@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Autolejek</a>
+    <nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel">
+      <a class="active" href="index.html" aria-current="page" data-i18n="navHome">Autolejek</a>
+      <a href="build-it-yourself.html" data-i18n="navBuild">Zbuduj sam</a><a href="projects.html" data-i18n="navProjects">Projekty</a><a href="contact.html" data-i18n="navContact">Kontakt</a>
+    </nav>
+    <div class="language-picker"><label for="language" data-i18n="languageLabel">Wybierz język</label><select id="language" aria-label="Wybierz język"></select></div>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow" data-i18n="homeEyebrow">Automatyczne zarządzanie wodą</p>
+      <h1>Autolejek</h1>
+      <p class="lead" data-i18n="homeLead">Odmierza dokładnie tyle wody, ile potrzebujesz.</p>
+    </section>
+
+    <section class="questions" aria-labelledby="questions-title">
+      <h2 id="questions-title" class="visually-hidden" data-i18n="questionsTitle">Czy znasz te problemy?</h2>
+      <ul>
+        <li data-i18n="questionOverflow">Czy kiedykolwiek zdarzyło Ci się przelać opryskiwacz lub zbiornik?</li>
+        <li data-i18n="questionRatio">Czy kiedykolwiek zdarzyło Ci się odmierzyć nieodpowiednią ilość wody w stosunku do środka chemicznego?</li>
+        <li data-i18n="questionIrrigation">Czy kiedykolwiek zdarzyło Ci się użyć niewystarczającej ilości wody do nawodnienia plantacji?</li>
+      </ul>
+      <p class="answer" data-i18n="questionsAnswer">Jeżeli odpowiedź brzmi „tak”, to znaczy, że borykasz się z tymi samymi problemami co ja kiedyś!</p>
+    </section>
+
+    <details class="accordion-section">
+      <summary class="section-heading"><span>01</span><h2 data-i18n="aboutTitle">Czym jest Autolejek?</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+      <div class="text-block accordion-content">
+        <p data-i18n="aboutParagraph1">Autolejek jest systemem zarządzającym wodą w gospodarstwie. Niezależnie od tego, czy musisz odmierzyć 100, czy 20 000 litrów, Autolejek zrobi to za Ciebie — szybko i dokładnie.</p>
+        <p data-i18n="aboutParagraph2">Sprawdzi się zarówno przy nalewaniu wody do opryskiwacza, jak i podczas podlewania plantacji.</p>
+        <p data-i18n="aboutParagraph3">Możesz pomyśleć, że to prosty projekt: przepływomierz, licznik i przekaźnik. W teorii tak jest — ale tylko w teorii. Autolejek oferuje wiele ustawień, które chronią przepływomierz, elektrozawór, pompę wody i instalację. Co najważniejsze, możesz dostosować go do swojego gospodarstwa.</p>
+        <p data-i18n="aboutParagraph4">Na podstronie „Zbuduj sam” opiszę, jak samodzielnie złożyć Autolejka — od wyboru wodomierza, elektrozaworu i pompy aż po odpowiednie złączki.</p>
+        <a class="text-link" href="build-it-yourself.html" data-i18n="aboutLink">Przejdź do sekcji „Zbuduj sam” →</a>
+      </div>
+    </details>
+
+    <details class="accordion-section">
+      <summary class="section-heading"><span>02</span><h2 data-i18n="storyTitle">Jak to się zaczęło</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+      <div class="text-block accordion-content">
+        <p data-i18n="storyParagraph1">Od czasu do czasu, zamiast chodzić do szkoły, chodziłem na wagary do wujka, żeby pojeździć ciągnikiem — znacznie ciekawsze zajęcie.</p>
+        <p data-i18n="storyParagraph2">Pewnego razu poprosił mnie, żebym przypilnował opryskiwacza, do którego nalewał wodę. Z lenistwa stwierdziłem, że to głupie — bo jak można stać i patrzeć, ile wody już naleciało? W tym czasie mogłem przecież jeździć ciągnikiem.</p>
+        <p data-i18n="storyParagraph3">Postanowiłem więc zbudować coś, co będzie samo nalewało wodę do opryskiwacza. Pierwszy prototyp nie był niczym zachwycającym: wytrawiona płytka PCB, niedbałe luty, a przede wszystkim cały panel zamontowany na kawałku deski. Ale działał.</p>
+        <p data-i18n="storyParagraph4">Po kilku latach powstał kolejny prototyp — już znacznie ładniejszy. Obudowa, klawiatura, wszystko wyglądało dobrze.</p>
+        <p data-i18n="storyParagraph5">Po następnych latach stwierdziłem, że wykonam projekt od nowa — tym razem profesjonalnie.</p>
+        <p data-i18n="storyParagraph6">Przez ten czas zdobyłem wiedzę, ukończyłem studia, a dziś zawodowo piszę kod. A wszystko zaczęło się od pilnowania wody.</p>
+      </div>
+    </details>
+
+    <section class="testing-callout">
+      <div>
+        <p class="eyebrow" data-i18n="testingEyebrow">Projekt w fazie testów</p>
+        <h2 data-i18n="testingTitle">Chcesz przetestować Autolejka w swoim gospodarstwie?</h2>
+        <p data-i18n="testingText">Jeżeli jesteś zainteresowany montażem systemu w swoim gospodarstwie lub masz pytania, napisz do nas.</p>
+      </div>
+      <a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a>
+    </section>
+  </main>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer>
+  <script src="i18n.js"></script>
+</body></html>
