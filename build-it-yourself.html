@@ -5,12 +5,248 @@
   <main>
     <section class="page-intro"><p class="eyebrow" data-i18n="buildEyebrow">Krok po kroku</p><h1 data-i18n="buildTitle">Zbuduj sam</h1><p class="lead" data-i18n="buildLead">W tym miejscu pojawią się poradniki, materiały i kolejne etapy budowy.</p></section>
     <section class="build-sections" aria-label="Etapy budowy" data-i18n-aria-label="plannedSectionsLabel">
-      <details class="accordion-section"><summary class="section-heading"><span>01</span><h2 data-i18n="buildMeterTitle">Wodomierz / przepływomierz</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
-      <details class="accordion-section"><summary class="section-heading"><span>02</span><h2 data-i18n="buildValveTitle">Elektrozawór</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
-      <details class="accordion-section"><summary class="section-heading"><span>03</span><h2 data-i18n="buildPumpTitle">Pompa</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
-      <details class="accordion-section"><summary class="section-heading"><span>04</span><h2 data-i18n="buildRelayTitle">Zewnętrzny przekaźnik</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
-      <details class="accordion-section"><summary class="section-heading"><span>05</span><h2 data-i18n="buildInstallationTitle">Jak złożyć instalację</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
-      <details class="accordion-section"><summary class="section-heading"><span>06</span><h2 data-i18n="buildConfigurationTitle">Jak skonfigurować Autolejka</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section">
+        <summary class="section-heading"><span>01</span><h2 data-i18n="buildDimensionsTitle">Wymiary i oznaczenia</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide">
+          <p data-i18n="dimensionsIntro1">Nie bez powodu pierwszą sekcją jest opis wymiarów. Bez poznania zasad unifikacji trudno dobrać odpowiednie materiały.</p>
+          <p data-i18n="dimensionsIntro2">Chodzi nie tylko o zakup właściwego elementu, ale również o uniknięcie nietrafionej oferty. Niejasny opis aukcji może oznaczać, że sprzedający nie do końca wie, co sprzedaje.</p>
+
+          <h3 data-i18n="isoTitle">ISO 228-1 — jak oznaczenie gwintu G ma się do rzeczywistych wymiarów?</h3>
+          <p data-i18n="isoDescription">ISO 228-1 opisuje rurowe gwinty walcowe oznaczane literą G. Liczba przy oznaczeniu, na przykład G1, nie oznacza średnicy gwintu równej 1 calowi (25,4 mm).</p>
+
+          <h4 data-i18n="differenceTitle">Skąd bierze się ta różnica?</h4>
+          <p data-i18n="differenceText">Oznaczenia gwintów rurowych mają charakter historyczny. Rozmiar calowy odnosił się pierwotnie w przybliżeniu do nominalnej średnicy wewnętrznej rury, natomiast gwint wykonywano na jej zewnętrznej powierzchni.</p>
+          <p class="dimension-highlight"><strong>G1 ≠ Ø25,4 mm</strong><span data-i18n="g1ActualDiameter">Rzeczywista średnica zewnętrzna gwintu G1 wynosi około Ø33,25 mm.</span></p>
+
+          <div class="table-scroll">
+            <table>
+              <caption data-i18n="threadTableCaption">Popularne rozmiary gwintów według ISO 228-1</caption>
+              <thead><tr><th scope="col" data-i18n="threadColumn">Gwint ISO 228-1</th><th scope="col" data-i18n="nominalColumn">Rozmiar nominalny</th><th scope="col" data-i18n="outerDiameterColumn">Średnica zewnętrzna gwintu</th></tr></thead>
+              <tbody>
+                <tr><td>G1/8</td><td>1/8&quot;</td><td>≈ 9,73 mm</td></tr>
+                <tr><td>G1/4</td><td>1/4&quot;</td><td>≈ 13,16 mm</td></tr>
+                <tr><td>G3/8</td><td>3/8&quot;</td><td>≈ 16,66 mm</td></tr>
+                <tr><td>G1/2</td><td>1/2&quot;</td><td>≈ 20,96 mm</td></tr>
+                <tr><td>G3/4</td><td>3/4&quot;</td><td>≈ 26,44 mm</td></tr>
+                <tr class="featured-row"><td><strong>G1</strong></td><td><strong>1&quot;</strong></td><td><strong>≈ 33,25 mm</strong></td></tr>
+                <tr><td>G1 1/4</td><td>1 1/4&quot;</td><td>≈ 41,91 mm</td></tr>
+                <tr><td>G1 1/2</td><td>1 1/2&quot;</td><td>≈ 47,80 mm</td></tr>
+                <tr><td>G2</td><td>2&quot;</td><td>≈ 59,61 mm</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 data-i18n="g1ExampleTitle">Przykład — G1</h4>
+          <p data-i18n="g1ExampleIntro">Gwint G1 według ISO 228-1 ma następujące parametry:</p>
+          <ul>
+            <li><span data-i18n="externalDiameterLabel">średnica zewnętrzna</span>: <strong>≈ 33,25 mm</strong></li>
+            <li><span data-i18n="threadCountLabel">liczba zwojów</span>: <strong>11 TPI</strong></li>
+            <li><span data-i18n="pitchLabel">skok</span>: <strong>≈ 2,309 mm</strong></li>
+            <li><span data-i18n="threadAngleLabel">kąt gwintu</span>: <strong>55°</strong></li>
+            <li><span data-i18n="threadTypeLabel">rodzaj</span>: <strong data-i18n="parallelThread">gwint walcowy</strong></li>
+          </ul>
+          <p data-i18n="g1Measurement">Mierząc suwmiarką zewnętrzną średnicę męskiego gwintu G1, otrzymamy więc około 33 mm, a nie 25,4 mm.</p>
+          <aside class="guide-note"><strong data-i18n="sealingTitle">Ważne: uszczelnienie</strong><p data-i18n="sealingText">Gwint G według ISO 228-1 jest walcowym gwintem mocującym. Szczelności ciśnieniowej nie uzyskuje się na samym gwincie — połączenie powinno mieć oddzielne uszczelnienie, na przykład uszczelkę płaską lub O-ring, dociskane poza gwintem. Gwinty uszczelniane na gwincie opisuje ISO 7-1.</p></aside>
+          <aside class="literary-note"><strong data-i18n="isoAsideTitle">ISO na marginesie</strong><p data-i18n="isoAsideText">Miłośnicy opowieści o Jakubie Wędrowyczu i jego towarzyszu Semenie pamiętają zapewne „Zbiór podstawowych norm ISO – wieś i gospodarstwo rolne”. Jak się okazuje, normy mogą mieć również mniej podręcznikowe zastosowania. :)</p></aside>
+
+          <h3 data-i18n="dnTitle">Co oznacza DN?</h3>
+          <p data-i18n="dnDescription">DN jest określonym w ISO 6708 oznaczeniem nominalnego rozmiaru elementów instalacji rurowej. Składa się z liter DN i bezwymiarowej liczby całkowitej, która jest tylko pośrednio związana z rzeczywistym wymiarem w milimetrach.</p>
+          <p data-i18n="dnClassDescription">DN można traktować jako klasę rozmiaru przewodu i współpracujących z nim elementów, takich jak zawory, wodomierze, przepływomierze, filtry czy pompy.</p>
+          <aside class="guide-note"><strong>DN25</strong><p data-i18n="dn25Explanation">nie oznacza automatycznie średnicy wewnętrznej, zewnętrznej ani średnicy gwintu równej 25 mm. Rzeczywiste wymiary zależą między innymi od rodzaju rury, grubości ścianki, materiału i zastosowanego standardu.</p></aside>
+          <p data-i18n="dnVariation">Dwie rury oznaczone jako DN25 mogą mieć różne rzeczywiste średnice wewnętrzne, a mimo to należeć do tej samej nominalnej klasy rozmiaru instalacji.</p>
+          <p data-i18n="dnIdOdText">Jeżeli dokumentacja wiąże wartość nominalną konkretnie ze średnicą wewnętrzną, może używać oznaczenia DN/ID (Inside Diameter). Dla powiązania ze średnicą zewnętrzną stosuje się DN/OD (Outside Diameter). Samo DN nie mówi, który rzeczywisty wymiar należy zmierzyć.</p>
+          <h4 data-i18n="dnNpsTitle">DN a NPS</h4>
+          <p data-i18n="dnNpsText">NPS (Nominal Pipe Size) jest północnoamerykańskim systemem nominalnych rozmiarów rur, a DN jego międzynarodowym odpowiednikiem metrycznym. Przykładowo NPS 1 odpowiada DN25, a NPS 1 1/4 — DN32. Jest to przyporządkowanie klas rozmiaru, nie bezpośrednie przeliczenie cali na milimetry.</p>
+          <p class="key-rule" data-i18n="dnGRule">DN mówi, jakiej wielkości jest instalacja, natomiast oznaczenie G określa konkretny gwint przyłączeniowy.</p>
+
+          <h3 data-i18n="dnGTitle">DN a gwint G</h3>
+          <p data-i18n="dnGIntro">W typowych instalacjach można spotkać następujące zestawienia:</p>
+          <div class="table-scroll">
+            <table>
+              <caption data-i18n="dnTableCaption">Typowe zestawienie DN i gwintów rurowych</caption>
+              <thead><tr><th scope="col">DN</th><th scope="col" data-i18n="typicalThreadColumn">Typowy gwint rurowy</th><th scope="col" data-i18n="outerDiameterShortColumn">Ø zewnętrzna gwintu</th></tr></thead>
+              <tbody>
+                <tr><td>DN8*</td><td>G1/4</td><td>13,16 mm</td></tr>
+                <tr><td>DN10</td><td>G3/8</td><td>16,66 mm</td></tr>
+                <tr><td>DN15</td><td>G1/2</td><td>20,96 mm</td></tr>
+                <tr><td>DN20</td><td>G3/4</td><td>26,44 mm</td></tr>
+                <tr><td>DN25</td><td>G1</td><td>33,25 mm</td></tr>
+                <tr class="featured-row"><td><strong>DN32</strong></td><td><strong>G1 1/4</strong></td><td><strong>41,91 mm</strong></td></tr>
+                <tr><td>DN40</td><td>G1 1/2</td><td>47,80 mm</td></tr>
+                <tr><td>DN50</td><td>G2</td><td>59,61 mm</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note" data-i18n="dn8Note">* Oznaczenie DN8 występuje w katalogach i niektórych standardach branżowych, ale nie znajduje się na liście preferowanych wartości DN w ISO 6708.</p>
+          <p class="guide-caveat" data-i18n="threadPipeDiameterCaveat">Podane średnice dotyczą zewnętrznej średnicy gwintu G, a nie zewnętrznej średnicy rury. Są to różne wymiary określone przez różne standardy, nawet jeśli ich wartości bywają do siebie zbliżone.</p>
+          <p class="guide-caveat" data-i18n="mappingCaveat">Tabela pokazuje typowe przyporządkowanie gwintu do rury o danym DN, a nie uniwersalną zasadę dla każdego urządzenia. Oznaczenie DN nie definiuje samodzielnie gwintu przyłącza — zawsze sprawdzaj rysunek wymiarowy konkretnego produktu.</p>
+
+          <h3 data-i18n="dn32G1Title">Dlaczego można spotkać oznaczenie „DN32 / G1”?</h3>
+          <p data-i18n="dn32G1Text">Według typowego przyporządkowania DN32 odpowiada gwintowi G1 1/4, natomiast G1 odpowiada DN25. Zapis „DN32 / G1” nie potwierdza więc zgodności wymiarowej. Może opisywać dwie różne cechy urządzenia, redukowane przyłącze albo być błędem w ofercie. Bez rysunku wymiarowego producenta należy traktować go jako niejednoznaczny.</p>
+          <p data-i18n="compatibilityIntro">Aby sprawdzić mechaniczną zgodność połączenia, zweryfikuj:</p>
+          <ul>
+            <li data-i18n="compatibilityType">rodzaj i rozmiar gwintu,</li>
+            <li data-i18n="compatibilityDiameter">jego średnicę i skok,</li>
+            <li data-i18n="compatibilitySeal">sposób uszczelnienia,</li>
+            <li data-i18n="compatibilityDocs">dokumentację wymiarową producenta.</li>
+          </ul>
+
+          <h3 data-i18n="gsdDimensionTitle">Praktyczny przykład — DN20 i gwint G1 w wodomierzu GSD8-R</h3>
+          <p data-i18n="gsdDimensionIntro">Poniżej znajduje się fragment dokumentacji wodomierza BMETERS GSD8-R. W tabeli „Wymiary i waga” dla wariantu DN20 producent podaje w wierszu „D Gwint” rozmiar 1″.</p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/gsd8-r-dimensions.png" width="690" height="720" loading="lazy" alt="Tabela wymiarów wodomierza BMETERS GSD8-R dla DN15 i DN20" data-i18n-alt="gsdDimensionAlt">
+            <figcaption><span data-i18n="gsdDimensionCaption">Fragment karty produktowej BMETERS GSD8-R — wymiary i waga.</span> <a href="https://bmeters.pl/wp-content/uploads/2025/05/GSD8-R_karta_produktowa_A4_13_07_2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="gsdDimensionSource">Otwórz dokumentację →</a></figcaption>
+          </figure>
+          <p data-i18n="gsdDimensionExplanation">DN20 określa nominalny rozmiar wodomierza, natomiast „D Gwint = 1″” oznacza przyłącze z gwintem G1 wykonanym według EN ISO 228-1. Litera D jest tutaj nazwą wymiaru na rysunku technicznym, a nie informacją, że średnica gwintu wynosi 1 cal.</p>
+          <p class="dimension-highlight"><strong>DN20 / G1 / Ø≈33,25 mm</strong><span data-i18n="gsdCaliperMeasurement">Pomiar suwmiarką zewnętrznej średnicy gwintu tego wodomierza daje około 33,25 mm. Wynik zgadza się z wymiarem gwintu G1 i ponownie pokazuje, że oznaczenia DN20 oraz 1″ nie są wymiarami, które należy odczytać bezpośrednio jako 20 mm lub 25,4 mm.</span></p>
+
+          <h3 data-i18n="mainRuleTitle">Najważniejsza zasada</h3>
+          <p class="dimension-highlight"><strong>G1 ≠ Ø25,4 mm</strong><span data-i18n="mainRuleText">G1 jest nominalnym oznaczeniem gwintu rurowego, którego rzeczywista średnica zewnętrzna wynosi około 33,25 mm.</span></p>
+          <p data-i18n="measurementAdvice">Identyfikując nieznany gwint, zmierz jego rzeczywistą średnicę i porównaj ją z tabelą odpowiedniego standardu. Nie przeliczaj oznaczenia calowego bezpośrednio według zależności 1&quot; = 25,4 mm.</p>
+        </article>
+      </details>
+      <details class="accordion-section">
+        <summary class="section-heading"><span>02</span><h2 data-i18n="buildMeterTitle">Wodomierz / przepływomierz</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide meter-guide">
+          <p data-i18n="meterIntro1">Istnieje wiele urządzeń służących do pomiaru przepływu i objętości cieczy. Różnią się budową, zasadą działania oraz sposobem przekazywania wyniku.</p>
+          <p data-i18n="meterIntro2">Wynik może być dostępny na mechanicznym liczydle, jako impulsy elektryczne, przez przewodową magistralę M-Bus, bezprzewodowo przez wM-Bus albo za pomocą innych interfejsów. Autolejek korzysta z prostego i popularnego rozwiązania: zlicza impulsy elektryczne.</p>
+          <p data-i18n="meterScope">Celem tego rozdziału nie jest opisanie każdego typu wodomierza i przepływomierza. Chodzi o poznanie najważniejszych cech, które pozwolą wybrać urządzenie pasujące do konkretnej instalacji.</p>
+
+          <h3 data-i18n="meterDifferenceTitle">Wodomierz czy przepływomierz?</h3>
+          <p data-i18n="meterDifferenceText">Wodomierz jest przeznaczony do wody i zazwyczaj pokazuje jej łączną zużytą objętość. Przepływomierz to szersza kategoria urządzeń: może mierzyć różne ciecze, przepływ chwilowy, objętość całkowitą albo oba parametry. Dla Autolejka najważniejsza jest nie nazwa urządzenia, lecz zgodność medium, zakresu pracy i wyjścia impulsowego.</p>
+
+          <h3 data-i18n="pulseTitle">Wyjście impulsowe — podstawowy warunek</h3>
+          <p data-i18n="pulseDescription">Autolejek wymaga wodomierza lub przepływomierza, który generuje co najmniej 1 impuls na każdy 1 litr zmierzonej cieczy.</p>
+          <p class="dimension-highlight"><strong>≥ 1 imp./l</strong><span data-i18n="pulseRule">Urządzenie o stałej 1 impuls na 10 litrów ma rozdzielczość 10 litrów i nie nadaje się do dokładnego odmierzania przez Autolejka — taką ofertę należy odrzucić.</span></p>
+          <p class="guide-caveat" data-i18n="pulseAccuracyCaveat">Liczba impulsów określa rozdzielczość odczytu, ale sama nie gwarantuje dokładności pomiaru. Dokładność, powtarzalność i zakres przepływu trzeba sprawdzić osobno w dokumentacji producenta.</p>
+          <aside class="guide-note"><strong data-i18n="signalCheckTitle">Sprawdź sygnał</strong><p data-i18n="signalCheckText">Samo hasło „wyjście impulsowe” nie wystarcza. Przed zakupem sprawdź jego typ, wymagane zasilanie, polaryzację, maksymalne napięcie i prąd oraz czas trwania impulsu. Wyjście kontaktronowe, tranzystorowe typu open collector i aktywne wyjście napięciowe wymagają innego sposobu podłączenia.</p></aside>
+
+          <h3 data-i18n="mediumTitle">Urządzenie musi pasować do cieczy</h3>
+          <p data-i18n="mediumText">Wodomierz zaprojektowany do wody nie musi poprawnie ani bezpiecznie mierzyć oleju, nawozu płynnego czy innej cieczy. Znaczenie mają między innymi lepkość, temperatura, właściwości chemiczne oraz zgodność cieczy z materiałem korpusu, uszczelnień i elementów pomiarowych.</p>
+          <figure class="guide-figure">
+            <img src="assets/oval-gear-flow-meter.png" width="1536" height="1024" loading="lazy" alt="Poglądowy przekrój przepływomierza owalnokołowego do oleju" data-i18n-alt="oilMeterAlt">
+            <figcaption><span data-i18n="oilMeterCaption">Poglądowy przekrój przepływomierza owalnokołowego do oleju.</span> <a href="https://www.silverinstruments.com/support/by-media/flow-meter/gear-oil-flow-meter.html" target="_blank" rel="noopener noreferrer" data-i18n="oilMeterSource">Opis zasady działania →</a></figcaption>
+          </figure>
+          <p data-i18n="oilMeterOperation">Jest to przepływomierz wyporowy. Różnica ciśnień wprawia w ruch dwie zazębiające się owalne zębatki. Między zębatkami a obudową zamykane są porcje cieczy o określonej objętości, przenoszone następnie od wlotu do wylotu. Zliczenie obrotów pozwala obliczyć przepuszczoną objętość. Taka konstrukcja dobrze radzi sobie z cieczami o większej lepkości, na przykład olejem przekładniowym.</p>
+
+          <h4 data-i18n="waterTemperatureTitle">Woda zimna i ciepła</h4>
+          <p data-i18n="waterTemperatureText">Wodomierze występują w wersjach przeznaczonych do wody zimnej i ciepłej. Różnią się dopuszczalną temperaturą pracy oraz materiałami elementów wewnętrznych i uszczelnień. Nie wybieraj urządzenia wyłącznie na podstawie koloru obudowy — sprawdź klasę temperaturową i maksymalną temperaturę medium w karcie katalogowej.</p>
+          <p class="guide-caveat" data-i18n="potableWaterCaveat">Jeżeli urządzenie ma pracować z wodą przeznaczoną do spożycia lub celów użytkowych, sprawdź również wymagane atesty i dopuszczenia materiałów do kontaktu z taką wodą.</p>
+
+          <h3 data-i18n="bmetersTitle">Omówienie wodomierzy na przykładzie BMETERS GSD8-R</h3>
+          <p data-i18n="bmetersIntro">Jeżeli wiemy już, jaki rodzaj cieczy będziemy odmierzać, kolejnym krokiem jest określenie wymaganego przepływu. Na przykładzie wodomierza BMETERS GSD8-R zobaczymy, jak odczytać najważniejsze oznaczenia i jak pozycja montażu wpływa na minimalny przepływ pomiarowy.</p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/bmetersgsd8-r.png" width="1672" height="941" loading="lazy" alt="Wodomierz BMETERS GSD8-R z nadajnikiem impulsów" data-i18n-alt="bmetersMeterAlt">
+            <figcaption><span data-i18n="bmetersMeterCaption">Wodomierz BMETERS GSD8-R z nadajnikiem impulsów.</span> <a href="https://bmeters.pl/produkt/gsd8-r/" target="_blank" rel="noopener noreferrer" data-i18n="bmetersProductLink">Informacje producenta →</a></figcaption>
+          </figure>
+
+          <h4 data-i18n="flowSymbolsTitle">Co oznaczają Q1, Q2, Q3 i Q4?</h4>
+          <p data-i18n="flowSymbolsIntro">Literą Q oznacza się strumień objętości, czyli ilość wody przepływającą przez wodomierz w określonym czasie.</p>
+          <dl class="flow-definitions">
+            <div><dt>Q4</dt><dd><strong data-i18n="q4Title">Przepływ przeciążeniowy</strong><span data-i18n="q4Text">Najwyższy przepływ, przy którym wodomierz może działać prawidłowo przez krótki czas. Nie jest przeznaczony do ciągłej pracy w tym punkcie.</span></dd></div>
+            <div><dt>Q3</dt><dd><strong data-i18n="q3Title">Przepływ ciągły</strong><span data-i18n="q3Text">Najwyższy przepływ, przy którym wodomierz może pracować w sposób ciągły w znamionowych warunkach użytkowania.</span></dd></div>
+            <div><dt>Q2</dt><dd><strong data-i18n="q2Title">Przepływ pośredni</strong><span data-i18n="q2Text">Granica między dolnym i górnym zakresem pomiarowym, dla których obowiązują różne dopuszczalne błędy pomiaru.</span></dd></div>
+            <div><dt>Q1</dt><dd><strong data-i18n="q1Title">Przepływ minimalny</strong><span data-i18n="q1Text">Najniższy przepływ, przy którym wodomierz ma jeszcze mierzyć w granicach dopuszczalnego błędu. Jego wartość zależy między innymi od klasy R i pozycji montażu.</span></dd></div>
+          </dl>
+          <figure class="guide-figure guide-figure-contain guide-figure-small">
+            <img src="assets/buildityourself/bmetersq.png" width="522" height="526" loading="lazy" alt="Oznaczenie Q3 4,0 na tarczy wodomierza BMETERS GSD8-R" data-i18n-alt="bmetersQAlt">
+            <figcaption data-i18n="bmetersQCaption">Oznaczenie Q3 4,0 na tarczy wodomierza.</figcaption>
+          </figure>
+          <p data-i18n="q3Example">Oznaczenie Q3 4,0 oznacza przepływ ciągły 4,0 m³/h, czyli 4000 l/h. Przy takim przepływie wodomierz może pracować ciągle w znamionowych warunkach. Dla tego wariantu GSD8-R karta katalogowa podaje Q4 = 5 m³/h.</p>
+          <p data-i18n="directFlowExample">Nie każdy producent używa na pierwszym planie oznaczeń Q1–Q4. Przykładowo SEA YF-G1 ma podany wprost zakres do 100 l/min. Niezależnie od sposobu prezentacji zawsze sprawdź kartę katalogową konkretnego wariantu urządzenia albo poproś sprzedawcę o jej udostępnienie.</p>
+
+          <h4 data-i18n="mountingTitle">Kolejny krok — pozycja montażu</h4>
+          <p data-i18n="mountingIntro">Tak, montaż — a precyzyjniej orientacja wodomierza — należy sprawdzić przed obliczeniem przepływu minimalnego. Ten sam wodomierz może mieć inną klasę R (o niej za moment), a więc inne Q1, zależnie od położenia korpusu i tarczy.</p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/allowedpossitions.png" width="981" height="404" loading="lazy" alt="Cztery przykładowe pozycje montażowe wodomierza według instrukcji BMETERS" data-i18n-alt="allowedPositionsAlt">
+            <figcaption><span data-i18n="allowedPositionsCaption">Przykładowe pozycje montażowe z instrukcji BMETERS.</span> <a href="https://www.bmeters.com/wp-content/uploads/2023/07/MAN025_quick-user-guide-12-lingue.pdf" target="_blank" rel="noopener noreferrer" data-i18n="installationManualLink">Instrukcja montażu →</a></figcaption>
+          </figure>
+          <p data-i18n="arrowExplanation">Duża strzałka pokazuje kierunek przepływu wody. Symbol przy literze H opisuje położenie tarczy wodomierza względem pionu. H oznacza rurę poziomą (horizontal), a V — rurę pionową (vertical).</p>
+          <ol class="orientation-list">
+            <li><strong>H↑</strong><span data-i18n="orientationUp">orientacja pozioma, tarcza wodomierza skierowana ku górze,</span></li>
+            <li><strong>H→</strong><span data-i18n="orientationSide">orientacja pozioma, tarcza obrócona na bok o 90°,</span></li>
+            <li><strong>H↓</strong><span data-i18n="orientationDown">orientacja pozioma, tarcza skierowana ku dołowi,</span></li>
+            <li><strong>V↑</strong><span data-i18n="orientationVertical">orientacja pionowa, strumień wody skierowany ku górze.</span></li>
+          </ol>
+          <p class="guide-caveat" data-i18n="verticalFlowRule">W instalacji Autolejka dla pozycji V przyjmujemy tylko przepływ ku górze. Nie montujemy wodomierza tak, aby woda płynąca grawitacyjnie w dół obracała turbinę lub wirnik. Przepływ powinien być wymuszany przez ciśnienie — do tego zagadnienia wrócimy w kolejnych rozdziałach.</p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/bmetersrh.png" width="1198" height="592" loading="lazy" alt="Oznaczenia R100-H ze strzałką w górę oraz R50-VH ze strzałką w prawo" data-i18n-alt="bmetersRhAlt">
+            <figcaption data-i18n="bmetersRhCaption">Oznaczenia pozycji i klas R na tarczy badanego GSD8-R.</figcaption>
+          </figure>
+          <p data-i18n="bmetersMountingVariants">Na pokazanym egzemplarzu widnieją dwa warianty dokładności montażowej: R100 dla H↑ oraz R50 dla V↑ i H→. Ogólna instrukcja pokazuje również pozycję H↓, ale tarcza tego konkretnego wodomierza jej nie wymienia.</p>
+          <p data-i18n="udTeaser">Spostrzegawczy czytelnicy zauważyli zapewne, że na tarczy widnieją również oznaczenia U0 oraz D0 — do nich wrócimy później.</p>
+
+          <h4 data-i18n="minimumFlowTitle">Przepływ minimalny — obliczamy Q1</h4>
+          <p data-i18n="rDefinition">Współczynnik R jest stosunkiem przepływu ciągłego Q3 do przepływu minimalnego Q1. Dlatego:</p>
+          <p class="formula-card"><code>R = Q3 / Q1</code><span data-i18n="formulaTherefore">czyli</span><code>Q1 = Q3 / R</code></p>
+          <div class="table-scroll">
+            <table class="calculation-table">
+              <caption data-i18n="q1TableCaption">Q1 dla GSD8-R z Q3 = 4,0 m³/h</caption>
+              <thead><tr><th scope="col" data-i18n="positionColumn">Pozycja</th><th scope="col">R</th><th scope="col" data-i18n="calculationColumn">Obliczenie</th><th scope="col">Q1</th></tr></thead>
+              <tbody>
+                <tr><td>H↑</td><td>100</td><td>4,0 / 100</td><td><strong>0,04 m³/h = 40 l/h</strong></td></tr>
+                <tr><td>V↑ / H→</td><td>50</td><td>4,0 / 50</td><td><strong>0,08 m³/h = 80 l/h</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="guide-caveat" data-i18n="q1MountingConclusion">Zmiana pozycji z H↑ na V↑ lub H→ podwaja minimalny przepływ Q1 z 40 do 80 l/h. Wodomierz nadal może mierzyć poniżej Q1, ale producent nie gwarantuje wtedy zachowania dopuszczalnego błędu.</p>
+
+          <h4 data-i18n="measurementErrorTitle">Błąd pomiarowy</h4>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/krzywabłędów.png" width="751" height="443" loading="lazy" alt="Przykładowa krzywa błędu wodomierza między Q1 i Q4" data-i18n-alt="errorCurveAlt">
+            <figcaption><span data-i18n="errorCurveCaption">Przykładowa krzywa błędu wodomierza dla wody zimnej.</span> <a href="https://bmeters.pl/wp-content/uploads/2026/08/Krzywe_bledow_wodomierzy_06_08_2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="errorCurveLink">Zobacz opracowanie BMETERS →</a></figcaption>
+          </figure>
+          <p data-i18n="errorCurveText">Krzywa pokazuje, że błąd nie jest jednakowy w całym zakresie. Między Q1 a Q2 obowiązuje szerszy przedział dopuszczalnego błędu, a od Q2 do Q4 — węższy. Poniżej Q1 błąd może gwałtownie rosnąć, dlatego właściwa pozycja montażu i znajomość rzeczywistego minimalnego przepływu są tak istotne.</p>
+
+          <h3 data-i18n="yfTitle">Przykład — przepływomierz SEA YF-G1</h3>
+          <p data-i18n="yfDescription">SEA YF-G1 jest turbinowym czujnikiem przepływu wody. Ma przyłącza z gwintem G1 i nominalny rozmiar DN25.</p>
+          <div class="table-scroll">
+            <table class="spec-table yf-spec-table">
+              <caption data-i18n="yfTableCaption">Najważniejsze parametry SEA YF-G1 z karty katalogowej</caption>
+              <tbody>
+                <tr><th scope="row" data-i18n="yfSupplyLabel">Zasilanie</th><td>DC 5–24 V</td></tr>
+                <tr><th scope="row" data-i18n="yfCurrentLabel">Maksymalny prąd pracy</th><td>15 mA (DC 5 V)</td></tr>
+                <tr><th scope="row" data-i18n="yfFlowRangeLabel">Zakres przepływu i deklarowana dokładność</th><td>1–100 l/min, ±5%</td></tr>
+                <tr><th scope="row" data-i18n="yfTemperatureLabel">Maksymalna temperatura cieczy</th><td>80°C</td></tr>
+                <tr><th scope="row" data-i18n="yfPressureLabel">Maksymalne ciśnienie</th><td>1,75 MPa</td></tr>
+                <tr><th scope="row" data-i18n="yfDutyLabel">Wypełnienie sygnału</th><td>50% ±10%</td></tr>
+                <tr><th scope="row" data-i18n="yfPulseLabel">Charakterystyka impulsowa</th><td><code>f [Hz] = 1 × Q [l/min] ±3%</code></td></tr>
+                <tr class="featured-row"><th scope="row" data-i18n="yfResolutionLabel">Nominalna liczba impulsów</th><td><strong>≈ 60 imp./l</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p data-i18n="yfCalculation">Ze wzoru wynika, że przy przepływie 30 l/min częstotliwość nominalna wynosi 30 Hz. W ciągu minuty czujnik wygeneruje 1800 impulsów dla 30 litrów, czyli nominalnie 60 impulsów na litr. YF-G1 spełnia więc wymaganie Autolejka wynoszące co najmniej 1 impuls na litr.</p>
+          <p class="table-note"><a class="text-link" href="https://www.plexishop.it/pdf/Misuratore_di_flusso_per_liquidi_YF-G1_DN25.pdf" target="_blank" rel="noopener noreferrer" data-i18n="yfDatasheetLink">Karta katalogowa YF-G1 →</a></p>
+
+          <h4 data-i18n="yfCalibrationTitle">Dlaczego ustawienie kalibracji może być problematyczne?</h4>
+          <p data-i18n="yfCalibrationText">Nominalne 60 impulsów na litr jest tylko wartością początkową. Dokumentacja deklaruje dokładność pomiaru ±5%, a przy charakterystyce impulsowej dodatkowo podaje tolerancję ±3%. Nie jest przy tym jasne, czy są to niezależne błędy, dlatego nie należy ich mechanicznie sumować. Oznacza to jednak, że wpisanie jednego współczynnika z karty katalogowej nie zapewni dokładnego wyniku dla każdego egzemplarza i całego zakresu przepływu.</p>
+          <p class="guide-caveat" data-i18n="yfVariantCaveat">Pod nazwą YF-G1 można znaleźć oferty podające różne charakterystyki, między innymi około 60 lub 64,8 impulsu na litr. Nie kopiuj współczynnika z przypadkowej aukcji — sprawdź dokumentację konkretnego wariantu i skalibruj posiadany egzemplarz.</p>
+          <p data-i18n="yfCalibrationMethodIntro">Kalibrację wykonaj w docelowej instalacji:</p>
+          <ol>
+            <li data-i18n="yfCalibrationStep1">przepuść dokładnie odmierzoną objętość wody i zapisz liczbę impulsów,</li>
+            <li data-i18n="yfCalibrationStep2">oblicz współczynnik: liczba impulsów ÷ liczba litrów,</li>
+            <li data-i18n="yfCalibrationStep3">powtórz pomiar kilka razy przy małym, typowym i dużym przepływie,</li>
+            <li data-i18n="yfCalibrationStep4">porównaj wyniki — jeżeli współczynnik wyraźnie zmienia się z przepływem, jedna stała kalibracyjna nie zapewni wysokiej dokładności.</li>
+          </ol>
+          <p class="dimension-highlight"><strong data-i18n="yfConclusionTitle">Wniosek</strong><span data-i18n="yfConclusionText">SEA YF-G1 zapewnia dobrą rozdzielczość impulsową, ale przy podanych tolerancjach jego precyzyjna kalibracja będzie problematyczna. Nadaje się do zastosowań, w których akceptowalny jest błąd rzędu kilku procent; przed użyciem do dokładnego odmierzania trzeba sprawdzić konkretny egzemplarz w rzeczywistych warunkach pracy.</span></p>
+
+          <h3 data-i18n="selectionTitle">To pomoże Ci wybrać odpowiedni przepływomierz</h3>
+          <ol class="selection-checklist">
+            <li><strong data-i18n="selectionMediumTitle">Jaka ciecz będzie mierzona?</strong><span data-i18n="selectionMediumText">Sprawdź lepkość, temperaturę, czystość i zgodność materiałową.</span></li>
+            <li><strong data-i18n="selectionFlowTitle">Jaki będzie przepływ?</strong><span data-i18n="selectionFlowText">Ustal przepływ minimalny, typowy i maksymalny. Wszystkie powinny mieścić się w zakresie pracy urządzenia.</span></li>
+            <li><strong data-i18n="selectionTemperatureTitle">Czy będzie to woda zimna czy ciepła?</strong><span data-i18n="selectionTemperatureText">Dobierz odpowiednią klasę temperaturową wodomierza.</span></li>
+            <li><strong data-i18n="selectionPulseTitle">Ile impulsów przypada na litr?</strong><span data-i18n="selectionPulseText">Autolejek wymaga co najmniej 1 impulsu na litr; większa liczba daje lepszą rozdzielczość odmierzania.</span></li>
+            <li><strong data-i18n="selectionInstallationTitle">Czy urządzenie pasuje do instalacji?</strong><span data-i18n="selectionInstallationText">Sprawdź gwint, średnicę nominalną, ciśnienie, kierunek przepływu, pozycję montażu i wymagany odcinek prosty.</span></li>
+          </ol>
+          <p class="key-rule" data-i18n="meterMainRule">Najpierw dobierz urządzenie do cieczy i przepływu, następnie sprawdź wyjście impulsowe, a na końcu wymiary przyłącza. Sam pasujący gwint nie oznacza, że przepływomierz nadaje się do danej instalacji.</p>
+          <p class="dimension-highlight"><strong data-i18n="meterConclusionTitle">Wniosek z praktyki</strong><span data-i18n="meterConclusionText">Z moich obserwacji wynika, że do odmierzania wody wodomierze takie jak BMETERS GSD8-R są znacznie przyjaźniejsze dla użytkownika niż przepływomierze o dużej deklarowanej niedokładności. Jasno określona charakterystyka metrologiczna i impulsowanie 1 l/imp sprawiają, że nie trzeba męczyć się z indywidualną kalibracją. Wystarczy poprawnie ustawić parametr impulsowania i zamontować urządzenie zgodnie z dokumentacją. Różnica w cenie nie jest przy tym duża: YF-G1 kosztuje orientacyjnie około 70 zł, a GSD8-R około 180 zł.</span></p>
+        </article>
+      </details>
+      <details class="accordion-section"><summary class="section-heading"><span>03</span><h2 data-i18n="buildValveTitle">Elektrozawór</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>04</span><h2 data-i18n="buildPumpTitle">Pompa</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>05</span><h2 data-i18n="buildRelayTitle">Zewnętrzny przekaźnik</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>06</span><h2 data-i18n="buildInstallationTitle">Jak złożyć instalację</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>07</span><h2 data-i18n="buildConfigurationTitle">Jak skonfigurować Autolejka</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
     </section>
   </main>
   <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="i18n.js"></script>
