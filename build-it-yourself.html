@@ -149,7 +149,7 @@
             <div><dt>Q1</dt><dd><strong data-i18n="q1Title">Przepływ minimalny</strong><span data-i18n="q1Text">Najniższy przepływ, przy którym wodomierz ma jeszcze mierzyć w granicach dopuszczalnego błędu. Jego wartość zależy między innymi od klasy R i pozycji montażu.</span></dd></div>
           </dl>
           <figure class="guide-figure guide-figure-contain guide-figure-small">
-            <img src="assets/buildityourself/bmetersq.png" width="522" height="526" loading="lazy" alt="Oznaczenie Q3 4,0 na tarczy wodomierza BMETERS GSD8-R" data-i18n-alt="bmetersQAlt">
+            <img src="assets/buildityourself/bmetersq2.png" width="636" height="479" loading="lazy" alt="Oznaczenie Q3 4,0 na tarczy wodomierza BMETERS GSD8-R" data-i18n-alt="bmetersQAlt">
             <figcaption data-i18n="bmetersQCaption">Oznaczenie Q3 4,0 na tarczy wodomierza.</figcaption>
           </figure>
           <p data-i18n="q3Example">Oznaczenie Q3 4,0 oznacza przepływ ciągły 4,0 m³/h, czyli 4000 l/h. Przy takim przepływie wodomierz może pracować ciągle w znamionowych warunkach. Dla tego wariantu GSD8-R karta katalogowa podaje Q4 = 5 m³/h.</p>
@@ -240,9 +240,43 @@
           </ol>
           <p class="key-rule" data-i18n="meterMainRule">Najpierw dobierz urządzenie do cieczy i przepływu, następnie sprawdź wyjście impulsowe, a na końcu wymiary przyłącza. Sam pasujący gwint nie oznacza, że przepływomierz nadaje się do danej instalacji.</p>
           <p class="dimension-highlight"><strong data-i18n="meterConclusionTitle">Wniosek z praktyki</strong><span data-i18n="meterConclusionText">Z moich obserwacji wynika, że do odmierzania wody wodomierze takie jak BMETERS GSD8-R są znacznie przyjaźniejsze dla użytkownika niż przepływomierze o dużej deklarowanej niedokładności. Jasno określona charakterystyka metrologiczna i impulsowanie 1 l/imp sprawiają, że nie trzeba męczyć się z indywidualną kalibracją. Wystarczy poprawnie ustawić parametr impulsowania i zamontować urządzenie zgodnie z dokumentacją. Różnica w cenie nie jest przy tym duża: YF-G1 kosztuje orientacyjnie około 70 zł, a GSD8-R około 180 zł.</span></p>
+          <p class="dimension-highlight"><strong data-i18n="meterInterferenceTitle">Uwaga na zakłócenia</strong><span data-i18n="meterInterferenceText">Świat nie jest idealny, dlatego w praktycznej instalacji trzeba również uwzględnić zakłócenia elektromagnetyczne, które mogą powodować fałszywe impulsy. Systemu nie należy montować w pobliżu spawarki, urządzeń o dużym poborze mocy ani ich przewodów zasilających. Przewód impulsowy także nie powinien być zbyt długi — w instalacjach Autolejka zalecam maksymalnie 2 m.</span></p>
         </article>
       </details>
-      <details class="accordion-section"><summary class="section-heading"><span>03</span><h2 data-i18n="buildValveTitle">Elektrozawór</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
+      <details class="accordion-section">
+        <summary class="section-heading"><span>03</span><h2 data-i18n="buildValveTitle">Elektrozawór</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide valve-guide">
+          <h3 data-i18n="valveWhenTitle">Kiedy użyć elektrozaworu?</h3>
+          <p data-i18n="valveWhenText">Elektrozawór jest naturalnym wyborem, gdy zamierzasz nalewać wodę z instalacji znajdującej się pod ciśnieniem, na przykład z kranu. Pozwala Autolejkowi rozpocząć i zatrzymać przepływ bez uruchamiania pompy.</p>
+
+          <h3 data-i18n="valveParametersTitle">Na co zwrócić uwagę?</h3>
+          <p data-i18n="valveParametersIntro">Przed zakupem sprawdź nie tylko rozmiar przyłącza i dopuszczalne ciśnienie, lecz także parametry elektryczne cewki:</p>
+          <ul>
+            <li data-i18n="valveVoltageItem">napięcie znamionowe,</li>
+            <li data-i18n="valveCurrentItem">pobór prądu lub moc cewki,</li>
+            <li data-i18n="valveSupplyItem">rodzaj zasilania i sterowania: AC albo DC,</li>
+            <li data-i18n="valveStateItem">stan spoczynkowy zaworu: normalnie zamknięty (NC) albo normalnie otwarty (NO),</li>
+            <li data-i18n="valveDutyItem">dopuszczalny cykl pracy, w tym możliwość pracy ciągłej.</li>
+          </ul>
+          <p class="guide-caveat" data-i18n="valveDutyWarning">Często pomijanym parametrem jest czas pracy ciągłej. Nie każda cewka może pozostawać pod napięciem bez przerwy — nieodpowiedni elektrozawór będzie się przegrzewał i może ulec uszkodzeniu. Szukaj w dokumentacji informacji „100% ED”, „continuous duty” albo jednoznacznego dopuszczenia do pracy ciągłej.</p>
+
+          <h3 data-i18n="valvePulseTitle">Zawory impulsowe i bistabilne</h3>
+          <p data-i18n="valvePulseText">Można spotkać elektrozawory, które nie wymagają ciągłego poboru prądu do podtrzymania stanu. Krótki impuls elektryczny przełącza taki zawór, a jego położenie podtrzymuje mechanizm bistabilny, magnes trwały lub — w niektórych konstrukcjach pilotowych — również różnica ciśnień cieczy. Sposób zamykania może wymagać drugiego impulsu, często o odwróconej polaryzacji.</p>
+          <p class="guide-caveat" data-i18n="valvePulseCaveat">Nie zakładaj jednak, że zwykły zawór pozostanie otwarty dzięki samemu przepływowi wody. Tryb impulsowy lub bistabilny musi być wyraźnie podany w jego dokumentacji, a sposób sterowania musi być zgodny z wyjściem Autolejka.</p>
+
+          <h3 data-i18n="valveAutolejekTitle">Zasilanie elektrozaworu z Autolejka</h3>
+          <p data-i18n="valveAutolejekDc">Autolejek może pracować z elektrozaworami DC o napięciu od kilku woltów do 32 V, sterowanymi przez ciągłe podanie napięcia. W praktyce napięcie zasilania całego systemu może odpowiadać napięciu znamionowemu cewki. Jeżeli wybierzesz elektrozawór 12 V DC, zastosuj zasilacz 12 V DC. Nietypowe napięcie, na przykład 18,2 V DC, również jest możliwe, o ile mieści się w zakresie Autolejka i jest zgodne ze wszystkimi zasilanymi elementami.</p>
+          <p data-i18n="valveAutolejekAc">Autolejek ma również drugi przekaźnik, którym można przełączać obwód elektrozaworu AC. Przekaźnik nie jest źródłem napięcia, dlatego taki zawór wymaga oddzielnego, odpowiednio dobranego zasilania. Należy także sprawdzić dopuszczalne napięcie i prąd styków przekaźnika.</p>
+
+          <h3 data-i18n="valveInductionTitle">Cewka, pole magnetyczne i przepięcie</h3>
+          <p data-i18n="valveInductionText">Cewka elektrozaworu jest elementem indukcyjnym. Gdy płynie przez nią prąd, wokół cewki powstaje pole magnetyczne, które przesuwa rdzeń i przełącza zawór. W polu tym zostaje zgromadzona energia. W chwili odłączenia zasilania pole gwałtownie zanika, a cewka — zgodnie z zasadą samoindukcji — próbuje podtrzymać dotychczasowy przepływ prądu.</p>
+          <p data-i18n="valveVoltageSpikeText">Im szybciej prąd jest przerywany, tym większe napięcie może się wyindukować. Jego wartość opisuje zależność <strong>|u| = L · |di/dt|</strong>. Powstały krótki impuls może mieć napięcie wielokrotnie wyższe od napięcia zasilania, powodować iskrzenie na stykach przekaźnika, zakłócenia elektromagnetyczne, fałszywe impulsy w przewodach sygnałowych, a nawet uszkodzenie elektroniki.</p>
+          <aside class="guide-note"><strong data-i18n="valveFlybackTitle">Dioda zwrotna przy cewce DC</strong><p data-i18n="valveFlybackText">Autolejek ma wbudowaną diodę chroniącą układ przed przepięciem indukcyjnym. Mimo to przy elektrozaworze DC zalecam umieszczenie dodatkowej diody zwrotnej bezpośrednio przy zaciskach cewki, z możliwie krótkimi przewodami. Po wyłączeniu tworzy ona lokalną drogę dla zanikającego prądu i ogranicza impuls napięcia u samego źródła.</p></aside>
+          <p data-i18n="valveBuiltInDiodeText">Niektóre elektrozawory mają już wbudowaną diodę zwrotną lub inny element tłumiący. Należy to sprawdzić w dokumentacji. Cewka z wbudowaną diodą ma określoną polaryzację — zamiana przewodów może spowodować zwarcie. Jeżeli odpowiednie zabezpieczenie jest już zamontowane przy cewce, dokładanie drugiej równoległej diody zwykle nie jest potrzebne.</p>
+          <p class="guide-caveat" data-i18n="valveAcSuppressionText">Zwykłej diody zwrotnej nie wolno podłączać równolegle do cewki AC, ponieważ przewodziłaby podczas jednej połówki przebiegu i spowodowała zwarcie. Dla zaworów AC stosuje się zabezpieczenia przeznaczone do napięcia przemiennego, na przykład układ RC albo właściwie dobrany warystor. Element zabezpieczający zawsze dobieraj do rodzaju cewki i zaleceń producenta.</p>
+          <aside class="guide-note"><strong data-i18n="valveSafetyTitle">Bezpieczeństwo</strong><p data-i18n="valveSafetyText">Napięcie sieciowe jest niebezpieczne. Obwód AC powinien mieć odpowiednią obudowę, zabezpieczenia i uziemienie, a jego wykonanie należy powierzyć osobie posiadającej wymagane kwalifikacje.</p></aside>
+        </article>
+      </details>
       <details class="accordion-section"><summary class="section-heading"><span>04</span><h2 data-i18n="buildPumpTitle">Pompa</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
       <details class="accordion-section"><summary class="section-heading"><span>05</span><h2 data-i18n="buildRelayTitle">Zewnętrzny przekaźnik</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>
       <details class="accordion-section"><summary class="section-heading"><span>06</span><h2 data-i18n="buildInstallationTitle">Jak złożyć instalację</h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder">Szczegółowy opis tej sekcji pojawi się wkrótce.</p></div></details>

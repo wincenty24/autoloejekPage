@@ -66,7 +66,7 @@ h2 { margin:0 0 12px; font-size:clamp(1.4rem,3vw,2rem); }
 .guide-figure { margin:30px 0 36px; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
 .guide-figure img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; }
 .guide-figure-contain img { aspect-ratio:auto; object-fit:contain; background:#f8faff; }
-.guide-figure-small { max-width:440px; }
+.guide-figure-small { max-width:440px; margin-right:auto; margin-left:auto; }
 .guide-figure figcaption { padding:14px 18px; color:var(--muted); font-size:.9rem; line-height:1.5; }
 .guide-figure a { color:var(--accent); font-weight:700; text-decoration:none; }
 .guide-figure a:hover { text-decoration:underline; }
