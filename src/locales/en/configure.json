@@ -1,0 +1,15 @@
+{
+  "configurePageTitle": "Configure it yourself — Autolejek",
+  "configureEyebrow": "Settings step by step",
+  "configureTitle": "Configure it yourself",
+  "configureLead": "Here you will find the information needed to start and correctly configure Autolejek for your own installation.",
+  "configureSectionsLabel": "Autolejek configuration steps",
+  "configureStartupTitle": "First startup",
+  "configureCalibrationTitle": "Water-meter or flow-meter calibration",
+  "configureMeterConnectionTitle": "Connecting a flow meter or water meter",
+  "configureFlowMeterTitle": "Flow-meter signal and filtering",
+  "configureLiquidLimitTitle": "Liquid limit",
+  "configureRelaysTitle": "Relay selection",
+  "configureFlowAlarmsTitle": "Flow alarms",
+  "configureSectionPlaceholder": "Detailed instructions for configuring this function will be added soon."
+}

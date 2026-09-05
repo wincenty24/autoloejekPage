@@ -1,0 +1,15 @@
+{
+  "configurePageTitle": "Skonfiguruj sam — Autolejek",
+  "configureEyebrow": "Ustawienia krok po kroku",
+  "configureTitle": "Skonfiguruj sam",
+  "configureLead": "Tutaj znajdziesz informacje potrzebne do pierwszego uruchomienia i poprawnego skonfigurowania Autolejka dla własnej instalacji.",
+  "configureSectionsLabel": "Etapy konfiguracji Autolejka",
+  "configureStartupTitle": "Pierwsze uruchomienie",
+  "configureCalibrationTitle": "Kalibracja wodomierza lub przepływomierza",
+  "configureMeterConnectionTitle": "Podłączenie przepływomierza lub wodomierza",
+  "configureFlowMeterTitle": "Sygnał i filtracja przepływomierza",
+  "configureLiquidLimitTitle": "Limit cieczy",
+  "configureRelaysTitle": "Wybór przekaźników",
+  "configureFlowAlarmsTitle": "Alarmy przepływu",
+  "configureSectionPlaceholder": "Szczegółowa instrukcja konfiguracji tej funkcji pojawi się wkrótce."
+}

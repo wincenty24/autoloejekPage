@@ -1,0 +1,15 @@
+{
+  "homePageTitle": "Smart Water Management System for Farms and Plantations | Autolejek",
+  "homeTitle": "Smart Water Management System for Farms and Plantations",
+  "homeLead": "It measures exactly as much water as you need.",
+  "homeHeroAlt": "Autolejek water-management controller with a display and keypad",
+  "storyProblemTitle": "Fill your sprayer without constant supervision",
+  "storyProblemLead": "Set the amount of water and focus on what matters.",
+  "storyProblemText": "Autolejek stops filling once the preset amount of water has been measured.",
+  "storyMeasureTitle": "Time is not a measure of water.",
+  "storyMeasureText": "The flow rate of an installation can change, so watering for a set amount of time does not always deliver the right volume of water. Autolejek adapts to your plantation and measures the actual flow, ensuring that your crops receive exactly as much water as they need.",
+  "storySourceTitle": "Whatever your water source",
+  "storySourceLead": "Tap, electric pump, or combustion-engine pump — Autolejek adapts to your installation.",
+  "storySourceText": "It takes control of filling, stops the flow after measuring the preset amount of water, and responds to irregularities.",
+  "storyAboutLink": "Read more about the project and where it can be used"
+}

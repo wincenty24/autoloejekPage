@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skonfiguruj sam — Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a href="build-it-yourself.html" data-i18n="navBuild"></a><a class="active" href="configure-yourself.html" aria-current="page" data-i18n="navConfigure"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div></header>
+  <main>
+    <section class="page-intro"><p class="eyebrow" data-i18n="configureEyebrow"></p><h1 data-i18n="configureTitle"></h1><p class="lead" data-i18n="configureLead"></p></section>
+    <section class="build-sections" aria-label="Etapy konfiguracji" data-i18n-aria-label="configureSectionsLabel">
+      <details class="accordion-section"><summary class="section-heading"><span>01</span><h2 data-i18n="configureStartupTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>02</span><h2 data-i18n="configureCalibrationTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+      <details class="accordion-section">
+        <summary class="section-heading"><span>03</span><h2 data-i18n="configureMeterConnectionTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide meter-configuration-guide">
+          <h3 data-i18n="meterWiringTitle"></h3>
+          <p data-i18n="meterWiringIntro"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/watermeterconnector.png" width="1060" height="299" loading="lazy" alt="Złącze WATER-METER Autolejka z pinami GND, WATER MATER i 5V" data-i18n-alt="meterWiringConnectorAlt">
+            <figcaption data-i18n="meterWiringConnectorCaption"></figcaption>
+          </figure>
+          <p class="dimension-highlight"><strong>WATER MATER = SIG</strong><span data-i18n="meterWiringMiddlePin"></span></p>
+          <p class="dimension-highlight"><strong>≤ 200 mA</strong><span data-i18n="meterWiringCurrentLimit"></span></p>
+          <div class="table-scroll">
+            <table class="meter-wiring-table">
+              <caption data-i18n="meterWiringTableCaption"></caption>
+              <thead><tr><th scope="col" data-i18n="meterWiringTerminalColumn"></th><th scope="col" data-i18n="meterWiringFunctionColumn"></th><th scope="col" data-i18n="meterWiringConnectionColumn"></th></tr></thead>
+              <tbody>
+                <tr><td><strong>5V</strong></td><td data-i18n="meterWiring5vFunction"></td><td data-i18n="meterWiring5vConnection"></td></tr>
+                <tr><td><strong>SIG</strong></td><td data-i18n="meterWiringSigFunction"></td><td data-i18n="meterWiringSigConnection"></td></tr>
+                <tr><td><strong>GND</strong></td><td data-i18n="meterWiringGndFunction"></td><td data-i18n="meterWiringGndConnection"></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4 data-i18n="meterWiringReedTitle"></h4>
+          <p data-i18n="meterWiringReedText"></p>
+          <p class="dimension-highlight"><strong>SIG ↔ GND</strong><span data-i18n="meterWiringReedRule"></span></p>
+          <h4 data-i18n="meterWiringBmetersTitle"></h4>
+          <p data-i18n="meterWiringBmetersText"></p>
+          <ul class="selection-checklist meter-wire-list">
+            <li><strong data-i18n="meterWiringBmetersBrownTitle"></strong><span data-i18n="meterWiringBmetersBrownText"></span></li>
+            <li><strong data-i18n="meterWiringBmetersBlueTitle"></strong><span data-i18n="meterWiringBmetersBlueText"></span></li>
+            <li><strong data-i18n="meterWiringBmeters5vTitle"></strong><span data-i18n="meterWiringBmeters5vText"></span></li>
+          </ul>
+          <p data-i18n="meterWiringBmetersColors"></p>
+          <p><a href="assets/buildityourself/IMPULSE-DEVICES-instructions-ENG.pdf" target="_blank" rel="noopener" data-i18n="meterWiringBmetersManual"></a></p>
+          <h4 data-i18n="meterWiringActiveTitle"></h4>
+          <p data-i18n="meterWiringActiveText"></p>
+          <h4 data-i18n="meterWiringYfTitle"></h4>
+          <p data-i18n="meterWiringYfText"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/seayf-g1-rotated.png" width="1672" height="941" loading="lazy" alt="Przepływomierz SEA YF-G1 z przewodem i trzyżyłowym złączem" data-i18n-alt="meterWiringYfAlt">
+            <figcaption data-i18n="meterWiringYfCaption"></figcaption>
+          </figure>
+          <ul class="selection-checklist meter-wire-list">
+            <li><strong data-i18n="meterWiringYfRedTitle"></strong><span data-i18n="meterWiringYfRedText"></span></li>
+            <li><strong data-i18n="meterWiringYfBlackTitle"></strong><span data-i18n="meterWiringYfBlackText"></span></li>
+            <li><strong data-i18n="meterWiringYfYellowTitle"></strong><span data-i18n="meterWiringYfYellowText"></span></li>
+          </ul>
+          <p class="guide-caveat" data-i18n="meterWiringYfCaveat"></p>
+          <p class="guide-caveat" data-i18n="meterWiringWarning"></p>
+        </article>
+      </details>
+      <details class="accordion-section"><summary class="section-heading"><span>04</span><h2 data-i18n="configureFlowMeterTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>05</span><h2 data-i18n="configureLiquidLimitTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>06</span><h2 data-i18n="configureRelaysTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+      <details class="accordion-section"><summary class="section-heading"><span>07</span><h2 data-i18n="configureFlowAlarmsTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="configureSectionPlaceholder"></p></div></details>
+    </section>
+  </main>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="site.js"></script>
+</body></html>

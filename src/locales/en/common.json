@@ -1,0 +1,11 @@
+{
+  "name": "English",
+  "languageLabel": "Choose language",
+  "navigationLabel": "Main navigation",
+  "navHome": "Autolejek",
+  "navAbout": "About the project",
+  "navBuild": "Build it yourself",
+  "navConfigure": "Configure it yourself",
+  "navProjects": "Projects",
+  "navContact": "Contact"
+}

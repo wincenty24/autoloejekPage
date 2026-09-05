@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title description" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" path="Animowany schemat dwóch obwodów przekaźnika.svg"/>
+    </bx:export>
+  </defs>
+  <title id="title">Animowany schemat dwóch obwodów przekaźnika</title>
+  <desc id="description">Obwód sterowania DC i odseparowany obwód obciążenia AC. Przekaźnik przełącza COM między NC i NO.</desc>
+  <style>
+svg{background:#fbfcff}text{font-family:Inter,Arial,sans-serif}.wire{fill:none;stroke:#475169;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.body{fill:#fff0a8;stroke:#30394d;stroke-width:5}.terminal,.switch-terminal{fill:#30394d}.terminal-label{fill:#30394d;font-size:24px;font-weight:800}.source-label{fill:#626b7c;font-size:18px;font-weight:700}.polarity{fill:#30394d;font-size:26px;font-weight:700}.coil-core{fill:#fff7d1;stroke:#30394d;stroke-width:5;animation:coil 5s ease-in-out infinite}.coil-winding{fill:none;stroke:#30394d;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.coil-label{fill:#30394d;font-size:17px;font-weight:700}.mechanical-link{fill:none;stroke:#68738a;stroke-width:3;stroke-dasharray:8 8}.arm{stroke:#3563e9;stroke-width:9;stroke-linecap:round;transform-origin:650px 400px;transform-box:view-box;animation:arm 5s ease-in-out infinite}.control-switch{stroke:#30394d;stroke-width:7;stroke-linecap:round;transform-origin:250px 190px;transform-box:view-box;animation:control-switch 5s ease-in-out infinite}.battery,.lamp,.ac-source,.filament,.ac-wave{stroke:#30394d;stroke-width:5;stroke-linecap:round}.battery{stroke-width:6}.lamp-nc{fill:#ffd95a;animation:lamp-nc 5s ease-in-out infinite}.lamp-no{fill:#eef1f6;animation:lamp-no 5s ease-in-out infinite}.filament,.ac-wave{fill:none}.ac-source{fill:#fff0a8}.lamp-rays line{stroke:#e0a527;stroke-width:5;stroke-linecap:round}.rays-nc{animation:rays-nc 5s ease-in-out infinite}.rays-no{opacity:0;animation:rays-no 5s ease-in-out infinite}.current{fill:none;stroke:#e0a527;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}.current-control{opacity:0;animation:current-control 5s ease-in-out infinite}.current-nc{opacity:.28;animation:current-nc 5s ease-in-out infinite}.current-no{opacity:0;animation:current-no 5s ease-in-out infinite}.state-title{fill:#172033;font-size:23px;font-weight:800}.state-path{fill:#3563e9;font-size:20px;font-weight:800}.state-resting{animation:state-resting 5s ease-in-out infinite}.state-energized{opacity:0;animation:state-energized 5s ease-in-out infinite}.terminal-nc{animation:terminal-nc 5s ease-in-out infinite}.terminal-no{animation:terminal-no 5s ease-in-out infinite}
+@keyframes arm{0%,40%,100%{transform:rotate(0)}50%,90%{transform:rotate(43.5deg)}}@keyframes control-switch{0%,40%,100%{transform:rotate(0)}50%,90%{transform:rotate(20.5deg)}}@keyframes coil{0%,40%,100%{fill:#fff7d1}50%,90%{fill:#bcd0ff}}@keyframes terminal-nc{0%,40%,100%{fill:#3563e9}50%,90%{fill:#30394d}}@keyframes terminal-no{0%,40%,100%{fill:#30394d}50%,90%{fill:#3563e9}}@keyframes lamp-nc{0%,40%,100%{fill:#ffd95a}50%,90%{fill:#eef1f6}}@keyframes lamp-no{0%,40%,100%{fill:#eef1f6}50%,90%{fill:#ffd95a}}@keyframes rays-nc{0%,40%,100%{opacity:1}50%,90%{opacity:0}}@keyframes rays-no{0%,40%,100%{opacity:0}50%,90%{opacity:1}}@keyframes current-control{0%,40%,100%{opacity:0}50%,90%{opacity:.28}}@keyframes current-nc{0%,40%,100%{opacity:.28}50%,90%{opacity:0}}@keyframes current-no{0%,40%,100%{opacity:0}50%,90%{opacity:.28}}@keyframes state-resting{0%,40%,100%{opacity:1}46%,94%{opacity:0}}@keyframes state-energized{0%,40%,100%{opacity:0}50%,90%{opacity:1}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@keyframes arm{0%,40%,100%{transform:rotate(0)}50%,90%{transform:rotate(45.9deg)}}
+</style>
+  <g id="state-labels" transform="translate(-214 5)">
+    <g class="state-resting">
+      <text class="state-title" x="550" y="42" text-anchor="middle" style="white-space: pre;">Stan spoczynkowy</text>
+      <text class="state-path" x="550" y="73" text-anchor="middle" style="white-space: pre;">COM ↔ NC</text>
+    </g>
+    <g class="state-energized">
+      <text class="state-title" x="550" y="42" text-anchor="middle" style="white-space: pre;">Stan załączony</text>
+      <text class="state-path" x="550" y="73" text-anchor="middle" style="white-space: pre;">COM ↔ NO</text>
+    </g>
+  </g>
+  <rect class="body" x="380" y="235" width="360" height="230" rx="18"/>
+  <g id="control-circuit">
+    <path class="wire" d="M80 398V190H250 M330 190H500V287 M500 365V500H80V444"/>
+    <path class="current current-control" d="M80 398V190H250 M330 190H500V287 M500 365V500H80V444"/>
+    <circle class="switch-terminal" cx="250" cy="190" r="8"/>
+    <circle class="switch-terminal" cx="330" cy="190" r="8"/>
+    <line class="control-switch" x1="250" y1="190" x2="325" y2="162"/>
+    <line class="wire" x1="80" y1="398" x2="80" y2="414"/>
+    <line class="battery" x1="44" y1="414" x2="116" y2="414"/>
+    <line class="battery" x1="58" y1="444" x2="102" y2="444"/>
+    <text class="polarity" x="121" y="407" style="white-space: pre;">+</text>
+    <text class="polarity" x="109" y="466" style="white-space: pre;">−</text>
+  </g>
+  <rect class="coil-core" x="420" y="287" width="160" height="78" rx="8" style="stroke: rgb(0, 0, 0);"/>
+  <path class="mechanical-link" d="M 580 326 L 622.476 326.232"/>
+  <text class="terminal-label" x="564.263" y="263" style="white-space: pre; font-size: 24px;">NC</text>
+  <text class="terminal-label" x="654.449" y="264.404" style="white-space: pre; font-size: 24px;">NO</text>
+  <text class="terminal-label" x="581.082" y="440.105" style="white-space: pre; font-size: 24px;">COM</text>
+  <circle class="terminal terminal-nc" cx="610" cy="285" r="9"/>
+  <circle class="terminal terminal-no" cx="700" cy="285" r="9"/>
+  <circle class="terminal" cx="650" cy="400" r="9"/>
+  <line class="arm" x1="650" y1="400" x2="610" y2="294" style="transform-origin: 650px 400px;"/>
+  <path class="wire" d="M 610 276 L 610 155 M 610 65 L 610 42 L 1000 42 L 1000 247.69 M 1000 350.978 L 1000 520 L 650 520 L 650 409 M 700 276 L 700 190 L 800 190 L 800 155 M 800 65 L 800 42" style=""/>
+  <path class="current current-nc" d="M610 276V155 M610 65V42H1000V250 M1000 370V520H650V409"/>
+  <path class="current current-no" d="M700 276V190H800V155 M800 65V42H1000V250 M1000 370V520H650V409"/>
+  <circle class="lamp lamp-nc" cx="610" cy="110" r="45"/>
+  <path class="filament" d="M580 80L640 140M640 80L580 140"/>
+  <line x1="610" y1="48" x2="610" y2="25"/>
+  <line x1="564" y1="64" x2="548" y2="47"/>
+  <line x1="656" y1="64" x2="672" y2="47"/>
+  <circle class="lamp lamp-no" cx="800" cy="110" r="45"/>
+  <path class="filament" d="M770 80L830 140M830 80L770 140"/>
+  <line x1="800" y1="48" x2="800" y2="25"/>
+  <line x1="754" y1="64" x2="738" y2="47"/>
+  <line x1="846" y1="64" x2="862" y2="47"/>
+  <circle class="ac-source" cx="1000" cy="299.841" r="50"/>
+  <path class="coil-winding" d="M 981.272 302.664 C 981.272 284.664 999.272 284.664 999.272 302.664 C 999.272 320.664 1017.27 320.664 1017.27 302.664" style="fill-rule: nonzero; stroke: rgb(0, 0, 0);"/>
+  <polyline style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 6px;" points="448.708 365.18 545.026 286.708"/>
+</svg>

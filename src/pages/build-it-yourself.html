@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Zbuduj sam — Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a class="active" href="build-it-yourself.html" aria-current="page" data-i18n="navBuild"></a><a href="configure-yourself.html" data-i18n="navConfigure"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div></header>
+  <main>
+    <section class="page-intro"><p class="eyebrow" data-i18n="buildEyebrow"></p><h1 data-i18n="buildTitle"></h1><p class="lead" data-i18n="buildLead"></p></section>
+    <section class="build-sections build-components" data-ordered-sections aria-label="Etapy budowy" data-i18n-aria-label="plannedSectionsLabel">
+      <details class="accordion-section" data-section-order="1">
+        <summary class="section-heading"><span>01</span><h2 data-i18n="buildDimensionsTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide">
+          <p data-i18n="dimensionsIntro1"></p>
+          <p data-i18n="dimensionsIntro2"></p>
+
+          <h3 data-i18n="isoTitle"></h3>
+          <p data-i18n="isoDescription"></p>
+
+          <h4 data-i18n="differenceTitle"></h4>
+          <p data-i18n="differenceText"></p>
+          <p class="dimension-highlight"><strong>G1 ≠ Ø25,4 mm</strong><span data-i18n="g1ActualDiameter"></span></p>
+
+          <div class="table-scroll">
+            <table>
+              <caption data-i18n="threadTableCaption"></caption>
+              <thead><tr><th scope="col" data-i18n="threadColumn"></th><th scope="col" data-i18n="nominalColumn"></th><th scope="col" data-i18n="outerDiameterColumn"></th></tr></thead>
+              <tbody>
+                <tr><td>G1/8</td><td>1/8&quot;</td><td>≈ 9,73 mm</td></tr>
+                <tr><td>G1/4</td><td>1/4&quot;</td><td>≈ 13,16 mm</td></tr>
+                <tr><td>G3/8</td><td>3/8&quot;</td><td>≈ 16,66 mm</td></tr>
+                <tr><td>G1/2</td><td>1/2&quot;</td><td>≈ 20,96 mm</td></tr>
+                <tr><td>G3/4</td><td>3/4&quot;</td><td>≈ 26,44 mm</td></tr>
+                <tr class="featured-row"><td><strong>G1</strong></td><td><strong>1&quot;</strong></td><td><strong>≈ 33,25 mm</strong></td></tr>
+                <tr><td>G1 1/4</td><td>1 1/4&quot;</td><td>≈ 41,91 mm</td></tr>
+                <tr><td>G1 1/2</td><td>1 1/2&quot;</td><td>≈ 47,80 mm</td></tr>
+                <tr><td>G2</td><td>2&quot;</td><td>≈ 59,61 mm</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 data-i18n="g1ExampleTitle"></h4>
+          <p data-i18n="g1ExampleIntro"></p>
+          <ul>
+            <li><span data-i18n="externalDiameterLabel"></span>: <strong>≈ 33,25 mm</strong></li>
+            <li><span data-i18n="threadCountLabel"></span>: <strong>11 TPI</strong></li>
+            <li><span data-i18n="pitchLabel"></span>: <strong>≈ 2,309 mm</strong></li>
+            <li><span data-i18n="threadAngleLabel"></span>: <strong>55°</strong></li>
+            <li><span data-i18n="threadTypeLabel"></span>: <strong data-i18n="parallelThread"></strong></li>
+          </ul>
+          <p data-i18n="g1Measurement"></p>
+          <aside class="guide-note"><strong data-i18n="sealingTitle"></strong><p data-i18n="sealingText"></p></aside>
+          <aside class="literary-note"><strong data-i18n="isoAsideTitle"></strong><p data-i18n="isoAsideText"></p></aside>
+
+          <h3 data-i18n="dnTitle"></h3>
+          <p data-i18n="dnDescription"></p>
+          <p data-i18n="dnClassDescription"></p>
+          <aside class="guide-note"><strong>DN25</strong><p data-i18n="dn25Explanation"></p></aside>
+          <p data-i18n="dnVariation"></p>
+          <p data-i18n="dnIdOdText"></p>
+          <h4 data-i18n="dnNpsTitle"></h4>
+          <p data-i18n="dnNpsText"></p>
+
+          <p class="guide-caveat" data-i18n="dnToExampleTransition"></p>
+          <h3 data-i18n="gsdDimensionTitle"></h3>
+          <p data-i18n="gsdDimensionIntro"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/gsd8-r-dimensions.png" width="690" height="720" loading="lazy" alt="Tabela wymiarów wodomierza BMETERS GSD8-R dla DN15 i DN20" data-i18n-alt="gsdDimensionAlt">
+            <figcaption><span data-i18n="gsdDimensionCaption"></span> <a href="https://bmeters.pl/wp-content/uploads/2025/05/GSD8-R_karta_produktowa_A4_13_07_2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="gsdDimensionSource"></a></figcaption>
+          </figure>
+          <p data-i18n="gsdDimensionExplanation"></p>
+          <p class="dimension-highlight"><strong>DN20 / G1 / Ø≈33,25 mm</strong><span data-i18n="gsdCaliperMeasurement"></span></p>
+
+          <h3 data-i18n="mainRuleTitle"></h3>
+          <p class="dimension-highlight"><strong data-i18n="mainRuleFormula"></strong><span data-i18n="mainRuleText"></span></p>
+          <p data-i18n="measurementAdvice"></p>
+        </article>
+      </details>
+      <details class="accordion-section" data-section-order="2">
+        <summary class="section-heading"><span>02</span><h2 data-i18n="buildMeterTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide meter-guide">
+          <p data-i18n="meterIntro1"></p>
+          <p data-i18n="meterIntro2"></p>
+          <p data-i18n="meterScope"></p>
+
+          <h3 data-i18n="meterDifferenceTitle"></h3>
+          <p data-i18n="meterDifferenceText"></p>
+
+          <h3 data-i18n="meterTypesTitle"></h3>
+          <p data-i18n="meterTypesIntro"></p>
+          <ol class="selection-checklist meter-type-list">
+            <li><strong data-i18n="meterTypeTurbineTitle"></strong><span data-i18n="meterTypeTurbineText"></span></li>
+            <li><strong data-i18n="meterTypePositiveTitle"></strong><span data-i18n="meterTypePositiveText"></span></li>
+            <li><strong data-i18n="meterTypeMagneticTitle"></strong><span data-i18n="meterTypeMagneticText"></span></li>
+            <li><strong data-i18n="meterTypeUltrasonicTitle"></strong><span data-i18n="meterTypeUltrasonicText"></span></li>
+            <li><strong data-i18n="meterTypeCoriolisTitle"></strong><span data-i18n="meterTypeCoriolisText"></span></li>
+          </ol>
+          <p class="table-note"><a class="text-link" href="https://en.wikipedia.org/wiki/Positive_displacement_meter" target="_blank" rel="noopener noreferrer" data-i18n="positiveDisplacementArticle"></a></p>
+          <p class="guide-caveat" data-i18n="meterTypesConclusion"></p>
+
+          <h3 data-i18n="mediumTitle"></h3>
+          <p data-i18n="mediumText"></p>
+          <h4 data-i18n="waterTemperatureTitle"></h4>
+          <p data-i18n="waterTemperatureText"></p>
+          <p class="guide-caveat" data-i18n="potableWaterCaveat"></p>
+
+          <h3 data-i18n="pulseTitle"></h3>
+          <p data-i18n="pulseDescription"></p>
+          <p class="dimension-highlight"><strong>≥ 1 imp./l</strong><span data-i18n="pulseRule"></span></p>
+          <p class="dimension-highlight"><strong>5 V</strong><span data-i18n="fiveVoltRule"></span></p>
+          <p class="guide-caveat" data-i18n="pulseAccuracyCaveat"></p>
+          <aside class="guide-note"><strong data-i18n="signalCheckTitle"></strong><p data-i18n="signalCheckText"></p></aside>
+
+          <h4 data-i18n="contactBounceTitle"></h4>
+          <p data-i18n="contactBounceText"></p>
+          <p data-i18n="contactBounceEffect"></p>
+          <figure class="guide-figure contact-bounce-chart">
+            <svg viewBox="0 0 900 430" role="img" aria-labelledby="bounce-chart-title bounce-chart-description">
+              <title id="bounce-chart-title" data-i18n="contactBounceFigureTitle"></title>
+              <desc id="bounce-chart-description" data-i18n="contactBounceFigureDescription"></desc>
+              <defs>
+                <marker id="bounce-axis-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                </marker>
+                <marker id="bounce-time-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                </marker>
+              </defs>
+              <line class="bounce-reference" x1="105" y1="82" x2="830" y2="82"></line>
+              <line class="bounce-boundary" x1="300" y1="42" x2="300" y2="335"></line>
+              <line class="bounce-boundary" x1="500" y1="42" x2="500" y2="335"></line>
+              <line class="bounce-axis" x1="105" y1="335" x2="840" y2="335" marker-end="url(#bounce-axis-arrow)"></line>
+              <line class="bounce-axis" x1="105" y1="335" x2="105" y2="35" marker-end="url(#bounce-axis-arrow)"></line>
+              <path class="bounce-waveform" d="M105 335 H280 C294 335 298 300 302 220 C306 142 310 96 320 82 L340 275 L360 104 L380 315 L400 82 L420 255 L440 84 L462 222 L478 96 Q485 82 505 82 H770"></path>
+              <line class="bounce-duration" x1="310" y1="385" x2="490" y2="385" marker-start="url(#bounce-time-arrow)" marker-end="url(#bounce-time-arrow)"></line>
+              <text class="bounce-label bounce-label-y" x="30" y="215" transform="rotate(-90 30 215)" data-i18n="contactBounceVoltageAxis"></text>
+              <text class="bounce-label bounce-label-x" x="710" y="375" data-i18n="contactBounceTimeAxis"></text>
+              <text class="bounce-state-label" x="92" y="88" text-anchor="end" data-i18n="contactBounceHighState"></text>
+              <text class="bounce-state-label" x="92" y="341" text-anchor="end" data-i18n="contactBounceLowState"></text>
+              <text class="bounce-duration-label" x="400" y="415" text-anchor="middle" data-i18n="contactBounceDuration"></text>
+            </svg>
+            <figcaption data-i18n="contactBounceFigureCaption"></figcaption>
+          </figure>
+          <p class="guide-caveat" data-i18n="contactBounceFiltering"></p>
+          <p data-i18n="contactBounceAutolejek"></p>
+
+          <h3 data-i18n="bmetersTitle"></h3>
+          <p data-i18n="bmetersIntro"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/bmetersgsd8-r.png" width="1672" height="941" loading="lazy" alt="Wodomierz BMETERS GSD8-R z nadajnikiem impulsów" data-i18n-alt="bmetersMeterAlt">
+            <figcaption><span data-i18n="bmetersMeterCaption"></span> <a href="https://bmeters.pl/produkt/gsd8-r/" target="_blank" rel="noopener noreferrer" data-i18n="bmetersProductLink"></a></figcaption>
+          </figure>
+
+          <h4 data-i18n="flowSymbolsTitle"></h4>
+          <p data-i18n="flowSymbolsIntro"></p>
+          <dl class="flow-definitions">
+            <div><dt>Q4</dt><dd><strong data-i18n="q4Title"></strong><span data-i18n="q4Text"></span></dd></div>
+            <div><dt>Q3</dt><dd><strong data-i18n="q3Title"></strong><span data-i18n="q3Text"></span></dd></div>
+            <div><dt>Q2</dt><dd><strong data-i18n="q2Title"></strong><span data-i18n="q2Text"></span></dd></div>
+            <div><dt>Q1</dt><dd><strong data-i18n="q1Title"></strong><span data-i18n="q1Text"></span></dd></div>
+          </dl>
+          <figure class="guide-figure guide-figure-contain guide-figure-small">
+            <img src="assets/buildityourself/bmetersq2.png" width="636" height="479" loading="lazy" alt="Oznaczenie Q3 4,0 na tarczy wodomierza BMETERS GSD8-R" data-i18n-alt="bmetersQAlt">
+            <figcaption data-i18n="bmetersQCaption"></figcaption>
+          </figure>
+          <p data-i18n="q3Example"></p>
+          <p data-i18n="directFlowExample"></p>
+
+          <h4 data-i18n="mountingTitle"></h4>
+          <p data-i18n="mountingIntro"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/allowedpossitions.png" width="981" height="404" loading="lazy" alt="Cztery przykładowe pozycje montażowe wodomierza według instrukcji BMETERS" data-i18n-alt="allowedPositionsAlt">
+            <figcaption><span data-i18n="allowedPositionsCaption"></span> <a href="https://www.bmeters.com/wp-content/uploads/2023/07/MAN025_quick-user-guide-12-lingue.pdf" target="_blank" rel="noopener noreferrer" data-i18n="installationManualLink"></a></figcaption>
+          </figure>
+          <p data-i18n="arrowExplanation"></p>
+          <ol class="orientation-list">
+            <li><strong>H↑</strong><span data-i18n="orientationUp"></span></li>
+            <li><strong>H→</strong><span data-i18n="orientationSide"></span></li>
+            <li><strong>H↓</strong><span data-i18n="orientationDown"></span></li>
+            <li><strong>V↑</strong><span data-i18n="orientationVertical"></span></li>
+          </ol>
+          <p class="guide-caveat" data-i18n="verticalFlowRule"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/bmetersrh.png" width="1198" height="592" loading="lazy" alt="Oznaczenia R100-H ze strzałką w górę oraz R50-VH ze strzałką w prawo" data-i18n-alt="bmetersRhAlt">
+            <figcaption data-i18n="bmetersRhCaption"></figcaption>
+          </figure>
+          <p data-i18n="bmetersMountingVariants"></p>
+          <p data-i18n="udTeaser"></p>
+
+          <h4 data-i18n="minimumFlowTitle"></h4>
+          <p data-i18n="rDefinition"></p>
+          <p class="formula-card"><code>R = Q3 / Q1</code><span data-i18n="formulaTherefore"></span><code>Q1 = Q3 / R</code></p>
+          <div class="table-scroll">
+            <table class="calculation-table">
+              <caption data-i18n="q1TableCaption"></caption>
+              <thead><tr><th scope="col" data-i18n="positionColumn"></th><th scope="col">R</th><th scope="col" data-i18n="calculationColumn"></th><th scope="col">Q1</th></tr></thead>
+              <tbody>
+                <tr><td>H↑</td><td>100</td><td>4,0 / 100</td><td><strong>0,04 m³/h = 40 l/h</strong></td></tr>
+                <tr><td>V↑ / H→</td><td>50</td><td>4,0 / 50</td><td><strong>0,08 m³/h = 80 l/h</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="guide-caveat" data-i18n="q1MountingConclusion"></p>
+
+          <h4 data-i18n="measurementErrorTitle"></h4>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/krzywabłędów.png" width="751" height="443" loading="lazy" alt="Przykładowa krzywa błędu wodomierza między Q1 i Q4" data-i18n-alt="errorCurveAlt">
+            <figcaption><span data-i18n="errorCurveCaption"></span> <a href="https://bmeters.pl/wp-content/uploads/2026/08/Krzywe_bledow_wodomierzy_06_08_2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="errorCurveLink"></a></figcaption>
+          </figure>
+          <p data-i18n="errorCurveText"></p>
+
+          <h3 data-i18n="yfTitle"></h3>
+          <p data-i18n="yfDescription"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/seayf-g1-rotated.png" width="1672" height="941" loading="lazy" alt="Przepływomierz SEA YF-G1 z przewodem i trzyżyłowym złączem" data-i18n-alt="meterWiringYfAlt">
+            <figcaption data-i18n="meterWiringYfCaption"></figcaption>
+          </figure>
+          <div class="table-scroll">
+            <table class="spec-table yf-spec-table">
+              <caption data-i18n="yfTableCaption"></caption>
+              <tbody>
+                <tr><th scope="row" data-i18n="yfSupplyLabel"></th><td>DC 5–24 V</td></tr>
+                <tr><th scope="row" data-i18n="yfCurrentLabel"></th><td>15 mA (DC 5 V)</td></tr>
+                <tr><th scope="row" data-i18n="yfFlowRangeLabel"></th><td>1–100 l/min, ±5%</td></tr>
+                <tr><th scope="row" data-i18n="yfTemperatureLabel"></th><td>80°C</td></tr>
+                <tr><th scope="row" data-i18n="yfPressureLabel"></th><td>1,75 MPa</td></tr>
+                <tr><th scope="row" data-i18n="yfDutyLabel"></th><td>50% ±10%</td></tr>
+                <tr><th scope="row" data-i18n="yfPulseLabel"></th><td><code>f [Hz] = 1 × Q [l/min] ±3%</code></td></tr>
+                <tr class="featured-row"><th scope="row" data-i18n="yfResolutionLabel"></th><td><strong>≈ 60 imp./l</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p data-i18n="yfCalculation"></p>
+          <p class="table-note"><a class="text-link" href="https://www.plexishop.it/pdf/Misuratore_di_flusso_per_liquidi_YF-G1_DN25.pdf" target="_blank" rel="noopener noreferrer" data-i18n="yfDatasheetLink"></a></p>
+
+          <h4 data-i18n="yfCalibrationTitle"></h4>
+          <p data-i18n="yfCalibrationText"></p>
+          <p class="guide-caveat" data-i18n="yfVariantCaveat"></p>
+          <p data-i18n="yfCalibrationMethodIntro"></p>
+          <ol>
+            <li data-i18n="yfCalibrationStep1"></li>
+            <li data-i18n="yfCalibrationStep2"></li>
+            <li data-i18n="yfCalibrationStep3"></li>
+            <li data-i18n="yfCalibrationStep4"></li>
+          </ol>
+          <p class="dimension-highlight"><strong data-i18n="yfConclusionTitle"></strong><span data-i18n="yfConclusionText"></span></p>
+
+          <h3 data-i18n="selectionTitle"></h3>
+          <ol class="selection-checklist">
+            <li><strong data-i18n="selectionMediumTitle"></strong><span data-i18n="selectionMediumText"></span></li>
+            <li><strong data-i18n="selectionFlowTitle"></strong><span data-i18n="selectionFlowText"></span></li>
+            <li><strong data-i18n="selectionTemperatureTitle"></strong><span data-i18n="selectionTemperatureText"></span></li>
+            <li><strong data-i18n="selectionPulseTitle"></strong><span data-i18n="selectionPulseText"></span></li>
+            <li><strong data-i18n="selectionBounceTitle"></strong><span data-i18n="selectionBounceText"></span></li>
+            <li><strong data-i18n="selectionInstallationTitle"></strong><span data-i18n="selectionInstallationText"></span></li>
+          </ol>
+          <p class="key-rule" data-i18n="meterMainRule"></p>
+          <p class="dimension-highlight"><strong data-i18n="meterConclusionTitle"></strong><span data-i18n="meterConclusionText"></span></p>
+          <p class="dimension-highlight"><strong data-i18n="meterInterferenceTitle"></strong><span data-i18n="meterInterferenceText"></span></p>
+        </article>
+      </details>
+      <details class="accordion-section" data-section-order="4">
+        <summary class="section-heading"><span>04</span><h2 data-i18n="buildValveTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide valve-guide">
+          <h3 data-i18n="valveWhenTitle"></h3>
+          <p data-i18n="valveWhenText"></p>
+
+          <h3 data-i18n="valveParametersTitle"></h3>
+          <p data-i18n="valveParametersIntro"></p>
+          <ul>
+            <li data-i18n="valveVoltageItem"></li>
+            <li data-i18n="valveCurrentItem"></li>
+            <li data-i18n="valveSupplyItem"></li>
+            <li data-i18n="valveStateItem"></li>
+            <li data-i18n="valveDutyItem"></li>
+          </ul>
+          <p class="guide-caveat" data-i18n="valveDutyWarning"></p>
+
+          <h3 data-i18n="valvePulseTitle"></h3>
+          <p data-i18n="valvePulseText"></p>
+          <p class="guide-caveat" data-i18n="valvePulseCaveat"></p>
+
+          <h3 data-i18n="valveAutolejekTitle"></h3>
+          <p class="dimension-highlight"><strong>6–32 V DC</strong><span data-i18n="valveInputVoltageRange"></span></p>
+          <p data-i18n="valveAutolejekDc"></p>
+          <p data-i18n="valveAutolejekAc"></p>
+          <h4 data-i18n="valveCurrentLimitsTitle"></h4>
+          <p data-i18n="valveCurrentLimitsIntro"></p>
+          <div class="table-scroll">
+            <table>
+              <caption data-i18n="valveCurrentTableCaption"></caption>
+              <thead><tr><th scope="col" data-i18n="valveVoltageColumn"></th><th scope="col" data-i18n="valveMaximumCurrentColumn"></th><th scope="col" data-i18n="valveMaximumPowerColumn"></th></tr></thead>
+              <tbody>
+                <tr><td>6 V</td><td><strong>3 A</strong></td><td>18 W</td></tr>
+                <tr><td>12 V</td><td><strong>3 A</strong></td><td>36 W</td></tr>
+                <tr><td>18 V</td><td><strong>2,33 A</strong></td><td>42 W</td></tr>
+                <tr><td>24 V</td><td><strong>1,75 A</strong></td><td>42 W</td></tr>
+                <tr><td>32 V</td><td><strong>1,31 A</strong></td><td>42 W</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="guide-caveat" data-i18n="valveCurrentLimitsCaveat"></p>
+
+          <h3 data-i18n="valveInductionTitle"></h3>
+          <p data-i18n="valveInductionText"></p>
+          <p><span data-i18n="valveVoltageSpikeIntro"></span> <strong>|u| = L · |di/dt|</strong>. <span data-i18n="valveVoltageSpikeEffect"></span></p>
+          <aside class="guide-note"><strong data-i18n="valveFlybackTitle"></strong><p data-i18n="valveFlybackText"></p></aside>
+          <p data-i18n="valveBuiltInDiodeText"></p>
+          <p class="guide-caveat" data-i18n="valveAcSuppressionText"></p>
+          <aside class="guide-note"><strong data-i18n="valveSafetyTitle"></strong><p data-i18n="valveSafetyText"></p></aside>
+        </article>
+      </details>
+      <details class="accordion-section" data-section-order="5"><summary class="section-heading"><span>05</span><h2 data-i18n="buildPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder"></p></div></details>
+      <details class="accordion-section" data-section-order="6">
+        <summary class="section-heading"><span>06</span><h2 data-i18n="buildCombustionPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide combustion-pump-guide">
+          <p data-i18n="combustionPumpIntro"></p>
+
+          <h3 data-i18n="combustionPumpRelayTitle"></h3>
+          <p data-i18n="combustionPumpRelayText"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/relay2Img.png" width="1060" height="299" loading="lazy" alt="Złącze RELAY2 ze stykami COM, NC i NO na płytce sterownika Autolejek" data-i18n-alt="combustionPumpRelayImageAlt">
+            <figcaption data-i18n="combustionPumpRelayImageCaption"></figcaption>
+          </figure>
+          <aside class="guide-note"><strong>COM / NC / NO</strong><p data-i18n="combustionPumpContactsText"></p></aside>
+          <p class="guide-caveat" data-i18n="combustionPumpLogicWarning"></p>
+
+          <h3 data-i18n="combustionPumpAdviceTitle"></h3>
+          <ol class="selection-checklist">
+            <li><strong data-i18n="combustionPumpAdviceFirstTitle"></strong><span data-i18n="combustionPumpAdviceFirstText"></span></li>
+            <li><strong data-i18n="combustionPumpAdviceDelayTitle"></strong><span data-i18n="combustionPumpAdviceDelayText"></span></li>
+          </ol>
+
+          <h3 data-i18n="combustionPumpOtherTitle"></h3>
+          <p data-i18n="combustionPumpOtherIntro"></p>
+          <ul>
+            <li data-i18n="combustionPumpFuelSolenoid"></li>
+            <li data-i18n="combustionPumpElectronicInput"></li>
+            <li data-i18n="combustionPumpOpenCircuit"></li>
+          </ul>
+          <aside class="guide-note"><strong data-i18n="combustionPumpSafetyTitle"></strong><p data-i18n="combustionPumpSafetyText"></p></aside>
+
+          <h3 data-i18n="combustionPumpSwitchTestTitle"></h3>
+          <p data-i18n="combustionPumpSwitchTestIntro"></p>
+          <aside class="guide-note"><strong data-i18n="combustionPumpProbePointsTitle"></strong><p data-i18n="combustionPumpProbePointsText"></p></aside>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/pumpswitchon.jpg" width="4080" height="2296" loading="lazy" alt="Pomiar przełącznika pompy ustawionego w pozycji ON — multimetr wskazuje OL, czyli brak przewodzenia" data-i18n-alt="combustionPumpSwitchOnAlt">
+            <figcaption data-i18n="combustionPumpSwitchOnCaption"></figcaption>
+          </figure>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/pumpswitchoff.jpg" width="4080" height="2296" loading="lazy" alt="Pomiar przełącznika pompy ustawionego w pozycji OFF — multimetr wskazuje niską rezystancję i potwierdza przewodzenie" data-i18n-alt="combustionPumpSwitchOffAlt">
+            <figcaption data-i18n="combustionPumpSwitchOffCaption"></figcaption>
+          </figure>
+          <p class="guide-caveat" data-i18n="combustionPumpSwitchConclusion"></p>
+          <aside class="guide-note"><strong>COM + NC</strong><p data-i18n="combustionPumpExampleContacts"></p></aside>
+        </article>
+      </details>
+      <details class="accordion-section" data-section-order="3">
+        <summary class="section-heading"><span>03</span><h2 data-i18n="buildRelayTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <article class="text-block accordion-content technical-guide relay-guide">
+          <p data-i18n="relayIntro"></p>
+          <p data-i18n="relayPurpose"></p>
+
+          <h3 data-i18n="relayConstructionTitle"></h3>
+          <p data-i18n="relayConstructionText"></p>
+          <ul>
+            <li data-i18n="relayCoilItem"></li>
+            <li data-i18n="relayArmatureItem"></li>
+            <li data-i18n="relayContactsItem"></li>
+          </ul>
+          <aside class="guide-note"><strong data-i18n="relaySeparationTitle"></strong><p data-i18n="relaySeparationText"></p></aside>
+
+          <h3 data-i18n="relayContactsTitle"></h3>
+          <dl class="flow-definitions">
+            <div><dt>COM</dt><dd><strong data-i18n="relayComTitle"></strong><span data-i18n="relayComText"></span></dd></div>
+            <div><dt>NC</dt><dd><strong data-i18n="relayNcTitle"></strong><span data-i18n="relayNcText"></span></dd></div>
+            <div><dt>NO</dt><dd><strong data-i18n="relayNoTitle"></strong><span data-i18n="relayNoText"></span></dd></div>
+          </dl>
+
+          <figure class="guide-figure relay-switch-animation">
+            <svg viewBox="0 0 1100 620" role="img" aria-labelledby="relay-animation-title relay-animation-description">
+              <title id="relay-animation-title" data-i18n="relayAnimationTitle"></title>
+              <desc id="relay-animation-description" data-i18n="relayAnimationDescription"></desc>
+
+              <g class="relay-state relay-state-resting" transform="translate(-214 5)">
+                <text class="relay-state-title" x="550" y="42" text-anchor="middle" data-i18n="relayAnimationResting"></text>
+                <text class="relay-state-path" x="550" y="73" text-anchor="middle">COM ↔ NC</text>
+              </g>
+              <g class="relay-state relay-state-energized" transform="translate(-214 5)">
+                <text class="relay-state-title" x="550" y="42" text-anchor="middle" data-i18n="relayAnimationEnergized"></text>
+                <text class="relay-state-path" x="550" y="73" text-anchor="middle">COM ↔ NO</text>
+              </g>
+
+              <rect class="relay-body" x="380" y="235" width="360" height="230" rx="18"></rect>
+              <g class="relay-control-circuit">
+                <path class="relay-wire" d="M80 398 V190 H250 M330 190 H500 V287 M500 365 V500 H80 V444"></path>
+                <path class="relay-current-path relay-current-path-control" d="M80 398 V190 H250 M330 190 H500 V287 M500 365 V500 H80 V444"></path>
+                <circle class="relay-switch-terminal" cx="250" cy="190" r="8"></circle>
+                <circle class="relay-switch-terminal" cx="330" cy="190" r="8"></circle>
+                <line class="relay-switch-blade" x1="250" y1="190" x2="325" y2="162"></line>
+                <line class="relay-wire" x1="80" y1="398" x2="80" y2="414"></line>
+                <line class="relay-battery-long" x1="44" y1="414" x2="116" y2="414"></line>
+                <line class="relay-battery-short" x1="58" y1="444" x2="102" y2="444"></line>
+                <text class="relay-polarity" x="121" y="407">+</text>
+                <text class="relay-polarity" x="109" y="466">−</text>
+              </g>
+
+              <g class="relay-coil">
+                <rect class="relay-coil-core" x="420" y="287" width="160" height="78" rx="8"></rect>
+                <polyline class="relay-coil-diagonal" points="448.708 365.18 545.026 286.708"></polyline>
+              </g>
+              <path class="relay-mechanical-link" d="M580 326 L622.476 326.232"></path>
+
+              <text class="relay-terminal-label" x="564.263" y="263">NC</text>
+              <text class="relay-terminal-label" x="654.449" y="264.404">NO</text>
+              <text class="relay-terminal-label" x="581.082" y="440.105">COM</text>
+              <circle class="relay-terminal relay-terminal-nc" cx="610" cy="285" r="9"></circle>
+              <circle class="relay-terminal relay-terminal-no" cx="700" cy="285" r="9"></circle>
+              <circle class="relay-terminal" cx="650" cy="400" r="9"></circle>
+              <line class="relay-arm" x1="650" y1="400" x2="610" y2="294"></line>
+
+              <g class="relay-load-circuit">
+                <path class="relay-wire" d="M610 276 L610 155 M610 65 L610 42 L1000 42 L1000 247.69 M1000 350.978 L1000 520 L650 520 L650 409 M700 276 L700 190 L800 190 L800 155 M800 65 L800 42"></path>
+                <path class="relay-current-path relay-current-path-nc" d="M610 276 V155 M610 65 V42 H1000 V250 M1000 370 V520 H650 V409"></path>
+                <path class="relay-current-path relay-current-path-no" d="M700 276 V190 H800 V155 M800 65 V42 H1000 V250 M1000 370 V520 H650 V409"></path>
+                <circle class="relay-lamp-bulb relay-lamp-nc" cx="610" cy="110" r="45"></circle>
+                <path class="relay-lamp-filament" d="M580 80 L640 140 M640 80 L580 140"></path>
+                <circle class="relay-lamp-bulb relay-lamp-no" cx="800" cy="110" r="45"></circle>
+                <path class="relay-lamp-filament" d="M770 80 L830 140 M830 80 L770 140"></path>
+                <circle class="relay-ac-source" cx="1000" cy="299.841" r="50"></circle>
+                <path class="relay-coil-winding relay-ac-wave-new" d="M981.272 302.664 C981.272 284.664 999.272 284.664 999.272 302.664 C999.272 320.664 1017.27 320.664 1017.27 302.664"></path>
+              </g>
+            </svg>
+            <div class="relay-animation-controls">
+              <button class="relay-toggle" type="button" data-relay-toggle aria-pressed="false">
+                <span class="relay-toggle-label-on" data-i18n="relayAnimationTurnOn"></span>
+                <span class="relay-toggle-label-off" data-i18n="relayAnimationTurnOff"></span>
+              </button>
+            </div>
+            <figcaption data-i18n="relayAnimationCaption"></figcaption>
+          </figure>
+
+          <h3 data-i18n="relayStatesTitle"></h3>
+          <p data-i18n="relayRestingText"></p>
+          <p data-i18n="relayEnergizedText"></p>
+          <p class="key-rule" data-i18n="relayNoVoltageRule"></p>
+
+          <h3 data-i18n="relaySelectionTitle"></h3>
+          <ul class="selection-checklist">
+            <li><strong data-i18n="relaySelectionCoilTitle"></strong><span data-i18n="relaySelectionCoilText"></span></li>
+            <li><strong data-i18n="relaySelectionContactTitle"></strong><span data-i18n="relaySelectionContactText"></span></li>
+            <li><strong data-i18n="relaySelectionLoadTitle"></strong><span data-i18n="relaySelectionLoadText"></span></li>
+            <li><strong data-i18n="relaySelectionProtectionTitle"></strong><span data-i18n="relaySelectionProtectionText"></span></li>
+          </ul>
+          <p class="guide-caveat" data-i18n="relaySafetyText"></p>
+        </article>
+      </details>
+      <details class="accordion-section" data-section-order="7"><summary class="section-heading"><span>07</span><h2 data-i18n="buildInstallationTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder"></p></div></details>
+    </section>
+  </main>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="site.js"></script>
+</body></html>

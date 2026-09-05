@@ -1,0 +1,43 @@
+{
+  "baseUrl": "https://autolejek.com",
+  "defaultLanguage": "pl",
+  "languages": ["pl", "en"],
+  "pages": [
+    {
+      "source": "index.html",
+      "output": "index.html",
+      "titleKey": "homePageTitle",
+      "descriptionKey": "homeLead"
+    },
+    {
+      "source": "about-project.html",
+      "output": "about-project.html",
+      "titleKey": "aboutPageTitle",
+      "descriptionKey": "aboutLead"
+    },
+    {
+      "source": "build-it-yourself.html",
+      "output": "build-it-yourself.html",
+      "titleKey": "buildPageTitle",
+      "descriptionKey": "buildLead"
+    },
+    {
+      "source": "configure-yourself.html",
+      "output": "configure-yourself.html",
+      "titleKey": "configurePageTitle",
+      "descriptionKey": "configureLead"
+    },
+    {
+      "source": "projects.html",
+      "output": "projects.html",
+      "titleKey": "projectsPageTitle",
+      "descriptionKey": "projectsLead"
+    },
+    {
+      "source": "contact.html",
+      "output": "contact.html",
+      "titleKey": "contactPageTitle",
+      "descriptionKey": "contactLead"
+    }
+  ]
+}
