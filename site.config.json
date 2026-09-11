@@ -28,6 +28,12 @@
       "descriptionKey": "configureLead"
     },
     {
+      "source": "manual.html",
+      "output": "manual.html",
+      "titleKey": "manualPageTitle",
+      "descriptionKey": "manualLead"
+    },
+    {
       "source": "projects.html",
       "output": "projects.html",
       "titleKey": "projectsPageTitle",

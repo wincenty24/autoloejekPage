@@ -1,0 +1,1226 @@
+<nav class="manual-toc" aria-label="Spis rozdziałów">
+<a href="#manual-przeczytaj-przed-użyciem" data-manual-chapter-link>Przeczytaj przed użyciem</a>
+<a href="#manual-przeznaczenie-urządzenia" data-manual-chapter-link>1. Przeznaczenie urządzenia</a>
+<a href="#manual-elementy-elektroniczne" data-manual-chapter-link>2. Elementy elektroniczne</a>
+<a href="#manual-elementy-panelu" data-manual-chapter-link>3. Elementy panelu</a>
+<a href="#manual-podstawowa-obsługa" data-manual-chapter-link>4. Podstawowa obsługa</a>
+<a href="#manual-menu-ustawień" data-manual-chapter-link>5. Menu ustawień</a>
+<a href="#manual-ustawienia-szczegółowe" data-manual-chapter-link>6. Ustawienia szczegółowe</a>
+<a href="#manual-komunikaty" data-manual-chapter-link>7. Komunikaty</a>
+<a href="#manual-ograniczenia-podczas-pracy" data-manual-chapter-link>8. Ograniczenia podczas pracy</a>
+<a href="#manual-zalecana-procedura-pierwszej-konfiguracji" data-manual-chapter-link>9. Zalecana procedura pierwszej konfiguracji</a>
+<a href="#manual-rozwiązywanie-problemów" data-manual-chapter-link>10. Rozwiązywanie problemów</a>
+<a href="#manual-uwagi-eksploatacyjne" data-manual-chapter-link>11. Uwagi eksploatacyjne</a>
+<a href="#manual-bezpieczeństwo-podczas-podłączania" data-manual-chapter-link>12. Bezpieczeństwo podczas podłączania</a>
+<a href="#manual-słowniczek" data-manual-chapter-link>13. Słowniczek</a>
+</nav>
+<div class="manual-chapters" data-manual-chapters>
+<details class="manual-chapter" id="manual-przeczytaj-przed-użyciem" open>
+  <summary class="manual-chapter-heading"><h2>Przeczytaj przed użyciem</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>Ta instrukcja jest przeznaczona dla operatorów Autolejka oraz osób, które podłączają sterownik do przepływomierza, czujnika zatrzymania, pompy, zaworu albo zewnętrznego przekaźnika. Przeczytaj ją przed pierwszym podłączeniem i przed pierwszym nalewaniem. Nieprawidłowe podłączenie albo konfiguracja może spowodować porażenie prądem, uszkodzenie instalacji, uszkodzenie przepływomierza albo przelanie cieczy.</p>
+<p><strong>OSTRZEŻENIE: napięcie elektryczne może porazić albo zabić.</strong> Przed otwarciem obudowy, oględzinami płytki, wymianą bezpieczników lub podłączaniem przewodów odłącz zasilanie. Nie dotykaj zacisków pod napięciem. Jeśli instalacja wymaga pracy z napięciem sieciowym 230 V, zleć podłączenie osobie z odpowiednimi uprawnieniami.</p>
+<p><strong>OSTRZEŻENIE: przeciążony przekaźnik może przegrzać przewody albo uszkodzić sterownik.</strong> Każdy przekaźnik może przełączać prąd maksymalnie 3 A. Dla pomp, zaworów lub innych odbiorników pobierających większy prąd zastosuj zewnętrzny przekaźnik albo stycznik dobrany do obciążenia.</p>
+<p><strong>UWAGA: zbyt duże napięcie może uszkodzić elektronikę.</strong> Napięcie wejściowe sterownika nie może przekroczyć 32 V DC. Sygnały przepływomierza i detektora nie mogą przekroczyć 5 V, a pobór prądu z każdego z tych złączy nie może przekroczyć 200 mA.</p>
+<p><strong>UWAGA: błędna konfiguracja może spowodować przelanie cieczy.</strong> Przed pierwszym nalewaniem ustaw kalibrację przepływomierza, maksymalny limit cieczy, aktywny przekaźnik oraz alarmy potrzebne w instalacji. Wykonaj próbę z małym limitem i obserwuj, czy sterownik zatrzymuje nalewanie poprawnie.</p>
+<p><strong>UWAGA: alarmy i detektor nie zastępują nadzoru operatora.</strong> Podczas pracy sprawdzaj przepływ, stan zbiornika i komunikaty na wyświetlaczu. Jeśli sterownik zatrzyma nalewanie alarmem, usuń przyczynę przed ponownym startem.</p>
+<h3 class="unnumbered" id="lista-kontrolna-przed-nalewaniem">Lista kontrolna przed nalewaniem</h3>
+<ol>
+<li><p>Sprawdź, czy zasilanie, przekaźniki, przepływomierz i detektor są podłączone zgodnie z ich dopuszczalnymi napięciami i prądami.</p></li>
+<li><p>Sprawdź, czy kalibracja odpowiada liczbie impulsów na litr podłączonego przepływomierza.</p></li>
+<li><p>Sprawdź, czy <code>Limit cieczy</code> nie przekracza pojemności zbiornika.</p></li>
+<li><p>Sprawdź, czy aktywny przekaźnik steruje właściwą pompą, zaworem albo przekaźnikiem zewnętrznym.</p></li>
+<li><p>Jeśli używasz detektora lub alarmów przepływu, sprawdź ich działanie na małym testowym nalewaniu.</p></li>
+</ol></div>
+</details>
+<details class="manual-chapter" id="manual-przeznaczenie-urządzenia">
+  <summary class="manual-chapter-heading"><h2>1. Przeznaczenie urządzenia</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>Autolejek jest sterownikiem nalewania cieczy opartym na przepływomierzu, wyświetlaczu OLED, klawiaturze 4x4 i dwóch wyjściach przekaźnikowych. Urządzenie pozwala ustawić limit w litrach, uruchomić nalewanie, obserwować aktualną objętość cieczy i przepływ oraz zatrzymać proces po osiągnięciu limitu albo po wykryciu sygnału z czujnika bezpieczeństwa.</p>
+<p>Sterownik obsługuje:</p>
+<ul>
+<li><p>pomiar nalanej objętości w litrach,</p></li>
+<li><p>limit maksymalnej pojemności zbiornika,</p></li>
+<li><p>kalibrację przepływomierza w impulsach na litr,</p></li>
+<li><p>wybór aktywnego przekaźnika,</p></li>
+<li><p>dodatkowy czujnik zatrzymania,</p></li>
+<li><p>filtr drgań styków dla przepływomierza i czujnika,</p></li>
+<li><p>wykrywanie zbyt małego i zbyt dużego przepływu,</p></li>
+<li><p>język polski i angielski.</p></li>
+</ul>
+<p>Instrukcja opisuje obsługę, konfigurację i podstawowe rozwiązywanie problemów. Nie zastępuje dokumentacji pompy, zaworu, przepływomierza, detektora ani zasad projektowania instalacji elektrycznej i hydraulicznej.</p></div>
+</details>
+<details class="manual-chapter" id="manual-elementy-elektroniczne">
+  <summary class="manual-chapter-heading"><h2>2. Elementy elektroniczne</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><h3 class="unnumbered" id="wyjścia-przekaźnikowe">2.1. Wyjścia przekaźnikowe</h3>
+<p><strong>OSTRZEŻENIE: zaciski przekaźników mogą przenosić niebezpieczne napięcie.</strong> Przed podłączaniem przewodów odłącz zasilanie sterownika oraz zasilanie obwodu, który ma być przełączany przez przekaźnik. Przy napięciu sieciowym 230 V użyj pomocy osoby z odpowiednimi uprawnieniami.</p>
+<p>Sterownik posiada dwa wbudowane przekaźniki. Przekaźnik nr 1 (P1) przełącza napięcie równe napięciu wejściowemu.</p>
+<p>Takie rozwiązanie jest pomocne, ponieważ użytkownik decyduje, jakie napięcie będzie przełączane przez przekaźnik. Przykład: użytkownik posiada elektrozawór o nominalnym napięciu 19 V DC. Aby zredukować koszty, wystarczy zastosować zasilacz 19 V. Kolejny przykład: maksymalny prąd, który może popłynąć przez pojedynczy przekaźnik, wynosi 3 A. Jeżeli użytkownik chce załączać pompę wody pobierającą maksymalnie 10 A przy 230 V, powinien zastosować zewnętrzny przekaźnik. W takiej sytuacji napięcie zasilania warto dobrać pod napięcie załączające przekaźnik. Wyjście przekaźnika nr 1 ma diodę, która ogranicza wysokie skoki napięcia. Zaleca się, aby elementy generujące skoki napięcia miały wbudowane obwody ochronne.</p>
+<p>Wyjście przekaźnika nr 2 jest niezależne od napięcia wejściowego. Użytkownik sam decyduje, jakie napięcie i jakie urządzenie podłączyć. Maksymalne obciążenie wyjścia to 230 V i 3 A.</p>
+<h4 class="unnumbered" id="podłączenie">2.1.1. Podłączenie</h4>
+<p><strong>OSTRZEŻENIE: nieprawidłowe podłączenie może porazić operatora albo uszkodzić urządzenie.</strong> Podłączaj przewody tylko przy odłączonym zasilaniu. Po podłączeniu sprawdź, czy żaden odsłonięty przewód nie może dotknąć innego zacisku ani obudowy.</p>
+<p>Przekaźnik nr 1:</p>
+<ul>
+<li><p><code>VOUT</code> - napięcie wyjściowe sterowane przez przekaźnik,</p></li>
+<li><p><code>GND</code> - masa.</p></li>
+</ul>
+<p>Przekaźnik nr 2:</p>
+<ul>
+<li><p><code>NO</code> - normally open - styk normalnie otwarty, zwierany z <code>COM</code> po podaniu napięcia na przekaźnik,</p></li>
+<li><p><code>COM</code> - common - styk wspólny przekaźnika,</p></li>
+<li><p><code>NC</code> - normally closed - styk normalnie zamknięty, zwarty z <code>COM</code> przy braku napięcia na przekaźniku.</p></li>
+</ul>
+<h3 class="unnumbered" id="bezpieczniki">2.2. Bezpieczniki</h3>
+<p><strong>OSTRZEŻENIE: wymiana bezpiecznika przy włączonym zasilaniu grozi porażeniem.</strong> Przed wymianą bezpiecznika odłącz zasilanie i sprawdź, dlaczego bezpiecznik zadziałał. Nie zastępuj bezpiecznika elementem o większym prądzie znamionowym.</p>
+<p>Sterownik ma 4 bezpieczniki. Bezpieczniki odpowiedzialne za przekaźniki nie mogą przepuszczać prądów większych niż 3 A. Każdy przekaźnik może przełączać prąd nie większy niż 3 A.</p>
+<p>Dwa kolejne bezpieczniki odpowiadają za zasilanie elektroniki na płytce:</p>
+<ul>
+<li><p>układ zasilania 5 V - 1 A,</p></li>
+<li><p>układ zasilania 3,3 V - 0,6 A.</p></li>
+</ul>
+<h3 class="unnumbered" id="napięcie-wejściowe">2.3. Napięcie wejściowe</h3>
+<p><strong>UWAGA: napięcie powyżej 32 V DC może uszkodzić sterownik.</strong> Przed podłączeniem zasilacza sprawdź jego napięcie wyjściowe.</p>
+<p>Maksymalne napięcie wejściowe to 32 V DC.</p>
+<h3 class="unnumbered" id="układ-zliczający">2.4. Układ zliczający</h3>
+<p><strong>UWAGA: sygnał powyżej 5 V może uszkodzić wejście zliczające.</strong> Przed podłączeniem przepływomierza sprawdź jego dokumentację i napięcie sygnału.</p>
+<p>Układ zliczający odpowiada za zliczanie impulsów elektrycznych.</p>
+<p>Napięcie sygnału nie może być większe niż 5 V. Układ jest zasilany napięciem 5 V. Maksymalny pobór prądu przez urządzenie nie może być większy niż 200 mA. Pin zliczający jest podciągnięty do zasilania 5 V rezystorem o oporze 2,2 kOhm.</p>
+<h3 class="unnumbered" id="złącze-detektora">2.5. Złącze detektora</h3>
+<p><strong>UWAGA: sygnał powyżej 5 V może uszkodzić wejście detektora.</strong> Przed podłączeniem czujnika zatrzymania sprawdź jego dokumentację i napięcie sygnału.</p>
+<p>Detektor, czyli czujnik zatrzymania, jest zewnętrznym urządzeniem służącym do natychmiastowego zatrzymania pracy systemu przez rozłączenie przekaźników. Złącze detektora jest zasilane napięciem 5 V. Maksymalny pobór prądu przez podłączone urządzenie nie może być większy niż 200 mA. Pin detektora jest podciągnięty do zasilania 5 V rezystorem o oporze 2,2 kOhm.</p></div>
+</details>
+<details class="manual-chapter" id="manual-elementy-panelu">
+  <summary class="manual-chapter-heading"><h2>3. Elementy panelu</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><h3 class="unnumbered" id="wyświetlacz">3.1. Wyświetlacz</h3>
+<p>Wyświetlacz OLED pokazuje ekran startowy, ekran główny, menu ustawień, komunikaty walidacyjne oraz informacje o bieżącym nalewaniu.</p>
+<h3 class="unnumbered" id="klawiatura">3.2. Klawiatura</h3>
+<p>Układ klawiatury:</p>
+<pre><code>[1][2][3][A]
+[4][5][6][B]
+[7][8][9][C]
+[F][0][E][D]</code></pre>
+<p>Znaki graficzne na klawiaturze mogą się różnić w zależności od wersji, więc wpisane litery w powyższym układzie stanowią tylko podpowiedź.</p>
+<p>Znaczenie klawiszy specjalnych:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zatwierdź / zapisz / start</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>B</code></td>
+<td style="text-align: left;">Reset albo przełączenie strony menu ustawień</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>C</code></td>
+<td style="text-align: left;">Wyczyść wpisywaną wartość</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wstecz do poprzedniego menu</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>E</code></td>
+<td style="text-align: left;">Wejście do ustawień z ekranu głównego</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>F</code></td>
+<td style="text-align: left;">Zmiana aktywnego limitu na ekranie głównym</td>
+</tr>
+</tbody>
+</table>
+<p>Klawisze <code>0</code>-<code>9</code> służą do wpisywania wartości liczbowych i wybierania pozycji w menu.</p></div>
+</details>
+<details class="manual-chapter" id="manual-podstawowa-obsługa">
+  <summary class="manual-chapter-heading"><h2>4. Podstawowa obsługa</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><h3 class="unnumbered" id="ekran-startowy">4.1. Ekran startowy</h3>
+<p>Zaraz po załączeniu zasilania na wyświetlaczu pojawi się poniższa grafika startowa. Istotną informacją jest wersja oprogramowania, np. <code>v1.0</code>. Po około 6 sekundach menu automatycznie zmieni się na ekran główny.</p>
+<p>Uwaga: aby nie czekać, można od razu przejść do ekranu głównego, naciskając dowolny przycisk na klawiaturze, np. <code>E</code> lub <code>3</code>.</p>
+<figure>
+<img src="assets/manual/images/controller-startup-screen.png" loading="lazy" style="width:82.0%" />
+<p><em>Ekran startowy</em></p>
+</figure>
+<p>Rys. 1. Ekran startowy z nazwą urządzenia i wersją oprogramowania.</p>
+<h3 class="unnumbered" id="ekran-główny">4.2. Ekran główny</h3>
+<p>Ekran główny służy do wpisywania żądanego litrażu w zbiorniku i załączania całego systemu.</p>
+<figure>
+<img src="assets/manual/images/dosing-volume-screen.png" loading="lazy" style="width:82.0%" />
+<p><em>Ekran główny</em></p>
+</figure>
+<p>Rys. 2. Ekran główny z limitem i ilością nalanej cieczy.</p>
+<p>Uwaga: jeżeli jest to pierwsze uruchomienie systemu, w pierwszej kolejności przejdź do rozdziału 6 <code>Ustawienia szczegółowe</code>, ponieważ źle skonfigurowane komponenty, np. wodomierz, będą skutkowały błędnym działaniem systemu.</p>
+<p><strong>UWAGA: zbyt duży limit może spowodować przelanie zbiornika.</strong> Przed startem upewnij się, że wpisany limit jest nie większy niż wolna pojemność zbiornika. Jeśli używasz detektora poziomu cieczy, sprawdź, czy jest włączony i działa poprawnie.</p>
+<ol>
+<li><p>Na ekranie głównym wpisz żądany limit w litrach przy użyciu klawiszy liczbowych <code>0</code>, <code>1</code>, ..., <code>9</code>.</p></li>
+<li><p>Naciśnij <code>A</code>, aby rozpocząć nalewanie.</p></li>
+<li><p>Podczas pracy obserwuj ekran roboczy opisany w podrozdziale 4.3 <code>Ekran nalewania</code>.</p></li>
+<li><p>Aby zatrzymać nalewanie ręcznie, naciśnij <code>A</code> albo <code>B</code>.</p></li>
+<li><p>Jeśli chcesz skasować wpisaną wartość określoną na wyświetlaczu jako <code>Limit</code>, naciśnij <code>C</code>.</p></li>
+<li><p>Na ekranie głównym naciśnij <code>B</code>, aby zresetować bieżący pomiar i wrócić do stanu początkowego. Na wyświetlaczu ten parametr określono jako <code>Nalano</code>.</p></li>
+</ol>
+<p>Po osiągnięciu limitu sterownik zatrzymuje nalewanie i pokazuje komunikat <code>Osiągnięto limit</code>.</p>
+<p>Uwaga: jeżeli parametr <code>Limit</code> będzie mniejszy lub równy parametrowi <code>Nalano</code>, wówczas system nie załączy przekaźników i pokaże odpowiednie ostrzeżenie.</p>
+<h3 class="unnumbered" id="ekran-nalewania">4.3. Ekran nalewania</h3>
+<p>Po rozpoczęciu nalewania sterownik pokazuje ekran roboczy. Jest to ekran, na którym można obserwować, jak przebiega nalewanie cieczy. Widoczne są na nim:</p>
+<ul>
+<li><p>ustawiony limit nalewania,</p></li>
+<li><p>aktualna ilość nalanej cieczy,</p></li>
+<li><p>procent wykorzystania limitu,</p></li>
+<li><p>bieżący przepływ cieczy w <code>L/min</code>,</p></li>
+<li><p>animowana kropla wody po prawej stronie ekranu.</p></li>
+</ul>
+<figure>
+<img src="assets/manual/images/dosing-progress-screen.png" loading="lazy" style="width:82.0%" />
+<p><em>Ekran nalewania</em></p>
+</figure>
+<p>Rys. 3. Ekran nalewania z limitem, nalaną ilością, procentem, przepływem i ikoną kropli wody.</p>
+<p>Na przykładowym ekranie:</p>
+<ul>
+<li><p><code>L: 100</code> oznacza liczbę litrów, którą użytkownik chce nalać,</p></li>
+<li><p><code>25</code> w drugim wierszu oznacza ilość cieczy, która do tej pory została nalana albo obliczona na podstawie impulsów z przepływomierza,</p></li>
+<li><p><code>%: 25</code> oznacza, że zbiornik jest napełniony w 25% względem ustawionego limitu,</p></li>
+<li><p><code>L/m: 3</code> na dole ekranu oznacza bieżący przepływ cieczy w litrach na minutę.</p></li>
+</ul>
+<p>Bieżący przepływ pokazuje, z jaką prędkością ciecz przepływa przez przepływomierz. Ta wartość jest szczególnie przydatna podczas pierwszego uruchomienia, ponieważ pozwala dobrać limit minimalnego przepływu. Przykład: jeżeli podczas normalnej pracy ekran pokazuje około <code>23 L/min</code>, limit minimalnego przepływu można ustawić niżej, np. na <code>15 L/min</code>.</p>
+<p>Kropla wody jest ikoną informacyjną pokazywaną podczas pracy. Jej animacja ułatwia zauważenie, że sterownik znajduje się na ekranie nalewania i proces jest aktywny.</p>
+<p>Podczas nalewania można zatrzymać pracę ręcznie klawiszem <code>A</code> albo <code>B</code>. Jeżeli sterownik osiągnie ustawiony limit, sam zatrzyma nalewanie i pokaże komunikat <code>Osiągnięto limit</code>.</p>
+<p>Nalewanie może zostać zatrzymane także automatycznie przez detektor, alarm minimalnego przepływu albo alarm maksymalnego przepływu. W takiej sytuacji sterownik rozłączy przekaźniki, pokaże odpowiedni komunikat i po naciśnięciu dowolnego klawisza wróci do menu głównego.</p>
+<p>Klawisze obsługiwane na ekranie nalewania:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zatrzymaj nalewanie ręcznie</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>B</code></td>
+<td style="text-align: left;">Zatrzymaj nalewanie ręcznie</td>
+</tr>
+</tbody>
+</table>
+<h3 class="unnumbered" id="zmiana-aktywnego-limitu">4.4. Zmiana aktywnego limitu</h3>
+<figure>
+<img src="assets/manual/images/volume-limit-changed.png" loading="lazy" style="width:82.0%" />
+<p><em>Zmiana limitu</em></p>
+</figure>
+<p>Rys. 4. Komunikat po zmianie aktywnego limitu klawiszem <code>F</code>.</p>
+<p>Na ekranie głównym naciśnij <code>F</code>, aby przełączyć aktywny limit nalewania. Sterownik wyświetli komunikat <code>Zmieniono limit</code> i zacznie używać drugiej dostępnej wartości:</p>
+<ul>
+<li><p>limitu zapisanego w pamięci w menu <code>Limit cieczy</code>,</p></li>
+<li><p>albo maksymalnej wartości wspieranej przez system dla aktualnej kalibracji.</p></li>
+</ul>
+<p>Funkcja jest przeznaczona do sytuacji, w których jednorazowo trzeba nalać więcej cieczy niż wynosi standardowy limit zbiornika zapisany w ustawieniach. Przełączenie aktywnego limitu nie zmienia wartości zapisanej w pamięci. Dzięki temu po zakończeniu pracy nie trzeba ponownie ustawiać stałego limitu zbiornika.</p>
+<p>Aby wrócić do limitu zapisanego w pamięci, naciśnij <code>F</code> jeszcze raz. Po wyłączeniu i ponownym włączeniu zasilania sterownik również wraca do limitu zapisanego w pamięci.</p>
+<p>Przykład: jeżeli w menu <code>Limit cieczy</code> zapisano <code>1’500</code> litrów, a kalibracja wynosi <code>450 impulsów/L</code>, po pierwszym naciśnięciu <code>F</code> sterownik przełączy aktywny limit na <code>9’533’371</code> litrów. Jeżeli jednorazowo trzeba nalać <code>3’000</code> litrów, można użyć tego większego aktywnego limitu bez zmiany ustawienia <code>Limit cieczy</code>. Po ponownym naciśnięciu <code>F</code> sterownik wróci do limitu zapisanego w pamięci, czyli <code>1’500</code> litrów. Taki sam powrót nastąpi po wyłączeniu i ponownym włączeniu zasilania.</p>
+<p>Więcej informacji o stałym limicie zbiornika znajduje się w podrozdziale 6.3 <code>Limit cieczy</code>.</p></div>
+</details>
+<details class="manual-chapter" id="manual-menu-ustawień">
+  <summary class="manual-chapter-heading"><h2>5. Menu ustawień</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>Tabele w tej części instrukcji pokazują, który klawisz nacisnąć na danym ekranie i co sterownik zrobi po jego naciśnięciu. Wiersz <code>0</code>-<code>9</code> oznacza, że w tym polu można wpisywać cyfry z klawiatury.</p>
+<p>Z ekranu głównego naciśnij <code>E</code>, aby wejść do ustawień. Menu ustawień ma dwie strony. Klawisz <code>B</code> przełącza strony, a <code>D</code> wraca do ekranu głównego.</p>
+<p>Pierwsza strona:</p>
+<figure>
+<img src="assets/manual/images/settings-menu-page-1.png" loading="lazy" style="width:82.0%" />
+<p><em>Ustawienia 1</em></p>
+</figure>
+<p>Rys. 5. Pierwsza strona menu ustawień.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Language</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Kalibracja</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Limit cieczy</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">Przepływomierz</td>
+</tr>
+</tbody>
+</table>
+<p>Druga strona:</p>
+<figure>
+<img src="assets/manual/images/settings-menu-page-2.png" loading="lazy" style="width:82.0%" />
+<p><em>Ustawienia 2</em></p>
+</figure>
+<p>Rys. 6. Druga strona menu ustawień.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">Przekaźniki</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>6</code></td>
+<td style="text-align: left;">Detektor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>7</code></td>
+<td style="text-align: left;">Przepływ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>8</code></td>
+<td style="text-align: left;">Nowy program</td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details class="manual-chapter" id="manual-ustawienia-szczegółowe">
+  <summary class="manual-chapter-heading"><h2>6. Ustawienia szczegółowe</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>W poniższych podrozdziałach zostały szczegółowo opisane możliwości i ustawienia Autolejka.</p>
+<p>Warunki, które są wspólne i dotyczą każdego parametru w ustawieniach:</p>
+<ul>
+<li><p>Jeśli zmienisz wartość któregokolwiek z ustawień i wyjdziesz klawiszem <code>D</code> do poprzedniego menu bez zapisu, sterownik wyświetli komunikat <code>Nie zapisano!</code> i wróci do poprzedniego menu, pozostawiając wartość parametru taką, jaka była przed zmianą. Zapis wykonuje się klawiszem <code>A</code>.</p></li>
+</ul>
+<ul>
+<li><p>Jeżeli wpisany parametr jest prawidłowy, po naciśnięciu <code>A</code> system wyświetli komunikat <code>Zapisano zmianę!</code>.</p></li>
+</ul>
+<ul>
+<li><p>Każdy komunikat opisany w rozdziale 7 <code>Komunikaty</code>, który informuje użytkownika o parametrach, trwa około 6 sekund.</p></li>
+</ul>
+<ul>
+<li><p>Z każdego komunikatu można wyjść szybciej przez naciśnięcie dowolnego klawisza, np. <code>B</code> albo <code>4</code>. W takiej sytuacji system wraca do menu, z którego wyświetlono komunikat.</p></li>
+</ul>
+<ul>
+<li><p>Na ekranach edycji parametrów zmieniana wartość znajduje się w lewym dolnym rogu wyświetlacza. Po wyczyszczeniu albo wpisaniu nowej liczby właśnie ta wartość zostanie zapisana klawiszem <code>A</code>.</p></li>
+</ul>
+<h3 class="unnumbered" id="language">6.1. Language</h3>
+<p>Menu <code>Language</code> służy do wyboru języka interfejsu. Autolejek obsługuje język polski i angielski.</p>
+<figure>
+<img src="assets/manual/images/language-selection-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu Language</em></p>
+</figure>
+<p>Rys. 7. Menu wyboru języka interfejsu.</p>
+<p>Nazwa <code>Language</code> jest zapisana w języku angielskim, aby ułatwić odnalezienie ustawienia języka niezależnie od aktualnie wybranego języka interfejsu.</p>
+<p>W pierwszym wierszu ekranu znajduje się aktualnie zapisany język albo język wybrany przed zatwierdzeniem zmiany.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">English</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Polski</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Z ekranu głównego naciśnij <code>E</code>, aby wejść do menu <code>Ustawienia</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby wejść do menu <code>Language</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby wybrać język angielski, albo <code>2</code>, aby wybrać język polski.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać wybór.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu <code>Ustawienia</code>.</p></li>
+</ol>
+<h3 class="unnumbered" id="kalibracja">6.2. Kalibracja</h3>
+<p>Kalibracja określa, ile impulsów elektrycznych odpowiada jednemu litrowi cieczy. Zaleca się podłączanie przepływomierzy lub wodomierzy, w których liczba impulsów odpowiada co najmniej jednemu litrowi. Na rynku można znaleźć wodomierze, które generują 1 impuls elektryczny na 10 litrów wody. Takie urządzenia mają małą rozdzielczość pomiaru i mogą nie sprawdzić się przy dokładnym odmierzaniu cieczy.</p>
+<p>Na poniższym zrzucie z wyświetlacza w lewym dolnym rogu znajduje się liczba impulsów na litr. W przykładzie użytkownik zakłada, że wodomierz emituje 450 impulsów elektrycznych na 1 litr cieczy.</p>
+<figure>
+<img src="assets/manual/images/pulses-per-liter-calibration.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu Kalibracja</em></p>
+</figure>
+<p>Rys. 8. Menu kalibracji przepływomierza.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>0</code>-<code>9</code></td>
+<td style="text-align: left;">Wpisz wartość impulsów na litr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>C</code></td>
+<td style="text-align: left;">Wyczyść wpis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz wartość</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 2-Kalibracja</code>, czyli naciśnij <code>E</code>, a następnie <code>2</code>.</p></li>
+<li><p>Naciśnij <code>C</code>, aby wyczyścić zadaną liczbę.</p></li>
+<li><p>Wpisz wartość impulsów na litr.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<p>Po zmianie kalibracji maksymalny dopuszczalny limit cieczy może zostać przeliczony. Jeśli poprzedni limit jest zbyt duży dla nowej kalibracji, sterownik obniży go do wartości dopuszczalnej. Więcej informacji znajduje się w podrozdziale 6.2.1 <code>Obliczenia</code>.</p>
+<p>Zmiana kalibracji wpływa także na czas odświeżania pomiaru przepływu ustawiany przez limit minimalnego przepływu. Jeżeli limit minimalnego przepływu jest już zapisany, sterownik przeliczy ten czas dla nowej liczby impulsów na litr.</p>
+<h4 class="unnumbered" id="obliczenia">6.2.1. Obliczenia</h4>
+<p>Maksymalna liczba litrów, jaka może zostać zliczona, zależy od kalibracji i jest obliczana według wzoru:</p>
+<pre><code>floor(4&#39;294&#39;967&#39;295 / kalibracja)</code></pre>
+<p><code>floor(liczba)</code> oznacza zaokrąglenie wyniku w dół do najbliższej liczby całkowitej, np. <code>floor(5.9) = 5</code>.</p>
+<p>Przykład:</p>
+<pre><code>kalibracja = 123 impulsy na litr
+maksymalna objętość cieczy = floor(4&#39;294&#39;967&#39;295 / 123) = floor(34&#39;918&#39;433.29) = 34&#39;918&#39;433</code></pre>
+<h3 class="unnumbered" id="limit-cieczy">6.3. Limit cieczy</h3>
+<p><code>Limit cieczy</code> określa maksymalną pojemność zbiornika w litrach. Jest to zabezpieczenie przed przelaniem.</p>
+<p>Przykład: jeżeli opryskiwacz ma pojemność 1’500 litrów, a operator przez nieuwagę chciałby wpisać 15’000 litrów na ekranie głównym, sterownik wyświetli informację, że liczba przekracza tę maksymalną zapisaną w pamięci.</p>
+<p>Na poniższym zrzucie ekranu wartość do ustawienia znajduje się w lewym dolnym rogu.</p>
+<figure>
+<img src="assets/manual/images/tank-capacity-limit.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu Limit cieczy</em></p>
+</figure>
+<p>Rys. 9. Menu maksymalnego limitu cieczy.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>0</code>-<code>9</code></td>
+<td style="text-align: left;">Wpisz nową wartość</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>C</code></td>
+<td style="text-align: left;">Wyczyść wpis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz wartość</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<p>Wartość musi być większa od zera i nie może przekroczyć maksimum obliczonego w podrozdziale 6.2.1 <code>Obliczenia</code>. Jeżeli liczba będzie zbyt duża albo zbyt mała, pojawi się odpowiedni komunikat.</p>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 3-Limit cieczy</code>, czyli naciśnij <code>E</code>, a następnie <code>3</code>.</p></li>
+<li><p>Naciśnij <code>C</code>, aby wyczyścić aktualnie wpisaną wartość.</p></li>
+<li><p>Wpisz nowy maksymalny limit cieczy w litrach.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać wartość.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<p>Przykład: zakładając, że użytkownik posiada wodomierz generujący 450 impulsów na litr, maksymalna liczba, jaką może wpisać, wynosi 9’544’371 litrów.</p>
+<pre><code> floor(4&#39;294&#39;967&#39;295 / 450) = floor(9&#39;544&#39;371.767) = 9&#39;544&#39;371</code></pre>
+<p>Bez tego zabezpieczenia na ekranie głównym operator może wpisać zbyt dużą liczbę.</p>
+<p>Uwaga: jeżeli jednorazowo trzeba nalać więcej cieczy niż zapisano w tym menu, z menu głównego naciśnij <code>F</code>. Więcej informacji znajduje się w podrozdziale 4.4 <code>Zmiana aktywnego limitu</code>.</p>
+<h3 class="unnumbered" id="przepływomierz">6.4. Przepływomierz</h3>
+<p>Menu <code>Przepływomierz</code> ustawia sposób zliczania impulsów:</p>
+<h4 class="unnumbered" id="sygnał-wzbudzania">6.4.1. Sygnał wzbudzania</h4>
+<figure>
+<img src="assets/manual/images/flow-meter-signal-edge-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu Przepływomierz</em></p>
+</figure>
+<p>Rys. 10. Menu trybu sygnału przepływomierza.</p>
+<p>Sterownik umożliwia dwa tryby wzbudzania licznika impulsów:</p>
+<ul>
+<li><p>rosnący - impuls liczony podczas zmiany sygnału z 0 V na 5 V,</p></li>
+<li><p>opadający - impuls liczony podczas zmiany sygnału z 5 V na 0 V.</p></li>
+</ul>
+<p>Ustaw ten tryb zgodnie z tym, na którym zboczu sygnału impuls wymusi zliczanie.</p>
+<p>W pierwszym wierszu ekranu znajduje się aktualnie zapisany tryb albo tryb wybrany przed zatwierdzeniem zmiany.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Sygnał rosnący</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Sygnał opadający</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Filtr drgań</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz wybrany tryb sygnału</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 4-Przepływomierz</code>, czyli naciśnij <code>E</code>, a następnie <code>4</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby wybrać sygnał rosnący, albo <code>2</code>, aby wybrać sygnał opadający.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać wybrany tryb.</p></li>
+<li><p>Naciśnij <code>3</code>, jeśli chcesz przejść do ustawień filtra drgań.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<h4 class="unnumbered" id="filtr-drgań-przepływomierza">6.4.2. Filtr drgań przepływomierza</h4>
+<p>Więcej o drganiach styków znajduje się w rozdziale 13 <code>Słowniczek</code>.</p>
+<figure>
+<img src="assets/manual/images/flow-meter-debounce-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu filtra drgań przepływomierza</em></p>
+</figure>
+<p>Rys. 11. Menu filtra drgań przepływomierza.</p>
+<p>Filtr drgań narzuca minimalny czas impulsu. Ta funkcja może być także pomocna przy filtracji zakłóceń z przewodów elektrycznych. Nie należy się dziwić, jeżeli przy długim przewodzie, np. 2-metrowym, oraz wyłączonym filtrze drgań system zlicza impulsy mimo braku przepływu. Przyczyną mogą być zakłócenia elektromagnetyczne, ponieważ długi przewód działa jak antena. Czas filtracji drgań zależy od zastosowanego czujnika wodomierza. Sprawdź dokumentację wodomierza albo czujnika, aby ustawić prawidłową wartość. Sterownik przyjmuje wartości od <code>10</code> mikrosekund do <code>349’000</code> mikrosekund, czyli od 10 mikrosekund do 349 milisekund.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Włącz filtr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Wyłącz filtr</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Ustaw czas impulsu w mikrosekundach</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Przepływomierz</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 4-Przepływomierz &gt; 3-Filtr drgań</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby włączyć filtr, albo <code>2</code>, aby go wyłączyć.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, jeśli chcesz ustawić czas impulsu elektrycznego.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu <code>Przepływomierz</code>.</p></li>
+</ol>
+<h4 class="unnumbered" id="ustawienie-czasu-impulsu-elektrycznego">6.4.3. Ustawienie czasu impulsu elektrycznego</h4>
+<p>Jednostką czasu w tym menu są mikrosekundy.</p>
+<figure>
+<img src="assets/manual/images/flow-meter-debounce-time.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu ustawiania czasu impulsu</em></p>
+</figure>
+<p>Rys. 12. Ekran ustawiania czasu impulsu przepływomierza.</p>
+<p>Na ekranie ustawiania czasu impulsu zmieniana wartość znajduje się w lewym dolnym rogu. Wpisz ją klawiszami <code>0</code>-<code>9</code>, a następnie naciśnij <code>A</code>.</p>
+<pre><code>1 sekunda = 1&#39;000 milisekund = 1&#39;000&#39;000 mikrosekund</code></pre>
+<p>Przykład:</p>
+<p>Jeżeli z dokumentacji technicznej czujnika wodomierza wynika, że sygnał stabilizuje się po 10 milisekundach, wpisz wartość <code>10’000</code>, ponieważ 1 milisekunda to 1’000 mikrosekund.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>0</code>-<code>9</code></td>
+<td style="text-align: left;">Wpisz wartość liczbową</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Filtr drgań przepływomierza</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 4-Przepływomierz &gt; 3-Filtr drgań &gt; 3-Czas</code>.</p></li>
+<li><p>Wpisz czas impulsu w mikrosekundach.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać wartość.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu filtra drgań przepływomierza.</p></li>
+</ol>
+<p>Czas impulsu określa minimalny odstęp używany przez filtr drgań. Zbyt mała albo zbyt duża wartość zostanie odrzucona komunikatem walidacyjnym.</p>
+<h3 class="unnumbered" id="przekaźniki">6.5. Przekaźniki</h3>
+<p>Menu <code>Przekaźniki</code> wybiera, który przekaźnik będzie przełączany podczas pracy systemu:</p>
+<p><strong>OSTRZEŻENIE: wybór niewłaściwego przekaźnika może uruchomić niewłaściwe urządzenie.</strong> Przed zapisem ustawienia sprawdź, co jest podłączone do P1, P2 albo obu wyjść.</p>
+<p>W pierwszym wierszu ekranu znajduje się przekaźnik zapisany w pamięci albo przekaźnik wybrany przed zatwierdzeniem zmiany.</p>
+<figure>
+<img src="assets/manual/images/relay-selection-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu przekaźników</em></p>
+</figure>
+<p>Rys. 13. Menu wyboru aktywnego przekaźnika.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Przekaźnik P1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Przekaźnik P2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">P1+P2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 5-Przekaźniki</code>, czyli naciśnij <code>E</code>, <code>B</code>, a następnie <code>5</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, <code>2</code> albo <code>3</code>, aby wybrać aktywny przekaźnik.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<p>P1 to przekaźnik nr 1. P2 to przekaźnik nr 2. Opcja <code>P1+P2</code> oznacza, że oba przekaźniki są załączone.</p>
+<p>Pamiętaj, że każdy przekaźnik może przełączać prąd nie większy niż 3 A. Więcej informacji znajduje się w podrozdziale 2.2 <code>Bezpieczniki</code>.</p>
+<h3 class="unnumbered" id="detektor">6.6. Detektor</h3>
+<p>Detektor i czujnik zatrzymania oznaczają w tej instrukcji ten sam element. Może pracować razem z przepływomierzem albo pozostać wyłączony. Jeżeli przed startem nalewania detektor zgłasza aktywny sygnał, sterownik pokazuje komunikat <code>Czujnik wciśnięty</code>. Oznacza to, że detektor informuje o pełnym zbiorniku i nalewanie nie może zostać rozpoczęte. Domyślnie jest wyłączony.</p>
+<p>Detektor warto włączyć wtedy, gdy do sterownika podłączony jest dodatkowy czujnik zatrzymania, np. pływak, krańcówka, czujnik poziomu cieczy albo inny element, który ma przerwać nalewanie niezależnie od przepływomierza. Po wykryciu aktywnego sygnału podczas pracy sterownik natychmiast rozłącza przekaźniki i pokazuje komunikat o przerwaniu.</p>
+<figure>
+<img src="assets/manual/images/level-sensor-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu detektora</em></p>
+</figure>
+<p>Rys. 14. Menu włączania i wyłączania detektora.</p>
+<p>Menu główne detektora:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Włącz detektor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Wyłącz detektor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Ustaw tryb sygnału</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 6-Detektor</code>, czyli naciśnij <code>E</code>, <code>B</code>, a następnie <code>6</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby włączyć detektor, albo <code>2</code>, aby go wyłączyć.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, jeśli chcesz przejść do trybu sygnału detektora.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<h4 class="unnumbered" id="tryb-sygnału-detektora">6.6.1. Tryb sygnału detektora</h4>
+<p>Tak jak w przypadku przepływomierza, detektor może zgłaszać zdarzenie na zboczu rosnącym albo opadającym sygnału. Ustaw ten tryb zgodnie z dokumentacją podłączonego czujnika:</p>
+<ul>
+<li><p>rosnący - sygnał aktywny jest wykrywany podczas zmiany z 0 V na 5 V,</p></li>
+<li><p>opadający - sygnał aktywny jest wykrywany podczas zmiany z 5 V na 0 V.</p></li>
+</ul>
+<p>W pierwszym wierszu ekranu znajduje się aktualnie zapisany tryb albo tryb wybrany przed zatwierdzeniem zmiany.</p>
+<figure>
+<img src="assets/manual/images/level-sensor-signal-edge-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu trybu sygnału detektora</em></p>
+</figure>
+<p>Rys. 15. Menu wyboru trybu sygnału detektora.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Sygnał rosnący</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Sygnał opadający</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Filtr drgań</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Detektor</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 6-Detektor &gt; 3-Tryb sygnału</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby wybrać sygnał rosnący, albo <code>2</code>, aby wybrać sygnał opadający.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, jeśli chcesz przejść do filtra drgań detektora.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu <code>Detektor</code>.</p></li>
+</ol>
+<h4 class="unnumbered" id="filtr-drgań-detektora">6.6.2. Filtr drgań detektora</h4>
+<p>Więcej o drganiach styków znajduje się w rozdziale 13 <code>Słowniczek</code>.</p>
+<p>Filtr drgań detektora działa tak samo jak filtr drgań przepływomierza: narzuca minimalny czas impulsu, który musi utrzymać się na wejściu, aby sterownik uznał sygnał za prawidłowy. Funkcja jest przydatna przy czujnikach mechanicznych, np. kontaktronach lub przełącznikach krańcowych, oraz przy długich przewodach podatnych na zakłócenia elektromagnetyczne.</p>
+<p>Czas filtracji należy dobrać do zastosowanego detektora. Sprawdź jego dokumentację, aby ustawić prawidłową wartość. Sterownik przyjmuje wartości od <code>10</code> mikrosekund do <code>349’000</code> mikrosekund, czyli od 10 mikrosekund do 349 milisekund.</p>
+<figure>
+<img src="assets/manual/images/level-sensor-debounce-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu filtra drgań detektora</em></p>
+</figure>
+<p>Rys. 16. Menu włączania i wyłączania filtra drgań detektora.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Włącz filtr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Wyłącz filtr</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Ustaw czas impulsu w mikrosekundach</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Tryb sygnału detektora</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 6-Detektor &gt; 3-Tryb sygnału &gt; 3-Filtr drgań</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby włączyć filtr, albo <code>2</code>, aby go wyłączyć.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, aby ustawić czas impulsu w mikrosekundach.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu trybu sygnału detektora.</p></li>
+</ol>
+<h4 class="unnumbered" id="ustawienie-czasu-impulsu-detektora">6.6.3. Ustawienie czasu impulsu detektora</h4>
+<p>Ekran ustawiania czasu impulsu detektora działa tak samo jak ekran czasu impulsu przepływomierza opisany w podrozdziale 6.4.3 <code>Ustawienie czasu impulsu elektrycznego</code>. Wpisana wartość określa minimalny czas trwania sygnału detektora. Krótsze impulsy zostaną odrzucone jako drgania styków albo zakłócenia.</p>
+<figure>
+<img src="assets/manual/images/level-sensor-debounce-time.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu ustawiania czasu impulsu detektora</em></p>
+</figure>
+<p>Rys. 17. Ekran ustawiania czasu impulsu detektora.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Funkcja</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>0</code>-<code>9</code></td>
+<td style="text-align: left;">Wpisz czas impulsu w mikrosekundach</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Filtr drgań detektora</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 6-Detektor &gt; 3-Tryb sygnału &gt; 3-Filtr drgań &gt; 3-Czas</code>.</p></li>
+<li><p>Wpisz czas impulsu w mikrosekundach.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać wartość.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu filtra drgań detektora.</p></li>
+</ol>
+<h4 class="unnumbered" id="alarm">6.6.4. Alarm</h4>
+<p>Alarm detektora informuje, że czujnik zatrzymania zgłosił aktywny sygnał. Sterownik rozróżnia dwie sytuacje:</p>
+<ul>
+<li><p>detektor jest aktywny przed startem nalewania - sterownik nie uruchomi przekaźników i pokaże komunikat <code>Czujnik wciśnięty</code>,</p></li>
+<li><p>detektor zostanie aktywowany podczas nalewania - sterownik natychmiast rozłączy przekaźniki, zatrzyma pracę i pokaże komunikat <code>Wykryto przerwanie</code>.</p></li>
+</ul>
+<p>Po wyświetleniu komunikatu alarmowego naciśnij dowolny klawisz na klawiaturze, aby wrócić do ekranu głównego. Przed ponownym startem sprawdź, dlaczego detektor zgłosił zatrzymanie, np. czy zbiornik jest pełny, pływak jest podniesiony albo czujnik pozostaje w stanie aktywnym.</p>
+<p><strong>UWAGA: nie uruchamiaj ponownie nalewania bez usunięcia przyczyny alarmu.</strong> Ponowny start przy aktywnym albo uszkodzonym detektorze może doprowadzić do przelania cieczy.</p>
+<figure>
+<img src="assets/manual/images/sensor-active-alert.png" loading="lazy" style="width:82.0%" />
+<p><em>Komunikat aktywnego detektora przed startem</em></p>
+</figure>
+<p>Rys. 18. Komunikat <code>Czujnik wciśnięty</code> wyświetlany, gdy detektor jest aktywny przed rozpoczęciem nalewania.</p>
+<figure>
+<img src="assets/manual/images/sensor-interruption-alert.png" loading="lazy" style="width:82.0%" />
+<p><em>Komunikat przerwania przez detektor</em></p>
+</figure>
+<p>Rys. 19. Komunikat <code>Wykryto przerwanie</code> wyświetlany po aktywacji detektora podczas nalewania.</p>
+<h3 class="unnumbered" id="przepływ">6.7. Przepływ</h3>
+<p>To menu odpowiada za alarmy przepływu podczas nalewania. Sterownik może wykrywać zbyt mały przepływ oraz zbyt duży przepływ.</p>
+<figure>
+<img src="assets/manual/images/flow-alarms-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu przepływu</em></p>
+</figure>
+<p>Rys. 20. Menu alarmów przepływu.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Minimalny przepływ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Maksymalny przepływ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Ustawienia</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 7-Przepływ</code>, czyli naciśnij <code>E</code>, <code>B</code>, a następnie <code>7</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby przejść do alarmu minimalnego przepływu.</p></li>
+<li><p>Naciśnij <code>2</code>, aby przejść do alarmu maksymalnego przepływu.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu ustawień.</p></li>
+</ol>
+<h4 class="unnumbered" id="minimalny-przepływ">6.7.1. Minimalny przepływ</h4>
+<p>Alarm minimalnego przepływu wykrywa brak przepływu albo przepływ zbyt mały w stosunku do ustawionego limitu. Po uruchomieniu nalewania sterownik najpierw czeka przez <code>Czas startu</code>, aby pompa, zawór i instalacja zdążyły rozpocząć normalną pracę. Po tym czasie kontroluje bieżący przepływ w <code>L/min</code>.</p>
+<p>Jeżeli alarm jest włączony, a przepływ spadnie poniżej ustawionego limitu, sterownik zaczyna odliczać <code>Czas przerwy</code>. Nalewanie zostanie zatrzymane dopiero wtedy, gdy zbyt mały przepływ utrzyma się przez cały ten czas. Jeżeli przepływ wróci do wartości równej limitowi albo wyższej przed końcem odliczania, sterownik kontynuuje nalewanie i zacznie liczyć czas od nowa dopiero przy kolejnym spadku przepływu.</p>
+<p>Przykład: limit minimalnego przepływu ustawiono na <code>20 L/min</code>, czas startu na <code>5 s</code>, a czas przerwy na <code>10 s</code>. Po starcie nalewania sterownik przez 5 sekund nie sprawdza alarmu. Następnie, jeśli przepływ spadnie poniżej <code>20 L/min</code> i taki stan potrwa 10 sekund, sterownik zatrzyma nalewanie i wyświetli komunikat o zbyt małym przepływie.</p>
+<p><strong>UWAGA: zbyt niski limit lub zbyt długi czas przerwy opóźnia wykrycie braku przepływu.</strong> Dobierz te wartości podczas próby, aby sterownik zatrzymywał nalewanie zanim pompa albo instalacja będzie pracować zbyt długo bez przepływu.</p>
+<figure>
+<img src="assets/manual/images/minimum-flow-alarm-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 21. Menu włączania i wyłączania alarmu minimalnego przepływu.</p>
+<p>Menu alarmu minimalnego przepływu:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Włącz alarm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Wyłącz alarm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Ustawienia</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Alarm przepływu</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 7-Przepływ &gt; 1-Minimalny przepływ</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby włączyć alarm, albo <code>2</code>, aby go wyłączyć.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, aby przejść do ustawień alarmu.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu <code>Przepływ</code>.</p></li>
+</ol>
+<p>W pierwszym wierszu ekranu znajduje się aktualny stan alarmu: <code>Włączony</code> albo <code>Wyłączony</code>. Zmiana stanu zaczyna działać dopiero po zapisaniu klawiszem <code>A</code>. Jeżeli naciśniesz <code>D</code> po zmianie stanu, ale przed zapisem, sterownik pokaże komunikat <code>Nie zapisano!</code> i pozostawi poprzednią wartość.</p>
+<p><strong>Ustawienia alarmu minimalnego przepływu</strong></p>
+<p>Ekran <code>Ustawienia</code> prowadzi do trzech parametrów, które razem określają zachowanie alarmu minimalnego przepływu:</p>
+<ul>
+<li><p><code>Limit przepływu w L/min</code> - próg, od którego przepływ jest uznawany za zbyt mały.</p></li>
+<li><p><code>Czas startu</code> - czas ignorowania alarmu po starcie nalewania.</p></li>
+<li><p><code>Czas przerwy</code> - czas, przez który zbyt mały przepływ musi trwać, aby sterownik zatrzymał nalewanie.</p></li>
+</ul>
+<figure>
+<img src="assets/manual/images/minimum-flow-settings-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 22. Menu ustawień alarmu minimalnego przepływu.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Limit przepływu w <code>L/min</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Czas startu w sekundach</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Czas przerwy w sekundach</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu alarmu minimalnego przepływu</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 7-Przepływ &gt; 1-Minimalny przepływ &gt; 3-Ustawienia</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby ustawić limit przepływu, <code>2</code>, aby ustawić czas startu, albo <code>3</code>, aby ustawić czas przerwy.</p></li>
+<li><p>Wpisz wartość liczbową na wybranym ekranie i naciśnij <code>A</code>, aby ją zapisać.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu alarmu minimalnego przepływu.</p></li>
+</ol>
+<p><strong>Limit przepływu</strong></p>
+<p>Parametr <code>Limit przepływu</code> określa najmniejszy akceptowany przepływ cieczy w <code>L/min</code>. Na ekranie <code>Min. przepływ [L/min]</code> zmieniana wartość znajduje się w lewym dolnym rogu. Wpisz ją klawiszami <code>0</code>-<code>9</code>.</p>
+<figure>
+<img src="assets/manual/images/minimum-flow-limit.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 23. Ekran ustawiania limitu minimalnego przepływu.</p>
+<p>Wartość musi być większa od zera. Jeżeli wpiszesz <code>0</code> i naciśniesz <code>A</code>, sterownik pokaże komunikat <code>Liczba musi być większa niż 0</code> i wróci do ekranu ustawiania limitu. Jeżeli wpisana liczba będzie zbyt duża, sterownik pokaże komunikat <code>Zbyt duża liczba</code>.</p>
+<p>Przykład: jeśli limit ustawiono na <code>20 L/min</code>, alarm uzna za nieprawidłowy przepływ <code>19 L/min</code>, <code>0 L/min</code> oraz każdą niższą wartość. Przepływ <code>20 L/min</code> albo większy jest traktowany jako prawidłowy.</p>
+<p>Zapisanie tego limitu ustawia również czas odświeżania pomiaru przepływu. Sterownik oblicza, jak długo może czekać na kolejny impuls z przepływomierza, zanim uzna bieżący przepływ za <code>0 L/min</code>. Czas zależy od zapisanego limitu oraz kalibracji przepływomierza:</p>
+<pre><code>czas [mikrosekundy] = 60&#39;000&#39;000 / (limit [L/min] * kalibracja [impulsy/L])</code></pre>
+<p>Przykład: dla limitu <code>20 L/min</code> i kalibracji <code>10 impulsów/L</code> czas odświeżania wynosi <code>300’000</code> mikrosekund. Jeżeli przez dłuższy czas nie pojawi się następny impuls, sterownik pokaże przepływ <code>0 L/min</code> i użyje tej wartości przy sprawdzaniu alarmu minimalnego przepływu.</p>
+<p><strong>Czas startu</strong></p>
+<p>Parametr <code>Czas startu</code> określa, przez ile sekund po rozpoczęciu nalewania sterownik nie sprawdza alarmu minimalnego przepływu. Ten czas jest potrzebny, ponieważ po starcie pompy lub otwarciu zaworu przepływ może przez chwilę wynosić <code>0 L/min</code> albo narastać stopniowo.</p>
+<figure>
+<img src="assets/manual/images/minimum-flow-startup-delay.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 24. Ekran ustawiania czasu startu alarmu minimalnego przepływu.</p>
+<p>Na ekranie <code>Czas startu [sekundy]</code> zmieniana wartość znajduje się w lewym dolnym rogu. Wpisz ją klawiszami <code>0</code>-<code>9</code>, a następnie naciśnij <code>A</code>.</p>
+<p>Zakres wartości wynosi od <code>1</code> do <code>60</code> sekund. Zbyt mała albo zbyt duża wartość zostanie odrzucona komunikatem walidacyjnym. Jeśli instalacja startuje wolno, ustaw dłuższy czas startu. Jeśli przepływ pojawia się natychmiast, czas może być krótszy.</p>
+<p><strong>Czas przerwy</strong></p>
+<p>Parametr <code>Czas przerwy</code> określa, jak długo zbyt mały przepływ musi utrzymywać się po czasie startu, aby sterownik zatrzymał nalewanie. Na ekranie urządzenia ten parametr jest opisany jako <code>Czas rozłączenia [sekundy]</code>.</p>
+<figure>
+<img src="assets/manual/images/minimum-flow-shutdown-delay.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 25. Ekran ustawiania czasu przerwy alarmu minimalnego przepływu.</p>
+<p>Na ekranie <code>Czas rozłączenia [sekundy]</code> zmieniana wartość znajduje się w lewym dolnym rogu. Wpisz ją klawiszami <code>0</code>-<code>9</code>, a następnie naciśnij <code>A</code>.</p>
+<p>Zakres wartości wynosi od <code>1</code> do <code>60</code> sekund. Krótki czas przerwy powoduje szybką reakcję na brak przepływu, ale może zatrzymać nalewanie przy chwilowym spadku ciśnienia. Dłuższy czas przerwy lepiej filtruje krótkie spadki, ale opóźnia zatrzymanie przy realnym braku przepływu.</p>
+<p><strong>Alarm minimalnego przepływu</strong></p>
+<p>Poniżej znajduje się zrzut ekranu komunikatu, który zostanie wyświetlony, jeżeli przepływ będzie zbyt mały. Ikona dłoni w prawym dolnym rogu oznacza, że aby wyjść z komunikatu, należy nacisnąć dowolny klawisz na klawiaturze.</p>
+<figure>
+<img src="assets/manual/images/low-flow-alert.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu minimalnego przepływu</em></p>
+</figure>
+<p>Rys. 26. Komunikat alarmu minimalnego przepływu.</p>
+<h4 class="unnumbered" id="maksymalny-przepływ">6.7.2. Maksymalny przepływ</h4>
+<p>Alarm maksymalnego przepływu chroni przepływomierz i instalację przed zbyt dużym przepływem cieczy. Jeżeli alarm jest włączony, sterownik stale porównuje bieżący przepływ w <code>L/min</code> z ustawionym limitem maksymalnym.</p>
+<p><strong>UWAGA: zbyt wysoki limit maksymalnego przepływu może nie ochronić przepływomierza.</strong> Ustaw limit zgodnie z dokumentacją przepływomierza i instalacji.</p>
+<p>Nalewanie zostanie zatrzymane natychmiast po przekroczeniu limitu. Ten alarm nie korzysta z <code>Czasu startu</code> ani <code>Czasu przerwy</code>, ponieważ zbyt duży przepływ może uszkodzić przepływomierz albo elementy instalacji. Tak samo jak w alarmie minimalnego przepływu, wartość równa limitowi jest dopuszczalna. Alarm zadziała dopiero wtedy, gdy przepływ będzie większy niż ustawiony limit.</p>
+<p>Przykład: jeśli limit maksymalnego przepływu ustawiono na <code>63 L/min</code>, przepływ <code>63 L/min</code> jest jeszcze prawidłowy. Przepływ <code>64 L/min</code> albo większy zatrzyma nalewanie i wyświetli komunikat o zbyt dużym przepływie.</p>
+<figure>
+<img src="assets/manual/images/maximum-flow-alarm-menu.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu maksymalnego przepływu</em></p>
+</figure>
+<p>Rys. 27. Menu włączania i wyłączania alarmu maksymalnego przepływu.</p>
+<p>Menu alarmu maksymalnego przepływu:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Klawisz</strong></th>
+<th style="text-align: left;"><strong>Ustawienie</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Włącz alarm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Wyłącz alarm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Ustaw limit w <code>L/min</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Zapisz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>D</code></td>
+<td style="text-align: left;">Wróć do menu <code>Alarm przepływu</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Wejdź do <code>Ustawienia &gt; 7-Przepływ &gt; 2-Maksymalny przepływ</code>.</p></li>
+<li><p>Naciśnij <code>1</code>, aby włączyć alarm, albo <code>2</code>, aby go wyłączyć.</p></li>
+<li><p>Naciśnij <code>A</code>, aby zapisać ustawienie.</p></li>
+<li><p>Naciśnij <code>3</code>, aby ustawić limit maksymalnego przepływu w <code>L/min</code>.</p></li>
+<li><p>Naciśnij <code>D</code>, aby wrócić do menu <code>Przepływ</code>.</p></li>
+</ol>
+<p>W pierwszym wierszu ekranu znajduje się aktualny stan alarmu: <code>Włączony</code> albo <code>Wyłączony</code>. Zmiana stanu zaczyna działać dopiero po zapisaniu klawiszem <code>A</code>. Jeżeli naciśniesz <code>D</code> po zmianie stanu, ale przed zapisem, sterownik pokaże komunikat <code>Nie zapisano!</code> i pozostawi poprzednią wartość.</p>
+<p><strong>Limit maksymalnego przepływu</strong></p>
+<p>Parametr <code>Maks. przepływ</code> określa największy dopuszczalny przepływ cieczy w <code>L/min</code>. Na ekranie <code>Maks. przepływ [L/min]</code> zmieniana wartość znajduje się w lewym dolnym rogu. Wpisz ją klawiszami <code>0</code>-<code>9</code>, a następnie naciśnij <code>A</code>.</p>
+<figure>
+<img src="assets/manual/images/maximum-flow-limit.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu maksymalnego przepływu</em></p>
+</figure>
+<p>Rys. 28. Ekran ustawiania limitu maksymalnego przepływu.</p>
+<p>Limit musi być większy od zera. Jeżeli zapisana w pamięci wartość jest poza dopuszczalnym zakresem, sterownik przywróci wartość minimalną.</p>
+<p>Jeżeli wpiszesz <code>0</code> i naciśniesz <code>A</code>, sterownik pokaże komunikat <code>Liczba musi być większa niż 0</code> i wróci do ekranu ustawiania limitu. Jeżeli wpisana liczba będzie zbyt duża, sterownik pokaże komunikat <code>Zbyt duża liczba</code>.</p>
+<p>Po wykryciu zbyt dużego przepływu sterownik zatrzymuje nalewanie i pokazuje komunikat <code>Przepływ zbyt duży. Sprawdź dopływ wody</code>. Aby wrócić do menu głównego, naciśnij dowolny klawisz na klawiaturze. Ikona dłoni w prawym dolnym rogu komunikatu oznacza, że sterownik czeka na naciśnięcie klawisza.</p>
+<p><strong>Alarm maksymalnego przepływu</strong></p>
+<figure>
+<img src="assets/manual/images/high-flow-alert.png" loading="lazy" style="width:82.0%" />
+<p><em>Menu maksymalnego przepływu</em></p>
+</figure>
+<p>Rys. 29. Komunikat alarmu maksymalnego przepływu.</p>
+<h3 class="unnumbered" id="nowy-program">6.8. Nowy program</h3>
+<p>Menu <code>Nowy program</code> służy do instalowania aktualizacji oprogramowania dostarczonej przez producenta. Aktualizacja zmienia program urządzenia, ale nie zastępuje chronionego programu rozruchowego. Gniazdo USB znajduje się wewnątrz obudowy, dlatego przed podłączeniem przewodu trzeba bezpiecznie otworzyć obudowę.</p>
+<p><strong>UWAGA: przed rozpoczęciem aktualizacji zatrzymaj nalewanie i upewnij się, że pompa oraz zawór są w bezpiecznym stanie.</strong> Podczas aktualizacji sterownik uruchamia się ponownie i nie prowadzi procesu nalewania. Gdy nalewanie jest uruchomione, klawisze <code>A</code> i <code>C</code> na ekranie <code>Nowy program</code> są zablokowane; klawisz <code>D</code> pozwala wrócić do ustawień.</p>
+<p><strong>OSTRZEŻENIE: przed otwarciem obudowy odłącz główne zasilanie sterownika oraz zasilanie wszystkich obwodów podłączonych do przekaźników.</strong> Upewnij się miernikiem, że wewnątrz nie ma niebezpiecznego napięcia. Obudowę może otworzyć wyłącznie osoba uprawniona do pracy przy występujących w instalacji napięciach. Nie dotykaj zacisków ani odsłoniętych elementów płytki podczas aktualizacji.</p>
+<p><strong>UWAGA: instalacja nowego programu nadpisuje pamięć nieulotną i usuwa dotychczasowe ustawienia użytkownika.</strong> Przed aktualizacją zapisz na kartce, w telefonie albo w formularzu serwisowym wszystkie wartości z rozdziału 6. Dotyczy to między innymi języka, kalibracji, limitu cieczy, ustawień przepływomierza, aktywnego przekaźnika, detektora oraz alarmów minimalnego i maksymalnego przepływu. Po aktualizacji trzeba wpisać i zapisać te wartości ponownie.</p>
+<p>Do aktualizacji przygotuj:</p>
+<ul>
+<li><p>komputer z portem USB,</p></li>
+<li><p>przewód USB obsługujący transmisję danych,</p></li>
+<li><p>plik aktualizacji <code>firmware.uf2</code> otrzymany od producenta albo dostarczoną aplikację aktualizującą,</p></li>
+<li><p>zapis wszystkich dotychczasowych ustawień urządzenia.</p></li>
+</ul>
+<p>Nie używaj pliku przeznaczonego dla innego produktu ani zwykłego pliku <code>.bin</code>, <code>.elf</code> lub <code>.hex</code>. Program rozruchowy przyjmuje tylko prawidłowo przygotowaną i uwierzytelnioną aktualizację Autolejka.</p>
+<h4 class="unnumbered" id="wejście-do-trybu-aktualizacji">6.8.1. Wejście do trybu aktualizacji</h4>
+<ol>
+<li><p>Zatrzymaj nalewanie i zapisz wszystkie dotychczasowe ustawienia urządzenia.</p></li>
+<li><p>Wyłącz sterownik oraz odłącz jego zasilanie i zasilanie obwodów przekaźnikowych.</p></li>
+<li><p>Otwórz obudowę zgodnie z zasadami bezpieczeństwa i uzyskaj dostęp do gniazda USB. Upewnij się, że wewnątrz nie występuje niebezpieczne napięcie.</p></li>
+<li><p>Podłącz Autolejek do komputera przewodem USB. Jeżeli do obsługi wyświetlacza potrzebne jest dodatkowe zasilanie, podłącz je wyłącznie zgodnie z procedurą serwisową urządzenia; obwody wykonawcze pompy i zaworu pozostaw odłączone.</p></li>
+<li><p>Z ekranu głównego naciśnij <code>E</code>, aby wejść do <code>Ustawień</code>.</p></li>
+<li><p>Naciśnij <code>B</code>, aby wyświetlić drugą stronę ustawień.</p></li>
+<li><p>Naciśnij <code>8</code>, aby otworzyć ekran <code>Nowy program</code>.</p></li>
+<li><p>Na pytanie <code>Czy chcesz zainstalować nowy program?</code> naciśnij <code>A</code>, aby potwierdzić. Klawisz <code>C</code> lub <code>D</code> anuluje operację i wraca do ustawień.</p></li>
+<li><p>Sterownik uruchomi się ponownie. Na komputerze pojawi się dysk USB o nazwie <code>AUTOLEJEK</code>.</p></li>
+</ol>
+<p>Jeżeli używasz aplikacji aktualizującej dostarczonej przez producenta, uruchom ją przed wykonaniem kroku 8 albo zgodnie z komunikatami aplikacji. Aplikacja powinna zaczekać na pojawienie się dysku <code>AUTOLEJEK</code>.</p>
+<h4 class="unnumbered" id="instalowanie-aktualizacji">6.8.2. Instalowanie aktualizacji</h4>
+<ol>
+<li><p>Jeżeli używasz aplikacji aktualizującej, wybierz udostępnioną wersję i naciśnij przycisk instalacji. W przeciwnym razie skopiuj otrzymany plik <code>firmware.uf2</code> na dysk <code>AUTOLEJEK</code>.</p></li>
+<li><p>Nie odłączaj przewodu USB i nie wyłączaj zasilania podczas kopiowania.</p></li>
+<li><p>Po przyjęciu całego pliku program rozruchowy sprawdzi aktualizację, zapisze ją i automatycznie uruchomi Autolejek ponownie. Dysk <code>AUTOLEJEK</code> zniknie z komputera.</p></li>
+<li><p>Sprawdź wersję programu na ekranie startowym.</p></li>
+<li><p>Korzystając z przygotowanego wcześniej zapisu, ponownie wprowadź i zapisz wszystkie ustawienia, w szczególności kalibrację, limit cieczy, aktywny przekaźnik, detektor i alarmy przepływu.</p></li>
+<li><p>Sprawdź każde odtworzone ustawienie. Przed pracą wykonaj próbne nalewanie z małym limitem.</p></li>
+</ol>
+<h4 class="unnumbered" id="przerwana-albo-odrzucona-aktualizacja">6.8.3. Przerwana albo odrzucona aktualizacja</h4>
+<p>Jeżeli przewód zostanie odłączony, komputer przerwie kopiowanie albo zasilanie zaniknie przed zapisaniem całej aktualizacji, Autolejek powinien ponownie uruchomić tryb aktualizacji i pokazać dysk <code>AUTOLEJEK</code>. Podłącz urządzenie ponownie i powtórz kopiowanie pełnego pliku.</p>
+<p>Jeżeli dysk <code>AUTOLEJEK</code> pozostaje widoczny po skopiowaniu pliku, aktualizacja nie została przyjęta albo nie była kompletna. Usuń pobrany plik ze swojego komputera, pobierz właściwą aktualizację ponownie i powtórz procedurę. Nie zmieniaj nazwy ani zawartości pliku aktualizacji. Jeżeli prawidłowy plik nadal jest odrzucany, skontaktuj się z serwisem i podaj wersję widoczną na ekranie startowym oraz nazwę użytego pliku.</p></div>
+</details>
+<details class="manual-chapter" id="manual-komunikaty">
+  <summary class="manual-chapter-heading"><h2>7. Komunikaty</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><ul>
+<li><p><code>Zapisano zmianę!</code> - ustawienie zostało zapisane.</p></li>
+<li><p><code>Nie zapisano!</code> - próba wyjścia bez zapisania zmienionej wartości.</p></li>
+<li><p><code>Liczba musi być większa niż ...</code> - wpisana wartość jest za mała.</p></li>
+<li><p><code>Zbyt duża liczba</code> - wpisana wartość przekracza dopuszczalne maksimum.</p></li>
+<li><p><code>Wartość nie jest wspierana</code> - wybrana wartość nie jest obsługiwana.</p></li>
+<li><p><code>Osiągnięto limit</code> - nalewanie zostało zatrzymane po osiągnięciu limitu.</p></li>
+<li><p><code>Wykryto przerwanie</code> - detektor zgłosił przerwanie podczas pracy. Aby wrócić do menu głównego, naciśnij dowolny przycisk na klawiaturze.</p></li>
+<li><p><code>Czujnik wciśnięty</code> - detektor, czyli czujnik zatrzymania, informuje, że zbiornik jest pełny, więc nie można rozpocząć nalewania. Aby wrócić do menu głównego, naciśnij dowolny przycisk na klawiaturze.</p></li>
+<li><p><code>Przepływ zbyt mały. Sprawdź dopływ wody</code> - wykryto przepływ poniżej limitu minimalnego. Aby wrócić do menu głównego, naciśnij dowolny przycisk na klawiaturze.</p></li>
+<li><p><code>Przepływ zbyt duży. Sprawdź dopływ wody</code> - wykryto przepływ powyżej ustawionego limitu maksymalnego. Aby wrócić do menu głównego, naciśnij dowolny przycisk na klawiaturze.</p></li>
+</ul>
+<p>Ikona dłoni na ekranie komunikatu oznacza, że sterownik czeka na naciśnięcie dowolnego przycisku na klawiaturze.</p></div>
+</details>
+<details class="manual-chapter" id="manual-ograniczenia-podczas-pracy">
+  <summary class="manual-chapter-heading"><h2>8. Ograniczenia podczas pracy</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>Gdy nalewanie jest uruchomione, większość ustawień jest zablokowana. Można wrócić klawiszem <code>D</code> do poprzedniego menu, ale zmiana parametrów roboczych powinna być wykonywana po zatrzymaniu procesu.</p>
+<p>Przed zmianą kalibracji, trybu przepływomierza, przekaźników, detektora lub alarmów przepływu zatrzymaj nalewanie.</p></div>
+</details>
+<details class="manual-chapter" id="manual-zalecana-procedura-pierwszej-konfiguracji">
+  <summary class="manual-chapter-heading"><h2>9. Zalecana procedura pierwszej konfiguracji</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p>Podczas pierwszego uruchomienia zaleca się skonfigurować co najmniej kalibrację, przepływomierz, maksymalną pojemność zbiornika oraz aktywny przekaźnik. Bez tych parametrów sterownik nie będzie poprawnie zliczał cieczy, sprawdzał dopuszczalnego limitu nalewania ani załączał właściwego wyjścia. Zaleca się także obserwować rzeczywisty przepływ cieczy podczas próbnego nalewania i na tej podstawie dobrać limit minimalnego przepływu. Przykład: jeżeli podczas normalnej pracy przepływ wynosi około <code>23 L/min</code>, można ustawić minimalny przepływ na <code>15 L/min</code>.</p>
+<ol>
+<li><p>Ustaw język polski w <code>Ustawienia &gt; Language</code> zgodnie z podrozdziałem 6.1 <code>Language</code>.</p></li>
+<li><p>Ustaw kalibrację przepływomierza w <code>Ustawienia &gt; Kalibracja</code> zgodnie z podrozdziałem 6.2 <code>Kalibracja</code>.</p></li>
+<li><p>Ustaw maksymalną pojemność zbiornika w <code>Ustawienia &gt; Limit cieczy</code> zgodnie z podrozdziałem 6.3 <code>Limit cieczy</code>.</p></li>
+<li><p>Sprawdź tryb sygnału przepływomierza zgodnie z podrozdziałem 6.4.1 <code>Sygnał wzbudzania</code>.</p></li>
+<li><p>Wybierz aktywny przekaźnik albo oba przekaźniki zgodnie z podrozdziałem 6.5 <code>Przekaźniki</code>.</p></li>
+<li><p>Jeśli używasz dodatkowego czujnika, włącz i skonfiguruj <code>Detektor</code> zgodnie z podrozdziałem 6.6 <code>Detektor</code>.</p></li>
+<li><p>Podczas próbnego nalewania obserwuj bieżący przepływ cieczy. Następnie ustaw alarm minimalnego przepływu w menu <code>Przepływ</code> zgodnie z podrozdziałem 6.7.1 <code>Minimalny przepływ</code>, dobierając limit niższy od normalnego przepływu.</p></li>
+<li><p>Jeśli chcesz chronić przepływomierz przed zbyt dużym przepływem, włącz alarm maksymalnego przepływu w menu <code>Przepływ</code> zgodnie z podrozdziałem 6.7.2 <code>Maksymalny przepływ</code> i ustaw limit.</p></li>
+<li><p>Wróć do ekranu głównego, wpisz mały testowy limit i wykonaj próbę.</p></li>
+</ol></div>
+</details>
+<details class="manual-chapter" id="manual-rozwiązywanie-problemów">
+  <summary class="manual-chapter-heading"><h2>10. Rozwiązywanie problemów</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><h3 class="unnumbered" id="urządzenie-nie-zlicza-litrów">10.1. Urządzenie nie zlicza litrów</h3>
+<ul>
+<li><p>Sprawdź, czy przepływomierz jest podłączony do wejścia przepływomierza.</p></li>
+<li><p>Sprawdź tryb sygnału w menu <code>Przepływomierz</code> zgodnie z podrozdziałem 6.4.1 <code>Sygnał wzbudzania</code>: rosnący albo opadający.</p></li>
+<li><p>Sprawdź kalibrację. Wartość zerowa lub zbyt mała zostanie odrzucona.</p></li>
+<li><p>Jeśli sygnał jest zaszumiony, włącz filtr drgań przepływomierza i ustaw czas impulsu.</p></li>
+</ul>
+<h3 class="unnumbered" id="nalewanie-nie-startuje">10.2. Nalewanie nie startuje</h3>
+<ul>
+<li><p>Sprawdź, czy wpisany limit jest większy od zera.</p></li>
+<li><p>Sprawdź, czy nie jest aktywny komunikat <code>Czujnik wciśnięty</code>. Ten komunikat oznacza, że detektor, czyli czujnik zatrzymania, informuje o pełnym zbiorniku i blokuje rozpoczęcie nalewania.</p></li>
+<li><p>Jeśli detektor nie jest używany, wyłącz go w menu <code>Detektor</code> zgodnie z podrozdziałem 6.6 <code>Detektor</code>.</p></li>
+<li><p>Sprawdź wybór przekaźnika w menu <code>Przekaźniki</code> zgodnie z podrozdziałem 6.5 <code>Przekaźniki</code>.</p></li>
+</ul>
+<h3 class="unnumbered" id="sterownik-zatrzymuje-nalewanie-zbyt-wcześnie">10.3. Sterownik zatrzymuje nalewanie zbyt wcześnie</h3>
+<ul>
+<li><p>Sprawdź ustawiony limit na ekranie głównym.</p></li>
+<li><p>Sprawdź maksymalny <code>Limit cieczy</code> zgodnie z podrozdziałem 6.3 <code>Limit cieczy</code>.</p></li>
+<li><p>Sprawdź, czy detektor nie zgłasza sygnału zatrzymania.</p></li>
+<li><p>Jeśli włączony jest alarm minimalnego przepływu, sprawdź limit <code>L/min</code> oraz czasy w menu <code>Przepływ</code> zgodnie z podrozdziałem 6.7.1 <code>Minimalny przepływ</code>.</p></li>
+<li><p>Jeśli włączony jest alarm maksymalnego przepływu, sprawdź limit maksymalnego przepływu w menu <code>Przepływ</code> zgodnie z podrozdziałem 6.7.2 <code>Maksymalny przepływ</code>.</p></li>
+</ul>
+<h3 class="unnumbered" id="pojawia-się-komunikat-o-zbyt-małym-przepływie">10.4. Pojawia się komunikat o zbyt małym przepływie</h3>
+<ul>
+<li><p>Sprawdź, czy realny przepływ jest równy ustawionemu limitowi <code>L/min</code> lub go przekracza.</p></li>
+<li><p>Zwiększ czas startu, jeśli przepływ stabilizuje się dopiero po kilku sekundach.</p></li>
+<li><p>Zwiększ czas przerwy, jeśli krótkie spadki przepływu nie powinny zatrzymywać pracy.</p></li>
+<li><p>Wyłącz alarm minimalnego przepływu, jeśli ta funkcja nie jest potrzebna.</p></li>
+</ul>
+<h3 class="unnumbered" id="pojawia-się-komunikat-o-zbyt-dużym-przepływie">10.5. Pojawia się komunikat o zbyt dużym przepływie</h3>
+<ul>
+<li><p>Sprawdź, czy realny przepływ nie przekracza ustawionego limitu maksymalnego.</p></li>
+<li><p>Sprawdź dopływ wody, zawory oraz pompę.</p></li>
+<li><p>Zwiększ limit maksymalnego przepływu, jeśli przepływ jest prawidłowy dla instalacji i przepływomierza.</p></li>
+<li><p>Wyłącz alarm maksymalnego przepływu, jeśli ta funkcja nie jest potrzebna.</p></li>
+</ul></div>
+</details>
+<details class="manual-chapter" id="manual-uwagi-eksploatacyjne">
+  <summary class="manual-chapter-heading"><h2>11. Uwagi eksploatacyjne</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><ul>
+<li><p>Po zmianie ustawień zawsze zatwierdź je klawiszem <code>A</code>.</p></li>
+<li><p>Po komunikacie błędu wróć do poprzedniego ekranu i wpisz poprawną wartość.</p></li>
+<li><p>Nie zmieniaj ustawień podczas aktywnego nalewania.</p></li>
+<li><p>Po zmianach w instalacji hydraulicznej wykonaj ponowną kalibrację przepływomierza.</p></li>
+<li><p>Po zmianie czujnika albo przepływomierza sprawdź tryb sygnału i filtr drgań.</p></li>
+</ul></div>
+</details>
+<details class="manual-chapter" id="manual-bezpieczeństwo-podczas-podłączania">
+  <summary class="manual-chapter-heading"><h2>12. Bezpieczeństwo podczas podłączania</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><p><strong>OSTRZEŻENIE: praca przy zasilonej płytce może porazić albo zabić.</strong> Zawsze odłącz zasilanie przed oględzinami płytki elektronicznej, wymianą bezpieczników lub podłączeniem nowych podzespołów. Po odłączeniu zasilania upewnij się, że na zaciskach nie ma napięcia.</p>
+<p>Jeśli nie masz pewności, jak bezpiecznie podłączyć urządzenie, przerwij pracę. Skontaktuj się z osobą uprawnioną do podłączania urządzeń elektrycznych, np. elektrykiem, albo z działem obsługi klienta.</p></div>
+</details>
+<details class="manual-chapter" id="manual-słowniczek">
+  <summary class="manual-chapter-heading"><h2>13. Słowniczek</h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+  <div class="manual-chapter-content"><h3 class="unnumbered" id="filtr-drgań">13.1. Filtr drgań</h3>
+<p>Filtr drgań odrzuca impulsy krótsze niż ustawiony czas. Dzięki temu sterownik nie reaguje na przypadkowe, bardzo krótkie zmiany sygnału, które mogą powstać przez drgania styków albo zakłócenia elektromagnetyczne.</p>
+<h3 class="unnumbered" id="drgania-styków">13.2. Drgania styków</h3>
+<p>Drgania styków występują w czujnikach mechanicznych, takich jak kontaktron albo przełącznik krańcowy. Podczas przełączania styki mogą przez bardzo krótki czas wielokrotnie łączyć się i rozłączać. Bez filtra drgań mikrokontroler może uznać jedno rzeczywiste przełączenie za kilka impulsów elektrycznych.</p>
+<figure>
+<img src="assets/manual/images/contact-bounce-diagram.png" loading="lazy" style="width:82.0%" />
+<p><em>Schemat drgań styków</em></p>
+</figure>
+<p>Rys. 30. Poglądowa grafika drgań styków wygenerowana z użyciem AI.</p>
+<h3 class="unnumbered" id="zakłócenia-elektromagnetyczne">13.3. Zakłócenia elektromagnetyczne</h3>
+<p>Zakłócenia elektromagnetyczne to niepożądane sygnały elektryczne indukowane w przewodach albo układach elektronicznych. Mogą pochodzić np. od silników, pomp, przekaźników, długich przewodów lub urządzeń pracujących w pobliżu. W praktyce mogą powodować fałszywe impulsy na wejściu przepływomierza albo detektora.</p>
+<figure>
+<img src="assets/manual/images/electromagnetic-interference-diagram.png" loading="lazy" style="width:82.0%" />
+<p><em>Zakłócenia elektromagnetyczne</em></p>
+</figure>
+<p>Rys. 31. Poglądowa grafika zakłóceń elektromagnetycznych wygenerowana z użyciem AI.</p>
+<h3 class="unnumbered" id="kontaktron">13.4. Kontaktron</h3>
+<p>Kontaktron to mechaniczny czujnik magnetyczny. Jego styki zamykają się albo otwierają pod wpływem pola magnetycznego. Kontaktrony są często stosowane w wodomierzach i prostych czujnikach położenia, ale mogą wymagać filtra drgań.</p>
+<figure>
+<img src="assets/manual/images/reed-switch-operation-diagram.png" loading="lazy" style="width:82.0%" />
+<p><em>Kontaktron</em></p>
+</figure>
+<p>Rys. 32. Poglądowa grafika kontaktronu wygenerowana z użyciem AI.</p>
+<h3 class="unnumbered" id="impuls">13.5. Impuls</h3>
+<p>Impuls to krótka zmiana sygnału elektrycznego na wejściu sterownika. W przepływomierzu impulsy są zliczane i przeliczane na litry. W detektorze impuls może oznaczać sygnał zatrzymania.</p>
+<figure>
+<img src="assets/manual/images/electrical-pulse-diagram.png" loading="lazy" style="width:82.0%" />
+<p><em>Impuls elektryczny</em></p>
+</figure>
+<p>Rys. 33. Poglądowa grafika impulsu elektrycznego wygenerowana z użyciem AI.</p>
+<h3 class="unnumbered" id="zbocze-sygnału">13.6. Zbocze sygnału</h3>
+<p>Zbocze sygnału to moment przejścia sygnału między dwoma poziomami napięcia. Zbocze rosnące oznacza zmianę z 0 V na 5 V, a zbocze opadające zmianę z 5 V na 0 V. Tryb sygnału trzeba dobrać do podłączonego przepływomierza albo detektora.</p></div>
+</details>
+</div>

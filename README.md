@@ -62,3 +62,16 @@ Settings → Pages → Build and deployment → Source: GitHub Actions
 ```
 
 Domena niestandardowa jest zachowana w `public/CNAME` i trafia do każdego artefaktu wdrożeniowego.
+
+## Nazwy ilustracji
+
+Pliki obrazów mają opisowe angielskie nazwy zapisane małymi literami, z wyrazami
+oddzielonymi myślnikami. Nazwa opisuje zawartość, np.
+`flow-meter-u-bend-correct.png` lub `minimum-flow-limit.png`.
+Wersje językowe pozostają w katalogach `pl` i `en`; nazwy zdjęć z Pexels
+zachowują autora i identyfikator źródła.
+
+Import instrukcji (`npm run manual:sync`) używa mapowania
+`scripts/manual-image-names.json`, aby zachować te nazwy również przy ponownym
+kopiowaniu obrazów z repozytorium Neptun. Dodając ilustrację do instrukcji,
+uzupełnij mapowanie nazwy źródłowej na nazwę używaną na stronie.

@@ -81,3 +81,19 @@ document.querySelectorAll("[data-relay-toggle]").forEach(button => {
     animation.classList.toggle("is-energized", energized);
   });
 });
+
+document.querySelectorAll("[data-manual-chapter-link]").forEach(link => {
+  link.addEventListener("click", event => {
+    const chapter = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+    if (!(chapter instanceof HTMLDetailsElement)) return;
+    event.preventDefault();
+    chapter.open = true;
+    history.replaceState(null, "", link.hash);
+    chapter.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+  });
+});
+
+if (window.location.hash) {
+  const chapter = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+  if (chapter instanceof HTMLDetailsElement && chapter.matches(".manual-chapter")) chapter.open = true;
+}

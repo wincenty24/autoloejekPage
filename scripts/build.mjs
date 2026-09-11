@@ -7,6 +7,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const sourceRoot = path.join(projectRoot, "src");
 const publicRoot = path.join(projectRoot, "public");
 const outputRoot = path.join(projectRoot, "_site");
+const manualContent = await readFile(path.join(sourceRoot, "includes", "manual-polish.html"), "utf8");
 const config = JSON.parse(await readFile(path.join(projectRoot, "site.config.json"), "utf8"));
 const usedTranslations = Object.fromEntries(config.languages.map(language => [language, new Set()]));
 const assetVersions = {};
@@ -170,7 +171,8 @@ for (const language of config.languages) {
 }
 
 for (const page of config.pages) {
-  const template = await readFile(path.join(sourceRoot, "pages", page.source), "utf8");
+  const sourceTemplate = await readFile(path.join(sourceRoot, "pages", page.source), "utf8");
+  const template = sourceTemplate.replace("<!-- MANUAL_POLISH_CONTENT -->", manualContent);
 
   for (const language of config.languages) {
     const dictionary = dictionaries[language];
