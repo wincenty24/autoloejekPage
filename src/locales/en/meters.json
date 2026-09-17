@@ -52,7 +52,7 @@
   "meterWiringBmeters5vTitle": "5V → do not connect",
   "meterWiringBmeters5vText": "A passive reed switch does not need a separate supply wire, so leave the 5V pin unused.",
   "meterWiringBmetersColors": "The manual gives this colour convention for the basic GSD and GMDX sensors. Electrically, swapping the brown and blue wires does not affect operation because this is an ordinary reed contact with no polarity. The manufacturer also notes that wire colours may change without notice, so check the documentation supplied with the particular unit.",
-  "meterWiringBmetersManual": "B METERS pulse-emitter instructions (PDF, English)",
+  "meterWiringBmetersManual": "B METERS pulse-emitter instructions (English PDF, hosted by Allvalve)",
   "meterWiringActiveTitle": "Active sensor or open-collector output",
   "meterWiringActiveText": "For a typical three-wire sensor, connect its supply wire to 5V, ground to GND, and pulse output to SIG. Before wiring, verify that the sensor supports a 5 V supply, its output is compatible with 5 V logic, and its current consumption does not exceed 200 mA. An open-collector output requires the sensor ground and Autolejek GND to be common.",
   "meterWiringYfTitle": "Example — SEA YF-G1",
@@ -172,6 +172,6 @@
   "meterConclusionTitle": "Practical conclusion",
   "meterConclusionText": "In my experience, water meters such as the BMETERS GSD8-R are much more user-friendly for measuring water than flow sensors with a large stated error. A clearly specified metrological characteristic and a pulse rate of 1 L/pulse mean that troublesome individual calibration is unnecessary. You only need to configure the pulse rate correctly and install the device according to its documentation. The price difference is not particularly large either: a YF-G1 costs approximately PLN 70, while a GSD8-R costs around PLN 180.",
   "meterInterferenceTitle": "Watch out for interference",
-  "meterInterferenceText": "The world is not ideal, so a real installation must also account for electromagnetic interference that may produce false pulses. Do not install the system near a welding machine, high-power equipment, or their power cables. The pulse cable should not be excessively long either — for Autolejek installations, I recommend a maximum length of 2 m.",
+  "meterInterferenceText": "Counting pulses without flow requires diagnosis. Check the power supply, connections, cable routing and coil suppression. Route the pulse cable away from motors and power wiring. Select its type, length, shielding and route for the particular installation; 2 m is not a universal interference immunity limit. Filtering does not replace correct installation, and an excessive filter time can reject valid pulses.",
   "buildMeterTitle": "Water meter / flow meter"
 }

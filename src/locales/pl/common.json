@@ -8,5 +8,6 @@
   "navConfigure": "Skonfiguruj sam",
   "navManual": "Instrukcja obsługi",
   "navProjects": "Projekty",
-  "navContact": "Kontakt"
+  "navContact": "Kontakt",
+  "themeToggleLabel": "Tryb nocny"
 }

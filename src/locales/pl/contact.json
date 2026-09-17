@@ -2,6 +2,17 @@
   "contactPageTitle": "Kontakt — Autolejek",
   "contactEyebrow": "Napisz do nas",
   "contactTitle": "Kontakt",
-  "contactLead": "Projekt jest obecnie w fazie testów. Jeśli interesuje Cię montaż systemu w Twoim przedsiębiorstwie lub chcesz omówić jego możliwe zastosowanie, napisz do nas.",
-  "emailLabel": "E-mail"
+  "contactLead": "Każdy system Autolejek jest budowany indywidualnie dla konkretnej instalacji. Napisz, co chcesz dozować i gdzie układ ma pracować — wspólnie ustalimy możliwy zakres realizacji.",
+  "emailLabel": "E-mail",
+  "contactEmailHint": "Na początek wystarczy krótki opis. Jeśli nie znasz jeszcze wszystkich parametrów, ustalimy je podczas rozmowy.",
+  "contactProjectTitle": "Chcesz przygotować nową instalację?",
+  "contactProjectIntro": "W wiadomości podaj dostępne informacje, które pomogą dobrać elementy i sposób montażu.",
+  "contactSiteLabel": "Miejsce i zastosowanie",
+  "contactSiteText": "Opisz przeznaczenie układu, lokalizację i miejsce montażu. Napisz, czy będzie użytkowany stale w tym miejscu, czy przenoszony, oraz z kim uzgadniać szczegóły instalacji.",
+  "contactFlowLabel": "Ciecz i dozowanie",
+  "contactFlowText": "Podaj rodzaj i źródło cieczy, oczekiwany przepływ oraz objętość pojedynczej dawki. Opisz, jak ma przebiegać napełnianie.",
+  "contactEquipmentLabel": "Urządzenia i zasilanie",
+  "contactEquipmentText": "Wymień istniejące lub planowane elementy: pompę, przepływomierz, zawory, detektor i zasilacz. Jeśli możesz, podaj modele, napięcia zasilania lub dołącz zdjęcia tabliczek znamionowych.",
+  "contactEnvironmentLabel": "Warunki montażu",
+  "contactEnvironmentText": "Napisz, czy układ będzie pracował w pomieszczeniu czy na zewnątrz, jakie urządzenia działają obok (np. silniki lub falowniki) oraz jakie są planowane długości i trasy przewodów. Pomocne będą zdjęcia miejsca montażu lub prosty schemat."
 }

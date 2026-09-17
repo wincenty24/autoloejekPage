@@ -23,7 +23,7 @@
   "sealingTitle": "Important: sealing",
   "sealingText": "A G thread according to ISO 228-1 is a parallel fastening thread. The thread itself is not intended to provide a pressure-tight seal — the connection should use a separate seal, such as a flat washer or O-ring, compressed outside the thread. Threads that form a pressure-tight joint on the thread are covered by ISO 7-1.",
   "isoAsideTitle": "ISO on the lighter side",
-  "isoAsideText": "Fans of the stories about Jakub Wędrowycz and his companion Semen may remember the “Collection of Basic ISO Standards – Village and Farm”. As it turns out, standards can have some rather less academic applications too. :)",
+  "isoAsideText": "In Andrzej Pilipiuk’s “Trucizna”, a collection of short stories about Jakub Wędrowycz, there is a mention of the police confiscating Semen’s list of ISO standards because he kept going around pointing out violations, including uneven pavements and unsuitable windows. As it turns out, standards can have some rather less academic applications too. :)",
   "dnTitle": "What does DN mean?",
   "dnDescription": "DN is the designation for the nominal size of piping-system components defined by ISO 6708. It consists of the letters DN followed by a dimensionless whole number that is only indirectly related to an actual dimension in millimetres.",
   "dnClassDescription": "DN can be understood as a size class for a pipe and the components used with it, such as valves, water meters, flow meters, filters, or pumps.",

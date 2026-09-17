@@ -8,7 +8,7 @@
   "quickFactsTitle": "The project at a glance",
   "quickFactsLead": "Open a topic to see what the system is, how it works, and where it can be used.",
   "whatIsAutolejekTitle": "What exactly is Autolejek?",
-  "whatIsAutolejekText": "Autolejek is an automatic liquid measuring and dispensing system. The user enters the required volume, while the controller counts pulses from a flow meter and stops the installation after dispensing the preset amount.",
+  "whatIsAutolejekText": "Autolejek is an automatic liquid measuring and dosing system project tailored to a particular installation. It combines controls with a flow meter and a valve or pump. The user specifies the required volume, and the system controls filling based on measured flow.",
   "howAutolejekWorksTitle": "How does it work?",
   "howAutolejekWorksText": "The flow meter sends pulses as liquid moves through the installation. Autolejek counts them, displays the measured volume, and controls a valve, electric pump, or compatible pump shut-off system. It therefore dispenses an actual volume even when the installation's flow rate changes during operation.",
   "whereAutolejekFitsTitle": "Where can it be used?",
@@ -71,7 +71,7 @@
   "storyParagraph1": "From time to time, instead of going to school, I would skip class and visit my uncle to drive a tractor — a much more interesting activity.",
   "storyParagraph2": "One day, he asked me to watch the sprayer while he filled it with water. Out of laziness, I decided this made no sense — why stand there watching how much water had gone in when I could be driving a tractor?",
   "storyParagraph3": "So I decided to build something that would fill the sprayer automatically. The first prototype was nothing impressive: an etched PCB, rough soldering, and, most importantly, the entire control panel mounted on a piece of wood. But it worked.",
-  "storyParagraph4": "A few years later, I built another prototype — this time much better-looking. It had an enclosure, a keypad, and everything looked good.",
-  "storyParagraph5": "After another few years, I decided to rebuild the entire project from scratch — professionally this time.",
-  "storyParagraph6": "In the meantime, I gained knowledge, graduated from university, and today I write code professionally. And it all started with watching the water."
+  "storyParagraph5": "After a few years, I decided to rebuild the project from scratch — professionally this time.",
+  "storyParagraph6": "In the meantime, I gained knowledge, graduated from university, and today I write code professionally. And it all started with watching the water.",
+  "aboutYoutubeLink": "Visit the Autolejek YouTube channel"
 }

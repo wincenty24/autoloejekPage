@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skonfiguruj sam — Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skonfiguruj sam — Autolejek</title><link rel="stylesheet" href="styles.css"><script src="theme.js"></script></head>
 <body>
-  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a href="build-it-yourself.html" data-i18n="navBuild"></a><a class="active" href="configure-yourself.html" aria-current="page" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div></header>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a href="build-it-yourself.html" data-i18n="navBuild"></a><a class="active" href="configure-yourself.html" aria-current="page" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Tryb nocny" data-i18n-aria-label="themeToggleLabel" data-theme-toggle hidden><span class="theme-day" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-night" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></svg></span></button></header>
   <main>
     <section class="page-intro"><p class="eyebrow" data-i18n="configureEyebrow"></p><h1 data-i18n="configureTitle"></h1><p class="lead" data-i18n="configureLead"></p></section>
     <section class="build-sections" data-ordered-sections aria-label="Etapy konfiguracji" data-i18n-aria-label="configureSectionsLabel">
-      <details class="accordion-section" data-section-order="1">
-        <summary class="section-heading"><span>01</span><h2 data-i18n="configureMeterConnectionTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+<details class="accordion-section" data-section-order="1"><summary class="section-heading"><span>1</span><h2 data-i18n="configurePowerTitle"></h2><span aria-hidden="true" class="accordion-icon"></span></summary><article class="text-block accordion-content technical-guide"><p data-i18n="configurePowerText"></p><figure class="guide-figure guide-figure-contain"><img alt="" data-i18n-alt="configureVinAlt" loading="lazy" src="assets/manual/images/controller-power-input-connector.png"/><figcaption data-i18n="configureVinCaption"></figcaption></figure><p data-i18n="configurePowerCheck"></p><h3 data-i18n="configureMountTitle"></h3><p data-i18n="configureMountText"></p></article></details>
+      <details class="accordion-section" data-section-order="2">
+        <summary class="section-heading"><span>2</span><h2 data-i18n="configureMeterConnectionTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide meter-configuration-guide">
           <h3 data-i18n="meterWiringTitle"></h3>
           <p data-i18n="meterWiringIntro"></p>
@@ -38,7 +39,7 @@
             <li><strong data-i18n="meterWiringBmeters5vTitle"></strong><span data-i18n="meterWiringBmeters5vText"></span></li>
           </ul>
           <p data-i18n="meterWiringBmetersColors"></p>
-          <p><a href="assets/buildityourself/IMPULSE-DEVICES-instructions-ENG.pdf" target="_blank" rel="noopener" data-i18n="meterWiringBmetersManual"></a></p>
+          <p><a href="https://www.allvalve.com.au/wp-content/uploads/2023/07/IMPULSE-DEVICES-instructions-ENG.pdf" target="_blank" rel="noopener noreferrer" data-i18n="meterWiringBmetersManual"></a></p>
           <h4 data-i18n="meterWiringActiveTitle"></h4>
           <p data-i18n="meterWiringActiveText"></p>
           <h4 data-i18n="meterWiringYfTitle"></h4>
@@ -56,8 +57,8 @@
           <p class="guide-caveat" data-i18n="meterWiringWarning"></p>
         </article>
       </details>
-      <details class="accordion-section" data-section-order="2">
-        <summary class="section-heading"><span>02</span><h2 data-i18n="configureRelay1DeviceTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+      <details class="accordion-section" data-section-order="3">
+        <summary class="section-heading"><span>3</span><h2 data-i18n="configureRelay1DeviceTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide relay1-device-guide">
           <p data-i18n="relay1DeviceIntro"></p>
           <figure class="guide-figure guide-figure-contain">
@@ -83,8 +84,8 @@
           <p class="guide-caveat" data-i18n="relay1PolarityWarning"></p>
         </article>
       </details>
-      <details class="accordion-section" data-section-order="3">
-        <summary class="section-heading"><span>03</span><h2 data-i18n="configureDetectorConnectionTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+      <details class="accordion-section" data-section-order="4">
+        <summary class="section-heading"><span>4</span><h2 data-i18n="configureDetectorConnectionTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide detector-connection-guide">
           <h3 data-i18n="detectorWiringTitle"></h3>
           <p data-i18n="detectorWiringIntro"></p>
@@ -146,25 +147,30 @@
           <p class="guide-caveat" data-i18n="detectorWiringWarning"></p>
         </article>
       </details>
-      <details class="accordion-section" data-section-order="4">
-        <summary class="section-heading"><span>04</span><h2 data-i18n="configureFirstSetupTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+      <details class="accordion-section" data-section-order="5">
+        <summary class="section-heading"><span>5</span><h2 data-i18n="configureFirstSetupTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide first-setup-guide">
-          <p data-i18n="firstSetupIntro"></p>
-          <ol class="selection-checklist">
-            <li><span data-i18n="firstSetupStep1"></span></li>
-            <li><span data-i18n="firstSetupStep2"></span></li>
-            <li><span data-i18n="firstSetupStep3"></span></li>
-            <li><span data-i18n="firstSetupStep4"></span></li>
-            <li><span data-i18n="firstSetupStep5"></span></li>
-            <li><span data-i18n="firstSetupStep6"></span></li>
-            <li><span data-i18n="firstSetupStep7"></span></li>
-            <li><span data-i18n="firstSetupStep8"></span></li>
-            <li><span data-i18n="firstSetupStep9"></span></li>
-          </ol>
-          <p class="guide-action"><a class="about-project-link" href="manual.html#manual-zalecana-procedura-pierwszej-konfiguracji"><span data-i18n="firstSetupManualLink"></span><span aria-hidden="true">→</span></a></p>
-        </article>
+<p data-i18n="firstSetupIntro"></p><p data-i18n="configureOperatorCheck"></p>
+<ol class="selection-checklist">
+<li><span data-i18n="firstSetupPrecheck"></span></li>
+<li><span data-i18n="firstSetupStep1"></span></li>
+<li><span data-i18n="firstSetupStep2"></span></li>
+<li><span data-i18n="firstSetupStep3"></span></li>
+<li><span data-i18n="firstSetupStep4"></span></li>
+<li><span data-i18n="firstSetupStep5"></span></li>
+<li><span data-i18n="firstSetupStep6"></span></li>
+<li><span data-i18n="firstSetupStep7"></span></li>
+<li><span data-i18n="firstSetupStep8"></span></li>
+<li><span data-i18n="firstSetupStep9"></span></li>
+<li><span data-i18n="firstSetupSwitching"></span></li>
+<li><span data-i18n="firstSetupRecord"></span></li>
+<li><span data-i18n="firstSetupChanges"></span></li>
+</ol>
+<p class="guide-action"><a class="about-project-link" href="manual.html#manual-zalecana-procedura-pierwszej-konfiguracji"><span data-i18n="firstSetupManualLink"></span><span aria-hidden="true">→</span></a></p>
+</article>
       </details>
+<details class="accordion-section" data-section-order="6"><summary class="section-heading"><span>6</span><h2 data-i18n="configureDiagnosticsTitle"></h2><span aria-hidden="true" class="accordion-icon"></span></summary><article class="text-block accordion-content technical-guide"><p data-i18n="configureRelayLedsText"></p><figure class="guide-figure guide-figure-contain"><img alt="" data-i18n-alt="configureRelayLedsAlt" loading="lazy" src="assets/manual/images/controller-relay-status-leds.png"/></figure><p data-i18n="configureComLedsText"></p><figure class="guide-figure guide-figure-contain"><img alt="" data-i18n-alt="configureComLedsAlt" loading="lazy" src="assets/manual/images/controller-communication-status-leds.png"/></figure><h3 data-i18n="configureFuseTitle"></h3><p data-i18n="configureFuseText"></p><h3 data-i18n="configureFalsePulsesTitle"></h3><p data-i18n="configureFalsePulsesText"></p><p><a data-i18n="configureManualDetails" href="manual.html#manual-rozwiux105zywanie-problemuxf3w"></a></p></article></details>
     </section>
   </main>
-  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="site.js"></script>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a><a href="https://www.youtube.com/@autolejek">YouTube @autolejek</a></footer><script src="site.js"></script>
 </body></html>

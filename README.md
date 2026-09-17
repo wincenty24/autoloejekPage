@@ -75,3 +75,11 @@ Import instrukcji (`npm run manual:sync`) używa mapowania
 `scripts/manual-image-names.json`, aby zachować te nazwy również przy ponownym
 kopiowaniu obrazów z repozytorium Neptun. Dodając ilustrację do instrukcji,
 uzupełnij mapowanie nazwy źródłowej na nazwę używaną na stronie.
+
+## Zdjęcia i opisy realizacji
+
+Strona Projekty pobiera treści z `content/investments/` podczas budowania.
+Każda realizacja ma własny katalog z `data.json`, okładką i opcjonalną galerią.
+Instrukcja dodawania realizacji oraz tłumaczeń: [content/README.md](content/README.md).
+Wpis testowy pozostaje szkicem (`draft: true`). Widoczne są rzeczywiste realizacje. Synchronizacja z Dyskiem Google jest dostępna po jednorazowej konfiguracji.
+Instrukcja: [Automatyczna publikacja z Dysku Google](docs/google-drive-sync.md).

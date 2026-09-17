@@ -1,0 +1,70 @@
+{
+  "id": "solenoid_valve_12v",
+  "title": "Elektrozawór 12 V — prosta instalacja przy kranie",
+  "date": "2026-09-17",
+  "coverImage": "12v-solenoid-valve-and-quick-coupling.png",
+  "description": {
+    "short": "Jedna z najprostszych konfiguracji Autolejka: elektrozawór 12 V i przepływomierz, podłączone do istniejącego doprowadzenia wody do kranu.",
+    "content": [
+      {
+        "type": "text",
+        "text": "W tej instalacji Autolejek współpracuje z elektrozaworem 12 V oraz przepływomierzem. To najprostszy wariant układu: przepływomierz mierzy ilość pobranej wody, a elektrozawór pozwala zatrzymać jej przepływ po odmierzeniu zadanej objętości."
+      },
+      {
+        "type": "text",
+        "text": "Ingerencja w istniejącą instalację była minimalna. Układ Autolejka wpięto w doprowadzenie wody do kranu, wykorzystując istniejący punkt poboru."
+      },
+      {
+        "type": "text",
+        "text": "Na zdjęciu elektrozaworu powyżej widoczna jest szybkozłączka, która ułatwia podłączanie węża."
+      },
+      {
+        "type": "image",
+        "src": "pulse-water-meter-at-tap.jpg",
+        "width": 480,
+        "caption": "Przepływomierz zamontowany w doprowadzeniu wody.",
+        "alt": "Wodomierz z niebieską obudową liczydła i przewodem impulsowym, zamontowany na rurze przy ścianie."
+      }
+    ]
+  },
+  "gallery": [],
+  "draft": false,
+  "language": "pl",
+  "translations": {
+    "en": {
+      "title": "12 V solenoid valve — a simple installation at the tap",
+      "description": {
+        "short": "One of the simplest Autolejek configurations: a 12 V solenoid valve and a flow meter connected to the existing water supply to a tap.",
+        "content": [
+          {
+            "type": "text",
+            "text": "In this installation, Autolejek works with a 12 V solenoid valve and a flow meter. This is the simplest arrangement: the flow meter measures the water drawn, while the solenoid valve stops the flow once the selected volume has been dispensed."
+          },
+          {
+            "type": "text",
+            "text": "Changes to the existing plumbing were minimal. The Autolejek assembly was connected to the water supply leading to the tap, using the existing water point."
+          },
+          {
+            "type": "text",
+            "text": "The valve photo above shows a quick coupling that makes connecting a hose easier."
+          },
+          {
+            "type": "image",
+            "src": "pulse-water-meter-at-tap.jpg",
+            "width": 480,
+            "caption": "Flow meter installed in the water supply line.",
+            "alt": "Water meter with a blue register housing and a pulse cable, mounted on a pipe beside a wall."
+          }
+        ]
+      }
+    }
+  },
+  "imageProvenance": {
+    "12v-solenoid-valve-and-quick-coupling.png": {
+      "kind": "original"
+    },
+    "pulse-water-meter-at-tap.jpg": {
+      "kind": "original"
+    }
+  }
+}

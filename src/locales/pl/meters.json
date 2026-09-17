@@ -52,7 +52,7 @@
   "meterWiringBmeters5vTitle": "5V → nie podłączaj",
   "meterWiringBmeters5vText": "Pasywny kontaktron nie wymaga osobnego przewodu zasilającego, dlatego pin 5V pozostaw wolny.",
   "meterWiringBmetersColors": "Takie oznaczenie kolorów instrukcja podaje dla podstawowych czujników GSD i GMDX. Elektrycznie zamiana przewodów brązowego i niebieskiego miejscami nie wpływa na działanie, ponieważ jest to zwykły styk kontaktronowy bez polaryzacji. Producent zastrzega również, że kolory przewodów mogą ulec zmianie bez powiadomienia, dlatego sprawdź dokumentację konkretnego egzemplarza.",
-  "meterWiringBmetersManual": "Instrukcja nadajników impulsów B METERS (PDF, język angielski)",
+  "meterWiringBmetersManual": "Instrukcja nadajników impulsów B METERS (PDF po angielsku, serwis Allvalve)",
   "meterWiringActiveTitle": "Czujnik aktywny lub wyjście open collector",
   "meterWiringActiveText": "W typowym czujniku trzyprzewodowym przewód zasilania podłącza się do 5V, masę do GND, a wyjście impulsowe do SIG. Przed wykonaniem połączenia sprawdź w dokumentacji, czy czujnik może być zasilany napięciem 5 V, jego wyjście jest zgodne z logiką 5 V, a pobór prądu nie przekracza 200 mA. Dla wyjścia open collector masa czujnika i GND Autolejka muszą być wspólne.",
   "meterWiringYfTitle": "Przykład — SEA YF-G1",
@@ -172,6 +172,6 @@
   "meterConclusionTitle": "Wniosek z praktyki",
   "meterConclusionText": "Z moich obserwacji wynika, że do odmierzania wody wodomierze takie jak BMETERS GSD8-R są znacznie przyjaźniejsze dla użytkownika niż przepływomierze o dużej deklarowanej niedokładności. Jasno określona charakterystyka metrologiczna i impulsowanie 1 l/imp sprawiają, że nie trzeba męczyć się z indywidualną kalibracją. Wystarczy poprawnie ustawić parametr impulsowania i zamontować urządzenie zgodnie z dokumentacją. Różnica w cenie nie jest przy tym duża: YF-G1 kosztuje orientacyjnie około 70 zł, a GSD8-R około 180 zł.",
   "meterInterferenceTitle": "Uwaga na zakłócenia",
-  "meterInterferenceText": "Świat nie jest idealny, dlatego w praktycznej instalacji trzeba również uwzględnić zakłócenia elektromagnetyczne, które mogą powodować fałszywe impulsy. Systemu nie należy montować w pobliżu spawarki, urządzeń o dużym poborze mocy ani ich przewodów zasilających. Przewód impulsowy także nie powinien być zbyt długi — w instalacjach Autolejka zalecam maksymalnie 2 m.",
+  "meterInterferenceText": "Zliczanie impulsów mimo braku przepływu wymaga diagnostyki. Sprawdź zasilanie, połączenia, prowadzenie przewodów i zabezpieczenia cewek. Prowadź przewód impulsowy z dala od silników i przewodów mocy. Typ, długość, ekranowanie i trasę dobierz do konkretnej instalacji — 2 m nie jest uniwersalną granicą odporności na zakłócenia. Filtr nie zastępuje poprawnego montażu; zbyt długi czas może odrzucać prawidłowe impulsy.",
   "buildMeterTitle": "Wodomierz / przepływomierz"
 }

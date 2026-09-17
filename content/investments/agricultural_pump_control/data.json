@@ -1,0 +1,104 @@
+{
+  "id": "agricultural_pump_control",
+  "title": "Sterowanie pompą — napełnianie opryskiwaczy i nawadnianie",
+  "date": "2026-09-16",
+  "coverImage": "24v-dc-power-supply-and-protection-assembly.png",
+  "description": {
+    "short": "Autolejek w tej instalacji steruje pompą wody, która służy do napełniania opryskiwaczy i nawadniania upraw. Wykorzystano do tego układ zasilania i sterowania pokazany na poniższym zdjęciu.",
+    "content": [
+      {
+        "type": "text",
+        "text": "Na zdjęciu powyżej, od lewej, znajdują się: wyłącznik nadprądowy, złączki, przekaźnik, gniazdo wtykowe oraz zasilacz 24 V DC."
+      },
+      {
+        "type": "text",
+        "text": "W tej konfiguracji Autolejek jest zasilany napięciem 24 V DC. Takim samym napięciem sterowana jest cewka przekaźnika, za którego pośrednictwem urządzenie kontroluje pracę pompy. Gniazdo umożliwia szybkie podłączenie i odłączenie pompy wody."
+      },
+      {
+        "type": "text",
+        "text": "W gospodarstwie pracują dwa rodzaje opryskiwaczy: standardowy opryskiwacz ciągany oraz specjalistyczny opryskiwacz do uprawy truskawek. Autolejek ułatwia ich napełnianie — użytkownik ustawia potrzebną ilość wody, a urządzenie nadzoruje jej odmierzanie i zatrzymuje pompę po osiągnięciu zadanej objętości."
+      },
+      {
+        "type": "text",
+        "text": "W tym sezonie Autolejek wykorzystywano również do sterowania nawadnianiem plantacji ogórków. Dzięki odmierzaniu objętości rośliny otrzymywały zadaną dawkę wody. Samo sterowanie czasem pracy pompy nie zapewnia takiej samej objętości przy zmieniającym się przepływie."
+      },
+      {
+        "type": "text",
+        "text": "W instalacji pracuje jeden z pierwszych prototypów Autolejka, widoczny na poniższym zdjęciu."
+      },
+      {
+        "type": "image",
+        "src": "autolejek-early-prototype.png",
+        "width": 440,
+        "caption": "Jeden z pierwszych prototypów Autolejka podczas odmierzania wody.",
+        "alt": "Prototyp Autolejka z klawiaturą i wyświetlaczem pokazującym limit 100 litrów oraz 13 nalanych litrów."
+      },
+      {
+        "type": "text",
+        "text": "Doświadczenia z użytkowania prototypu posłużyły do dopracowania kolejnej wersji. Przeprojektowano w niej obudowę, która jest teraz znacznie sztywniejsza. Według relacji użytkownika po tej zmianie nie ma już uwag dotyczących użytkowania urządzenia."
+      },
+      {
+        "type": "text",
+        "text": "W przyszłym sezonie planowane jest podłączenie Autolejka do pompy spalinowej wykorzystywanej do nawadniania truskawek."
+      }
+    ]
+  },
+  "gallery": [],
+  "draft": false,
+  "language": "pl",
+  "translations": {
+    "en": {
+      "title": "Pump control — sprayer filling and crop irrigation",
+      "description": {
+        "short": "In this installation, Autolejek controls a water pump used for filling sprayers and irrigating crops. The power and control assembly is shown in the photo below.",
+        "content": [
+          {
+            "type": "text",
+            "text": "In the photo above, from left to right: a miniature circuit breaker, terminal blocks, a relay, a power socket and a 24 V DC power supply."
+          },
+          {
+            "type": "text",
+            "text": "In this configuration, Autolejek runs on 24 V DC. The relay coil uses the same voltage, allowing the controller to switch the water pump through the relay. The socket makes it easy to connect and disconnect the pump."
+          },
+          {
+            "type": "text",
+            "text": "The farm uses two types of sprayer: a conventional trailed sprayer and a specialist sprayer for strawberry crops. Autolejek makes filling them easier: the user sets the required water volume, and the controller measures it and stops the pump when the target is reached."
+          },
+          {
+            "type": "text",
+            "text": "This season, Autolejek also controlled irrigation of a cucumber plantation. Measuring volume allowed the plants to receive a specified amount of water. Controlling pump running time alone does not deliver the same volume when the flow rate changes."
+          },
+          {
+            "type": "text",
+            "text": "This installation uses one of the first Autolejek prototypes, shown below."
+          },
+          {
+            "type": "image",
+            "src": "autolejek-early-prototype.png",
+            "width": 440,
+            "caption": "One of the first Autolejek prototypes measuring water.",
+            "alt": "Autolejek prototype with a keypad and a display showing a 100-litre limit and 13 litres dispensed."
+          },
+          {
+            "type": "text",
+            "text": "Experience with the prototype informed the next version. Its enclosure was redesigned to be considerably more rigid. According to the user, there are no further concerns about using the device following this change."
+          },
+          {
+            "type": "text",
+            "text": "Next season, the plan is to connect Autolejek to an engine-driven pump used to irrigate strawberries."
+          }
+        ]
+      }
+    }
+  },
+  "imageProvenance": {
+    "autolejek-early-prototype.png": {
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    "24v-dc-power-supply-and-protection-assembly.png": {
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    }
+  }
+}

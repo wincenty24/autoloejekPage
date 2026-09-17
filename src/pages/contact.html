@@ -1,7 +1,20 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kontakt — Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kontakt — Autolejek</title><link rel="stylesheet" href="styles.css"><script src="theme.js"></script></head>
 <body>
-  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a href="build-it-yourself.html" data-i18n="navBuild"></a><a href="configure-yourself.html" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a class="active" href="contact.html" aria-current="page" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div></header>
-  <main><section class="page-intro"><p class="eyebrow" data-i18n="contactEyebrow"></p><h1 data-i18n="contactTitle"></h1><p class="lead" data-i18n="contactLead"></p></section><section class="contact-card"><span data-i18n="emailLabel"></span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></section></main>
-  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="site.js"></script>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a href="build-it-yourself.html" data-i18n="navBuild"></a><a href="configure-yourself.html" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a class="active" href="contact.html" aria-current="page" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Tryb nocny" data-i18n-aria-label="themeToggleLabel" data-theme-toggle hidden><span class="theme-day" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-night" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></svg></span></button></header>
+  <main>
+    <section class="page-intro"><p class="eyebrow" data-i18n="contactEyebrow"></p><h1 data-i18n="contactTitle"></h1><p class="lead" data-i18n="contactLead"></p></section>
+    <section class="contact-card"><span data-i18n="emailLabel"></span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a><p data-i18n="contactEmailHint"></p></section>
+    <section class="contact-details" aria-labelledby="contact-project-title">
+      <h2 id="contact-project-title" data-i18n="contactProjectTitle"></h2>
+      <p data-i18n="contactProjectIntro"></p>
+      <dl class="contact-topics">
+        <div><dt data-i18n="contactSiteLabel"></dt><dd data-i18n="contactSiteText"></dd></div>
+        <div><dt data-i18n="contactFlowLabel"></dt><dd data-i18n="contactFlowText"></dd></div>
+        <div><dt data-i18n="contactEquipmentLabel"></dt><dd data-i18n="contactEquipmentText"></dd></div>
+        <div><dt data-i18n="contactEnvironmentLabel"></dt><dd data-i18n="contactEnvironmentText"></dd></div>
+      </dl>
+    </section>
+  </main>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a><a href="https://www.youtube.com/@autolejek">YouTube @autolejek</a></footer><script src="site.js"></script>
 </body></html>

@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "npm run build && node scripts/check.mjs",
-    "manual:sync": "node scripts/generate-manual.mjs"
+    "check": "node --test scripts/investments.test.mjs scripts/sync-drive.test.mjs scripts/image-provenance.test.mjs && npm run build && node scripts/check.mjs",
+    "manual:sync": "node scripts/generate-manual.mjs",
+    "drive:sync": "node scripts/sync-drive.mjs"
   },
   "engines": {
     "node": ">=18"

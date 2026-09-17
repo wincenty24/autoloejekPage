@@ -1,0 +1,957 @@
+{
+  "images": [
+    {
+      "id": "IMG-001",
+      "sha256": "084342cf1b7b47a8f593b575da05aa9e0f4b3371b66cb3e7cd6b481569c15f25",
+      "paths": [
+        "content/investments/agricultural_pump_control/24v-dc-power-supply-and-protection-assembly.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-002",
+      "sha256": "bf674f0f79ffd9885c9ba96990afb7f3ec7a93d4b57b58d7a81bf64d9b18e08f",
+      "paths": [
+        "content/investments/agricultural_pump_control/autolejek-early-prototype.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-003",
+      "sha256": "b953dab6a4b3d96970ca7540838c74d91f29bbbbc6ad4b779a3cc61092b9641a",
+      "paths": [
+        "content/investments/example_investment/example-installation-placeholder.png"
+      ],
+      "kind": "removed"
+    },
+    {
+      "id": "IMG-004",
+      "sha256": "a139363a7d0028f5891d06033e9c2d05873709b0d9a795b9abcce1126468d30f",
+      "paths": [
+        "content/investments/solenoid_valve_12v/12v-solenoid-valve-and-quick-coupling.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-005",
+      "sha256": "f6a4c651d68fdbcc5dd6c33faeb45ffa216a4dd2da75dce7a4d7ba17082327d3",
+      "paths": [
+        "content/investments/solenoid_valve_12v/pulse-water-meter-at-tap.jpg"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-006",
+      "sha256": "c6892f4ff425dd51787afa72ef680e7e009614f6af78c537cd0e671e826ef25b",
+      "paths": [
+        "content/investments/test_water_filling/autolejek-controller.png",
+        "public/assets/mainPage/autolejek-controller.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-007",
+      "sha256": "ad42e454c03d1a43bd49aa21ce370abca645d1dd3e2dd8ff5854e889594d7d95",
+      "paths": [
+        "content/investments/test_water_filling/flow-meter-and-solenoid-valve.png",
+        "public/assets/buildityourself/flow-meter-and-solenoid-valve.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-008",
+      "sha256": "58e39b999f8abce6d1bce31ab72af9a776c3bc29a12ba7537663a9500617278a",
+      "paths": [
+        "content/investments/test_water_filling/pipe-water-filling.png",
+        "public/assets/buildityourself/pipe-water-filling.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-009",
+      "sha256": "729d4c17ba864096a071c2536d9d3321d3c07a08701ef192ccc7c9ad9a81daa9",
+      "paths": [
+        "public/assets/buildityourself/bmeters-gsd8-r-mounting-ratios.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-010",
+      "sha256": "d0dcd0d1f660177f1811ecb2fc577c1cfea87ac77b80e2d5d0eefe484adb2efb",
+      "paths": [
+        "public/assets/buildityourself/bmeters-gsd8-r-q3-marking.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-011",
+      "sha256": "d6d7aa8609ae720f5aa23ea7552358af76400cf5bd7eaa4563bfbb3c17b905f9",
+      "paths": [
+        "public/assets/buildityourself/bmeters-gsd8-r-water-meter-ud.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-012",
+      "sha256": "f3517b98b81c170d85c05bdd44b18b5945df256e16533c780ab3c4f0488be38c",
+      "paths": [
+        "public/assets/buildityourself/bmeters-gsd8-r-water-meter.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-013",
+      "sha256": "cca11794d5de6f9a854da9c340d0e9f41533a0164068abb499fbfc72e98c05ea",
+      "paths": [
+        "public/assets/buildityourself/controller-relay-1-connector-detail.png",
+        "public/assets/buildityourself/controller-relay-1-connector.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-014",
+      "sha256": "36807296fdaae8371ac170773407cd78640b8b3a044984f2ee759105e57ceda6",
+      "paths": [
+        "public/assets/buildityourself/controller-relay-2-connector.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-015",
+      "sha256": "d9ed01d0b2c66a9a9add0c8bf5e6dffb356fff5379afd10cc7d929e8c08f1cb1",
+      "paths": [
+        "public/assets/buildityourself/controller-sensor-connector.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-016",
+      "sha256": "75eb41144dbfc98afc135f9f941963f231346cbdf8b6aa308453e28521ce70c9",
+      "paths": [
+        "public/assets/buildityourself/controller-water-meter-connector.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-017",
+      "sha256": "04834853a8085f60eed54fefebaa574cba5c991afa80ff7b16dbe09346b9f6d4",
+      "paths": [
+        "public/assets/buildityourself/float-level-switch.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-018",
+      "sha256": "5eefb65d45c80fefce870a9f3edd640ed99acb2671a4b8fd903e41adcb328d44",
+      "paths": [
+        "public/assets/buildityourself/flow-meter-free-outlet-incorrect.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-019",
+      "sha256": "88e24fe2a14acc21f3adc7542cdd137151ded7d2d10c3dece723c8680bbe9e65",
+      "paths": [
+        "public/assets/buildityourself/flow-meter-high-point-incorrect.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-020",
+      "sha256": "26ac52691e88ca8e65a980f7b7bdaa55169b3c26aea386af770b0983e136c3cb",
+      "paths": [
+        "public/assets/buildityourself/flow-meter-solenoid-and-manual-valves.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-021",
+      "sha256": "74c88b20ed0eee9852d56d98371ccee2a39204c9265a887c3ca971a8ee746084",
+      "paths": [
+        "public/assets/buildityourself/flow-meter-u-bend-correct.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-022",
+      "sha256": "1582ed01243abeda5cf09ac36308b2e3fbff2c57f1338495c3d3745f98ec7c90",
+      "paths": [
+        "public/assets/buildityourself/gsd8-r-dimensions.png"
+      ],
+      "kind": "screenshot-diagram"
+    },
+    {
+      "id": "IMG-023",
+      "sha256": "32bbc4256240b5141e4cc12a14cdce24347e293786905a20a1d8846c511b9c88",
+      "paths": [
+        "public/assets/buildityourself/non-contact-water-level-monitoring.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-024",
+      "sha256": "c2321f862d0862c1c3c9c30cba4db9003175316d97f7606a84042d61179e08dc",
+      "paths": [
+        "public/assets/buildityourself/pump-stop-switch-off-resistance.jpg"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-025",
+      "sha256": "113abfbacd9d6df558478c0373f77864d4cff72dbc146d05bc57d12d7590bfbc",
+      "paths": [
+        "public/assets/buildityourself/pump-stop-switch-on-resistance.jpg"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-026",
+      "sha256": "dd3ea8820bfa3037826a45814b0db4809bf369db05ea00f9c36849e8d1c1b103",
+      "paths": [
+        "public/assets/buildityourself/sea-yf-g1-flow-meter-landscape.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-027",
+      "sha256": "3f69e754dc12e1f2b307c61f96d401099cc59eb00334acfd63073fe5f50b0c7e",
+      "paths": [
+        "public/assets/buildityourself/sea-yf-g1-flow-meter-portrait.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-028",
+      "sha256": "8055fbd328b8dceea75d099eab4f7683dbd9f622a578cb21883fc425a717016d",
+      "paths": [
+        "public/assets/buildityourself/tank-bottom-level-sensor.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-029",
+      "sha256": "4f3184d3c35f46533922f7c91a3a7bdadaba8e068d99fb7329e438e794255ed8",
+      "paths": [
+        "public/assets/buildityourself/vertical-water-meter-installation.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-030",
+      "sha256": "c8a06acf76fe3afb25e4232d76b4c19c8cbc5698088f27a00cbf25fb1514fb5e",
+      "paths": [
+        "public/assets/buildityourself/water-meter-allowed-mounting-positions.png"
+      ],
+      "kind": "screenshot-diagram"
+    },
+    {
+      "id": "IMG-031",
+      "sha256": "dc8e0364af9cc8c7b75c41f12ee4b438c404113cb007457329735847afe3b78a",
+      "paths": [
+        "public/assets/buildityourself/water-meter-error-curve.png"
+      ],
+      "kind": "screenshot-diagram"
+    },
+    {
+      "id": "IMG-032",
+      "sha256": "11ac59e74f259a137a807af8b7187ad498227a2b75540ad5e794ae8e5dd3c277",
+      "paths": [
+        "public/assets/mainPage/autolejek-controller-original.png"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-033",
+      "sha256": "6f525524a8150c72ae3d9be8f8a2abaeed9918a7fd4215b901d6926e3c796dcb",
+      "paths": [
+        "public/assets/mainPage/field-irrigation-sprinkler.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-034",
+      "sha256": "cefc8a89b01444dc742091f2c30760c862fc3e968ecde5bceee9bffc7b8f92be",
+      "paths": [
+        "public/assets/mainPage/outdoor-water-tap.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-035",
+      "sha256": "049f01ea43d4672b392b572a837bee20ad7e2e0d94ea2503c413e1ae7f2d3c5e",
+      "paths": [
+        "public/assets/mainPage/tractor-spraying-field.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-036",
+      "sha256": "bb47d3d13a4e92554cc1ac75ecd1a6264ab593dff30948f2188e5fe829994a79",
+      "paths": [
+        "public/assets/mainPage/wheat-close-up-pexels-zmaysq-1725935641-38701898.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-037",
+      "sha256": "c956c2d1739d15ce4d3ab0b8c38c124fd9a2f5fa91a41dc7b9bb0b7362528ecd",
+      "paths": [
+        "public/assets/mainPage/wheat-field-pexels-rebornfilmes-29290183.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-038",
+      "sha256": "72a2f0da07b3b0a6552733caf8a38d84392f2781e984d43328e03e1710271fa4",
+      "paths": [
+        "public/assets/mainPage/wheat-field-tree-pexels-merictuna-30336135.jpg"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-039",
+      "sha256": "4963bf2ce771650eeb58dd41cc133bd47e620228007a1de8f80bc526e44337f3",
+      "paths": [
+        "public/assets/configure/pl/contact-bounce-diagram.png",
+        "public/assets/manual/images/contact-bounce-diagram.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-040",
+      "sha256": "48e0c68c79873a79346e970cf857db6f45d8336a38f171ddfaf3fd44556fcd1c",
+      "paths": [
+        "public/assets/manual/images/controller-circuit-board-connectors.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-041",
+      "sha256": "0f674004a91cd3f475ae20ecd14a45fd7ba9763ea8c886b4942112d3c8e1e90f",
+      "paths": [
+        "public/assets/manual/images/controller-communication-status-leds.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-042",
+      "sha256": "b9690b21154e2cc3c5514c450204305a86ed1aef0823d74c6e8f5ffe4e078871",
+      "paths": [
+        "public/assets/manual/images/controller-power-input-connector.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-043",
+      "sha256": "7a6beb5a51e7d9f8d55263ee54f72766d6e552ba6810d7547130f4fc871ed380",
+      "paths": [
+        "public/assets/manual/images/controller-relay-status-leds.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-044",
+      "sha256": "36f7a5a31fceab70bc03b0eb841c11db47126f45a2e427e739d6217fecf3d0de",
+      "paths": [
+        "public/assets/configure/pl/controller-startup-screen.png",
+        "public/assets/manual/images/controller-startup-screen.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-045",
+      "sha256": "413ee16295cdb5c676f22825cf9b9f46f15a918eeb51f837303e2dbb4687a127",
+      "paths": [
+        "public/assets/configure/pl/dosing-progress-screen.png",
+        "public/assets/manual/images/dosing-progress-screen.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-046",
+      "sha256": "24bf954c3c444a9f21d8b7dc7a11112d0c5ee1994bb3794bff55ef4642190140",
+      "paths": [
+        "public/assets/configure/pl/dosing-volume-screen.png",
+        "public/assets/manual/images/dosing-volume-screen.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-047",
+      "sha256": "a6132475cb1927ae53a47fded0b26478afe78277d481ff4bd849cf17d12e6ed7",
+      "paths": [
+        "public/assets/configure/pl/electrical-pulse-diagram.png",
+        "public/assets/manual/images/electrical-pulse-diagram.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-048",
+      "sha256": "de80a7af776a2b55ea9cd625c0164cb0d31f952a1f95bf547bb960912d5dfd29",
+      "paths": [
+        "public/assets/configure/pl/electromagnetic-interference-diagram.png",
+        "public/assets/manual/images/electromagnetic-interference-diagram.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-049",
+      "sha256": "be83690156c2f3f7bff943638d4a425cc2553b1f5a0624f17df8c498a2e35345",
+      "paths": [
+        "public/assets/configure/pl/flow-alarms-menu.png",
+        "public/assets/manual/images/flow-alarms-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-050",
+      "sha256": "7a4301f267e73b4af79f1c198fb416beb789d63e556fe0dfbc782e332a48da41",
+      "paths": [
+        "public/assets/configure/pl/flow-meter-debounce-menu.png",
+        "public/assets/configure/pl/level-sensor-debounce-menu.png",
+        "public/assets/manual/images/flow-meter-debounce-menu.png",
+        "public/assets/manual/images/level-sensor-debounce-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-051",
+      "sha256": "bc362722dd9b05405aafb7597d45fa30eff9b6f9a2bdeb0cbc24eba2fc4e6d93",
+      "paths": [
+        "public/assets/configure/pl/flow-meter-debounce-time.png",
+        "public/assets/manual/images/flow-meter-debounce-time.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-052",
+      "sha256": "dee7ca808a8b92d4d14a413c39418c8e1551054d12e3a7832009bcbcef387db1",
+      "paths": [
+        "public/assets/configure/pl/flow-meter-signal-edge-menu.png",
+        "public/assets/manual/images/flow-meter-signal-edge-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-053",
+      "sha256": "6b9412654b70c1fea30b89e9db187e74f5a049683b30149dc082667a6f136d70",
+      "paths": [
+        "public/assets/configure/pl/high-flow-alert.png",
+        "public/assets/manual/images/high-flow-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-054",
+      "sha256": "ad7d864c715b0534a8246b2be27c5e7f41539330bbe8ad59754291e10fe1b32a",
+      "paths": [
+        "public/assets/configure/pl/language-selection-menu.png",
+        "public/assets/manual/images/language-selection-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-055",
+      "sha256": "e1ee2716600b1da050f3df1fcc8e7f5eaf09c9a9fb91b7264216eb5e15dcfdd5",
+      "paths": [
+        "public/assets/configure/pl/level-sensor-debounce-time.png",
+        "public/assets/manual/images/level-sensor-debounce-time.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-056",
+      "sha256": "2c795f01260887a8d77f0d0df5aabf3563bdb11efd48540b8353c70d9fe11d39",
+      "paths": [
+        "public/assets/configure/pl/level-sensor-menu.png",
+        "public/assets/manual/images/level-sensor-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-057",
+      "sha256": "07c9d42c5e26ecb71116eb06bd5acfc6cbe8129ea90a5b3d2910fea669a9258a",
+      "paths": [
+        "public/assets/configure/pl/level-sensor-signal-edge-menu.png",
+        "public/assets/manual/images/level-sensor-signal-edge-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-058",
+      "sha256": "9e2848264d9e48b377414d3b5aa5716374bde95d291de8b853724876b2a7ae7d",
+      "paths": [
+        "public/assets/configure/pl/low-flow-alert.png",
+        "public/assets/manual/images/low-flow-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-059",
+      "sha256": "6e8b43839820eac9815f54951582741bfcda240902979d93fe17332fe304b4fb",
+      "paths": [
+        "public/assets/configure/pl/maximum-flow-alarm-menu.png",
+        "public/assets/manual/images/maximum-flow-alarm-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-060",
+      "sha256": "ecf51c6b67c39b9a7c9ca9a3c9f7a64d90decd7a3871c45b804f5094aa758327",
+      "paths": [
+        "public/assets/configure/pl/maximum-flow-limit.png",
+        "public/assets/manual/images/maximum-flow-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-061",
+      "sha256": "5aa1c6fb63d6cda931b73cc03712ffef9d0c4da7a3d07b005be3080cfaa2e746",
+      "paths": [
+        "public/assets/configure/pl/minimum-flow-alarm-menu.png",
+        "public/assets/manual/images/minimum-flow-alarm-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-062",
+      "sha256": "550190d5b18648a52b050e18ff23e3cb8342f67afbc5f3b8cae49ab41fae515b",
+      "paths": [
+        "public/assets/configure/pl/minimum-flow-limit.png",
+        "public/assets/manual/images/minimum-flow-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-063",
+      "sha256": "673c744cad157c9c50b3722e37f42a0631286d8739a1073b6f7d146728e6e62e",
+      "paths": [
+        "public/assets/configure/pl/minimum-flow-settings-menu.png",
+        "public/assets/manual/images/minimum-flow-settings-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-064",
+      "sha256": "7dbf1e239c1131670771af119fd70083ca5d1707f4cc887906f089c12bd0e2c2",
+      "paths": [
+        "public/assets/configure/pl/minimum-flow-shutdown-delay.png",
+        "public/assets/manual/images/minimum-flow-shutdown-delay.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-065",
+      "sha256": "3b79eb2680c3a463189626c31f7a981a0a53741e246a947cbaa273b7ecf800a2",
+      "paths": [
+        "public/assets/configure/pl/minimum-flow-startup-delay.png",
+        "public/assets/manual/images/minimum-flow-startup-delay.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-066",
+      "sha256": "2ba4b74d1b4277d4b2fcbd8c0bbefbf8cf29de688badf0eebc18b5990935568c",
+      "paths": [
+        "public/assets/configure/pl/pulses-per-liter-calibration.png",
+        "public/assets/manual/images/pulses-per-liter-calibration.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-067",
+      "sha256": "66141cf750240a3830c365f6d7dbda9b1fcc4b701ac0c78d65784276b3c75027",
+      "paths": [
+        "public/assets/configure/pl/reed-switch-operation-diagram.png",
+        "public/assets/manual/images/reed-switch-operation-diagram.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-068",
+      "sha256": "4f1ac309b32a5950545be78c948f43d1ba911e9de62e85c9c5b6f624b5478a2d",
+      "paths": [
+        "public/assets/configure/pl/relay-selection-menu.png",
+        "public/assets/manual/images/relay-selection-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-069",
+      "sha256": "a6e50787953a431ce50d2e1a9ba4c36a8b292be8be09456a68095a0e664b9815",
+      "paths": [
+        "public/assets/configure/pl/sensor-active-alert.png",
+        "public/assets/manual/images/sensor-active-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-070",
+      "sha256": "64fd0e00a7fb989d750eed160436315291fd315380be8d236bf95143a4c2272a",
+      "paths": [
+        "public/assets/configure/pl/sensor-interruption-alert.png",
+        "public/assets/manual/images/sensor-interruption-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-071",
+      "sha256": "6bb468c1b87cf6ff392f336e43738a770456ee3c8154fa73c2a18f6f62f41991",
+      "paths": [
+        "public/assets/configure/pl/settings-menu-page-1.png",
+        "public/assets/manual/images/settings-menu-page-1.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-072",
+      "sha256": "40bfde652297c42cf490ff726859793d767c2cfd1fd61668d79e30cab641d641",
+      "paths": [
+        "public/assets/configure/pl/settings-menu-page-2.png",
+        "public/assets/manual/images/settings-menu-page-2.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-073",
+      "sha256": "641f7a43fc488d7b33390dc86aacc748f210e5246dcf39cc2168124abc40c2ab",
+      "paths": [
+        "public/assets/configure/pl/tank-capacity-limit.png",
+        "public/assets/manual/images/tank-capacity-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-074",
+      "sha256": "0985b542ea91cce83e88bb109629b3293de3d03e2f1cbc0f0278099d55a6571c",
+      "paths": [
+        "public/assets/configure/pl/volume-limit-changed.png",
+        "public/assets/manual/images/volume-limit-changed.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-075",
+      "sha256": "1914ce81b59826151e2ceebebad9b24dff7c70bcd5b5b5adfa004d3fbc862470",
+      "paths": [
+        "public/assets/configure/en/changes-not-saved.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-076",
+      "sha256": "e4c27760097dffa68f252fedb6a2e81eeb5b53f3e956894c817aebe24b3ee705",
+      "paths": [
+        "public/assets/configure/en/changes-saved.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-077",
+      "sha256": "52930c1c4c8963bbf2533ae179c1bedc71fefe9b1ac5c8a258c6ac5648b6a901",
+      "paths": [
+        "public/assets/configure/en/dosing-progress-screen.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-078",
+      "sha256": "9163d23fc3d561d79a17e94f48c93c3e796e2f793bef27e921c170924dcd563b",
+      "paths": [
+        "public/assets/configure/en/dosing-volume-screen.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-079",
+      "sha256": "f8aa8fd1099b6248840236be08f3028e09fa884e553ebb1e06241c15e44bc43c",
+      "paths": [
+        "public/assets/configure/en/firmware-installation-confirmation.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-080",
+      "sha256": "2dcfbe0437ed32dc781f34570af39e807ef525415c97b95f6e28744a6ee5db8e",
+      "paths": [
+        "public/assets/configure/en/flow-alarms-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-081",
+      "sha256": "791dca2bad305fb480f2021483eb4f639758632b287cd06965e75f1fa08d86e8",
+      "paths": [
+        "public/assets/configure/en/flow-meter-debounce-menu.png",
+        "public/assets/configure/en/level-sensor-debounce-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-082",
+      "sha256": "b1d88f606ee45360beb049082a5969dc8ed443a3bde41f4a337eec7f9ef82c62",
+      "paths": [
+        "public/assets/configure/en/flow-meter-debounce-time.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-083",
+      "sha256": "43977a420aa4f5e7e7bab3bdc4215ffeb5233beee29831ae7762009a87839688",
+      "paths": [
+        "public/assets/configure/en/flow-meter-signal-edge-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-084",
+      "sha256": "a4705d4e8e7874d76efe29ddb46b0ffe67b67707a1bbe5115c8baa3e4d667b16",
+      "paths": [
+        "public/assets/configure/en/high-flow-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-085",
+      "sha256": "c9638bd650265be5b2532e3e08f2ff6949be5d197847264aa922d112efc20c43",
+      "paths": [
+        "public/assets/configure/en/level-sensor-debounce-time.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-086",
+      "sha256": "eaacf07058cbc0ffab07b65c062a08ef2dad97e3ba875fc2d8a901500ad0d774",
+      "paths": [
+        "public/assets/configure/en/level-sensor-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-087",
+      "sha256": "36bd0158ac9741666b4f1a61f5e263665953804390d88858e24ff4be31c8b43a",
+      "paths": [
+        "public/assets/configure/en/level-sensor-signal-edge-menu-alternate.png",
+        "public/assets/configure/en/level-sensor-signal-edge-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-088",
+      "sha256": "ec01bf7f9f28a190846d44e421b272d7ca36c11e01a4e141396d9c13bd9d957c",
+      "paths": [
+        "public/assets/configure/en/low-flow-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-089",
+      "sha256": "89029c3610f7e65d3825f45ac7c214f64d57a866f509bd5719d723a038dec457",
+      "paths": [
+        "public/assets/configure/en/maximum-flow-alarm-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-090",
+      "sha256": "20d344982e24be679ec7741adb573f1c7767d09d1a82fc05dc1a1673a5e4bc19",
+      "paths": [
+        "public/assets/configure/en/maximum-flow-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-091",
+      "sha256": "f9a0d8c4ca4f5f751de1a9dcf32f9f8f9cc525548e2d44463869d385bb7274a6",
+      "paths": [
+        "public/assets/configure/en/minimum-flow-alarm-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-092",
+      "sha256": "ea98847f82e50a2173c488d6c14b01911b6838b51a04ede06e332f123dfd112f",
+      "paths": [
+        "public/assets/configure/en/minimum-flow-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-093",
+      "sha256": "0e4b4305067ca76c31ebf54b92318399440cead3a159d1e0927edd577f15c3c9",
+      "paths": [
+        "public/assets/configure/en/minimum-flow-settings-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-094",
+      "sha256": "de035332d8ee7286169251463bb35216ebfbacf235dfa0063a3bdfecb9c60d39",
+      "paths": [
+        "public/assets/configure/en/minimum-flow-shutdown-delay.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-095",
+      "sha256": "8954a5b7b086e5946ec97d978ca49ca2454cd69b9f09d28d88deafcdfc34cf59",
+      "paths": [
+        "public/assets/configure/en/minimum-flow-startup-delay.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-096",
+      "sha256": "ee64aee0c9e11c80569e56a1a42d85b7e8527c0e44257fafd5948006b633649b",
+      "paths": [
+        "public/assets/configure/en/pulses-per-liter-calibration.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-097",
+      "sha256": "913cc02cf307c051afe28d1bd32fb99e4a4242d2ee32b7d06e2deccd84dbc507",
+      "paths": [
+        "public/assets/configure/en/relay-selection-menu.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-098",
+      "sha256": "76f90c6110ca23acd780693690383947daff8ef3256b4c3d7b6d7933bf690ad7",
+      "paths": [
+        "public/assets/configure/en/sensor-active-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-099",
+      "sha256": "dda1b5a100c1b0b92c3246dac8758af9c0beb9e2efe5135064716e92306954b4",
+      "paths": [
+        "public/assets/configure/en/sensor-interruption-alert.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-100",
+      "sha256": "a02dfb9b5f8aeb4076f9e8ce54ab35d63864ba583759ebedf8bba7d4e954147c",
+      "paths": [
+        "public/assets/configure/en/settings-menu-page-1.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-101",
+      "sha256": "ddd3a273216c7982f936e71d3c7da256c8372775e1e54257d67870bd53a9e4c2",
+      "paths": [
+        "public/assets/configure/en/tank-capacity-limit.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-102",
+      "sha256": "de6252087037e5a962f009b0fcfa62ed87a287a38b2f8840644573270922901f",
+      "paths": [
+        "public/assets/configure/en/unsupported-value-warning.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-103",
+      "sha256": "d76ebc61c731999fa04a480a5e86f6ccf2c4cc0cb2c5cf47b938b44eb4b6424e",
+      "paths": [
+        "public/assets/configure/en/value-above-maximum-warning.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-104",
+      "sha256": "019ba6ddf596c2b8bed4f6fd6d0b64fa7174e733d0cfdc9219f6ba491942dc10",
+      "paths": [
+        "public/assets/configure/en/value-below-minimum-warning.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-105",
+      "sha256": "fe21574f462d625be580dffff8f9cfe4ad9d90219f16e5b8be798c509a739840",
+      "paths": [
+        "public/assets/configure/en/volume-limit-changed.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-106",
+      "sha256": "e9ac4d8c1a06164a0ef3f1f201e488e5766e8d9c480b2b49d750499a7fd36348",
+      "paths": [
+        "public/assets/configure/en/volume-limit-reached.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-107",
+      "sha256": "cef490259059c54e3478229bbf894596dd8d87f8e93b4286e5861f698ab2386f",
+      "paths": [
+        "public/assets/configure/pl/controller-circuit-board.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-108",
+      "sha256": "078e5b188772905e9fb2ae1c27464771681780a87b85cf1e911e519a30c08c13",
+      "paths": [
+        "public/assets/configure/pl/flow-alarms-menu-map.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-109",
+      "sha256": "a7e6368e93c6e7b227728ce78212e731ede1ca1f8a14298c79c6389128972874",
+      "paths": [
+        "public/assets/configure/pl/flow-meter-menu-map.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-110",
+      "sha256": "524bdf200cabfee06b2edf2f8406bd7cb412fb2587c49517436a9916b9a0c6d7",
+      "paths": [
+        "public/assets/configure/pl/level-sensor-menu-map.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-111",
+      "sha256": "6ba392e7dfeff6ca9c614331802f621bc7ce321ac4d0a45da9f48c457fa605a9",
+      "paths": [
+        "public/assets/configure/pl/main-menu-navigation-map.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-112",
+      "sha256": "321a1ee685618b002bb44563de9a571dad672dd8779d360bf1780c9804250b3b",
+      "paths": [
+        "public/assets/configure/pl/settings-menu-map.png"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-113",
+      "sha256": "6770ee054aaa1fbf29e85d76b5eed9cd7be07ed672a449cee49e6102214da31a",
+      "paths": [
+        "public/assets/configure/pl/volume-limit-reached.png"
+      ],
+      "kind": "original"
+    }
+  ]
+}

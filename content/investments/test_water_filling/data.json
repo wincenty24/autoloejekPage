@@ -1,0 +1,118 @@
+{
+  "id": "test_water_filling",
+  "title": "TEST — Punkt napełniania wody",
+  "date": "2026-09-16",
+  "coverImage": "flow-meter-and-solenoid-valve.png",
+  "description": {
+    "short": "Wpis demonstracyjny: tekst, zdjęcia i podpisy w dowolnej kolejności. Materiał wyłącznie do testów.",
+    "content": [
+      {
+        "type": "text",
+        "text": "To przykładowa historia przygotowana wyłącznie do testowania strony. Wykorzystuje zdjęcie sterownika i ilustracje z istniejących materiałów Autolejka; nie dokumentuje rzeczywistej realizacji u klienta."
+      },
+      {
+        "type": "text",
+        "text": "Wyobraźmy sobie punkt napełniania zbiornika, w którym użytkownik chce odmierzać zadaną ilość wody. Opowieść zaczynamy od sterownika — miejsca ustawiania objętości i obserwowania postępu napełniania."
+      },
+      {
+        "type": "image",
+        "src": "autolejek-controller.png",
+        "caption": "1. Sterownik Autolejek — panel użytkownika",
+        "alt": "Czarny sterownik Autolejek z wyświetlaczem i klawiaturą numeryczną",
+        "width": 360
+      },
+      {
+        "type": "text",
+        "text": "Kolejna część opisu przedstawia przykładowy układ przepływomierza i zaworu. Poniższa ilustracja pokazuje ich położenie w instalacji i kierunek przepływu wody."
+      },
+      {
+        "type": "image",
+        "src": "flow-meter-and-solenoid-valve.png",
+        "caption": "2. Przepływomierz i zawór — ilustracja układu",
+        "alt": "Ilustracja rury w kształcie litery U z przepływomierzem u dołu i zaworem po prawej stronie",
+        "width": 680
+      },
+      {
+        "type": "text",
+        "text": "Na końcu historii można pokazać szczegół, który warto omówić z użytkownikiem. Tutaj jest to porównanie rury całkowicie wypełnionej wodą z rurą wypełnioną częściowo."
+      },
+      {
+        "type": "image",
+        "src": "pipe-water-filling.png",
+        "caption": "3. Wypełnienie rury wodą — porównanie",
+        "alt": "Dwie rury: całkowicie wypełniona wodą z zielonym znacznikiem oraz częściowo wypełniona z czerwonym krzyżykiem",
+        "width": 600
+      },
+      {
+        "type": "text",
+        "text": "To koniec wpisu testowego. W prawdziwym opisie w tym miejscu można podsumować sposób użytkowania oraz udokumentowane efekty. Przycisk „Wróć do projektów” prowadzi do karty na stronie nadrzędnej."
+      }
+    ]
+  },
+  "gallery": [],
+  "draft": true,
+  "language": "pl",
+  "translations": {
+    "en": {
+      "title": "TEST — Water-filling point",
+      "description": {
+        "short": "Demo entry: text, images and captions in a chosen order. For testing only.",
+        "content": [
+          {
+            "type": "text",
+            "text": "This sample story is for testing the website only. It uses a controller photo and illustrations from existing Autolejek materials; it does not document a real customer installation."
+          },
+          {
+            "type": "text",
+            "text": "Imagine a tank-filling point where the user wants to measure a chosen volume of water. The story starts with the controller, where the user sets the volume and monitors filling progress."
+          },
+          {
+            "type": "image",
+            "src": "autolejek-controller.png",
+            "caption": "1. Autolejek controller — the user panel",
+            "alt": "Black Autolejek controller with a display and numeric keypad",
+            "width": 360
+          },
+          {
+            "type": "text",
+            "text": "The next part introduces an example flow-meter and valve arrangement. The illustration below shows their position in the installation and the direction of water flow."
+          },
+          {
+            "type": "image",
+            "src": "flow-meter-and-solenoid-valve.png",
+            "caption": "2. Flow meter and valve — layout illustration",
+            "alt": "U-shaped pipe illustration with a flow meter at the bottom and a valve on the right",
+            "width": 680
+          },
+          {
+            "type": "text",
+            "text": "At the end of the story, we can highlight a detail worth discussing with the user. Here we compare a pipe completely filled with water and a partially filled pipe."
+          },
+          {
+            "type": "image",
+            "src": "pipe-water-filling.png",
+            "caption": "3. Water filling the pipe — a comparison",
+            "alt": "Two pipes: a full pipe marked with a green tick and a partially filled pipe marked with a red cross",
+            "width": 600
+          },
+          {
+            "type": "text",
+            "text": "This is the end of the test story. A real project could conclude with a description of everyday use and documented results. The “Back to Projects” button returns to the card on the parent page."
+          }
+        ]
+      }
+    }
+  },
+  "imageProvenance": {
+    "pipe-water-filling.png": {
+      "kind": "ai-generated"
+    },
+    "autolejek-controller.png": {
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    "flow-meter-and-solenoid-valve.png": {
+      "kind": "ai-generated"
+    }
+  }
+}

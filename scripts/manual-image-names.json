@@ -31,5 +31,9 @@
   "sensorHasBeenPressed.png": "sensor-interruption-alert.png",
   "sensorIsPressed.png": "sensor-active-alert.png",
   "tooHighFLow.png": "high-flow-alert.png",
-  "tooLowFLow.png": "low-flow-alert.png"
+  "tooLowFLow.png": "low-flow-alert.png",
+  "vin.png": "controller-power-input-connector.png",
+  "ledrelays.png": "controller-relay-status-leds.png",
+  "ledsInfo.png": "controller-communication-status-leds.png",
+  "pcbConnectors.png": "controller-circuit-board-connectors.png"
 }

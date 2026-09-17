@@ -1,10 +1,13 @@
 import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { loadInvestments, investmentFilename } from "./investments.mjs";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputRoot = path.join(projectRoot, "_site");
 const config = JSON.parse(await readFile(path.join(projectRoot, "site.config.json"), "utf8"));
+const investments = await loadInvestments(process.env.INVESTMENTS_DIR ? path.resolve(projectRoot, process.env.INVESTMENTS_DIR) : path.join(projectRoot, "content", "investments"));
+const pages = [...config.pages, ...investments.map(project => ({ output: investmentFilename(project) }))];
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -47,7 +50,7 @@ for (const filename of htmlFiles) {
 }
 
 for (const language of config.languages) {
-  for (const page of config.pages) {
+  for (const page of pages) {
     const filename = path.join(outputRoot, language, page.output);
     const html = await readFile(filename, "utf8");
     if (!html.includes(`<html lang="${language}">`)) errors.push(`${filename}: incorrect html lang`);

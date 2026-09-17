@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Zbuduj sam — Autolejek</title><link rel="stylesheet" href="styles.css"></head>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Zbuduj sam — Autolejek</title><link rel="stylesheet" href="styles.css"><script src="theme.js"></script></head>
 <body>
-  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a class="active" href="build-it-yourself.html" aria-current="page" data-i18n="navBuild"></a><a href="configure-yourself.html" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div></header>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a class="active" href="build-it-yourself.html" aria-current="page" data-i18n="navBuild"></a><a href="configure-yourself.html" data-i18n="navConfigure"></a><a href="manual.html" data-i18n="navManual"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Tryb nocny" data-i18n-aria-label="themeToggleLabel" data-theme-toggle hidden><span class="theme-day" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-night" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></svg></span></button></header>
   <main>
     <section class="page-intro"><p class="eyebrow" data-i18n="buildEyebrow"></p><h1 data-i18n="buildTitle"></h1><p class="lead" data-i18n="buildLead"></p></section>
     <section class="build-sections build-components" data-ordered-sections aria-label="Etapy budowy" data-i18n-aria-label="plannedSectionsLabel">
       <details class="accordion-section" data-section-order="1">
-        <summary class="section-heading"><span>01</span><h2 data-i18n="buildDimensionsTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>1</span><h2 data-i18n="buildDimensionsTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide">
           <p data-i18n="dimensionsIntro1"></p>
           <p data-i18n="dimensionsIntro2"></p>
@@ -74,7 +74,7 @@
         </article>
       </details>
       <details class="accordion-section" data-section-order="2">
-        <summary class="section-heading"><span>02</span><h2 data-i18n="buildMeterTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>2</span><h2 data-i18n="buildMeterTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide meter-guide">
           <p data-i18n="meterIntro1"></p>
           <p data-i18n="meterIntro2"></p>
@@ -257,7 +257,7 @@
         </article>
       </details>
       <details class="accordion-section" data-section-order="4">
-        <summary class="section-heading"><span>04</span><h2 data-i18n="buildValveTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>4</span><h2 data-i18n="buildValveTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide valve-guide">
           <h3 data-i18n="valveWhenTitle"></h3>
           <p data-i18n="valveWhenText"></p>
@@ -283,20 +283,8 @@
           <p data-i18n="valveAutolejekAc"></p>
           <h4 data-i18n="valveCurrentLimitsTitle"></h4>
           <p data-i18n="valveCurrentLimitsIntro"></p>
-          <div class="table-scroll">
-            <table>
-              <caption data-i18n="valveCurrentTableCaption"></caption>
-              <thead><tr><th scope="col" data-i18n="valveVoltageColumn"></th><th scope="col" data-i18n="valveMaximumCurrentColumn"></th><th scope="col" data-i18n="valveMaximumPowerColumn"></th></tr></thead>
-              <tbody>
-                <tr><td>6 V</td><td><strong>3 A</strong></td><td>18 W</td></tr>
-                <tr><td>12 V</td><td><strong>3 A</strong></td><td>36 W</td></tr>
-                <tr><td>18 V</td><td><strong>2,33 A</strong></td><td>42 W</td></tr>
-                <tr><td>24 V</td><td><strong>1,75 A</strong></td><td>42 W</td></tr>
-                <tr><td>32 V</td><td><strong>1,31 A</strong></td><td>42 W</td></tr>
-              </tbody>
-            </table>
-          </div>
           <p class="guide-caveat" data-i18n="valveCurrentLimitsCaveat"></p>
+<p><a href="manual.html#manual-elementy-elektroniczne" data-i18n="valveFuseManualLink"></a></p>
 
           <h3 data-i18n="valveInductionTitle"></h3>
           <p data-i18n="valveInductionText"></p>
@@ -307,9 +295,9 @@
           <aside class="guide-note"><strong data-i18n="valveSafetyTitle"></strong><p data-i18n="valveSafetyText"></p></aside>
         </article>
       </details>
-      <details class="accordion-section" data-section-order="5"><summary class="section-heading"><span>05</span><h2 data-i18n="buildPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="buildSectionPlaceholder"></p></div></details>
+      <details class="accordion-section" data-section-order="5"><summary class="section-heading"><span>5</span><h2 data-i18n="buildPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary><div class="text-block accordion-content"><p data-i18n="electricPumpIntro"></p><p data-i18n="electricPumpAdaptation"></p></div></details>
       <details class="accordion-section" data-section-order="6">
-        <summary class="section-heading"><span>06</span><h2 data-i18n="buildCombustionPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>6</span><h2 data-i18n="buildCombustionPumpTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide combustion-pump-guide">
           <p data-i18n="combustionPumpIntro"></p>
 
@@ -353,7 +341,7 @@
         </article>
       </details>
       <details class="accordion-section" data-section-order="7">
-        <summary class="section-heading"><span>07</span><h2 data-i18n="buildLiquidLevelDetectorTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>7</span><h2 data-i18n="buildLiquidLevelDetectorTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide liquid-level-guide">
           <p data-i18n="liquidLevelIntro"></p>
 
@@ -398,7 +386,7 @@
         </article>
       </details>
       <details class="accordion-section" data-section-order="3">
-        <summary class="section-heading"><span>03</span><h2 data-i18n="buildRelayTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>3</span><h2 data-i18n="buildRelayTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content technical-guide relay-guide">
           <p data-i18n="relayIntro"></p>
           <p data-i18n="relayPurpose"></p>
@@ -498,18 +486,37 @@
         </article>
       </details>
       <details class="accordion-section" data-section-order="8">
-        <summary class="section-heading"><span>08</span><h2 data-i18n="buildInstallationTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
+        <summary class="section-heading"><span>8</span><h2 data-i18n="buildInstallationTitle"></h2><span class="accordion-icon" aria-hidden="true"></span></summary>
         <article class="text-block accordion-content">
           <p data-i18n="installationIntro"></p>
           <h3 data-i18n="installationLayoutTitle"></h3>
           <p data-i18n="installationLayoutText"></p>
           <p data-i18n="installationSpacingText"></p>
+          <h3 data-i18n="installationUdTitle"></h3>
+          <p data-i18n="installationUdIntro"></p>
+          <p data-i18n="installationUdValues"></p>
+          <figure class="guide-figure guide-figure-contain">
+            <img src="assets/buildityourself/bmeters-gsd8-r-water-meter-ud.png" width="729" height="445" loading="lazy" alt="" data-i18n-alt="installationUdAlt">
+            <figcaption data-i18n="installationUdCaption"></figcaption>
+          </figure>
+          <p data-i18n="installationUdZero"></p>
+          <p><a href="https://www.bmeters.com/wp-content/uploads/2021/05/Quick-User-Guide_Water-Meters_ver2.0.pdf#page=2" target="_blank" rel="noopener noreferrer" data-i18n="installationUdSource"></a></p>
+          <h3 data-i18n="installationPumpTitle"></h3>
+          <p data-i18n="installationPumpText"></p>
+          <p data-i18n="installationPumpDetail"></p>
           <h3 data-i18n="installationFullPipeTitle"></h3>
           <p data-i18n="installationFullPipeText"></p>
           <figure class="guide-figure guide-figure-contain">
             <img src="assets/buildityourself/pipe-water-filling.png" width="2172" height="724" loading="lazy" alt="Po lewej rura całkowicie wypełniona wodą, po prawej rura z przestrzenią powietrzną" data-i18n-alt="installationFullPipeAlt">
             <figcaption data-i18n="installationFullPipeCaption"></figcaption>
           </figure>
+          <h3 data-i18n="installationVerticalTitle"></h3>
+          <p data-i18n="installationVerticalText"></p>
+          <figure class="guide-figure guide-figure-contain guide-figure-small">
+            <img src="assets/buildityourself/vertical-water-meter-installation.png" width="1024" height="1536" loading="lazy" alt="" data-i18n-alt="installationVerticalAlt">
+            <figcaption data-i18n="installationVerticalCaption"></figcaption>
+          </figure>
+          <p data-i18n="installationVerticalRequirements"></p>
           <h3 data-i18n="installationExamplesTitle"></h3>
           <h4 data-i18n="installationLowTitle"></h4>
           <figure class="guide-figure guide-figure-contain">
@@ -552,5 +559,5 @@
       </details>
     </section>
   </main>
-  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a></footer><script src="site.js"></script>
+  <footer><span>© <span data-current-year></span> Autolejek</span><a href="mailto:autolejek@gmail.com">autolejek@gmail.com</a><a href="https://www.youtube.com/@autolejek">YouTube @autolejek</a></footer><script src="site.js"></script>
 </body></html>

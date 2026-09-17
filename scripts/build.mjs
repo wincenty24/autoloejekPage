@@ -1,4 +1,6 @@
+import { buildProvenanceMap, annotateImages } from "./image-provenance.mjs";
 import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { loadInvestments, copyInvestmentImages, renderInvestments, renderInvestment, investmentFilename, investmentText } from "./investments.mjs";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,8 +13,18 @@ const manualContent = await readFile(path.join(sourceRoot, "includes", "manual-p
 const config = JSON.parse(await readFile(path.join(projectRoot, "site.config.json"), "utf8"));
 const usedTranslations = Object.fromEntries(config.languages.map(language => [language, new Set()]));
 const assetVersions = {};
+const investments = await loadInvestments(process.env.INVESTMENTS_DIR ? path.resolve(projectRoot, process.env.INVESTMENTS_DIR) : path.join(projectRoot, "content", "investments"));
+const provenanceManifest = JSON.parse(await readFile(path.join(projectRoot, "content", "image-provenance.json"), "utf8"));
+const imageProvenance = await buildProvenanceMap(publicRoot, investments, provenanceManifest);
+const buildPages = [...config.pages, ...investments.map(investment => ({
+  source: "projects.html",
+  output: investmentFilename(investment),
+  titleKey: "investmentPageTitle",
+  descriptionKey: "investmentPageDescription",
+  investment
+}))];
 
-for (const filename of ["styles.css", "site.js"]) {
+for (const filename of ["styles.css", "site.js", "theme.js"]) {
   const contents = await readFile(path.join(publicRoot, filename));
   assetVersions[filename] = createHash("sha256").update(contents).digest("hex").slice(0, 10);
 }
@@ -121,6 +133,7 @@ function adjustAssetPaths(html) {
     .replaceAll('href="styles.css"', `href="../styles.css?v=${assetVersions["styles.css"]}"`)
     .replaceAll('href="assets/', 'href="../assets/')
     .replaceAll('src="assets/', 'src="../assets/')
+    .replaceAll('src="theme.js"', `src="../theme.js?v=${assetVersions["theme.js"]}"`)
     .replaceAll('src="site.js"', `src="../site.js?v=${assetVersions["site.js"]}"`);
 }
 
@@ -154,6 +167,7 @@ function makeRedirect(target, canonical) {
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 await cp(publicRoot, outputRoot, { recursive: true });
+await copyInvestmentImages(investments, outputRoot);
 
 const dictionaries = {};
 for (const language of config.languages) {
@@ -170,13 +184,20 @@ for (const language of config.languages) {
   }
 }
 
-for (const page of config.pages) {
+for (const page of buildPages) {
   const sourceTemplate = await readFile(path.join(sourceRoot, "pages", page.source), "utf8");
   const template = sourceTemplate.replace("<!-- MANUAL_POLISH_CONTENT -->", manualContent);
 
   for (const language of config.languages) {
-    const dictionary = dictionaries[language];
+    const content = page.investment ? investmentText(page.investment, language).text : null;
+    const dictionary = content ? { ...dictionaries[language], investmentPageTitle: `${content.title} — Autolejek`, investmentPageDescription: content.description.short } : dictionaries[language];
     let html = applyTranslations(template, dictionary, language);
+    if (page.investment) {
+      html = html.replace(/<main>[\s\S]*?<\/main>/, () => renderInvestment(page.investment, language));
+      html = html.replace('aria-current="page"', 'aria-current="location"');
+    }
+    html = html.replace("<!-- INVESTMENTS_CONTENT -->", () => renderInvestments(investments, language));
+    html = annotateImages(html, language, imageProvenance);
     html = orderSections(html);
     html = addMetadata(html, page, language, dictionary);
     html = html.replace(/<select id="language"([^>]*)><\/select>/, `<select id="language"$1>${makeLanguageOptions(page, language, dictionaries)}</select>`);
@@ -192,7 +213,7 @@ for (const page of config.pages) {
   await writeFile(path.join(outputRoot, page.output), makeRedirect(defaultTarget, canonical));
 }
 
-const sitemapEntries = config.languages.flatMap(language => config.pages.map(page => {
+const sitemapEntries = config.languages.flatMap(language => buildPages.map(page => {
   const url = new URL(pageUrl(language, page.output), config.baseUrl).href;
   return `  <url><loc>${escapeHtml(url)}</loc></url>`;
 }));
@@ -205,4 +226,4 @@ for (const language of config.languages) {
   }
 }
 
-console.log(`Built ${config.pages.length * config.languages.length} localized pages in _site/`);
+console.log(`Built ${buildPages.length * config.languages.length} localized pages in _site/`);

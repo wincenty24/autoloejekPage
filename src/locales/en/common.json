@@ -8,5 +8,6 @@
   "navConfigure": "Configure it yourself",
   "navManual": "User manual",
   "navProjects": "Projects",
-  "navContact": "Contact"
+  "navContact": "Contact",
+  "themeToggleLabel": "Night mode"
 }

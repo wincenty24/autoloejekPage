@@ -23,7 +23,7 @@
   "sealingTitle": "Ważne: uszczelnienie",
   "sealingText": "Gwint G według ISO 228-1 jest walcowym gwintem mocującym. Szczelności ciśnieniowej nie uzyskuje się na samym gwincie — połączenie powinno mieć oddzielne uszczelnienie, na przykład uszczelkę płaską lub O-ring, dociskane poza gwintem. Gwinty uszczelniane na gwincie opisuje ISO 7-1.",
   "isoAsideTitle": "ISO na marginesie",
-  "isoAsideText": "Miłośnicy opowieści o Jakubie Wędrowyczu i jego towarzyszu Semenie pamiętają zapewne „Zbiór podstawowych norm ISO – wieś i gospodarstwo rolne”. Jak się okazuje, normy mogą mieć również mniej podręcznikowe zastosowania. :)",
+  "isoAsideText": "W zbiorze opowiadań o Jakubie Wędrowyczu „Trucizna” Andrzeja Pilipiuka pojawia się wzmianka o tym, że policja skonfiskowała Semenowi spis norm ISO, bo chodził i wytykał niezgodności — między innymi krzywe chodniki i niewłaściwe okna. Jak się okazuje, normy mogą mieć również mniej podręcznikowe zastosowania. :)",
   "dnTitle": "Co oznacza DN?",
   "dnDescription": "DN jest określonym w ISO 6708 oznaczeniem nominalnego rozmiaru elementów instalacji rurowej. Składa się z liter DN i bezwymiarowej liczby całkowitej, która jest tylko pośrednio związana z rzeczywistym wymiarem w milimetrach.",
   "dnClassDescription": "DN można traktować jako klasę rozmiaru przewodu i współpracujących z nim elementów, takich jak zawory, wodomierze, przepływomierze, filtry czy pompy.",

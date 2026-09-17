@@ -2,6 +2,17 @@
   "contactPageTitle": "Contact — Autolejek",
   "contactEyebrow": "Get in touch",
   "contactTitle": "Contact",
-  "contactLead": "The project is currently in the testing phase. If you are interested in installing the system in your business or would like to discuss a potential application, email us.",
-  "emailLabel": "Email"
+  "contactLead": "Each Autolejek system is built individually for a specific installation. Tell us what you want to dose and where the system will operate so we can discuss the possible project scope.",
+  "emailLabel": "Email",
+  "contactEmailHint": "A short description is enough to get started. We can work through any missing specifications together.",
+  "contactProjectTitle": "Planning a new installation?",
+  "contactProjectIntro": "Include the details you already know to help us select components and plan their installation.",
+  "contactSiteLabel": "Location and application",
+  "contactSiteText": "Describe the purpose of the system, its location and mounting position. Tell us whether it will remain in that location or be moved, and who to contact about installation details.",
+  "contactFlowLabel": "Liquid and dosing",
+  "contactFlowText": "Specify the liquid and its source, the required flow rate and the volume of each dose. Describe how filling should work.",
+  "contactEquipmentLabel": "Equipment and power supply",
+  "contactEquipmentText": "List existing or planned components: pump, flow meter, valves, detector and power supply. Where possible, include models, supply voltages or photos of their rating plates.",
+  "contactEnvironmentLabel": "Installation conditions",
+  "contactEnvironmentText": "Tell us whether the system will operate indoors or outdoors, what equipment runs nearby (such as motors or variable frequency drives), and the planned cable lengths and routes. Photos of the installation site or a simple diagram will help."
 }
