@@ -1,3 +1,39 @@
+document.querySelectorAll(".site-header").forEach((header, index) => {
+  const navigation = header.querySelector("nav");
+  if (!navigation) return;
+
+  const mobile = window.matchMedia("(max-width:760px)");
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "navigation-toggle";
+  toggle.textContent = "Menu";
+  navigation.id ||= `site-navigation-${index}`;
+  toggle.setAttribute("aria-controls", navigation.id);
+
+  const setOpen = open => {
+    toggle.setAttribute("aria-expanded", String(open));
+    navigation.hidden = mobile.matches && !open;
+  };
+
+  toggle.addEventListener("click", () => {
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+  header.addEventListener("keydown", event => {
+    if (event.key !== "Escape" || !mobile.matches || navigation.hidden) return;
+    setOpen(false);
+    toggle.focus();
+  });
+  mobile.addEventListener("change", () => {
+    const focusWillHide = mobile.matches && navigation.contains(document.activeElement);
+    if (!mobile.matches && document.activeElement === toggle) navigation.querySelector("a")?.focus();
+    setOpen(!mobile.matches);
+    if (focusWillHide) toggle.focus();
+  });
+
+  navigation.before(toggle);
+  setOpen(!mobile.matches);
+});
+
 const languageSelect = document.querySelector("#language");
 
 if (languageSelect) {
@@ -11,6 +47,29 @@ document.querySelectorAll("[data-current-year]").forEach(element => {
 });
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll("[data-photo-gallery]").forEach(gallery => {
+  const track = gallery.querySelector("[data-gallery-track]");
+  const slides = [...track.children];
+  const counter = gallery.querySelector("[data-gallery-counter]");
+  const currentIndex = () => Math.round(track.scrollLeft / track.clientWidth);
+  const move = direction => {
+    const index = (currentIndex() + direction + slides.length) % slides.length;
+    track.scrollTo({ left:index * track.clientWidth, behavior:prefersReducedMotion ? "instant" : "smooth" });
+  };
+  gallery.querySelector("[data-gallery-previous]").addEventListener("click", () => move(-1));
+  gallery.querySelector("[data-gallery-next]").addEventListener("click", () => move(1));
+  track.addEventListener("keydown", event => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    move(event.key === "ArrowRight" ? 1 : -1);
+  });
+  track.addEventListener("scroll", () => {
+    const label = `${currentIndex() + 1} / ${slides.length}`;
+    if (counter.textContent !== label) counter.textContent = label;
+  }, { passive:true });
+  gallery.querySelector("[data-gallery-controls]").hidden = false;
+});
+
 const revealElements = [...document.querySelectorAll("[data-reveal]")];
 
 if (revealElements.length && "IntersectionObserver" in window && !prefersReducedMotion) {

@@ -10,42 +10,49 @@
       "source": "index.html",
       "output": "index.html",
       "titleKey": "homePageTitle",
+      "navKey": "navHome",
       "descriptionKey": "homeLead"
     },
     {
       "source": "about-project.html",
       "output": "about-project.html",
       "titleKey": "aboutPageTitle",
+      "navKey": "navAbout",
       "descriptionKey": "aboutLead"
     },
     {
       "source": "build-it-yourself.html",
       "output": "build-it-yourself.html",
       "titleKey": "buildPageTitle",
+      "navKey": "navBuild",
       "descriptionKey": "buildLead"
     },
     {
       "source": "configure-yourself.html",
       "output": "configure-yourself.html",
       "titleKey": "configurePageTitle",
+      "navKey": "navConfigure",
       "descriptionKey": "configureLead"
     },
     {
       "source": "manual.html",
       "output": "manual.html",
       "titleKey": "manualPageTitle",
+      "navKey": "navManual",
       "descriptionKey": "manualLead"
     },
     {
       "source": "projects.html",
       "output": "projects.html",
       "titleKey": "projectsPageTitle",
+      "navKey": "navProjects",
       "descriptionKey": "projectsLead"
     },
     {
       "source": "contact.html",
       "output": "contact.html",
       "titleKey": "contactPageTitle",
+      "navKey": "navContact",
       "descriptionKey": "contactLead"
     }
   ]

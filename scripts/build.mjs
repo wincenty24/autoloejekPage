@@ -160,6 +160,16 @@ function orderSections(html) {
   });
 }
 
+function addNextPageLink(html, page, language, dictionary) {
+  if (page.output === "index.html") return html;
+  const currentIndex = config.pages.findIndex(item => item.source === page.source);
+  const nextPage = config.pages[(currentIndex + 1) % config.pages.length];
+  const label = escapeHtml(requireTranslation(dictionary, "nextPageLabel", language));
+  const title = escapeHtml(requireTranslation(dictionary, nextPage.navKey, language));
+  const link = `<div class="next-page"><a class="next-page-link" href="${escapeHtml(nextPage.output)}"><span>${label}: ${title}</span><span aria-hidden="true">→</span></a></div>`;
+  return html.replace("</main>", `${link}</main>`);
+}
+
 function makeRedirect(target, canonical) {
   return `<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autolejek</title><link rel="canonical" href="${canonical}"><meta http-equiv="refresh" content="0;url=${target}"><script>location.replace(${JSON.stringify(target)});</script></head><body><p><a href="${target}">Przejdź do strony Autolejek</a></p></body></html>\n`;
 }
@@ -199,6 +209,7 @@ for (const page of buildPages) {
     html = html.replace("<!-- INVESTMENTS_CONTENT -->", () => renderInvestments(investments, language));
     html = annotateImages(html, language, imageProvenance);
     html = orderSections(html);
+    html = addNextPageLink(html, page, language, dictionary);
     html = addMetadata(html, page, language, dictionary);
     html = html.replace(/<select id="language"([^>]*)><\/select>/, `<select id="language"$1>${makeLanguageOptions(page, language, dictionaries)}</select>`);
     html = adjustAssetPaths(html).replaceAll('src="i18n.js"', `src="../site.js?v=${assetVersions["site.js"]}"`);
