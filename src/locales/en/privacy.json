@@ -1,0 +1,20 @@
+{
+  "privacyTitle": "Privacy information",
+  "privacyPageTitle": "Privacy information — Autolejek",
+  "privacyLead": "How this website works and what happens when you contact Autolejek.",
+  "privacyContactTitle": "Email contact",
+  "privacyContactText": "Contact: autolejek@gmail.com. Correspondence is handled through Gmail. Your email address, message and any attachments are used to read and respond to your enquiry. Messages are stored in the Gmail mailbox. Google, as the provider of Gmail, also processes data as described in its privacy policy linked below. Send only information needed to discuss your enquiry; avoid unnecessary personal details in photos and documents.",
+  "privacyHostingTitle": "Website hosting",
+  "privacyHostingText": "This website is hosted on GitHub Pages. GitHub records and stores visitor IP addresses for security purposes, including visits by people who are not signed in to GitHub. Details are available in GitHub’s documentation and privacy statement.",
+  "privacyStorageTitle": "Theme preference and analytics",
+  "privacyStorageText": "The website saves your choice of light or dark theme in your browser’s local storage under autolejek-theme. This value is read on later visits to restore your choice. You can remove it by clearing this website’s browser data. The website code does not include analytics, advertising trackers, account registration or a contact form.",
+  "privacyLinksTitle": "External links",
+  "privacyLinksText": "Links to YouTube, product suppliers and other websites take you to services with their own privacy policies. The YouTube channel is linked rather than embedded in this website.",
+  "privacyRequestsTitle": "Privacy questions",
+  "privacyRequestsText": "For questions about information you have sent to Autolejek, contact autolejek@gmail.com. Depending on the circumstances and applicable law, you may have rights to access, correct or erase your data, restrict processing, object to processing or receive your data in a portable format. You may also complain to a data protection authority; in Poland this is the President of UODO.",
+  "privacyGithubDocs": "GitHub Pages documentation",
+  "privacyGithubPolicy": "GitHub privacy statement",
+  "privacyGooglePolicy": "Google privacy policy",
+  "privacyUodo": "Polish data protection authority (UODO)",
+  "privacyContactLink": "Read the privacy information before sending an enquiry."
+}

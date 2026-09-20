@@ -143,16 +143,22 @@ document.querySelectorAll("[data-relay-toggle]").forEach(button => {
 
 document.querySelectorAll("[data-manual-chapter-link]").forEach(link => {
   link.addEventListener("click", event => {
-    const chapter = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-    if (!(chapter instanceof HTMLDetailsElement)) return;
+    const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+    const chapter = target?.closest("details.manual-chapter");
+    if (!chapter) return;
     event.preventDefault();
     chapter.open = true;
     history.replaceState(null, "", link.hash);
-    chapter.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+    target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
   });
 });
 
 if (window.location.hash) {
-  const chapter = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
-  if (chapter instanceof HTMLDetailsElement && chapter.matches(".manual-chapter")) chapter.open = true;
+  let target;
+  try { target = document.getElementById(decodeURIComponent(window.location.hash.slice(1))); } catch {}
+  const chapter = target?.closest("details.manual-chapter");
+  if (chapter) {
+    chapter.open = true;
+    target.scrollIntoView({ block:"start" });
+  }
 }

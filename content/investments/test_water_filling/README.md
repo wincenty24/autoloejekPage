@@ -32,7 +32,6 @@ Wszystkie zdjęcia muszą być w tym samym folderze co `data.json`.
 
 Prześlij cały folder `test_water_filling` na Dysk Google.
 Po aktywacji synchronizacji GitHub Actions sprawdza folder co 15 minut.
-Jednorazowa konfiguracja: `docs/google-drive-sync.md` w repozytorium strony.
 Bez aktywnej synchronizacji, aby wyświetlić wpis, skopiuj cały folder do `content/investments/` repozytorium
 strony i uruchom `npm run check`. Kopia jest już dodana do repozytorium.
 Podstrona: `/pl/project-test_water_filling.html` (lub `/en/`).
@@ -44,7 +43,7 @@ This folder is a self-contained test entry with a controller photo and two
 existing illustrations. Upload the whole folder to Google Drive for storage.
 To use it on the website, copy it into `content/investments/` and rebuild using
 `npm run check`. Optional automatic Drive syncing checks every 15 minutes after one-time
-setup; see `docs/google-drive-sync.md` in the website repository.
+configuration in GitHub Actions.
 The order of text/image blocks in `description.content` controls the page layout.
 `caption` is the visible image title; `alt` describes the image for screen readers.
 

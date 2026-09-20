@@ -100,9 +100,8 @@ text, not HTML.
 7. Copy the whole folder into the website repository's `content/investments/`.
 8. Run `npm run check` in the repository, then use the normal deployment workflow.
 
-Automatic Drive syncing is available after one-time setup: see
-`docs/google-drive-sync.md` in the website repository (a copy is included with
-the exported content package). With syncing enabled, upload installation folders
+Automatic Drive syncing is optional and requires configuration in GitHub Actions.
+With syncing enabled, upload installation folders
 to the configured Drive folder; scheduled deployments check every 15 minutes.
 Without that setup, use the manual copy-and-rebuild steps above. Drive becomes
 the full Projects content source when enabled; local examples are not merged.

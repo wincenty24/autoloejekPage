@@ -54,6 +54,14 @@
       "titleKey": "contactPageTitle",
       "navKey": "navContact",
       "descriptionKey": "contactLead"
+    },
+    {
+      "source": "privacy.html",
+      "output": "privacy.html",
+      "titleKey": "privacyPageTitle",
+      "navKey": "privacyTitle",
+      "descriptionKey": "privacyLead",
+      "footerOnly": true
     }
   ]
 }

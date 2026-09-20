@@ -279,11 +279,12 @@
     },
     {
       "id": "IMG-034",
-      "sha256": "cefc8a89b01444dc742091f2c30760c862fc3e968ecde5bceee9bffc7b8f92be",
+      "sha256": "6fd99ff8e07741823da40d37e86f536c8d288b48f1c5a182c2bf253f0d63e7b0",
       "paths": [
         "public/assets/mainPage/outdoor-water-tap.jpg"
       ],
-      "kind": "pexels"
+      "kind": "pexels",
+      "sourceFilename": "pexels-qtheilespy-34158878.jpg"
     },
     {
       "id": "IMG-035",

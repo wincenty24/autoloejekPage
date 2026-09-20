@@ -61,7 +61,7 @@ W ustawieniach repozytorium wybierz jednorazowo:
 Settings → Pages → Build and deployment → Source: GitHub Actions
 ```
 
-Domena niestandardowa jest zachowana w `public/CNAME` i trafia do każdego artefaktu wdrożeniowego.
+Domenę niestandardową trzeba ustawić w **Settings → Pages → Custom domain** oraz skierować jej DNS na GitHub Pages. Przy publikacji przez GitHub Actions sam plik `public/CNAME` nie konfiguruje domeny. Po poprawnej konfiguracji DNS włącz **Enforce HTTPS**. Instrukcja GitHub: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
 ## Nazwy ilustracji
 
@@ -82,4 +82,3 @@ Strona Projekty pobiera treści z `content/investments/` podczas budowania.
 Każda realizacja ma własny katalog z `data.json`, okładką i opcjonalną galerią.
 Instrukcja dodawania realizacji oraz tłumaczeń: [content/README.md](content/README.md).
 Wpis testowy pozostaje szkicem (`draft: true`). Widoczne są rzeczywiste realizacje. Synchronizacja z Dyskiem Google jest dostępna po jednorazowej konfiguracji.
-Instrukcja: [Automatyczna publikacja z Dysku Google](docs/google-drive-sync.md).

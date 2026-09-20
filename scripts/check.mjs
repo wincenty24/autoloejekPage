@@ -37,6 +37,12 @@ for (const filename of htmlFiles) {
   const html = await readFile(filename, "utf8");
   if (html.includes("data-i18n")) errors.push(`${filename}: unresolved translation marker`);
 
+  const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
+  if (new Set(ids).size !== ids.length) errors.push(`${filename}: duplicate HTML IDs`);
+  for (const [, fragment] of html.matchAll(/href="#([^"]+)"/g)) {
+    if (!ids.includes(decodeURIComponent(fragment))) errors.push(`${filename}: missing fragment #${fragment}`);
+  }
+
   const references = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(match => match[1]);
   for (const reference of references) {
     if (/^(?:https?:|mailto:|tel:|#|data:|javascript:)/.test(reference)) continue;

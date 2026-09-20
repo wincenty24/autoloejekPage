@@ -9,7 +9,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const sourceRoot = path.join(projectRoot, "src");
 const publicRoot = path.join(projectRoot, "public");
 const outputRoot = path.join(projectRoot, "_site");
-const manualContent = await readFile(path.join(sourceRoot, "includes", "manual-polish.html"), "utf8");
+const manualContent = prepareManual(await readFile(path.join(sourceRoot, "includes", "manual-polish.html"), "utf8"));
 const config = JSON.parse(await readFile(path.join(projectRoot, "site.config.json"), "utf8"));
 const usedTranslations = Object.fromEntries(config.languages.map(language => [language, new Set()]));
 const assetVersions = {};
@@ -27,6 +27,21 @@ const buildPages = [...config.pages, ...investments.map(investment => ({
 for (const filename of ["styles.css", "site.js", "theme.js"]) {
   const contents = await readFile(path.join(publicRoot, filename));
   assetVersions[filename] = createHash("sha256").update(contents).digest("hex").slice(0, 10);
+}
+
+function prepareManual(html) {
+  // Keep imported document IDs separate from the site's controls and repair
+  // the original numbered table-of-contents links after chapter conversion.
+  const ids = new Map([...html.matchAll(/\sid="([^"]+)"/g)].map(([, id]) =>
+    [id, id.startsWith("manual-") ? id : `manual-${id}`]));
+  html = html.replace(/\sid="([^"]+)"/g, (_, id) => ` id="${ids.get(id)}"`);
+  html = html.replace(/<a\b([^>]*?)href="#([^"]+)"([^>]*)>/g, (tag, before, id, after) => {
+    const target = ids.get(id) ?? ids.get(`manual-${id.replace(/^\d+-/, "")}`);
+    if (!target) return tag;
+    const marker = tag.includes("data-manual-chapter-link") ? "" : " data-manual-chapter-link";
+    return `<a${before}href="#${target}"${after}${marker}>`;
+  });
+  return `<div lang="pl">${html.replace(/<(table|pre)(?=[\s>])/g, '<$1 tabindex="0"')}</div>`;
 }
 
 function escapeHtml(value) {
@@ -161,9 +176,10 @@ function orderSections(html) {
 }
 
 function addNextPageLink(html, page, language, dictionary) {
-  if (page.output === "index.html") return html;
-  const currentIndex = config.pages.findIndex(item => item.source === page.source);
-  const nextPage = config.pages[(currentIndex + 1) % config.pages.length];
+  if (page.output === "index.html" || page.footerOnly) return html;
+  const sequence = config.pages.filter(item => !item.footerOnly);
+  const currentIndex = sequence.findIndex(item => item.source === page.source);
+  const nextPage = sequence[(currentIndex + 1) % sequence.length];
   const label = escapeHtml(requireTranslation(dictionary, "nextPageLabel", language));
   const title = escapeHtml(requireTranslation(dictionary, nextPage.navKey, language));
   const link = `<div class="next-page"><a class="next-page-link" href="${escapeHtml(nextPage.output)}"><span>${label}: ${title}</span><span aria-hidden="true">→</span></a></div>`;
@@ -176,7 +192,10 @@ function makeRedirect(target, canonical) {
 
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
-await cp(publicRoot, outputRoot, { recursive: true });
+await cp(publicRoot, outputRoot, {
+  recursive: true,
+  filter: filename => !filename.endsWith(":Zone.Identifier") && !filename.endsWith(".prompt.txt")
+});
 await copyInvestmentImages(investments, outputRoot);
 
 const dictionaries = {};
