@@ -3,7 +3,11 @@
   "privacyPageTitle": "Informacje o prywatności — Autolejek",
   "privacyLead": "Jak działa ta strona i co dzieje się, gdy kontaktujesz się z Autolejkiem.",
   "privacyContactTitle": "Kontakt e-mail",
-  "privacyContactText": "Kontakt: autolejek@gmail.com. Korespondencja jest obsługiwana przez Gmail. Twój adres e-mail, treść wiadomości i ewentualne załączniki są wykorzystywane do zapoznania się z zapytaniem i udzielenia odpowiedzi. Wiadomości są przechowywane w skrzynce Gmail. Google, jako dostawca Gmaila, również przetwarza dane zgodnie ze swoją polityką prywatności, do której link znajduje się poniżej. Przesyłaj tylko informacje potrzebne do omówienia zapytania; unikaj zbędnych danych osobowych na zdjęciach i w dokumentach.",
+  "privacyContactText": "Administratorem danych osobowych przekazanych w korespondencji e-mail jest Mateusz Rogoż. Kontakt: autolejek@gmail.com. Korespondencja jest obsługiwana przez Gmail. Twój adres e-mail, treść wiadomości i ewentualne załączniki są wykorzystywane do zapoznania się z zapytaniem i udzielenia odpowiedzi. Wiadomości są przechowywane w skrzynce Gmail. Google, jako dostawca Gmaila, również przetwarza dane zgodnie ze swoją polityką prywatności, do której link znajduje się poniżej. Przesyłaj tylko informacje potrzebne do omówienia zapytania; unikaj zbędnych danych osobowych na zdjęciach i w dokumentach.",
+  "privacyLegalBasisTitle": "Podstawa prawna",
+  "privacyLegalBasisText": "Przetwarzamy Twój adres e-mail, treść wiadomości i załączniki w celu udzielenia odpowiedzi na zapytanie, na podstawie naszego prawnie uzasadnionego interesu polegającego na obsłudze korespondencji (art. 6 ust. 1 lit. f RODO). Jeśli zapytanie dotyczy zawarcia z nami umowy, przetwarzanie niezbędne do podjęcia działań na Twoje żądanie przed zawarciem tej umowy odbywa się na podstawie art. 6 ust. 1 lit. b RODO.",
+  "privacyRetentionTitle": "Okres przechowywania",
+  "privacyRetentionText": "Przechowujemy korespondencję przez czas potrzebny do rozpatrzenia zapytania oraz przez okres do 12 miesięcy od ostatniego kontaktu. Jeśli korespondencja jest potrzebna do wypełnienia obowiązków prawnych lub ustalenia, dochodzenia bądź obrony roszczeń, przechowujemy odpowiednie informacje przez okres właściwy dla danego obowiązku lub roszczenia.",
   "privacyHostingTitle": "Hosting strony",
   "privacyHostingText": "Strona jest hostowana w GitHub Pages. GitHub rejestruje i przechowuje adresy IP odwiedzających w celach bezpieczeństwa, także gdy odwiedzający nie są zalogowani do GitHuba. Szczegóły znajdują się w dokumentacji i oświadczeniu o prywatności GitHuba.",
   "privacyStorageTitle": "Preferencja motywu i analityka",
@@ -15,6 +19,5 @@
   "privacyGithubDocs": "Dokumentacja GitHub Pages",
   "privacyGithubPolicy": "Oświadczenie o prywatności GitHuba",
   "privacyGooglePolicy": "Polityka prywatności Google",
-  "privacyUodo": "Urząd Ochrony Danych Osobowych (UODO)",
-  "privacyContactLink": "Przed wysłaniem zapytania przeczytaj informacje o prywatności."
+  "privacyUodo": "Urząd Ochrony Danych Osobowych (UODO)"
 }

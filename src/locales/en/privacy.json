@@ -3,7 +3,11 @@
   "privacyPageTitle": "Privacy information — Autolejek",
   "privacyLead": "How this website works and what happens when you contact Autolejek.",
   "privacyContactTitle": "Email contact",
-  "privacyContactText": "Contact: autolejek@gmail.com. Correspondence is handled through Gmail. Your email address, message and any attachments are used to read and respond to your enquiry. Messages are stored in the Gmail mailbox. Google, as the provider of Gmail, also processes data as described in its privacy policy linked below. Send only information needed to discuss your enquiry; avoid unnecessary personal details in photos and documents.",
+  "privacyContactText": "The controller of personal data provided in email correspondence is Mateusz Rogoż. Contact: autolejek@gmail.com. Correspondence is handled through Gmail. Your email address, message and any attachments are used to read and respond to your enquiry. Messages are stored in the Gmail mailbox. Google, as the provider of Gmail, also processes data as described in its privacy policy linked below. Send only information needed to discuss your enquiry; avoid unnecessary personal details in photos and documents.",
+  "privacyLegalBasisTitle": "Legal basis",
+  "privacyLegalBasisText": "We process your email address, message and attachments to respond to your enquiry, based on our legitimate interest in handling correspondence (Article 6(1)(f) GDPR). If your enquiry concerns entering into a contract with us, processing necessary to take steps at your request before entering into that contract is based on Article 6(1)(b) GDPR.",
+  "privacyRetentionTitle": "Retention",
+  "privacyRetentionText": "We retain correspondence for the time needed to resolve your enquiry and for up to 12 months after the last contact. Where correspondence is needed to meet legal obligations or establish, exercise or defend legal claims, we retain the relevant information for the applicable period.",
   "privacyHostingTitle": "Website hosting",
   "privacyHostingText": "This website is hosted on GitHub Pages. GitHub records and stores visitor IP addresses for security purposes, including visits by people who are not signed in to GitHub. Details are available in GitHub’s documentation and privacy statement.",
   "privacyStorageTitle": "Theme preference and analytics",
@@ -15,6 +19,5 @@
   "privacyGithubDocs": "GitHub Pages documentation",
   "privacyGithubPolicy": "GitHub privacy statement",
   "privacyGooglePolicy": "Google privacy policy",
-  "privacyUodo": "Polish data protection authority (UODO)",
-  "privacyContactLink": "Read the privacy information before sending an enquiry."
+  "privacyUodo": "Polish data protection authority (UODO)"
 }

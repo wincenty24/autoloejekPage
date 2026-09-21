@@ -30,9 +30,6 @@ h2 { margin:0 0 12px; font-size:clamp(1.4rem,3vw,2rem); }
 .story-visual-irrigation { object-position:34% center; }
 .story-visual-tap { object-position:58% center; }
 .story-visual.is-active { opacity:1; transform:scale(1); }
-.story-progress { position:absolute; z-index:2; right:24px; bottom:28px; left:24px; height:3px; overflow:hidden; border-radius:999px; background:rgba(255,255,255,.35); }
-.story-progress span { display:block; width:100%; height:100%; border-radius:inherit; background:#fff; transform:scaleX(.25); transform-origin:left; transition:transform .55s ease; }
-.story-counter { position:absolute; z-index:2; top:24px; right:24px; padding:8px 11px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(23,32,51,.58); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.12em; backdrop-filter:blur(8px); }
 .story-step { min-height:100svh; display:flex; align-items:center; transition:opacity .4s ease,transform .55s ease; }
 .has-scroll-story .story-step { opacity:1; transform:translateY(22px); }
 .has-scroll-story .story-step.is-active { opacity:1; transform:translateY(0); }
@@ -279,7 +276,7 @@ h2 { margin:0 0 12px; font-size:clamp(1.4rem,3vw,2rem); }
 @keyframes relay-resting-label { 0%,40%,100% { opacity:1; } 46%,94% { opacity:0; } }
 @keyframes relay-energized-label { 0%,40%,100% { opacity:0; } 50%,90% { opacity:1; } }
 @media (prefers-reduced-motion:reduce) {
-  .story-visual,.story-progress span,.story-step { transition:none; }
+  .story-visual,.story-step { transition:none; }
   .relay-switch-animation .relay-arm,.relay-switch-animation .relay-switch-blade,.relay-switch-animation .relay-coil-core,.relay-switch-animation .relay-terminal-nc,.relay-switch-animation .relay-terminal-no,.relay-switch-animation .relay-lamp-bulb,.relay-switch-animation .relay-lamp-rays line,.relay-switch-animation .relay-current-path,.relay-switch-animation .relay-state-resting,.relay-switch-animation .relay-state-energized { animation:none; }
   .relay-switch-animation .relay-terminal-nc { fill:var(--accent); }
   .relay-switch-animation.is-interactive * { transition:none; }
@@ -560,17 +557,22 @@ footer a { text-decoration:none; }
   .manual-download-link,.text-link,footer a { padding-top:12px; padding-bottom:12px; min-height:44px; }
   footer { gap:4px; }
 }
-/* Use the scrolling story on phones once its observer is available. */
+/* Phone chapters: photo first, then the card and its staggered copy. */
 @media (max-width:760px) and (prefers-reduced-motion:no-preference) {
-  .has-scroll-story .story-stage { display:block; min-height:0; height:46svh; }
-  .has-scroll-story .story-chapters { display:block; margin-top:0; }
-  .has-scroll-story .story-step { display:flex; min-height:88svh; padding:0 12px 5svh; opacity:1; transform:translateY(22px); }
-  .has-scroll-story .story-step.is-active { opacity:1; transform:translateY(0); }
-  .has-scroll-story .story-mobile-media { display:none; }
-  .has-scroll-story .story-card { border-radius:20px; }
+  .has-mobile-story .story-chapters { gap:48px; }
+  .has-mobile-story .story-mobile-media { opacity:0; transform:translateY(28px) scale(.96); transition:opacity .6s ease,transform .85s cubic-bezier(.16,1,.3,1); }
+  .has-mobile-story .story-mobile-media img { transform:scale(1.12); transition:transform 1.3s cubic-bezier(.16,1,.3,1); }
+  .has-mobile-story .story-card { opacity:0; transform:translateY(24px); transition:opacity .55s ease .5s,transform .75s cubic-bezier(.16,1,.3,1) .5s; }
+  .has-mobile-story .story-card > * { opacity:0; transform:translateY(12px); transition:opacity .45s ease .62s,transform .6s cubic-bezier(.16,1,.3,1) .62s; }
+  .has-mobile-story .story-card > :nth-child(2) { transition-delay:.74s; }
+  .has-mobile-story .story-card > :nth-child(3) { transition-delay:.86s; }
+  .has-mobile-story .is-introduced .story-mobile-media,
+  .has-mobile-story .is-introduced .story-card,
+  .has-mobile-story .is-introduced .story-card > * { opacity:1; transform:none; }
+  .has-mobile-story .is-introduced .story-mobile-media img { transform:scale(1); }
 }
 @media (prefers-reduced-motion:reduce) {
-  .story-step,.story-visual,.story-progress span { transition:none; }
+  .story-step,.story-visual { transition:none; }
 }
 @media (min-width:761px) and (max-width:900px) {
 

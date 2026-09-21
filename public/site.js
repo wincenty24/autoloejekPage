@@ -105,8 +105,6 @@ document.querySelectorAll("[data-pop-group]").forEach(group => {
 document.querySelectorAll("[data-scroll-story]").forEach(story => {
   const steps = [...story.querySelectorAll("[data-story-step]")];
   const visuals = [...story.querySelectorAll("[data-story-visual]")];
-  const progress = story.querySelector("[data-story-progress]");
-  const current = story.querySelector("[data-story-current]");
 
   if (!steps.length || !visuals.length || !("IntersectionObserver" in window)) return;
 
@@ -115,8 +113,6 @@ document.querySelectorAll("[data-scroll-story]").forEach(story => {
   const activate = index => {
     steps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
     visuals.forEach((visual, visualIndex) => visual.classList.toggle("is-active", visualIndex === index));
-    if (progress) progress.style.transform = `scaleX(${(index + 1) / steps.length})`;
-    if (current) current.textContent = String(index + 1).padStart(2, "0");
   };
 
   const observer = new IntersectionObserver(entries => {
@@ -127,6 +123,29 @@ document.querySelectorAll("[data-scroll-story]").forEach(story => {
 
   steps.forEach(step => observer.observe(step));
   activate(0);
+
+  // Each phone chapter introduces its own image before revealing the copy.
+  const mobileMotion = window.matchMedia("(max-width: 760px) and (prefers-reduced-motion: no-preference)");
+  let mobileObserver;
+  const setupMobileStory = () => {
+    mobileObserver?.disconnect();
+    story.classList.remove("has-mobile-story");
+    steps.forEach(step => step.classList.remove("is-introduced"));
+    if (!mobileMotion.matches) return;
+
+    mobileObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.closest("[data-story-step]").classList.add("is-introduced");
+        mobileObserver.unobserve(entry.target);
+      });
+    }, { rootMargin:"0px 0px -8%", threshold:.15 });
+
+    story.classList.add("has-mobile-story");
+    steps.forEach(step => mobileObserver.observe(step.querySelector(".story-mobile-media")));
+  };
+  mobileMotion.addEventListener("change", setupMobileStory);
+  setupMobileStory();
 });
 
 document.querySelectorAll("[data-relay-toggle]").forEach(button => {
