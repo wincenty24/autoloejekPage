@@ -354,7 +354,7 @@ html[lang="pl"] .localized-shot.lang-pl,html[lang="en"] .localized-shot.lang-en 
 .contact-topics dd { margin:0; color:var(--muted); line-height:1.7; }
 .contact-card span { color:var(--muted); font-size:.85rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
 .contact-card a, .contact-card .contact-email { color:var(--accent); font-size:clamp(1.4rem,5vw,2.5rem); font-weight:750; text-decoration:none; }
-footer { width:min(1120px,calc(100% - 48px)); margin:0 auto; padding:28px 0; display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+footer { width:min(1120px,calc(100% - 48px)); margin:0 auto; padding:28px 0; display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
 footer a { text-decoration:none; }
 @media (max-width:900px) {
   .about-hero { min-height:0; grid-template-columns:1fr; }
@@ -581,3 +581,11 @@ footer a { text-decoration:none; }
 }
 
 @media (max-width:900px) { .manual-toc a { white-space:normal; overflow-wrap:anywhere; } }
+
+.social-channels { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.social-channels .youtube-channel { margin-top:0; }
+.social-platform-symbol { font-size:2rem; line-height:1; }
+.social-tiktok .youtube-channel-icon { background:rgba(37,244,238,.1); color:var(--ink); }
+.social-instagram .youtube-channel-icon { background:rgba(193,53,132,.1); color:#c13584; }
+.social-tiktok:hover { border-color:var(--ink); }
+.social-instagram:hover { border-color:#c13584; }

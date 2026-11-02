@@ -13,7 +13,7 @@
   "privacyStorageTitle": "Preferencja motywu i analityka",
   "privacyStorageText": "Strona zapisuje wybór jasnego lub ciemnego motywu w pamięci lokalnej przeglądarki pod kluczem autolejek-theme. Odczytuje tę wartość podczas kolejnych wizyt, aby przywrócić wybrany motyw. Możesz ją usunąć, czyszcząc dane tej witryny w przeglądarce. Kod strony nie zawiera analityki, narzędzi śledzenia reklamowego, rejestracji kont ani formularza kontaktowego.",
   "privacyLinksTitle": "Linki zewnętrzne",
-  "privacyLinksText": "Linki do YouTube, dostawców produktów i innych stron prowadzą do usług z własnymi zasadami prywatności. Kanał YouTube jest podlinkowany, a nie osadzony na tej stronie.",
+  "privacyLinksText": "Linki do YouTube, TikToka, Instagrama, dostawców produktów i innych stron prowadzą do usług z własnymi zasadami prywatności. Profile społecznościowe są podlinkowane, a nie osadzone na tej stronie.",
   "privacyRequestsTitle": "Pytania o prywatność",
   "privacyRequestsText": "Pytania dotyczące informacji przesłanych do Autolejka kieruj na autolejek@gmail.com. Zależnie od okoliczności i obowiązujących przepisów mogą przysługiwać Ci prawa dostępu do danych, ich sprostowania lub usunięcia, ograniczenia przetwarzania, wniesienia sprzeciwu lub przenoszenia danych. Możesz też wnieść skargę do organu ochrony danych osobowych; w Polsce jest nim Prezes UODO.",
   "privacyGithubDocs": "Dokumentacja GitHub Pages",
