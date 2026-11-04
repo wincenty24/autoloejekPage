@@ -35,6 +35,21 @@
       "descriptionKey": "configureLead"
     },
     {
+      "source": "visualization.html",
+      "output": "visualization.html",
+      "titleKey": "vizPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizHubLead"
+    },
+    {
+      "source": "hydraulic-visualization.html",
+      "output": "hydraulic-visualization.html",
+      "titleKey": "vizHydraulicPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizLead",
+      "parent": "visualization.html"
+    },
+    {
       "source": "manual.html",
       "output": "manual.html",
       "titleKey": "manualPageTitle",

@@ -92,7 +92,7 @@ function replaceTranslatedAttributes(html, dictionary, language, dataAttribute, 
       return result.replace(targetPattern, ` ${targetAttribute}="${value}"`);
     }
 
-    return result.replace(/>$/, ` ${targetAttribute}="${value}">`);
+    return result.replace(/(\/?)>$/, (_, closingSlash) => ` ${targetAttribute}="${value}"${closingSlash}>`);
   });
 }
 
@@ -176,8 +176,8 @@ function orderSections(html) {
 }
 
 function addNextPageLink(html, page, language, dictionary) {
-  if (page.output === "index.html" || page.footerOnly) return html;
-  const sequence = config.pages.filter(item => !item.footerOnly);
+  if (page.output === "index.html" || page.footerOnly || page.parent) return html;
+  const sequence = config.pages.filter(item => !item.footerOnly && !item.parent);
   const currentIndex = sequence.findIndex(item => item.source === page.source);
   const nextPage = sequence[(currentIndex + 1) % sequence.length];
   const label = escapeHtml(requireTranslation(dictionary, "nextPageLabel", language));

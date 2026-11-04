@@ -953,6 +953,286 @@
         "public/assets/configure/pl/volume-limit-reached.png"
       ],
       "kind": "original"
+    },
+    {
+      "id": "IMG-114",
+      "sha256": "33c4a0b8311588449970ddad9eea5edb05c75be7012b070c1b3f47ec2f88bc57",
+      "paths": [
+        "public/assets/visualization/water-meter-external-photo.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-115",
+      "sha256": "d3eef0026c23019bc4e6a53b3ca0dc1f491b3e0590bda2cc6840f38dc14251e8",
+      "paths": [
+        "public/assets/visualization/water-meter-internal-photo.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-116",
+      "sha256": "660362e674cd3651ff928fe40045e0b6fe45b6e295ddb07f423981c2b2616ebf",
+      "paths": [
+        "public/assets/visualization/tee-fitting-photo.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-117",
+      "sha256": "bfc40b04699496960760b42484fe8b88a99a4cd8e89fb10cddd5a970e370d333",
+      "paths": [
+        "public/assets/visualization/male-female-elbow-photo.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-118",
+      "sha256": "7429a05ceab6340ab758d2ac20beaeecc71b6bbc22e5742693582738a11d8eaf",
+      "paths": [
+        "public/assets/visualization/female-female-elbow-photo.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-119",
+      "sha256": "fc81d1c596f83ef86090e5814e40f3e06eaa8dd9a0f837fe18a25be793745e13",
+      "paths": [
+        "public/assets/visualization/tee-fitting-photo-v2.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-120",
+      "sha256": "baa676d5559d21b2e1276567c70564750bf9bc4d3b4651ba771f4f08505faad4",
+      "paths": [
+        "public/assets/visualization/male-female-elbow-photo-v2.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-121",
+      "sha256": "d3b2569ffaa7802126ff4988342600b3381017fe72d537ca2d0ef207c8b349a4",
+      "paths": [
+        "public/assets/visualization/tee-fitting-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-122",
+      "sha256": "56ce16d34c494b944b805b2f995b2689d5730df8b9a5d22feeb0e0f5ea9d0969",
+      "paths": [
+        "public/assets/visualization/male-female-elbow-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-123",
+      "sha256": "f0be0d0e47a94083ad57ed3490962d5e263750f482d01e24128f83d1b951d44f",
+      "paths": [
+        "public/assets/visualization/female-female-elbow-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-124",
+      "sha256": "103e6a38bf4149eda6caf8e585d03ab5387471becd4ed049bd65992df411e225",
+      "paths": [
+        "public/assets/visualization/water-meter-external-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-125",
+      "sha256": "4873178ae1271992adc294321579bc475f65889f5e90c61fcf87043389128111",
+      "paths": [
+        "public/assets/visualization/water-meter-internal-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-126",
+      "sha256": "3dfc7135a3f74134174c2f18f478dbfc1356ef10e851e40bae11da3ec5dbf4fb",
+      "paths": [
+        "public/assets/visualization/hex-nipple-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-127",
+      "sha256": "82778fc6c147470f1d5f4517d7dae270e8417703654c322b8857f30c313874e5",
+      "paths": [
+        "public/assets/visualization/blanking-plug-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-128",
+      "sha256": "9bb2d0feaf625288422e4dd6fa6d1f79baba1482c185acd4fb57cd8a5980949b",
+      "paths": [
+        "public/assets/visualization/solenoid-valve-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-129",
+      "sha256": "5c0253cc5204fd0c3dac16dbe791a62a706a8e54ba652aec0e2d9d71c4ef4303",
+      "paths": [
+        "public/assets/visualization/solenoid-valve-external-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-130",
+      "sha256": "b72a6c104ade60163d7367cbf6bc30407f9f75901d89dc0177d260fe278287b0",
+      "paths": [
+        "public/assets/visualization/valve-union-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-131",
+      "sha256": "3031d661f4ce12fb710992e606193eb85e604992a6e8d05d8960ec1ddfc11c6d",
+      "paths": [
+        "public/assets/visualization/double-union-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-132",
+      "sha256": "1be674fe76f164271613a3364cfc6c9a04ddf0e15bd6952f9883bfdcae3139bd",
+      "paths": [
+        "public/assets/visualization/compression-adapter-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-133",
+      "sha256": "b36f8fe9e0f15c005c7fed0253b4ddc65493948dced5e250cec175c9164b69a3",
+      "paths": [
+        "public/assets/visualization/claw-coupling-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-134",
+      "sha256": "d6bc7129af5543a3761506f64505da9367417bbe52099908d89432a1a3fbb8d5",
+      "paths": [
+        "public/assets/visualization/claw-coupling-male-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-135",
+      "sha256": "6a9097a973e3e097cf85bc9cb5293ca9a12dd4e53c9116ea3c6d05d2b1f704d1",
+      "paths": [
+        "public/assets/visualization/compression-adapter-male-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-136",
+      "sha256": "2d229bad2c9c3bf4157f5e298ab843746e9723869b79030b396b80e91b4030f4",
+      "paths": [
+        "public/assets/visualization/air-release-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-137",
+      "sha256": "17c36e766b11d8bb5de0502f49040c11094559b180fed27e9c83171b27d2bc49",
+      "paths": [
+        "public/assets/visualization/claw-hose-tail-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-138",
+      "sha256": "513f2189e3193c59343c6b46f63b88354259b8afcf87b326234616732f322ffb",
+      "paths": [
+        "public/assets/visualization/claw-hose-tail-front-v2.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-139",
+      "sha256": "cb72ef9563c932e7ef5fd21ce1bb25d007c949d19d563e0ba191c7c20a9c74f1",
+      "paths": [
+        "public/assets/visualization/suction-hose-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-140",
+      "sha256": "e4b4d26e1cf013383e2535db174c86bff8791f0c261b7b493013db2cd2369a96",
+      "paths": [
+        "public/assets/visualization/pe-pipe-light-blue-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-141",
+      "sha256": "c03452dcc683d01c4c5cfdfd785c5a2ca09e4c5f5fa8a9f61ecd638454895e70",
+      "paths": [
+        "public/assets/visualization/water-meter-multijet-external-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-142",
+      "sha256": "e3c67036c0fb59da050551e13508be5cfa74411b2e994edb6b5ea23e55a374f7",
+      "paths": [
+        "public/assets/visualization/water-meter-multijet-internal-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-143",
+      "sha256": "dc117040424ca8929732393a75148866d27dddfd22b0b8037de243b646072597",
+      "paths": [
+        "public/assets/visualization/water-meter-multijet-internal-front-v2.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-144",
+      "sha256": "d4beeec352680dfeb4b84283c6717cf6cc8f4e2462881db51ba0dcaa86685aeb",
+      "paths": [
+        "public/assets/visualization/flow-sensor-black-external-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-145",
+      "sha256": "68b880e2bd8cf7767533deefcca456c4a0ec90b947188630829eabb02e23191c",
+      "paths": [
+        "public/assets/visualization/flow-sensor-black-internal-front.png"
+      ],
+      "kind": "ai-edited"
+    },
+    {
+      "id": "IMG-146",
+      "sha256": "9bd30e350432e36a27604346fb430a47902283e3c5c4b0c92a759ed5627f2ac2",
+      "paths": [
+        "public/assets/visualization/surface-pump-controller-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-147",
+      "sha256": "7e963680f3733666566e5eb960c5e2a50af59fd5234a6eddf9e744233b78f681",
+      "paths": [
+        "public/assets/visualization/pe-pipe-bend-front.png"
+      ],
+      "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-148",
+      "sha256": "8032cf399655dfb5c80496fcc8ec11cb330bdfe9795dd6d664ae2de79414039e",
+      "paths": [
+        "public/assets/visualization/check-valve-female-front.png"
+      ],
+      "kind": "ai-generated"
     }
   ]
 }

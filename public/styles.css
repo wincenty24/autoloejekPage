@@ -589,3 +589,166 @@ footer a { text-decoration:none; }
 .social-instagram .youtube-channel-icon { background:rgba(193,53,132,.1); color:#c13584; }
 .social-tiktok:hover { border-color:var(--ink); }
 .social-instagram:hover { border-color:#c13584; }
+
+/* Installation parts: connector numbers are stable across meter variants. */
+.viz-controls { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; padding:24px; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
+.viz-controls fieldset { border:0; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:12px; }
+.viz-controls legend { margin-bottom:14px; font-weight:750; }
+.viz-controls label { display:flex; align-items:center; gap:8px; cursor:pointer; }
+.viz-controls fieldset label { padding:12px 16px; border:1px solid var(--line); border-radius:12px; }
+.viz-controls fieldset label:has(:checked) { border-color:var(--accent); color:var(--accent); background:rgba(53,99,233,.07); }
+.viz-controls input { accent-color:var(--accent); width:18px; height:18px; }
+.viz-status { min-height:68px; color:var(--muted); line-height:1.6; }
+.viz-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.viz-card { min-width:0; padding:28px; border:1px solid var(--line); background:var(--surface); border-radius:24px; }
+.viz-card h2 { font-size:1.25rem; min-height:3em; }
+.viz-card .eyebrow { margin-bottom:12px; }
+.viz-pin circle { fill:var(--accent); stroke:var(--surface); stroke-width:3; }
+.viz-pin text { fill:#fff; font:bold 14px system-ui; text-anchor:middle; }
+.viz-reference { margin-top:14px; border-top:1px solid var(--line); padding-top:16px; }
+.viz-reference summary { cursor:pointer; color:var(--accent); font-weight:650; }
+.viz-reference img { display:block; width:100%; height:220px; margin-top:18px; object-fit:contain; background:white; border-radius:12px; }
+.viz-register { padding:28px; margin:32px 0 64px; border:1px solid var(--line); border-radius:18px; line-height:1.7; }
+.viz-register ul { display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; padding-left:20px; }
+.viz-register p { color:var(--muted); }
+[data-visualization] [hidden] { display:none; }
+@media(max-width:700px) { .viz-grid { grid-template-columns:1fr; } .viz-card { padding:20px; } .viz-register ul { grid-template-columns:1fr; } }
+
+/* Photographic meter cutouts; connector labels remain separate from the asset. */
+.viz-meter-visual { position:relative; width:100%; aspect-ratio:4/3; }
+.viz-meter-variant { position:absolute; inset:0; }
+.viz-meter-variant > [data-meter-type] { height:100%; }
+.viz-meter-variant img { display:block; width:100%; height:100%; padding:6px 42px 30px; object-fit:contain; }
+.viz-meter-variant .image-provenance { position:absolute; bottom:0; left:0; right:0; padding:2px 0; text-align:center; font-size:.68rem; }
+.viz-meter-connectors { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+@media(max-width:400px) { .viz-meter-variant img { padding:6px 28px 30px; } }
+
+/* Fitting photographs share the meter's static, separately numbered presentation. */
+.viz-fitting-visual { position:relative; width:100%; aspect-ratio:4/3; }
+.viz-fitting-photo { position:absolute; inset:0; }
+.viz-fitting-photo img { position:absolute; top:2%; left:16%; width:68%; height:auto; aspect-ratio:1; object-fit:contain; }
+.viz-fitting-photo .image-provenance { position:absolute; bottom:0; left:0; right:0; padding:2px 0; text-align:center; font-size:.68rem; }
+.viz-fitting-connectors { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+
+/* Orthogonal exploded installation: physical ends remain separated by small gaps. */
+.viz-assembly { margin:0 0 28px; padding:28px; border:1px solid var(--line); border-radius:24px; background:var(--surface); }
+.viz-assembly h2 { margin-bottom:8px; }
+.viz-assembly-hint { margin:0; color:var(--muted); line-height:1.6; }
+.viz-assembly-scroll { margin:18px -8px; overflow:auto; overscroll-behavior-x:contain; }
+.viz-assembly-scroll:focus-visible { outline:3px solid var(--accent); outline-offset:3px; border-radius:12px; }
+.viz-assembly-svg { display:block; width:var(--viz-zoom-width,100%); min-width:calc(1000px * var(--viz-zoom,1)); height:auto; margin-inline:auto; }
+.viz-assembly-svg[data-meter-variant="internal"] { min-width:calc(1300px * var(--viz-zoom,1)); }
+.viz-zoom { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.viz-zoom > span { font-weight:650; margin-right:4px; }
+.viz-zoom button { display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); font:600 1.4rem system-ui,sans-serif; cursor:pointer; }
+.viz-zoom button:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
+.viz-zoom button:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.viz-zoom button:disabled { opacity:.4; cursor:default; }
+.viz-zoom output { min-width:4ch; text-align:center; font-weight:650; font-variant-numeric:tabular-nums; }
+.viz-zoom small { color:var(--muted); }
+.viz-assembly-gap { fill:none; stroke:#94a3b8; stroke-width:2; stroke-dasharray:4 5; }
+.viz-assembly-leader { fill:none; stroke:#94a3b8; stroke-width:1; }
+.viz-assembly-label { fill:var(--muted); font:500 13px system-ui,sans-serif; text-anchor:middle; }
+.viz-assembly-provenance { padding:0; margin-top:12px; }
+.viz-connections { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 0; padding:0; list-style:none; }
+.viz-connections li { padding:8px 14px; border:1px solid var(--line); border-radius:10px; background:var(--background); font-size:.9rem; font-weight:650; }
+.viz-library { margin-bottom:28px; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
+.viz-library > summary { padding:22px 24px; color:var(--accent); font-weight:700; cursor:pointer; }
+.viz-library > .viz-grid { padding:0 20px 20px; }
+@media(max-width:700px) { .viz-assembly { padding:20px 16px; } .viz-library > .viz-grid { padding:0 12px 12px; } }
+
+[data-visualization][data-device="pump"] [data-valve-variant],
+[data-visualization][data-device="pump"] [data-valve-status],
+[data-visualization][data-device="pump"] [data-device-valve] { display:none; }
+.viz-interactive-part { cursor:pointer; }
+.viz-interactive-part:focus-visible { outline:2px solid var(--accent); }
+.viz-part-popup { position:fixed; z-index:1000; max-width:min(280px,calc(100vw - 16px)); padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); box-shadow:0 6px 24px #0002; pointer-events:none; }
+.viz-part-popup[hidden] { display:none; }
+
+.viz-end-arrow { display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid var(--accent); border-radius:12px; background:var(--surface); color:var(--accent); font:700 24px system-ui,sans-serif; cursor:pointer; }
+.viz-end-arrow:hover { background:var(--background); }
+.viz-end-arrow:focus-visible { outline:3px solid var(--accent); outline-offset:-4px; }
+
+/* Flow-meter installation note: hover, keyboard focus and touch. */
+.viz-ud-trigger { margin:3px; display:grid; place-items:center; width:38px; height:38px; padding:0; border:1px solid #b97413; border-radius:50%; background:#fff4d6; color:#8c5000; font:800 1.35rem system-ui,sans-serif; cursor:pointer; }
+.viz-ud-trigger:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+.viz-ud-panel { position:fixed; z-index:1000; width:min(360px,calc(100vw - 64px)); padding:18px; border:1px solid var(--line); border-radius:14px; background:var(--surface); color:var(--ink); box-shadow:0 12px 32px #0002; font-size:.95rem; line-height:1.6; }
+.viz-ud-panel p { margin:0 0 12px; }
+.viz-ud-panel a { display:block; width:fit-content; color:var(--accent); text-underline-offset:3px; }
+.viz-ud-panel a + a { margin-top:8px; }
+#flow-meters, #meter-straight-lengths { scroll-margin-top:24px; }
+
+.viz-check-toggle { padding:12px 16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); font:600 .95rem system-ui,sans-serif; cursor:pointer; }
+.viz-check-toggle[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); background:rgba(53,99,233,.07); }
+.viz-check-toggle:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.viz-flow-direction path { fill:none; stroke:var(--accent); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.viz-flow-direction text { fill:var(--ink); font:600 17px system-ui,sans-serif; }
+
+/* Quiet segmented device picker; meter types stay on the diagram arrows. */
+.viz-controls { align-items:flex-end; justify-content:flex-start; gap:24px 32px; margin-bottom:24px; }
+.viz-controls .viz-device-picker { display:block; flex:1 0 100%; order:-1; padding:0 0 20px; border-bottom:1px solid var(--line); }
+.viz-device-segments { display:inline-flex; gap:4px; padding:4px; border:1px solid var(--line); border-radius:14px; background:var(--background); }
+.viz-controls .viz-device-picker label { position:relative; justify-content:center; min-width:126px; margin:0; padding:10px 18px; border:0; border-radius:10px; background:transparent; color:var(--muted); font-weight:600; transition:background .15s ease,color .15s ease,box-shadow .15s ease; }
+.viz-controls .viz-device-picker input { position:absolute; width:1px; height:1px; opacity:0; }
+.viz-controls .viz-device-picker label:has(:checked) { color:var(--ink); background:var(--surface); box-shadow:0 1px 5px #00000012; }
+.viz-controls .viz-device-picker label:has(:focus-visible) { outline:3px solid var(--accent); outline-offset:2px; }
+.viz-controls > fieldset:has([data-check-toggle]) { order:3; margin-left:auto; }
+@media(max-width:700px) {
+  .viz-device-segments { display:flex; width:100%; }
+  .viz-controls .viz-device-picker label { flex:1; min-width:0; }
+  .viz-controls > fieldset:has([data-check-toggle]) { margin-left:0; }
+}
+
+/* Draw attention to the unread installation note without flashing. */
+.viz-ud-marker { overflow:visible; }
+.viz-ud-trigger { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; width:160px; height:72px; margin:0; padding:0; border:0; border-radius:12px; background:transparent; }
+.viz-ud-caption { color:#8c5000; font:650 16px system-ui,sans-serif; white-space:nowrap; }
+.viz-ud-icon { position:relative; display:grid; place-items:center; width:38px; height:38px; border:1px solid #b97413; border-radius:50%; background:#fff4d6; color:#8c5000; font:800 1.35rem system-ui,sans-serif; }
+.viz-ud-icon::after { content:""; position:absolute; inset:-1px; border:2px solid #d89a35; border-radius:50%; pointer-events:none; }
+.viz-ud-trigger:not(.is-seen) .viz-ud-icon::after { animation:viz-ud-pulse 2.6s ease-out infinite; }
+.viz-ud-trigger:not(.is-seen) .viz-ud-icon { animation:viz-ud-nudge 3.6s ease-in-out infinite; }
+.viz-ud-trigger.is-seen .viz-ud-icon::after { display:none; }
+.viz-ud-trigger:hover .viz-ud-icon, .viz-ud-trigger:focus-visible .viz-ud-icon { background:#ffe8ae; border-color:#8c5000; }
+@keyframes viz-ud-pulse { 0% { transform:scale(1); opacity:.65; } 65%,100% { transform:scale(1.65); opacity:0; } }
+@keyframes viz-ud-nudge { 0%,62%,100% { transform:scale(1); } 72%,84% { transform:scale(1.08); } 78%,90% { transform:scale(1); } }
+@media(prefers-reduced-motion:reduce) { .viz-ud-trigger .viz-ud-icon, .viz-ud-trigger .viz-ud-icon::after { animation:none !important; } }
+
+/* Mobile diagram viewer: native fullscreen when supported, modal fallback otherwise. */
+.viz-fullscreen-open { display:none; align-items:center; justify-content:center; gap:10px; min-height:44px; margin-top:16px; padding:10px 16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); font:600 .95rem system-ui,sans-serif; cursor:pointer; }
+.viz-fullscreen-open > span[aria-hidden] { font-size:1.25rem; }
+@media(max-width:900px), (pointer:coarse) { .viz-fullscreen-open { display:inline-flex; } }
+.viz-fullscreen-active { overflow:hidden; }
+.viz-fullscreen-dialog { position:fixed; inset:0; width:100vw; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; overflow:hidden; background:var(--surface); color:var(--ink); }
+.viz-fullscreen-dialog::backdrop { background:var(--surface); }
+.viz-fullscreen-stage { position:absolute; left:50%; top:50%; padding:20px 48px; transform-origin:center; }
+.viz-fullscreen-dialog .viz-assembly { display:flex; flex-direction:column; width:100%; height:100%; min-height:0; margin:0; padding:0; border:0; border-radius:0; }
+.viz-fullscreen-dialog .viz-assembly h2 { margin:0; font-size:1.2rem; }
+.viz-fullscreen-dialog .viz-assembly-hint, .viz-fullscreen-dialog .viz-fullscreen-open, .viz-fullscreen-dialog .viz-assembly-provenance, .viz-fullscreen-dialog .viz-zoom small { display:none; }
+.viz-fullscreen-dialog .viz-zoom { margin-top:8px; gap:8px; }
+.viz-fullscreen-dialog .viz-assembly-scroll { display:flex; align-items:safe center; flex:1; min-height:0; width:100%; margin:10px 0 0; overflow:auto; overscroll-behavior:contain; touch-action:pan-x pan-y pinch-zoom; }
+.viz-fullscreen-dialog .viz-assembly-svg { flex:none; width:var(--viz-zoom-width,100%); min-width:0; height:auto; margin:0; }
+.viz-fullscreen-close { position:absolute; z-index:1100; top:max(8px,env(safe-area-inset-top)); right:max(8px,env(safe-area-inset-right)); display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid var(--line); border-radius:50%; background:var(--surface); color:var(--ink); box-shadow:0 2px 12px #0001; font:400 2rem system-ui,sans-serif; cursor:pointer; }
+.viz-fullscreen-open:focus-visible, .viz-fullscreen-close:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+
+.viz-fullscreen-close > svg { display:block; width:20px; height:20px; }
+
+/* Visualization entry points. */
+.viz-choice-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin:0 0 64px; }
+.viz-choice-wrap { position:relative; min-width:0; }
+.viz-choice { display:flex; align-items:flex-start; gap:18px; width:100%; height:100%; min-height:184px; margin:0; padding:28px; border:1px solid var(--line); border-radius:20px; background:var(--surface); color:var(--ink); text-align:left; text-decoration:none; font:inherit; cursor:pointer; transition:border-color .18s ease,box-shadow .18s ease; }
+.viz-choice:hover { border-color:#b4c4e5; box-shadow:0 8px 24px #17203308; }
+.viz-choice:focus-visible, .viz-back:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+.viz-choice-icon { display:grid; flex:none; place-items:center; width:48px; height:48px; border-radius:14px; background:var(--background); color:var(--accent); }
+.viz-choice-icon svg { width:30px; height:30px; }
+.viz-choice-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:12px; }
+.viz-choice-copy strong { font-size:1.2rem; line-height:1.4; font-weight:650; }
+.viz-choice-copy > span { color:var(--muted); line-height:1.6; font-size:.95rem; }
+.viz-choice-arrow { flex:none; width:22px; height:22px; margin-top:13px; color:var(--muted); }
+.viz-choice-badge { flex:none; align-self:flex-start; margin-top:8px; padding:5px 9px; border:1px solid var(--line); border-radius:20px; color:var(--muted); font-size:.75rem; white-space:nowrap; }
+.viz-soon-popover { position:absolute; z-index:10; top:calc(100% + 10px); right:0; width:min(340px,100%); padding:18px 20px; border:1px solid var(--line); border-radius:14px; background:var(--surface); color:var(--ink); box-shadow:0 12px 32px #17203314; line-height:1.6; }
+.viz-soon-popover::before { content:""; position:absolute; top:-6px; right:30px; width:10px; height:10px; border-top:1px solid var(--line); border-left:1px solid var(--line); background:var(--surface); transform:rotate(45deg); }
+.viz-soon-popover p { margin:8px 0 0; color:var(--muted); font-size:.95rem; }
+.viz-back { display:inline-flex; align-items:center; gap:8px; margin:28px 0 0; color:var(--muted); text-decoration:none; font-size:.95rem; }
+.viz-back:hover { color:var(--accent); }
+@media(max-width:760px) { .viz-choice-grid { grid-template-columns:1fr; gap:16px; } .viz-choice { min-height:150px; padding:24px 20px; gap:14px; } .viz-choice-copy strong { font-size:1.1rem; } .viz-choice-badge { font-size:.7rem; padding:4px 7px; } }
+@media(prefers-reduced-motion:reduce) { .viz-choice { transition:none; } }
