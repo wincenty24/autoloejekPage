@@ -14,7 +14,6 @@
   "vizLayoutHint": "Small gaps separate the parts. On narrow screens, scroll the diagram horizontally.",
   "vizLayoutScrollLabel": "Installation diagram, scrollable horizontally",
   "vizLayoutLabel": "Installation diagram with an externally threaded flow meter. Water flows from left to right through the tee, elbows and flow meter.",
-  "vizCopyLabel": "Second elbow",
   "vizAssemblyProvenance": "Component illustrations generated using AI.",
   "vizAssemblyFemaleAlt": "Double-union elbow with green nuts, front view.",
   "vizAssemblyMaleAlt": "Elbow with a union on the left and an upward-facing male thread.",

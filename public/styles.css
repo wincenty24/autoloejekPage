@@ -752,3 +752,8 @@ footer a { text-decoration:none; }
 .viz-back:hover { color:var(--accent); }
 @media(max-width:760px) { .viz-choice-grid { grid-template-columns:1fr; gap:16px; } .viz-choice { min-height:150px; padding:24px 20px; gap:14px; } .viz-choice-copy strong { font-size:1.1rem; } .viz-choice-badge { font-size:.7rem; padding:4px 7px; } }
 @media(prefers-reduced-motion:reduce) { .viz-choice { transition:none; } }
+
+/* Keep close at the upper right of the rotated diagram. */
+.viz-fullscreen-dialog.is-portrait .viz-fullscreen-close { top:auto; bottom:max(8px,env(safe-area-inset-bottom)); }
+.viz-fullscreen-dialog.is-portrait .viz-part-popup { max-width:calc(100dvh - 24px); }
+.viz-fullscreen-dialog.is-portrait .viz-ud-panel { width:min(360px,calc(100dvh - 64px)); }

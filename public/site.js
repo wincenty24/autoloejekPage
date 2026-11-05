@@ -253,6 +253,7 @@ document.querySelectorAll('[data-visualization]').forEach(visualization => {
         const width = fullDialog.clientWidth;
         const height = fullDialog.clientHeight;
         const portrait = height > width;
+        fullDialog.classList.toggle('is-portrait', portrait);
         stage.style.width = `${portrait ? height : width}px`;
         stage.style.height = `${portrait ? width : height}px`;
         stage.style.transform = `translate(-50%, -50%) rotate(${portrait ? 90 : 0}deg)`;
@@ -409,31 +410,56 @@ document.querySelectorAll('[data-visualization]').forEach(visualization => {
   updateCheckValve();
 });
 
+// Position HTML overlays in viewport coordinates, with the same rotation as the diagram.
+const positionDiagramOverlay = (overlay, anchor, margin = 12) => {
+  const rotated = !!overlay.closest('.viz-fullscreen-dialog.is-portrait');
+  overlay.style.transform = rotated ? 'rotate(90deg)' : '';
+  overlay.style.transformOrigin = 'center';
+  overlay.style.maxWidth = `${Math.max(120, (rotated ? innerHeight : innerWidth) - margin * 2)}px`;
+  const box = anchor.getBoundingClientRect();
+  const width = overlay.offsetWidth;
+  const height = overlay.offsetHeight;
+  const visualWidth = rotated ? height : width;
+  const visualHeight = rotated ? width : height;
+  const left = Math.max(margin, Math.min(innerWidth - visualWidth - margin, rotated ? box.left - visualWidth - 8 : box.left + box.width / 2 - visualWidth / 2));
+  const top = Math.max(margin, Math.min(innerHeight - visualHeight - margin, rotated ? box.top + box.height / 2 - visualHeight / 2 : box.bottom + 8));
+  overlay.style.left = `${left + (visualWidth - width) / 2}px`;
+  overlay.style.top = `${top + (visualHeight - height) / 2}px`;
+};
+
 // Shared element-name popup for mouse, keyboard and touch.
 const partPopup = document.createElement('div');
 partPopup.className = 'viz-part-popup';
 partPopup.setAttribute('role', 'status');
 partPopup.hidden = true;
 document.body.append(partPopup);
-let activePart;
-const hidePartPopup = () => { partPopup.hidden = true; activePart = null; };
+let partTapped = false;
+const hidePartPopup = () => { partPopup.hidden = true; partTapped = false; };
+document.addEventListener('pointerdown', () => { partTapped = false; }, true);
 document.querySelectorAll('.viz-interactive-part').forEach(part => {
   const show = () => {
-    activePart = part;
     partPopup.textContent = part.getAttribute('aria-label');
     partPopup.hidden = false;
-    const box = part.getBoundingClientRect();
-    partPopup.style.left = `${Math.max(8, Math.min(box.left + box.width / 2 - partPopup.offsetWidth / 2, window.innerWidth - partPopup.offsetWidth - 8))}px`;
-    partPopup.style.top = `${Math.max(8, Math.min(box.bottom + 8, window.innerHeight - partPopup.offsetHeight - 8))}px`;
+    positionDiagramOverlay(partPopup, part, 8);
   };
-  part.addEventListener('mouseenter', show);
-  part.addEventListener('mouseleave', hidePartPopup);
+  part.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') show(); });
+  part.addEventListener('pointerleave', event => {
+    if (event.pointerType !== 'touch' && !partTapped) hidePartPopup();
+  });
+  part.addEventListener('pointerup', event => {
+    if (event.pointerType !== 'touch') return;
+    partTapped = true;
+    show();
+  });
   part.addEventListener('focus', show);
-  part.addEventListener('blur', hidePartPopup);
+  part.addEventListener('blur', () => { if (!partTapped) hidePartPopup(); });
   part.addEventListener('click', event => { event.stopPropagation(); show(); });
   part.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); show(); } });
 });
-document.addEventListener('click', hidePartPopup);
+document.addEventListener('click', event => {
+  // The browser can retarget the click from a rotated SVG part to the dialog.
+  if (event.pointerType !== 'touch' || !partTapped) hidePartPopup();
+});
 document.addEventListener('keydown', event => { if (event.key === 'Escape') hidePartPopup(); });
 document.addEventListener('scroll', hidePartPopup, true);
 window.addEventListener('resize', hidePartPopup);
@@ -498,13 +524,10 @@ if (udPanel) {
   let active = null;
   let pinned = false;
   let closeTimer;
+  let touchTrigger;
   const position = () => {
     if (!active || udPanel.hidden) return;
-    const box = active.getBoundingClientRect();
-    const width = udPanel.offsetWidth;
-    const height = udPanel.offsetHeight;
-    udPanel.style.left = `${Math.max(12, Math.min(innerWidth - width - 12, box.x + box.width / 2 - width / 2))}px`;
-    udPanel.style.top = `${Math.max(12, Math.min(innerHeight - height - 12, box.bottom + 8))}px`;
+    positionDiagramOverlay(udPanel, active);
   };
   const close = () => {
     clearTimeout(closeTimer);
@@ -527,12 +550,21 @@ if (udPanel) {
       if (!pinned && !udPanel.contains(document.activeElement) && document.activeElement !== active) close();
     }, 150);
   };
+  document.addEventListener('pointerdown', () => { touchTrigger = null; }, true);
   triggers.forEach(button => {
-    button.addEventListener('pointerenter', () => show(button));
-    button.addEventListener('pointerleave', scheduleClose);
+    button.addEventListener('pointerup', event => {
+      if (event.pointerType !== 'touch' || !button.closest('.viz-fullscreen-dialog')) return;
+      touchTrigger = button;
+      show(button);
+      pinned = true;
+    });
+    button.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') show(button); });
+    button.addEventListener('pointerleave', event => { if (event.pointerType !== 'touch') scheduleClose(); });
     button.addEventListener('focus', () => show(button));
     button.addEventListener('blur', scheduleClose);
-    button.addEventListener('click', () => {
+    button.addEventListener('click', event => {
+      event.stopPropagation();
+      if (event.pointerType === 'touch') { show(button); pinned = true; return; }
       if (active === button && pinned) close();
       else { show(button); pinned = true; }
     });
@@ -542,6 +574,8 @@ if (udPanel) {
   udPanel.addEventListener('focusin', () => clearTimeout(closeTimer));
   udPanel.addEventListener('focusout', scheduleClose);
   document.addEventListener('click', event => {
+    // A touch on the rotated SVG button can produce a click retargeted to the dialog.
+    if (event.pointerType === 'touch' && touchTrigger) return;
     if (!udPanel.contains(event.target) && !triggers.some(button => button.contains(event.target))) close();
   });
   document.addEventListener('keydown', event => {
