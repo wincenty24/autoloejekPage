@@ -246,6 +246,7 @@ document.querySelectorAll('[data-visualization]').forEach(visualization => {
       let savedZoom = 100;
       let savedScroll = {left:0, top:0};
       let nativeFullscreen = false;
+      let openingFullscreen = false;
       let overlayMarkers = [];
       const layoutFullscreen = () => {
         if (!fullDialog.open) return;
@@ -257,8 +258,19 @@ document.querySelectorAll('[data-visualization]').forEach(visualization => {
         stage.style.transform = `translate(-50%, -50%) rotate(${portrait ? 90 : 0}deg)`;
       };
       openButton.hidden = false;
-      openButton.addEventListener('click', () => {
-        if (fullDialog.open) return;
+      openButton.addEventListener('click', async () => {
+        if (fullDialog.open || openingFullscreen) return;
+        openingFullscreen = true;
+        // Enter native fullscreen first: opening it after the dialog places the
+        // document above the dialog in the browser top layer.
+        if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+          try {
+            await document.documentElement.requestFullscreen({navigationUI:'hide'});
+            nativeFullscreen = true;
+          } catch {
+            // Mobile browsers without native fullscreen use the viewport dialog.
+          }
+        }
         savedZoom = zoom;
         savedScroll = {left:diagram.scrollLeft, top:diagram.scrollTop};
         sectionMarker = document.createComment('installation diagram position');
@@ -279,13 +291,7 @@ document.querySelectorAll('[data-visualization]').forEach(visualization => {
         diagram.scrollLeft = 0;
         diagram.scrollTop = 0;
         closeButton.focus();
-        if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
-          document.documentElement.requestFullscreen({navigationUI:'hide'}).then(() => {
-            nativeFullscreen = true;
-            layoutFullscreen();
-            if (!fullDialog.open) { nativeFullscreen = false; document.exitFullscreen().catch(() => {}); }
-          }).catch(() => {});
-        }
+        openingFullscreen = false;
       });
       closeButton.addEventListener('click', () => fullDialog.close());
       fullDialog.addEventListener('cancel', event => {
