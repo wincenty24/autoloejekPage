@@ -24,7 +24,7 @@ const buildPages = [...config.pages, ...investments.map(investment => ({
   investment
 }))];
 
-for (const filename of ["styles.css", "site.js", "theme.js"]) {
+for (const filename of ["styles.css", "site.js", "theme.js", "electrical-simulator.css", "electrical-simulator.js"]) {
   const contents = await readFile(path.join(publicRoot, filename));
   assetVersions[filename] = createHash("sha256").update(contents).digest("hex").slice(0, 10);
 }
@@ -149,7 +149,9 @@ function adjustAssetPaths(html) {
     .replaceAll('href="assets/', 'href="../assets/')
     .replaceAll('src="assets/', 'src="../assets/')
     .replaceAll('src="theme.js"', `src="../theme.js?v=${assetVersions["theme.js"]}"`)
-    .replaceAll('src="site.js"', `src="../site.js?v=${assetVersions["site.js"]}"`);
+    .replaceAll('src="site.js"', `src="../site.js?v=${assetVersions["site.js"]}"`)
+    .replaceAll('href="../electrical-simulator.css"', `href="../electrical-simulator.css?v=${assetVersions["electrical-simulator.css"]}"`)
+    .replaceAll('src="../electrical-simulator.js"', `src="../electrical-simulator.js?v=${assetVersions["electrical-simulator.js"]}"`);
 }
 
 function orderSections(html) {
@@ -176,10 +178,13 @@ function orderSections(html) {
 }
 
 function addNextPageLink(html, page, language, dictionary) {
-  if (page.output === "index.html" || page.footerOnly || page.parent) return html;
-  const sequence = config.pages.filter(item => !item.footerOnly && !item.parent);
-  const currentIndex = sequence.findIndex(item => item.source === page.source);
-  const nextPage = sequence[(currentIndex + 1) % sequence.length];
+  if (page.output === "index.html" || page.footerOnly || (page.parent && !page.nextPage)) return html;
+  let nextPage = page.nextPage;
+  if (!nextPage) {
+    const sequence = config.pages.filter(item => !item.footerOnly && !item.parent);
+    const currentIndex = sequence.findIndex(item => item.source === page.source);
+    nextPage = sequence[(currentIndex + 1) % sequence.length];
+  }
   const label = escapeHtml(requireTranslation(dictionary, "nextPageLabel", language));
   const title = escapeHtml(requireTranslation(dictionary, nextPage.navKey, language));
   const link = `<div class="next-page"><a class="next-page-link" href="${escapeHtml(nextPage.output)}"><span>${label}: ${title}</span><span aria-hidden="true">→</span></a></div>`;

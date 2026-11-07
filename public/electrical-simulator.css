@@ -1,0 +1,110 @@
+.electrical-simulator {
+  --sim-background:#fff; --sim-ink:#172033; --sim-muted:#4c5e73; --sim-card:#f5f7fb;
+  --sim-border:#c5d0de; --sim-control:#edf2f8; --sim-control-hover:#e0e8f2;
+  --sim-active:#17624d; --sim-off:#556578; --sim-trip:#8a4814;
+  color-scheme:light;font:16px system-ui,sans-serif;background:var(--sim-background);color:var(--sim-ink);padding:clamp(14px,3vw,30px);border-radius:18px;overflow:hidden }
+[data-theme="dark"] .electrical-simulator {
+  --sim-background:#111923; --sim-ink:#edf3fa; --sim-muted:#b5c5d7; --sim-card:#192635;
+  --sim-border:#3b4d60; --sim-control:#25384a; --sim-control-hover:#33516a;
+  --sim-active:#9af0d2; --sim-off:#bdc9d6; --sim-trip:#ffcb91;
+  color-scheme:dark;
+}
+.electrical-simulator * { box-sizing:border-box }
+.electrical-simulator h2 { margin-top:32px }
+.electrical-simulator h3 { margin:0 0 5px }
+.electrical-simulator p { color:var(--sim-muted);line-height:1.5 }
+.electrical-simulator section { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px }
+.electrical-simulator article { border:1px solid var(--sim-border);background:var(--sim-card);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:9px }
+.electrical-simulator article[hidden] { display:none }
+.electrical-simulator article p { margin:0;font-size:.9rem }
+.electrical-simulator svg { width:100%;background:var(--sim-background);border-radius:8px;margin-top:3px }
+.electrical-simulator svg text { fill:var(--sim-svg-ink,var(--sim-ink));font:11px system-ui,sans-serif }
+.electrical-simulator button, .electrical-simulator select { font:inherit;background:var(--sim-control);color:var(--sim-ink);border:1px solid var(--sim-border);border-radius:6px;padding:7px 10px }
+.electrical-simulator button { cursor:pointer }
+.electrical-simulator button:hover { background:var(--sim-control-hover) }
+.electrical-simulator output { color:var(--sim-active);font-weight:650 }
+.electrical-simulator output:is([data-state="off"],[data-state="released"],[data-state="stopped"]) { color:var(--sim-off) }
+.electrical-simulator output[data-state="tripped"] { color:var(--sim-trip) }
+.electrical-simulator .controls { display:flex;gap:8px;flex-wrap:wrap;margin-top:auto }
+.electrical-simulator [hidden] { display:none!important }
+.electrical-simulator .setup { display:flex;flex-wrap:wrap;align-items:center;gap:12px }
+.electrical-simulator .setup-option { display:flex; flex-wrap:wrap; align-items:center; gap:12px }
+.electrical-simulator .wiring { overflow:auto;margin:18px 0 }
+.electrical-simulator .wiring svg { display:block;width:100%;min-width:640px;max-width:900px;margin:0 auto 16px }
+.electrical-simulator .module-toggle { cursor:pointer }
+.electrical-simulator .module-toggle:hover .module-hit, .electrical-simulator .module-toggle:focus-visible .module-hit { stroke:#82e4bc;stroke-width:2 }
+.electrical-simulator .module-hit { fill:transparent;stroke:transparent }
+.electrical-simulator .wiring table { border-collapse:collapse;width:100%;min-width:500px }
+.electrical-simulator .wiring th, .electrical-simulator .wiring td { padding:10px 12px;text-align:center;border-bottom:1px solid var(--sim-border) }
+.electrical-simulator .wiring td { color:var(--sim-muted) }
+.electrical-simulator .wiring .live, .electrical-simulator .wiring .earth { color:var(--sim-active) }
+.electrical-simulator .wiring .open { color:var(--sim-trip) }
+.electrical-simulator .wire-legend { display:flex;flex-wrap:wrap;gap:8px 18px }
+.electrical-simulator .wire-legend span { display:inline-flex;align-items:center;gap:6px }
+.electrical-simulator .wire-legend i { display:inline-block;width:18px;height:3px;background:var(--wire-color) }
+.electrical-simulator .pump-flow { fill:none;stroke:#83c8ff;stroke-width:3;stroke-linecap:round;stroke-dasharray:5 6;animation:electrical-pump-flow .55s linear infinite }
+@keyframes electrical-pump-flow{to{stroke-dashoffset:-11}}
+.electrical-simulator .pump-jet { fill:none;stroke:#69bfff;stroke-width:7;stroke-linecap:round;opacity:.58 }
+.electrical-simulator .pump-droplets { fill:none;stroke:#c1ecff;stroke-width:3;stroke-linecap:round;stroke-dasharray:1 11;animation:electrical-pump-droplets .33s linear infinite }
+@keyframes electrical-pump-droplets{to{stroke-dashoffset:-12}}
+@media (prefers-reduced-motion:reduce){
+.electrical-simulator .pump-flow, .electrical-simulator .pump-droplets { animation:none }
+.electrical-simulator .pump-flow { stroke-dasharray:none }
+}
+.electrical-simulator .connector-pin-label { paint-order:stroke;stroke:var(--sim-background);stroke-width:3px;stroke-linejoin:round }
+.electrical-simulator .pcb-model { margin-top:32px }
+.electrical-simulator .pcb-model svg { display:block;max-width:680px }
+.electrical-simulator .pcb-model svg .pcb-pin { font-size:13px;font-weight:700 }
+.electrical-simulator .pcb-model svg .pcb-header { font-size:12px;font-weight:700;fill:#b9e7ff }
+
+.electrical-simulator .click-hint { pointer-events:none }
+.electrical-simulator .click-hint circle { fill:#25384a; stroke:#9af0d2; stroke-width:1.3 }
+.electrical-simulator .click-hint path { fill:none; stroke:#9af0d2; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round }
+.electrical-simulator .module-instructions { display:flex; align-items:center; gap:8px; margin:0 0 14px; font-size:.9rem }
+.electrical-simulator .module-instructions svg { display:block; width:24px; height:24px; margin:0; background:none }
+
+.electrical-simulator .valve-fuse-break { visibility:hidden }
+.electrical-simulator .valve-fuse-control[data-blown="true"] .valve-fuse-break { visibility:visible }
+.electrical-simulator .valve-fuse-control[data-blown="true"] .module-hit { stroke:#ffcb91; stroke-width:3 }
+
+.electrical-simulator .valve-assembly { display:block; max-width:680px; margin:6px auto 16px }
+.electrical-simulator .valve-lead path { fill:none; stroke-width:4; stroke-linejoin:round }
+.electrical-simulator [data-valve-wires][data-energized="false"] [data-valve-lead="VOUT"] path { stroke-dasharray:9 7; opacity:.55 }
+
+.electrical-simulator .valve-board-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; max-width:680px; margin:16px auto 0 }
+.electrical-simulator .pcb-relay-button { display:inline-flex; align-items:center; gap:7px; min-height:42px }
+.electrical-simulator .pcb-relay-button svg { display:block; width:24px; height:24px; margin:0; background:none }
+.electrical-simulator .pcb-relay-button[aria-pressed="true"] { background:#246953; color:#fff }
+.electrical-simulator .pcb-relay-button:disabled { cursor:not-allowed; opacity:.55 }
+
+.electrical-simulator .valve-water, .electrical-simulator .valve-upstream .pump-droplets { visibility:hidden; pointer-events:none }
+.electrical-simulator [data-valve-wires][data-energized="true"] ~ .valve-water,
+.electrical-simulator [data-valve-wires][data-energized="true"] ~ .valve-upstream .pump-droplets { visibility:visible }
+
+.electrical-simulator .valve-assembly .pump-jet { stroke-width:70 }
+
+.electrical-simulator [data-meter-wires][data-energized="false"] [data-valve-lead="5V"] path { stroke-dasharray:9 7; opacity:.55 }
+
+.electrical-simulator .meter-pulse-controls { display:grid; gap:10px; padding:4px }
+.electrical-simulator .meter-pulse-controls button { min-height:96px; font-size:25px; line-height:1.2 }
+.electrical-simulator .meter-pulse-controls button:disabled { cursor:not-allowed; opacity:.55 }
+.electrical-simulator .meter-pulse-controls output { font-size:24px; text-align:center }
+.electrical-simulator .meter-pulse-active [data-valve-lead="SIG"] path,
+.electrical-simulator .meter-pulse-active ~ [data-electric-meter] .meter-pickup-signal { stroke:#fff4bd; stroke-width:7 }
+
+.electrical-simulator :is(.pcb-artwork,[data-device-face],.diagram-dark-label) { --sim-svg-ink:#e9f1fa }
+.electrical-simulator [data-device-face]:not([data-contactor]) .device-terminal-label,
+.electrical-simulator .diagram-canvas-label { --sim-svg-ink:var(--sim-ink) }
+
+.electrical-simulator[data-pump-simulator] {
+  --sim-active:#00843d;
+  --sim-off:#cb172d;
+  --pump-relay-on:#00843d;
+  --pump-relay-off:#bd182d;
+}
+[data-theme="dark"] .electrical-simulator[data-pump-simulator] {
+  --sim-active:#37f77e;
+  --sim-off:#ff5268;
+}
+
+.electrical-simulator [data-meter-wires][data-energized="false"] ~ [data-electric-meter] .meter-pickup-supply { stroke-dasharray:5 4; opacity:.55 }

@@ -588,20 +588,3 @@ if (udPanel) {
   document.addEventListener('scroll', position, true);
   document.querySelectorAll('[name="meter-thread"]').forEach(input => input.addEventListener('change', close));
 }
-
-document.querySelectorAll('[data-viz-electrical-soon]').forEach(button => {
-  const panel = document.getElementById(button.getAttribute('aria-controls'));
-  const close = () => { panel.hidden = true; button.setAttribute('aria-expanded', 'false'); };
-  button.addEventListener('click', () => {
-    const open = panel.hidden;
-    panel.hidden = !open;
-    button.setAttribute('aria-expanded', String(open));
-    if (open) panel.scrollIntoView({block:'nearest', behavior:'smooth'});
-  });
-  document.addEventListener('click', event => {
-    if (!button.contains(event.target) && !panel.contains(event.target)) close();
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !panel.hidden) { close(); button.focus(); }
-  });
-});

@@ -21,20 +21,6 @@
       "descriptionKey": "aboutLead"
     },
     {
-      "source": "build-it-yourself.html",
-      "output": "build-it-yourself.html",
-      "titleKey": "buildPageTitle",
-      "navKey": "navBuild",
-      "descriptionKey": "buildLead"
-    },
-    {
-      "source": "configure-yourself.html",
-      "output": "configure-yourself.html",
-      "titleKey": "configurePageTitle",
-      "navKey": "navConfigure",
-      "descriptionKey": "configureLead"
-    },
-    {
       "source": "visualization.html",
       "output": "visualization.html",
       "titleKey": "vizPageTitle",
@@ -47,7 +33,73 @@
       "titleKey": "vizHydraulicPageTitle",
       "navKey": "navVisualization",
       "descriptionKey": "vizLead",
-      "parent": "visualization.html"
+      "parent": "visualization.html",
+      "nextPage": {
+        "output": "electrical-visualization.html",
+        "navKey": "vizElectricalChoice"
+      }
+    },
+    {
+      "source": "electrical-visualization.html",
+      "output": "electrical-visualization.html",
+      "titleKey": "vizElectricPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizElectricHubLead",
+      "parent": "visualization.html",
+      "nextPage": {
+        "output": "electrical-valve.html",
+        "navKey": "vizElectricValve"
+      }
+    },
+    {
+      "source": "electrical-valve.html",
+      "output": "electrical-valve.html",
+      "titleKey": "vizElectricValvePageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizElectricValve",
+      "parent": "electrical-visualization.html",
+      "nextPage": {
+        "output": "electrical-pump.html",
+        "navKey": "vizElectricPump"
+      }
+    },
+    {
+      "source": "electrical-pump.html",
+      "output": "electrical-pump.html",
+      "titleKey": "vizElectricPumpPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizElectricLead",
+      "parent": "electrical-visualization.html",
+      "nextPage": {
+        "output": "electrical-flow-meter.html",
+        "navKey": "vizElectricMeter"
+      }
+    },
+    {
+      "source": "electrical-flow-meter.html",
+      "output": "electrical-flow-meter.html",
+      "titleKey": "vizElectricMeterPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "vizElectricMeterLead",
+      "parent": "electrical-visualization.html",
+      "nextPage": {
+        "output": "build-it-yourself.html",
+        "navKey": "navBuild"
+      }
+    },
+    {
+      "source": "build-it-yourself.html",
+      "output": "build-it-yourself.html",
+      "titleKey": "buildPageTitle",
+      "navKey": "navBuild",
+      "descriptionKey": "buildLead"
+    },
+    {
+      "source": "configure-yourself.html",
+      "output": "configure-yourself.html",
+      "titleKey": "configurePageTitle",
+      "navKey": "navConfigure",
+      "descriptionKey": "configureLead"
     },
     {
       "source": "manual.html",
