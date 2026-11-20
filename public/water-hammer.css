@@ -1,0 +1,33 @@
+.water-hammer .simulator {display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);align-items:start;gap:clamp(16px,3vw,32px)}
+.water-hammer .simulator h2 {font-size:1.45rem;margin-bottom:12px}
+.water-hammer .schematic {min-width:0}
+.water-hammer .diagram {width:100%;height:auto;display:block;background:var(--background);border:1px solid var(--line);border-radius:14px;color:var(--muted)}
+.water-hammer .legend {display:flex;flex-wrap:wrap;gap:10px 20px;color:var(--muted);font-size:.85rem;margin-top:10px}
+.water-hammer .legend span::before {content:'';display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%;background:#1b9abc}
+.water-hammer .legend span+span::before {background:#d78622}
+.water-hammer .counter {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:14px;padding:12px;background:color-mix(in srgb,var(--accent) 9%,var(--surface));border:1px solid var(--line);border-radius:12px}
+.water-hammer .counter div {display:grid;gap:4px}
+.water-hammer .counter span {font-size:.72rem;color:var(--muted)}
+.water-hammer .counter strong {font:750 clamp(.9rem,1.65vw,1.2rem)/1.15 ui-monospace,monospace;overflow-wrap:anywhere}
+.water-hammer .counter.active {box-shadow:0 0 0 2px #e39731}
+.water-hammer .status {padding:12px;border:1px solid var(--line);border-radius:12px}
+.water-hammer .status h2 {font-size:1.15rem;margin:4px 0}
+.water-hammer .status p, .water-hammer .note, .water-hammer .explanation p {color:var(--muted)}
+.water-hammer .status p {margin:0;font-size:.9rem}
+.water-hammer .track {height:4px;margin:12px 0;background:var(--line);border-radius:4px;overflow:hidden}
+.water-hammer .progress {height:100%;transform:scaleX(0);transform-origin:left;background:var(--accent)}
+.water-hammer .settings, .water-hammer .calibration {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.water-hammer .calibration {grid-column:1/-1}
+.water-hammer .settings label {display:grid;gap:5px;align-content:start;font-size:.85rem;font-weight:650}
+.water-hammer input, .water-hammer select {width:100%;min-width:0;font:inherit;color:inherit;accent-color:var(--accent)}
+.water-hammer input[type=number], .water-hammer select {border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:7px}
+.water-hammer .controls {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.water-hammer button {font:700 .9rem system-ui;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);padding:9px 4px;cursor:pointer}
+.water-hammer button:first-child {background:#3159e5;border-color:#3159e5;color:white}
+.water-hammer button:disabled {opacity:.55;cursor:default}
+.water-hammer .note {font-size:.8rem;margin:12px 0 0}
+.water-hammer .explanation {margin-top:18px}
+.water-hammer .explanation p:last-child {margin-bottom:0}
+
+@media(max-width:840px){.water-hammer .simulator{grid-template-columns:1fr}}
+.water-hammer .simulator,.water-hammer .explanation{border:1px solid var(--line);border-radius:20px;background:var(--surface);padding:clamp(18px,3vw,30px)}

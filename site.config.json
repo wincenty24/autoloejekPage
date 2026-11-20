@@ -52,6 +52,14 @@
       }
     },
     {
+      "source": "water-hammer-visualization.html",
+      "output": "water-hammer-visualization.html",
+      "titleKey": "waterHammerPageTitle",
+      "navKey": "navVisualization",
+      "descriptionKey": "waterHammerLead",
+      "parent": "visualization.html"
+    },
+    {
       "source": "electrical-valve.html",
       "output": "electrical-valve.html",
       "titleKey": "vizElectricValvePageTitle",
