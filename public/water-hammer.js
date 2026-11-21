@@ -5,6 +5,11 @@ const fullTurn = 360
 const dialOffset = -90
 const waveDuration = 4.2
 const needleSpeed = 140
+const flowRampDuration = 2
+const minReverseTravel = 15
+const maxReverseTravel = 30
+const pulseDuration = .14
+const sensorHighlightAngle = 20
 const waterSpeed = 67
 const pipe = new Path2D('M16 141H108Q126 141 126 159V207Q126 226 145 226H244Q263 226 263 207V161Q263 141 283 141H434')
 const points = [[16,141],[108,141]]
@@ -107,7 +112,7 @@ function draw(t, state) {
   const gate = Number(closed)
   const forward = !closed
   const reverse = wave
-  const pulse = 1-clamp((t-lastPulse)/.84)
+  const pulse = 1-clamp((t-lastPulse)/pulseDuration)
   ctx.clearRect(0,0,450,360)
   ctx.lineCap='round'
   ctx.lineJoin='round'
@@ -216,10 +221,17 @@ function draw(t, state) {
   ctx.textAlign='center'
   ctx.fillStyle='#e7f4f9'
   ctx.fillText('00000',193,193)
+  const markerSpacing=fullTurn/markersPerTurn
+  const highlightAngle=Math.min(sensorHighlightAngle,markerSpacing*.4)
+  const closestMarker=Math.round(angle/markerSpacing)
+  const nearSensor=(forward || reverse) && Math.abs(angle-closestMarker*markerSpacing)<=highlightAngle
   for(let i=0;i<markersPerTurn;i++) {
-    const mark=(i*fullTurn/markersPerTurn+dialOffset)*Math.PI/180
+    const mark=(i*markerSpacing+dialOffset)*Math.PI/180
     const active=pulse>0 && i===state.lastMarker
-    disk(193+26*Math.cos(mark),199+26*Math.sin(mark),active ? 4 : 2.6,active ? '#fff0b5' : '#f5b74e')
+    const nearby=nearSensor && i===markerOnDial(closestMarker)
+    const radius=active ? 4 : nearby ? 3.5 : 2.6
+    const color=active ? '#fff0b5' : nearby ? '#ffdc75' : '#f5b74e'
+    disk(193+26*Math.cos(mark),199+26*Math.sin(mark),radius,color)
   }
   const needle=(angle+dialOffset)*Math.PI/180
   line([[193,199],[193+16*Math.cos(needle),199+16*Math.sin(needle)]],'#bd3f32',2.4)
@@ -255,14 +267,18 @@ function draw(t, state) {
   label(gate > .5 ? get("wh-copy-5").textContent : get("wh-copy-6").textContent,358,217,gate > .5 ? '#ad661b' : '#228666')
 
   const title = wave ? get("wh-copy-7").textContent : closed ? get("wh-copy-8").textContent : get("wh-copy-9").textContent
-  const description = count >= target
+  const description = settingsError || (count >= target
     ? wave ? get("wh-copy-10").textContent : get("wh-copy-11").textContent
     : wave ? get("wh-copy-12").textContent
     : closed ? get("wh-copy-13").textContent
     : pulse ? get("wh-copy-14").textContent
-    : get("wh-copy-15").textContent
+    : get("wh-copy-15").textContent)
   if (get('title').textContent !== title) get('title').textContent = title
-  if (get('description').textContent !== description) get('description').textContent = description
+  const descriptionNode=get('description')
+  const status=get('status')
+  const startBlocked=closed && (Boolean(settingsError) || wave || count>=target)
+  if(descriptionNode.textContent!==description) descriptionNode.textContent=description
+  status.classList.toggle('start-blocked',startBlocked)
   const displayCount=String(count).padStart(2,'0')
   if(get('count').textContent!==displayCount) get('count').textContent=displayCount
   const indicated=volumeFormat.format(count*litersPerPulse)+' l'
@@ -280,17 +296,27 @@ const state = {
 let time=0
 let previous
 let reverseAngle=0
+let flowElapsed=0
 const targetField=get('target')
-let targetLiters=Number(targetField.value)
-let target=targetLiters
+let target=1
+let settingsError=''
 let speed=Number(get('speed').value)
 let frame=null
 let resetAngle=state.angle
 let litersPerPulse=1
 let markersPerTurn=1
+const locale=document.documentElement.lang || 'pl'
+const volumeChoices=new Intl.ListFormat(locale,{type:'disjunction'})
 const volumeFormat=new Intl.NumberFormat(document.documentElement.lang,{maximumSignificantDigits:4})
 const calibrationUnit=get('calibration-unit')
 const calibrationValue=get('calibration-value')
+const pulseDensity=get('pulse-density')
+const calibration=get('calibration')
+const resetButton=get('reset')
+
+function markerOnDial(index) {
+  return (index%markersPerTurn+markersPerTurn)%markersPerTurn
+}
 function pulseIndex(angle) {
   const estimated=Math.round(angle*markersPerTurn/fullTurn)
   return angle < estimated*fullTurn/markersPerTurn ? estimated-1 : estimated
@@ -298,18 +324,27 @@ function pulseIndex(angle) {
 
 function displayCalibration() {
   const perLiter=calibrationUnit.value==='per-liter'
-  calibrationValue.min=perLiter ? '1' : '0.001'
-  calibrationValue.max=perLiter ? '10' : '1000'
-  calibrationValue.step=perLiter ? '1' : 'any'
-  calibrationValue.value=perLiter ? markersPerTurn : Number(litersPerPulse.toPrecision(8))
+  get('density-setting').hidden=!perLiter
+  get('volume-setting').hidden=perLiter
+  pulseDensity.value=markersPerTurn
+  calibrationValue.value=perLiter ? 1 : litersPerPulse
 }
 
 function updateTarget() {
-  const pulses=targetLiters/litersPerPulse
-  const nearest=Math.round(pulses)
-  const wholePulses=Math.abs(pulses-nearest)<=Number.EPSILON*Math.max(1,pulses)*4
-    ? nearest : Math.ceil(pulses)
-  target=Number.isSafeInteger(wholePulses) ? Math.max(1,wholePulses) : Infinity
+  const targetLiters=targetField.valueAsNumber
+  const perLiter=calibrationUnit.value==='per-liter'
+  const pulses=perLiter ? targetLiters*markersPerTurn : targetLiters/litersPerPulse
+  settingsError=''
+  if(!Number.isSafeInteger(targetLiters) || targetLiters<1) settingsError=get("wh-TargetInteger").textContent
+  else if(!perLiter && targetLiters%litersPerPulse!==0) {
+    const lower=targetLiters-targetLiters%litersPerPulse
+    const upper=lower+litersPerPulse
+    const volumes=[lower,upper].filter(value=>value>0 && Number.isSafeInteger(value))
+      .map(value=>value.toLocaleString(locale)+' l')
+    settingsError=get("wh-TargetMultiple").textContent.replace('{volumes}',volumeChoices.format(volumes))
+  } else if(!Number.isSafeInteger(pulses)) settingsError=get("wh-TargetTooLarge").textContent
+  target=settingsError ? Infinity : pulses
+  targetField.setAttribute('aria-invalid',String(Boolean(settingsError)))
   get('target-pulses').textContent=Number.isFinite(target)
     ? target.toLocaleString(document.documentElement.lang || 'pl') : '—'
 }
@@ -320,8 +355,16 @@ function render() {
   targetField.disabled = !state.closed || state.wave
   calibrationUnit.disabled = targetField.disabled || state.count>0
   calibrationValue.disabled = calibrationUnit.disabled
+  pulseDensity.disabled = calibrationUnit.disabled
+  calibration.tabIndex = calibrationUnit.disabled ? 0 : -1
+  if(!calibrationUnit.disabled) resetButton.classList.remove('reset-highlight')
   get('stop').disabled = state.closed
-  get('reset').disabled = state.wave
+  resetButton.disabled = state.wave
+}
+// Convert elapsed time during startup to equivalent time at full flow.
+function fullFlowTime(elapsed) {
+  const rampTime=Math.min(elapsed,flowRampDuration)
+  return rampTime*rampTime/(2*flowRampDuration)+Math.max(0,elapsed-flowRampDuration)
 }
 function tick(now) {
   frame=null
@@ -338,7 +381,10 @@ function tick(now) {
   } else if(!state.closed) {
     const previousIndex=pulseIndex(state.angle)
     const endAngle=(previousIndex+target-state.count)*fullTurn/markersPerTurn
-    const nextAngle=Math.min(endAngle,state.angle+needleSpeed*dt)
+    const previousFlowTime=fullFlowTime(flowElapsed)
+    flowElapsed+=dt
+    const flowTime=fullFlowTime(flowElapsed)-previousFlowTime
+    const nextAngle=Math.min(endAngle,state.angle+needleSpeed*flowTime)
     const movement=(nextAngle-state.angle)/needleSpeed*waterSpeed
     state.angle=nextAngle
     state.shift+=movement
@@ -347,8 +393,8 @@ function tick(now) {
     const crossings=lastIndex-previousIndex
     if(crossings>0) {
       state.count+=crossings
-      state.lastMarker=lastIndex%markersPerTurn
-      state.lastPulse=time-(nextAngle-lastIndex*fullTurn/markersPerTurn)/needleSpeed
+      state.lastMarker=markerOnDial(lastIndex)
+      state.lastPulse=time
     }
     if(state.count>=target) stop()
   }
@@ -358,6 +404,7 @@ function tick(now) {
 function start() {
   if(!state.closed || state.wave || state.count>=target || !Number.isFinite(target)) return
   state.closed=false
+  flowElapsed=0
   state.backward=0
   previous=undefined
   render()
@@ -367,7 +414,7 @@ function stop() {
   if(state.closed) return
   state.closed=true
   state.wave=true
-  reverseAngle=Math.min(84,state.angle)
+  reverseAngle=minReverseTravel+Math.floor(Math.random()*(maxReverseTravel-minReverseTravel+1))
   render()
 }
 function reset() {
@@ -378,14 +425,12 @@ function reset() {
   state.wave=false
   state.backward=0
   state.count=0
+  resetButton.classList.remove('reset-highlight')
   resetAngle=state.angle
   state.lastPulse=-Infinity
   render()
 }
-targetField.addEventListener('change',()=>{
-  const value=targetField.valueAsNumber
-  if(Number.isFinite(value) && value>0) targetLiters=value
-  targetField.value=targetLiters
+targetField.addEventListener('input',()=>{
   updateTarget()
   render()
 })
@@ -395,24 +440,28 @@ get('speed').addEventListener('input',()=>{
 })
 calibrationUnit.addEventListener('change',()=>{
   markersPerTurn=1
-  if(calibrationUnit.value==='per-liter') litersPerPulse=1
+  litersPerPulse=1
   displayCalibration()
+  updateTarget()
+  render()
+})
+pulseDensity.addEventListener('change',()=>{
+  markersPerTurn=Number(pulseDensity.value)
+  litersPerPulse=1/markersPerTurn
   updateTarget()
   render()
 })
 calibrationValue.addEventListener('change',()=>{
-  const value=calibrationValue.valueAsNumber
-  if(calibrationUnit.value==='per-liter' && Number.isFinite(value)) {
-    markersPerTurn=Math.max(1,Math.min(10,Math.round(value)))
-    litersPerPulse=1/markersPerTurn
-  } else if(calibrationValue.validity.valid) {
-    litersPerPulse=value
-  }
-  displayCalibration()
+  litersPerPulse=Number(calibrationValue.value)
   updateTarget()
   render()
 })
-get('reset').addEventListener('click',reset)
+function highlightReset() {
+  if(calibrationUnit.disabled) resetButton.classList.add('reset-highlight')
+}
+calibration.addEventListener('click',highlightReset)
+calibration.addEventListener('focus',highlightReset)
+resetButton.addEventListener('click',reset)
 get('start').addEventListener('click',start)
 get('stop').addEventListener('click',stop)
 displayCalibration()

@@ -19,7 +19,7 @@
 <div><span data-i18n="waterHammerNet"></span><strong id="net">0 l</strong></div>
 </div>
 
-<section class="status" aria-live="polite">
+<section class="status" id="status" aria-live="polite">
 <div class="caption"><span data-i18n="waterHammerValve"></span></div>
 <h2 id="title"></h2>
 <p id="description"></p>
@@ -27,26 +27,30 @@
 <div class="track" aria-hidden="true"><div class="progress" id="progress"></div></div>
 <div class="settings">
 <label><span data-i18n="waterHammerTarget"></span>
-<input id="target" type="number" min="0" step="any" value="1" inputmode="decimal" required>
+<input id="target" type="number" min="1" step="1" value="1" inputmode="numeric" required>
 </label>
 <label for="speed"><span><span data-i18n="waterHammerSpeed"></span> <output id="speed-value" for="speed">1×</output></span>
 <input id="speed" type="range" min="1" max="2" step="0.1" value="1">
 </label>
-<div class="calibration">
+<div class="calibration" id="calibration">
 <label><span data-i18n="waterHammerCalibration"></span>
 <select id="calibration-unit">
 <option value="per-liter" data-i18n="waterHammerPerLiter"></option>
 <option value="per-pulse" data-i18n="waterHammerPerPulse"></option>
 </select>
 </label>
-<label><span data-i18n="waterHammerValue"></span>
-<input id="calibration-value" type="number" min="1" max="10" step="1" value="1" required>
+<label id="density-setting"><span data-i18n="waterHammerDensity"></span>
+<select id="pulse-density"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+</label>
+<label id="volume-setting" hidden>
+<span data-i18n="waterHammerValue"></span>
+<select id="calibration-value"><option>1</option><option>2</option><option>5</option><option>10</option><option>100</option></select>
 </label>
 </div>
 </div>
-<p class="note"><span data-i18n="waterHammerPulseTarget"></span> <output id="target-pulses" for="target calibration-value calibration-unit">1</output></p>
+<p class="note"><span data-i18n="waterHammerPulseTarget"></span> <output id="target-pulses" for="target pulse-density calibration-value calibration-unit">1</output></p>
 <div class="controls">
-<button id="start" type="button" data-i18n="waterHammerStart"></button>
+<button id="start" type="button" aria-describedby="description" data-i18n="waterHammerStart"></button>
 <button id="stop" type="button" disabled data-i18n="waterHammerStop"></button>
 <button id="reset" type="button" data-i18n="waterHammerReset"></button>
 </div>
@@ -59,13 +63,13 @@
 <p data-i18n="waterHammerNote1"></p>
 <p data-i18n="waterHammerNote2"></p>
 <p data-i18n="waterHammerNote3"></p>
-<p data-i18n="waterHammerTargetRounding"></p>
+<p data-i18n="waterHammerTargetRequirement"></p>
 <h3 data-i18n="waterHammerRestart"></h3>
 <p data-i18n="waterHammerNote4"></p>
 <p data-i18n="waterHammerNote5"></p>
 </section>
 
-<div hidden><span id="wh-copy-0" data-i18n="waterHammerMessage0"></span><span id="wh-copy-1" data-i18n="waterHammerMessage1"></span><span id="wh-copy-2" data-i18n="waterHammerMessage2"></span><span id="wh-copy-3" data-i18n="waterHammerMessage3"></span><span id="wh-copy-4" data-i18n="waterHammerMessage4"></span><span id="wh-copy-5" data-i18n="waterHammerMessage5"></span><span id="wh-copy-6" data-i18n="waterHammerMessage6"></span><span id="wh-copy-7" data-i18n="waterHammerMessage7"></span><span id="wh-copy-8" data-i18n="waterHammerMessage8"></span><span id="wh-copy-9" data-i18n="waterHammerMessage9"></span><span id="wh-copy-10" data-i18n="waterHammerMessage10"></span><span id="wh-copy-11" data-i18n="waterHammerMessage11"></span><span id="wh-copy-12" data-i18n="waterHammerMessage12"></span><span id="wh-copy-13" data-i18n="waterHammerMessage13"></span><span id="wh-copy-14" data-i18n="waterHammerMessage14"></span><span id="wh-copy-15" data-i18n="waterHammerMessage15"></span></div>
+<div hidden><span id="wh-TargetInteger" data-i18n="waterHammerTargetInteger"></span><span id="wh-TargetMultiple" data-i18n="waterHammerTargetMultiple"></span><span id="wh-TargetTooLarge" data-i18n="waterHammerTargetTooLarge"></span><span id="wh-copy-0" data-i18n="waterHammerMessage0"></span><span id="wh-copy-1" data-i18n="waterHammerMessage1"></span><span id="wh-copy-2" data-i18n="waterHammerMessage2"></span><span id="wh-copy-3" data-i18n="waterHammerMessage3"></span><span id="wh-copy-4" data-i18n="waterHammerMessage4"></span><span id="wh-copy-5" data-i18n="waterHammerMessage5"></span><span id="wh-copy-6" data-i18n="waterHammerMessage6"></span><span id="wh-copy-7" data-i18n="waterHammerMessage7"></span><span id="wh-copy-8" data-i18n="waterHammerMessage8"></span><span id="wh-copy-9" data-i18n="waterHammerMessage9"></span><span id="wh-copy-10" data-i18n="waterHammerMessage10"></span><span id="wh-copy-11" data-i18n="waterHammerMessage11"></span><span id="wh-copy-12" data-i18n="waterHammerMessage12"></span><span id="wh-copy-13" data-i18n="waterHammerMessage13"></span><span id="wh-copy-14" data-i18n="waterHammerMessage14"></span><span id="wh-copy-15" data-i18n="waterHammerMessage15"></span></div>
 </main>
 <footer><span>© <span data-current-year></span> Autolejek</span><span>autolejek@gmail.com</span><a href="https://www.youtube.com/@autolejek" target="_blank" rel="noopener noreferrer">YouTube @autolejek</a><a href="https://www.tiktok.com/@autolejek" target="_blank" rel="noopener noreferrer">TikTok @autolejek</a><a href="https://www.instagram.com/autolejek/" target="_blank" rel="noopener noreferrer">Instagram @autolejek</a><a href="privacy.html" data-i18n="privacyTitle"></a></footer><script src="site.js"></script>
 <script src="../water-hammer.js" defer></script>

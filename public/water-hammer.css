@@ -31,3 +31,11 @@
 
 @media(max-width:840px){.water-hammer .simulator{grid-template-columns:1fr}}
 .water-hammer .simulator,.water-hammer .explanation{border:1px solid var(--line);border-radius:20px;background:var(--surface);padding:clamp(18px,3vw,30px)}
+
+.water-hammer .calibration [hidden] {display:none}
+.water-hammer .calibration :disabled {pointer-events:none}
+.water-hammer #reset.reset-highlight {outline:2px solid #d58a22;outline-offset:2px;box-shadow:0 0 12px #d58a2266}
+
+.water-hammer .status.start-blocked{outline:3px solid #efbb00;outline-offset:2px;background:color-mix(in srgb,#ffd429 12%,var(--surface));animation:water-hammer-status-pulse 1s ease-in-out infinite}
+@keyframes water-hammer-status-pulse{50%{outline-color:#ffd429;box-shadow:0 0 0 6px #ffd429a6}}
+@media(prefers-reduced-motion:reduce){.water-hammer .status.start-blocked{animation:none}}
