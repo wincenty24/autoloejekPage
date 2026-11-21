@@ -193,8 +193,17 @@ function addNextPageLink(html, page, language, dictionary) {
   return html.replace("</main>", `${link}</main>`);
 }
 
-function makeRedirect(target, canonical) {
-  return `<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autolejek</title><link rel="canonical" href="${canonical}"><meta http-equiv="refresh" content="0;url=${target}"><script>location.replace(${JSON.stringify(target)});</script></head><body><p><a href="${target}">Przejdź do strony Autolejek</a></p></body></html>\n`;
+function makeRedirect(page) {
+  const targets = Object.fromEntries(config.languages.map(language => [language, pageUrl(language, page.output).slice(1)]));
+  const fallback = targets.en;
+  const canonical = new URL(pageUrl(config.defaultLanguage, page.output), config.baseUrl).href;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autolejek</title><link rel="canonical" href="${canonical}"><noscript><meta http-equiv="refresh" content="0;url=${escapeHtml(fallback)}"></noscript><script>
+const targets = ${JSON.stringify(targets)};
+const preferences = navigator.languages?.length ? navigator.languages : [navigator.language];
+const language = preferences.map(locale => locale?.toLowerCase().split("-")[0])
+  .find(code => Object.prototype.hasOwnProperty.call(targets, code)) ?? "en";
+location.replace(targets[language] + location.search + location.hash);
+</script></head><body><p><a href="${escapeHtml(fallback)}">Continue to Autolejek</a></p></body></html>\n`;
 }
 
 await rm(outputRoot, { recursive: true, force: true });
@@ -245,9 +254,7 @@ for (const page of buildPages) {
     await writeFile(destination, html);
   }
 
-  const defaultTarget = page.output === "index.html" ? `${config.defaultLanguage}/` : `${config.defaultLanguage}/${page.output}`;
-  const canonical = new URL(pageUrl(config.defaultLanguage, page.output), config.baseUrl).href;
-  await writeFile(path.join(outputRoot, page.output), makeRedirect(defaultTarget, canonical));
+  await writeFile(path.join(outputRoot, page.output), makeRedirect(page));
 }
 
 const sitemapEntries = config.languages.flatMap(language => buildPages.map(page => {
