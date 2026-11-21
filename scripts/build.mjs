@@ -24,7 +24,7 @@ const buildPages = [...config.pages, ...investments.map(investment => ({
   investment
 }))];
 
-for (const filename of ["styles.css", "site.js", "theme.js", "electrical-simulator.css", "electrical-simulator.js"]) {
+for (const filename of ["styles.css", "site.js", "theme.js", "electrical-simulator.css", "electrical-simulator.js", "water-hammer.js"]) {
   const contents = await readFile(path.join(publicRoot, filename));
   assetVersions[filename] = createHash("sha256").update(contents).digest("hex").slice(0, 10);
 }
@@ -151,7 +151,8 @@ function adjustAssetPaths(html) {
     .replaceAll('src="theme.js"', `src="../theme.js?v=${assetVersions["theme.js"]}"`)
     .replaceAll('src="site.js"', `src="../site.js?v=${assetVersions["site.js"]}"`)
     .replaceAll('href="../electrical-simulator.css"', `href="../electrical-simulator.css?v=${assetVersions["electrical-simulator.css"]}"`)
-    .replaceAll('src="../electrical-simulator.js"', `src="../electrical-simulator.js?v=${assetVersions["electrical-simulator.js"]}"`);
+    .replaceAll('src="../electrical-simulator.js"', `src="../electrical-simulator.js?v=${assetVersions["electrical-simulator.js"]}"`)
+    .replaceAll('src="../water-hammer.js"', `src="../water-hammer.js?v=${assetVersions["water-hammer.js"]}"`);
 }
 
 function orderSections(html) {

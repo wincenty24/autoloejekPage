@@ -27,7 +27,7 @@
 <div class="track" aria-hidden="true"><div class="progress" id="progress"></div></div>
 <div class="settings">
 <label><span data-i18n="waterHammerTarget"></span>
-<input id="target" type="number" min="1" max="1000" step="1" value="1" inputmode="numeric" required>
+<input id="target" type="number" min="0" step="any" value="1" inputmode="decimal" required>
 </label>
 <label for="speed"><span><span data-i18n="waterHammerSpeed"></span> <output id="speed-value" for="speed">1×</output></span>
 <input id="speed" type="range" min="1" max="2" step="0.1" value="1">
@@ -40,10 +40,11 @@
 </select>
 </label>
 <label><span data-i18n="waterHammerValue"></span>
-<input id="calibration-value" type="number" min="0.001" max="1000" step="any" value="1" required>
+<input id="calibration-value" type="number" min="1" max="10" step="1" value="1" required>
 </label>
 </div>
 </div>
+<p class="note"><span data-i18n="waterHammerPulseTarget"></span> <output id="target-pulses" for="target calibration-value calibration-unit">1</output></p>
 <div class="controls">
 <button id="start" type="button" data-i18n="waterHammerStart"></button>
 <button id="stop" type="button" disabled data-i18n="waterHammerStop"></button>
@@ -58,6 +59,7 @@
 <p data-i18n="waterHammerNote1"></p>
 <p data-i18n="waterHammerNote2"></p>
 <p data-i18n="waterHammerNote3"></p>
+<p data-i18n="waterHammerTargetRounding"></p>
 <h3 data-i18n="waterHammerRestart"></h3>
 <p data-i18n="waterHammerNote4"></p>
 <p data-i18n="waterHammerNote5"></p>

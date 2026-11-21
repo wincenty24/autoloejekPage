@@ -1,7 +1,7 @@
 const get = id => document.getElementById(id)
 const ctx = get('diagram').getContext('2d')
 ctx.scale(2, 2)
-const triggerAngle = 360
+const fullTurn = 360
 const dialOffset = -90
 const waveDuration = 4.2
 const needleSpeed = 140
@@ -216,10 +216,11 @@ function draw(t, state) {
   ctx.textAlign='center'
   ctx.fillStyle='#e7f4f9'
   ctx.fillText('00000',193,193)
-  const mark = (triggerAngle+dialOffset)*Math.PI/180
-  const markX = 193 + 26*Math.cos(mark)
-  const markY = 199 + 26*Math.sin(mark)
-  disk(markX,markY,pulse ? 4 : 2.6,pulse ? '#fff0b5' : '#f5b74e')
+  for(let i=0;i<markersPerTurn;i++) {
+    const mark=(i*fullTurn/markersPerTurn+dialOffset)*Math.PI/180
+    const active=pulse>0 && i===state.lastMarker
+    disk(193+26*Math.cos(mark),199+26*Math.sin(mark),active ? 4 : 2.6,active ? '#fff0b5' : '#f5b74e')
+  }
   const needle=(angle+dialOffset)*Math.PI/180
   line([[193,199],[193+16*Math.cos(needle),199+16*Math.sin(needle)]],'#bd3f32',2.4)
   disk(193,199,2.5,'#82392f')
@@ -265,7 +266,7 @@ function draw(t, state) {
   const displayCount=String(count).padStart(2,'0')
   if(get('count').textContent!==displayCount) get('count').textContent=displayCount
   const indicated=volumeFormat.format(count*litersPerPulse)+' l'
-  const net=volumeFormat.format((angle-resetAngle)/triggerAngle*litersPerPulse)+' l'
+  const net=volumeFormat.format((angle-resetAngle)/fullTurn*markersPerTurn*litersPerPulse)+' l'
   if(get('indicated').textContent!==indicated) get('indicated').textContent=indicated
   if(get('net').textContent!==net) get('net').textContent=net
   get('counter').classList.toggle('active',pulse>0)
@@ -279,23 +280,46 @@ const state = {
 let time=0
 let previous
 let reverseAngle=0
-let target=Number(get('target').value)
+const targetField=get('target')
+let targetLiters=Number(targetField.value)
+let target=targetLiters
 let speed=Number(get('speed').value)
 let frame=null
 let resetAngle=state.angle
 let litersPerPulse=1
+let markersPerTurn=1
 const volumeFormat=new Intl.NumberFormat(document.documentElement.lang,{maximumSignificantDigits:4})
 const calibrationUnit=get('calibration-unit')
 const calibrationValue=get('calibration-value')
+function pulseIndex(angle) {
+  const estimated=Math.round(angle*markersPerTurn/fullTurn)
+  return angle < estimated*fullTurn/markersPerTurn ? estimated-1 : estimated
+}
+
 function displayCalibration() {
-  const value=calibrationUnit.value==='per-liter' ? 1/litersPerPulse : litersPerPulse
-  calibrationValue.value=Number(value.toPrecision(8))
+  const perLiter=calibrationUnit.value==='per-liter'
+  calibrationValue.min=perLiter ? '1' : '0.001'
+  calibrationValue.max=perLiter ? '10' : '1000'
+  calibrationValue.step=perLiter ? '1' : 'any'
+  calibrationValue.value=perLiter ? markersPerTurn : Number(litersPerPulse.toPrecision(8))
+}
+
+function updateTarget() {
+  const pulses=targetLiters/litersPerPulse
+  const nearest=Math.round(pulses)
+  const wholePulses=Math.abs(pulses-nearest)<=Number.EPSILON*Math.max(1,pulses)*4
+    ? nearest : Math.ceil(pulses)
+  target=Number.isSafeInteger(wholePulses) ? Math.max(1,wholePulses) : Infinity
+  get('target-pulses').textContent=Number.isFinite(target)
+    ? target.toLocaleString(document.documentElement.lang || 'pl') : '—'
 }
 
 function render() {
   draw(time,state)
-  get('start').disabled = !state.closed || state.wave || state.count >= target
-  get('target').disabled = !state.closed || state.wave
+  get('start').disabled = !state.closed || state.wave || state.count >= target || !Number.isFinite(target)
+  targetField.disabled = !state.closed || state.wave
+  calibrationUnit.disabled = targetField.disabled || state.count>0
+  calibrationValue.disabled = calibrationUnit.disabled
   get('stop').disabled = state.closed
   get('reset').disabled = state.wave
 }
@@ -312,17 +336,19 @@ function tick(now) {
     state.backward=progress
     state.wave=progress<1-1e-9
   } else if(!state.closed) {
-    const previousTurn=Math.floor(state.angle/triggerAngle)
-    const endAngle=(previousTurn+target-state.count)*triggerAngle
+    const previousIndex=pulseIndex(state.angle)
+    const endAngle=(previousIndex+target-state.count)*fullTurn/markersPerTurn
     const nextAngle=Math.min(endAngle,state.angle+needleSpeed*dt)
     const movement=(nextAngle-state.angle)/needleSpeed*waterSpeed
     state.angle=nextAngle
     state.shift+=movement
     state.outletShift+=movement
-    const crossings=Math.floor(nextAngle/triggerAngle)-previousTurn
+    const lastIndex=pulseIndex(nextAngle)
+    const crossings=lastIndex-previousIndex
     if(crossings>0) {
       state.count+=crossings
-      state.lastPulse=time-(nextAngle%triggerAngle)/needleSpeed
+      state.lastMarker=lastIndex%markersPerTurn
+      state.lastPulse=time-(nextAngle-lastIndex*fullTurn/markersPerTurn)/needleSpeed
     }
     if(state.count>=target) stop()
   }
@@ -330,7 +356,7 @@ function tick(now) {
   if(!state.closed || state.wave) frame=requestAnimationFrame(tick)
 }
 function start() {
-  if(!state.closed || state.wave || state.count>=target) return
+  if(!state.closed || state.wave || state.count>=target || !Number.isFinite(target)) return
   state.closed=false
   state.backward=0
   previous=undefined
@@ -356,11 +382,11 @@ function reset() {
   state.lastPulse=-Infinity
   render()
 }
-get('target').addEventListener('change',()=>{
-  const field=get('target')
-  const value=field.valueAsNumber
-  if(Number.isFinite(value)) target=Math.max(1,Math.min(1000,Math.round(value)))
-  field.value=target
+targetField.addEventListener('change',()=>{
+  const value=targetField.valueAsNumber
+  if(Number.isFinite(value) && value>0) targetLiters=value
+  targetField.value=targetLiters
+  updateTarget()
   render()
 })
 get('speed').addEventListener('input',()=>{
@@ -368,19 +394,27 @@ get('speed').addEventListener('input',()=>{
   get('speed-value').textContent=speed.toLocaleString(document.documentElement.lang)+'×'
 })
 calibrationUnit.addEventListener('change',()=>{
+  markersPerTurn=1
   if(calibrationUnit.value==='per-liter') litersPerPulse=1
   displayCalibration()
+  updateTarget()
   render()
 })
 calibrationValue.addEventListener('change',()=>{
-  if(calibrationValue.validity.valid) {
-    const value=calibrationValue.valueAsNumber
-    litersPerPulse=calibrationUnit.value==='per-liter' ? 1/value : value
+  const value=calibrationValue.valueAsNumber
+  if(calibrationUnit.value==='per-liter' && Number.isFinite(value)) {
+    markersPerTurn=Math.max(1,Math.min(10,Math.round(value)))
+    litersPerPulse=1/markersPerTurn
+  } else if(calibrationValue.validity.valid) {
+    litersPerPulse=value
   }
   displayCalibration()
+  updateTarget()
   render()
 })
 get('reset').addEventListener('click',reset)
 get('start').addEventListener('click',start)
 get('stop').addEventListener('click',stop)
+displayCalibration()
+updateTarget()
 render()
