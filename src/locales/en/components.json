@@ -1,0 +1,16 @@
+{
+  "navComponents": "Component selection",
+  "componentsPageTitle": "Component selection — Autolejek",
+  "componentsLead": "Autolejek works with a liquid flow meter and a device that shuts off the supply.",
+  "componentsAdvice": "Use the interactive configurator to find a suitable component quickly. We also recommend reading the technical documentation for sizing and installation details.",
+  "componentsInteractive": "Interactive configuration",
+  "componentsMeter": "Water meter",
+  "componentsMeterFinder": "Find a water meter",
+  "componentsAllMeters": "View all water meters",
+  "componentsCatalogueUpdate": "The water meter catalogue is updated regularly.",
+  "componentsShutoff": "Solenoid valve",
+  "componentsShutoffText": "Water shutoff selection guide",
+  "componentsPump": "Pump",
+  "componentsPumpGuide": "Pump selection guide",
+  "componentsInProgress": "Interactive selection is in development. We are researching suitable models."
+}

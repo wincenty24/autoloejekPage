@@ -21,11 +21,19 @@
       "descriptionKey": "aboutLead"
     },
     {
+      "source": "component-selection.html",
+      "output": "component-selection.html",
+      "titleKey": "componentsPageTitle",
+      "navKey": "navComponents",
+      "descriptionKey": "componentsLead"
+    },
+    {
       "source": "visualization.html",
       "output": "visualization.html",
       "titleKey": "vizPageTitle",
       "navKey": "navVisualization",
-      "descriptionKey": "vizHubLead"
+      "descriptionKey": "vizHubLead",
+      "parent": "component-selection.html"
     },
     {
       "source": "hydraulic-visualization.html",
@@ -96,25 +104,51 @@
       }
     },
     {
+      "source": "documentation.html",
+      "output": "documentation.html",
+      "titleKey": "documentationPageTitle",
+      "navKey": "navDocumentation",
+      "descriptionKey": "documentationLead"
+    },
+    {
       "source": "build-it-yourself.html",
       "output": "build-it-yourself.html",
       "titleKey": "buildPageTitle",
       "navKey": "navBuild",
-      "descriptionKey": "buildLead"
+      "descriptionKey": "buildLead",
+      "parent": "documentation.html",
+      "nextPage": {
+        "output": "configure-yourself.html",
+        "navKey": "navConfigure"
+      }
     },
     {
       "source": "configure-yourself.html",
       "output": "configure-yourself.html",
       "titleKey": "configurePageTitle",
       "navKey": "navConfigure",
-      "descriptionKey": "configureLead"
+      "descriptionKey": "configureLead",
+      "parent": "documentation.html",
+      "nextPage": {
+        "output": "manual.html",
+        "navKey": "navManual"
+      }
+    },
+    {
+      "source": "water-meter-catalog.html",
+      "output": "water-meter-catalog.html",
+      "titleKey": "meterCatalogPageTitle",
+      "navKey": "navConfigure",
+      "descriptionKey": "meterCatalogLead",
+      "parent": "configure-yourself.html"
     },
     {
       "source": "manual.html",
       "output": "manual.html",
       "titleKey": "manualPageTitle",
       "navKey": "navManual",
-      "descriptionKey": "manualLead"
+      "descriptionKey": "manualLead",
+      "parent": "documentation.html"
     },
     {
       "source": "projects.html",

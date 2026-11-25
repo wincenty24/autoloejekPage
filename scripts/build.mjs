@@ -1,3 +1,4 @@
+import { meters, andromedaReferences, modularMeterReferences } from "../public/meter-configurator/catalog.mjs";
 import { buildProvenanceMap, annotateImages } from "./image-provenance.mjs";
 import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { loadInvestments, copyInvestmentImages, renderInvestments, renderInvestment, investmentFilename, investmentText } from "./investments.mjs";
@@ -51,6 +52,28 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function renderMeterCatalogue(language) {
+  const number = new Intl.NumberFormat(language, { maximumFractionDigits: 2 });
+  const flow = value => value == null ? "—" : number.format(value * 1000 / 60);
+  const catalogue = [...meters, ...andromedaReferences, ...modularMeterReferences].sort((a, b) =>
+    a.manufacturer.localeCompare(b.manufacturer, language) || a.dn - b.dn ||
+    a.q3 - b.q3 || a.model.localeCompare(b.model, language));
+  return catalogue.map(meter => {
+    const horizontal = meter.ranges.find(range => range.position === "horizontal-up");
+    const temperature = meter.temperature?.map(value => number.format(value)).join("–");
+    const pulse = meter.pulse.litres == null ? "—" : `${number.format(meter.pulse.litres)} L`;
+    const separateModule = meter.pulse.retrofit ? (language === "pl" ? " · osobny moduł" : " · separate module") : "";
+    const pressureLoss = meter.kv > 0 && meter.q3 >= 2.4 ? number.format((2.4 / meter.kv) ** 2) : "—";
+    const cells = [meter.dn, meter.connection, flow(horizontal?.q1), flow(horizontal?.q2),
+      flow(meter.q3), flow(meter.q4), temperature ? `${temperature} °C` : meter.temperatureClasses?.join(" / ") ?? "—",
+      `${meter.pulse.model} · ${pulse}${separateModule}`, pressureLoss];
+    const name = escapeHtml(`${meter.manufacturer} ${meter.model}`);
+    return `<tr data-dn="${meter.dn}" data-q3="${meter.q3}"><th scope="row"><a href="${escapeHtml(meter.documentation)}">${name}</a></th>${
+      cells.map(value => `<td>${escapeHtml(String(value))}</td>`).join("")
+    }</tr>`;
+  }).join("\n");
 }
 
 function requireTranslation(dictionary, key, language) {
@@ -146,6 +169,8 @@ function addMetadata(html, page, language, dictionary) {
 function adjustAssetPaths(html) {
   return html
     .replaceAll('href="styles.css"', `href="../styles.css?v=${assetVersions["styles.css"]}"`)
+    .replaceAll('href="meter-configurator/', 'href="../meter-configurator/')
+    .replaceAll('src="meter-configurator/', 'src="../meter-configurator/')
     .replaceAll('href="assets/', 'href="../assets/')
     .replaceAll('src="assets/', 'src="../assets/')
     .replaceAll('src="theme.js"', `src="../theme.js?v=${assetVersions["theme.js"]}"`)
@@ -242,6 +267,9 @@ for (const page of buildPages) {
       html = html.replace('aria-current="page"', 'aria-current="location"');
     }
     html = html.replace("<!-- INVESTMENTS_CONTENT -->", () => renderInvestments(investments, language));
+    if (page.output === "water-meter-catalog.html") {
+      html = html.replace("<!-- METER_CATALOG_ROWS -->", () => renderMeterCatalogue(language));
+    }
     html = annotateImages(html, language, imageProvenance);
     html = orderSections(html);
     html = addNextPageLink(html, page, language, dictionary);

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --test scripts/investments.test.mjs scripts/sync-drive.test.mjs scripts/image-provenance.test.mjs && npm run build && node scripts/check.mjs",
+    "check": "node --test scripts/investments.test.mjs scripts/sync-drive.test.mjs scripts/image-provenance.test.mjs scripts/meter-configurator.test.mjs && npm run build && node scripts/check.mjs",
     "manual:sync": "node scripts/generate-manual.mjs",
     "drive:sync": "node scripts/sync-drive.mjs"
   },

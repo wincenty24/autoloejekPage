@@ -1,0 +1,16 @@
+{
+  "navComponents": "Dobór komponentów",
+  "componentsPageTitle": "Dobór komponentów — Autolejek",
+  "componentsLead": "Autolejek współpracuje z przyrządem mierzącym przepływ cieczy oraz z elementem odcinającym jej dopływ.",
+  "componentsAdvice": "Skorzystaj z interaktywnej konfiguracji, aby szybko dobrać element. Zalecamy też przeczytanie dokumentacji technicznej, w której znajdziesz informacje potrzebne do doboru i montażu.",
+  "componentsInteractive": "Interaktywna konfiguracja",
+  "componentsMeter": "Wodomierz",
+  "componentsMeterFinder": "Dobierz wodomierz",
+  "componentsAllMeters": "Zobacz wszystkie wodomierze",
+  "componentsCatalogueUpdate": "Katalog wodomierzy jest regularnie aktualizowany.",
+  "componentsShutoff": "Elektrozawór",
+  "componentsShutoffText": "Instrukcja doboru odcięcia wody",
+  "componentsPump": "Pompa",
+  "componentsPumpGuide": "Instrukcja doboru pompy",
+  "componentsInProgress": "Interaktywny dobór w przygotowaniu. Trwa wyszukiwanie odpowiednich modeli."
+}

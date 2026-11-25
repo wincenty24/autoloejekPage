@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dobór komponentów — Autolejek</title><link rel="stylesheet" href="styles.css"><script src="theme.js"></script></head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Autolejek</a><nav aria-label="Główna nawigacja" data-i18n-aria-label="navigationLabel"><a href="index.html" data-i18n="navHome"></a><a href="about-project.html" data-i18n="navAbout"></a><a class="active" aria-current="page" href="visualization.html" data-i18n="navVisualization"></a><a href="documentation.html" data-i18n="navDocumentation"></a><a href="projects.html" data-i18n="navProjects"></a><a href="contact.html" data-i18n="navContact"></a></nav><div class="language-picker"><label for="language" data-i18n="languageLabel"></label><select id="language" aria-label="Wybierz język" data-i18n-aria-label="languageLabel"></select></div><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Tryb nocny" data-i18n-aria-label="themeToggleLabel" data-theme-toggle hidden><span class="theme-day" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-night" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></svg></span></button></header>
+  <main>
+    <section class="page-intro">
+      <h1 data-i18n="navComponents"></h1>
+      <p class="lead" data-i18n="componentsLead"></p>
+      <p data-i18n="componentsAdvice"></p>
+    </section>
+    <section id="interactive-configuration" aria-labelledby="interactive-configuration-title">
+      <h2 id="interactive-configuration-title" data-i18n="componentsInteractive"></h2>
+      <div class="viz-choice-grid component-grid">
+        <article class="viz-choice component-card">
+          <div class="viz-choice-copy">
+            <h3 data-i18n="componentsMeter"></h3>
+            <a class="component-primary" href="configure-yourself.html#water-meter-configurator" data-i18n="componentsMeterFinder"></a>
+            <a href="water-meter-catalog.html" data-i18n="componentsAllMeters"></a>
+            <span data-i18n="componentsCatalogueUpdate"></span>
+          </div>
+        </article>
+        <article class="viz-choice component-card" id="water-shutoff">
+          <div class="viz-choice-copy">
+            <h3 data-i18n="componentsShutoff"></h3>
+            <span data-i18n="componentsInProgress"></span>
+            <a href="build-it-yourself.html#shutoff-components" data-i18n="componentsShutoffText"></a>
+          </div>
+        </article>
+        <article class="viz-choice component-card">
+          <div class="viz-choice-copy">
+            <h3 data-i18n="componentsPump"></h3>
+            <span data-i18n="componentsInProgress"></span>
+            <a href="build-it-yourself.html#pump-components" data-i18n="componentsPumpGuide"></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><span>© <span data-current-year></span> Autolejek</span><span>autolejek@gmail.com</span><a href="https://www.youtube.com/@autolejek" target="_blank" rel="noopener noreferrer">YouTube @autolejek</a><a href="https://www.tiktok.com/@autolejek" target="_blank" rel="noopener noreferrer">TikTok @autolejek</a><a href="https://www.instagram.com/autolejek/" target="_blank" rel="noopener noreferrer">Instagram @autolejek</a><a href="privacy.html" data-i18n="privacyTitle"></a></footer><script src="site.js"></script>
+</body></html>

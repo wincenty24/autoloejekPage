@@ -1,4 +1,7 @@
 {
+  "navDocumentation": "Documentation",
+  "documentationPageTitle": "Documentation — Autolejek",
+  "documentationLead": "Guides to building, configuring and using Autolejek.",
   "name": "English",
   "languageLabel": "Choose language",
   "nextPageLabel": "Next page",
