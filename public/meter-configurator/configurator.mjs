@@ -362,7 +362,7 @@ function result() {
     pressure: Math.max(number(answers.staticPressure) ?? 0, number(answers.dynamicPressure) ?? 0) || null,
   });
   const overview = `<p>${t('Maksymalny zmierzony przepływ', 'Highest measured flow')} <strong>${format(flow.max)} l/min</strong>.</p>
-    <p><a class="mc-primary mc-visualization-link" href="hydraulic-visualization.html#installation-diagram" target="_blank" rel="noopener">${t('Przejdź do wizualizacji (nowa karta)', 'Open installation visualization (new tab)')}</a></p>
+    <p><a class="mc-primary mc-visualization-link" href="visualization.html" target="_blank" rel="noopener">${t('Przejdź do wizualizacji (nowa karta)', 'Open installation visualization (new tab)')}</a></p>
     <p>${t('Gotowy prompt do AI znajdziesz na dole wyników.', 'The AI prompt is at the bottom of the results.')}
       <a href="#mc-ai-prompt">${t('Przejdź do promptu', 'Go to the prompt')}</a>
     </p>
