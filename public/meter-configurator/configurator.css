@@ -194,3 +194,13 @@
 .mc-shopping ul { margin: 8px 0 0; padding-inline-start: 20px; }
 .meter-configurator .mc-save-meter { justify-self: start; min-width: 44px; font-size: 1.25rem; }
 .meter-configurator .mc-save-meter[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+
+.meter-configurator .mc-visualization-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}

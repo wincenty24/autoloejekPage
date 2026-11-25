@@ -800,3 +800,9 @@ footer a { text-decoration:none; }
   text-decoration: none;
   font-weight: 700;
 }
+
+.component-card { position: relative; }
+a.component-card { cursor: pointer; }
+.component-primary::after { content: ""; position: absolute; inset: 0; }
+.component-card a:not(.component-primary) { position: relative; z-index: 1; }
+.component-guide-link { text-decoration: underline; text-underline-offset: .2em; }

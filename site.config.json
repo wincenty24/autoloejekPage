@@ -135,6 +135,14 @@
       }
     },
     {
+      "source": "water-meter-finder.html",
+      "output": "water-meter-finder.html",
+      "parent": "component-selection.html",
+      "navKey": "navComponents",
+      "titleKey": "meterConfiguratorTitle",
+      "descriptionKey": "meterCatalogLead"
+    },
+    {
       "source": "water-meter-catalog.html",
       "output": "water-meter-catalog.html",
       "titleKey": "meterCatalogPageTitle",

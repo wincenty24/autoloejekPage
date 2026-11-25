@@ -119,11 +119,11 @@ function existingResult() {
     return notes(
       'Sprawdź w dokumentacji zgodność sygnału posiadanego nadajnika ze sterownikiem Autolejek. Jeśli nadajnik jest zgodny, możesz go wykorzystać bez kupowania kolejnego.',
       'Check the installed transmitter’s signal against the Autolejek controller documentation. If it is compatible, you can reuse it without purchasing another transmitter.',
-    ) + `<p><a href="#meter-connection">${t('Podłączenie do sterownika', 'Controller wiring')}</a></p>` + shutoffLink();
+    ) + `<p><a href="configure-yourself.html#meter-connection">${t('Podłączenie do sterownika', 'Controller wiring')}</a></p>` + shutoffLink();
   }
   if (status === 'retrofit') {
     return `<p>${t('Zachowaj sprawny wodomierz i dobierz nakładkę', 'Keep the working meter and purchase the pulse attachment')} <strong>${meter.pulse.model}</strong>. ${pulseDetails(meter)}</p>
-      <p><a href="#meter-connection">${t('Podłączenie do sterownika', 'Controller wiring')}</a></p>
+      <p><a href="configure-yourself.html#meter-connection">${t('Podłączenie do sterownika', 'Controller wiring')}</a></p>
       ${existingMeterEmail()}
       ${shutoffLink()}`;
   }
@@ -362,7 +362,7 @@ function result() {
     pressure: Math.max(number(answers.staticPressure) ?? 0, number(answers.dynamicPressure) ?? 0) || null,
   });
   const overview = `<p>${t('Maksymalny zmierzony przepływ', 'Highest measured flow')} <strong>${format(flow.max)} l/min</strong>.</p>
-    <p><a href="hydraulic-visualization.html#installation-diagram" target="_blank" rel="noopener">${t('Zobacz schemat instalacji (nowa karta)', 'View installation diagram (new tab)')}</a></p>
+    <p><a class="mc-primary mc-visualization-link" href="hydraulic-visualization.html#installation-diagram" target="_blank" rel="noopener">${t('Przejdź do wizualizacji (nowa karta)', 'Open installation visualization (new tab)')}</a></p>
     <p>${t('Gotowy prompt do AI znajdziesz na dole wyników.', 'The AI prompt is at the bottom of the results.')}
       <a href="#mc-ai-prompt">${t('Przejdź do promptu', 'Go to the prompt')}</a>
     </p>
