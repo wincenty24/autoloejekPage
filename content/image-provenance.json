@@ -46,8 +46,7 @@
       "id": "IMG-006",
       "sha256": "c6892f4ff425dd51787afa72ef680e7e009614f6af78c537cd0e671e826ef25b",
       "paths": [
-        "content/investments/test_water_filling/autolejek-controller.png",
-        "public/assets/mainPage/autolejek-controller.png"
+        "content/investments/test_water_filling/autolejek-controller.png"
       ],
       "kind": "ai-edited",
       "editDetails": "color-correction"
@@ -268,31 +267,6 @@
       ],
       "kind": "ai-edited",
       "editDetails": "color-correction"
-    },
-    {
-      "id": "IMG-033",
-      "sha256": "6f525524a8150c72ae3d9be8f8a2abaeed9918a7fd4215b901d6926e3c796dcb",
-      "paths": [
-        "public/assets/mainPage/field-irrigation-sprinkler.jpg"
-      ],
-      "kind": "pexels"
-    },
-    {
-      "id": "IMG-034",
-      "sha256": "6fd99ff8e07741823da40d37e86f536c8d288b48f1c5a182c2bf253f0d63e7b0",
-      "paths": [
-        "public/assets/mainPage/outdoor-water-tap.jpg"
-      ],
-      "kind": "pexels",
-      "sourceFilename": "pexels-qtheilespy-34158878.jpg"
-    },
-    {
-      "id": "IMG-035",
-      "sha256": "049f01ea43d4672b392b572a837bee20ad7e2e0d94ea2503c413e1ae7f2d3c5e",
-      "paths": [
-        "public/assets/mainPage/tractor-spraying-field.jpg"
-      ],
-      "kind": "pexels"
     },
     {
       "id": "IMG-036",
@@ -1257,6 +1231,122 @@
         "public/assets/buildityourself/terminal-block-plug-removal.webp"
       ],
       "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-152",
+      "sha256": "aa2ae14efa33f84990acfbd8e849072a5131901ea4792cd1ca6f455d3bd238a7",
+      "paths": [
+        "public/assets/mainPage/autolejek-controller-480.webp"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-153",
+      "sha256": "bf4b39760cc9e01e5a33a84d92a538427dab2ece86ef72e7312b0b487b011e78",
+      "paths": [
+        "public/assets/mainPage/autolejek-controller-941.webp"
+      ],
+      "kind": "ai-edited",
+      "editDetails": "color-correction"
+    },
+    {
+      "id": "IMG-154",
+      "sha256": "77a6e85236f1c14ebe7a09af58a7461d65749684707ff4b6ed711ec4c382f4b3",
+      "paths": [
+        "public/assets/mainPage/tractor-spraying-field-720.webp"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-155",
+      "sha256": "c9437907235a1b112a12bb1cd6972e36226379503a3bde0de1701a084afd707c",
+      "paths": [
+        "public/assets/mainPage/tractor-spraying-field-1080.webp"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-156",
+      "sha256": "2af03292e592a0333f2a53fa942c6430c9ea5d2055279108f235ffc83c9e9a18",
+      "paths": [
+        "public/assets/mainPage/field-irrigation-sprinkler-720.webp"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-157",
+      "sha256": "cf7b0d82980763ba5ec454e0b5a2a5c90da6781f32fea0f93ca7adad18b3597f",
+      "paths": [
+        "public/assets/mainPage/field-irrigation-sprinkler-1440.webp"
+      ],
+      "kind": "pexels"
+    },
+    {
+      "id": "IMG-158",
+      "sha256": "d8062e25cd72766c41b3b4829f2d7d76af73cfdf0b85bba62322c83e3fe81434",
+      "paths": [
+        "public/assets/mainPage/outdoor-water-tap-720.webp"
+      ],
+      "kind": "pexels",
+      "sourceFilename": "pexels-qtheilespy-34158878.jpg"
+    },
+    {
+      "id": "IMG-159",
+      "sha256": "31649d76c271d70129885008b34a8b5400837d6d80aa5d76ec0aa2e8eebb9e65",
+      "paths": [
+        "public/assets/mainPage/outdoor-water-tap-1440.webp"
+      ],
+      "kind": "pexels",
+      "sourceFilename": "pexels-qtheilespy-34158878.jpg"
+    },
+    {
+      "id": "IMG-160",
+      "sha256": "1a1691ec993994dafd2b936e23f0dadd31e04bbe88d23bb5bcffa78c70250b96",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-dosing-progress-500l-480.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-161",
+      "sha256": "c11b1de1b07f2346678a09a4919531fbef99244387563083374dd1842958763e",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-dosing-progress-500l-800.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-162",
+      "sha256": "854d994b6b2824d52b9beaae4a2f78cbfeb3b2acd2a42db254f404a7a8e23177",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-low-flow-warning-pl-480.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-163",
+      "sha256": "ac90319b7c7e6bc45b1bfbf12fc331bae3c1f67c185bc808583d36fcfa8bb95f",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-low-flow-warning-pl-800.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-164",
+      "sha256": "ef4f0efbffc435c7168da6496942d331e822c1b6808e5c096efe959b83c8b017",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-volume-limit-500l-pl-480.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-165",
+      "sha256": "03577a8cc634896b05fcda19fe0cf8ed7b94a456fad7f81892b545615b5dae5e",
+      "paths": [
+        "public/assets/about-project/autolejek-controller-volume-limit-500l-pl-800.webp"
+      ],
+      "kind": "original"
     }
   ]
 }

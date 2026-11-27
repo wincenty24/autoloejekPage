@@ -44,6 +44,11 @@ for (const filename of htmlFiles) {
   }
 
   const references = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(match => match[1]);
+  for (const [, candidates] of html.matchAll(/\bsrcset="([^"]+)"/g)) {
+    for (const [, url] of candidates.matchAll(/(?:^|,\s*)([^\s]+)\s+(?:\d+w|[\d.]+x)(?=\s*(?:,|$))/g)) {
+      references.push(url);
+    }
+  }
   for (const reference of references) {
     if (/^(?:https?:|mailto:|tel:|#|data:|javascript:)/.test(reference)) continue;
     const clean = reference.split(/[?#]/, 1)[0];

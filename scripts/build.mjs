@@ -175,6 +175,8 @@ function adjustAssetPaths(html) {
     .replaceAll('src="meter-configurator/', 'src="../meter-configurator/')
     .replaceAll('href="assets/', 'href="../assets/')
     .replaceAll('src="assets/', 'src="../assets/')
+    .replace(/\bsrcset="([^"]*)"/g, (_, candidates) =>
+      `srcset="${candidates.replace(/(^|,\s*)assets\//g, "$1../assets/")}"`)
     .replaceAll('src="theme.js"', `src="../theme.js?v=${assetVersions["theme.js"]}"`)
     .replaceAll('src="site.js"', `src="../site.js?v=${assetVersions["site.js"]}"`)
     .replaceAll('href="../electrical-simulator.css"', `href="../electrical-simulator.css?v=${assetVersions["electrical-simulator.css"]}"`)
