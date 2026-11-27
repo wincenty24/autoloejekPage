@@ -1233,6 +1233,30 @@
         "public/assets/visualization/check-valve-female-front.png"
       ],
       "kind": "ai-generated"
+    },
+    {
+      "id": "IMG-149",
+      "sha256": "1052dc56331b6541695964951c462acb6792a5c0d656165cbc503a4ca544e345",
+      "paths": [
+        "public/assets/buildityourself/terminal-wire-trim.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-150",
+      "sha256": "55c22250f02d0036ba3599cb17d4f4ee87c1a38f603d53101312e54d8bd78cd2",
+      "paths": [
+        "public/assets/buildityourself/terminal-wire-strip.webp"
+      ],
+      "kind": "original"
+    },
+    {
+      "id": "IMG-151",
+      "sha256": "2c6af73587ba927a30ba836ff3d69a59cf52b64a7c803b7ae85701cea8ff696a",
+      "paths": [
+        "public/assets/buildityourself/terminal-block-plug-removal.webp"
+      ],
+      "kind": "ai-generated"
     }
   ]
 }

@@ -114,7 +114,7 @@
   "vizElectricMeterTwoWires": "2 wires · reed contact",
   "vizElectricMeterThreeWires": "3 wires · powered sensor",
   "vizElectricMeterReedPickup": "Reed-switch pulse pickup on the compact water meter",
-  "vizElectricMeterGuide": "See the meter wiring instructions in Configure yourself",
+  "vizElectricMeterGuide": "See the meter wiring instructions under Initial setup",
   "vizElectricMeterUncountedPulses": "Even if the meter still produces pulses, Autolejek cannot count them while the fuse is blown.",
   "vizElectricMeterPoweredPickup": "Powered pulse module on the multi-jet water meter",
   "waterHammerLead": "Simulate backflow and see when the meter can register an extra pulse.",

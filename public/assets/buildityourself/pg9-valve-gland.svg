@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="910" height="364" viewBox="0 0 910 364">
+  <defs>
+    <g id="gland" stroke="#203e56" stroke-width="3" stroke-linejoin="round">
+      <path d="M0-46 40-23v46L0 46l-40-23v-46Z"/>
+      <circle r="27" stroke-width="2" opacity=".7"/>
+      <circle r="13" fill="#fff" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="910" height="364" fill="#fff"/>
+  <path d="M124 70h662v215H124z" fill="#e8f0f6" stroke="#203e56" stroke-width="3"/>
+  <g fill="#acc6d8">
+    <use href="#gland" x="526" y="184"/>
+    <use href="#gland" x="384" y="184"/>
+    <use href="#gland" x="668" y="184"/>
+  </g>
+  <circle cx="242" cy="184" r="58" fill="#e6efff" stroke="#2459bb" stroke-width="3"/>
+  <use href="#gland" x="242" y="184" fill="#6498e6"/>
+  <g text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" font-weight="700">
+    <g fill="#203e56">
+      <text x="526" y="309">3</text>
+      <text x="384" y="309">2</text>
+      <text x="668" y="309">4</text>
+    </g>
+    <rect x="219" y="278" width="46" height="46" rx="12" fill="#2459bb"/>
+    <text x="242" y="310" fill="#fff">1</text>
+  </g>
+</svg>

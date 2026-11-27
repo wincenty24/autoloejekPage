@@ -210,7 +210,7 @@ function pulseDetails(meter) {
     ? t(' Potwierdź obsługę tej wagi impulsu w oprogramowaniu sterownika.',
       ' Confirm that the controller firmware supports this pulse weight.')
     : '';
-  return `${t('Styk bezpotencjałowy', 'Dry contact')} (SIG ↔ GND) · ${pulseWeight(meter.pulse)} (${order}).${check}`;
+  return `${t('Styk bezpotencjałowy', 'Dry contact')} (WATER METER ↔ GND) · ${pulseWeight(meter.pulse)} (${order}).${check}`;
 }
 
 function requestedConnectionSize() {

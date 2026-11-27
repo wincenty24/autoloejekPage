@@ -321,7 +321,7 @@
 <p>Złącze układu zliczającego jest oznaczone na Rys. 1 numerem 4. Piny złącza:</p>
 <ul>
 <li><p><code>GND</code> - masa,</p></li>
-<li><p><code>SIG</code> - sygnał z przepływomierza,</p></li>
+<li><p><code>WATER METER</code> - sygnał z przepływomierza,</p></li>
 <li><p><code>5V</code> - zasilanie 5 V.</p></li>
 </ul>
 <p><strong>UWAGA: sygnał powyżej 5 V może uszkodzić wejście zliczające.</strong> Przed podłączeniem przepływomierza sprawdź jego dokumentację i napięcie sygnału.</p>
@@ -1467,7 +1467,7 @@ maksymalna objętość cieczy = floor(4&#39;294&#39;967&#39;295 / 123) = floor(3
 <p>Obciążenie to urządzenie zasilane albo przełączane przez obwód, np. pompa, elektrozawór albo cewka przekaźnika zewnętrznego. Dobór bezpiecznika i przekaźnika zależy od napięcia, prądu i mocy obciążenia.</p>
 <h3 id="masa-gnd-i-sig">14.12. Masa, GND i SIG</h3>
 <p><code>GND</code> oznacza masę, czyli punkt odniesienia dla napięć w obwodzie sterownika. Przewód masy przepływomierza albo detektora należy podłączać do pinu <code>GND</code>.</p>
-<p><code>SIG</code> oznacza sygnał. Jest to pin, którym przepływomierz albo detektor przekazuje do sterownika impuls lub zmianę stanu.</p>
+<p>Sygnał z przepływomierza trafia na zacisk <code>WATER METER</code>, a sygnał z detektora na zacisk <code>SENSOR</code>.</p>
 <h3 id="no-com-i-nc">14.13. NO, COM i NC</h3>
 <p><code>COM</code> to wspólny styk przekaźnika.</p>
 <p><code>NO</code> oznacza styk normalnie otwarty. Przy wyłączonym przekaźniku <code>NO</code> nie jest połączony z <code>COM</code>; po załączeniu przekaźnika zostaje połączony z <code>COM</code>.</p>

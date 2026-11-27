@@ -114,7 +114,7 @@
   "vizElectricMeterTwoWires": "2 przewody · kontaktron",
   "vizElectricMeterThreeWires": "3 przewody · czujnik zasilany",
   "vizElectricMeterReedPickup": "Nakładka impulsowa z kontaktronem na wodomierzu kompaktowym",
-  "vizElectricMeterGuide": "Zobacz instrukcję podłączenia wodomierza lub przepływomierza w sekcji „Skonfiguruj sam”",
+  "vizElectricMeterGuide": "Zobacz instrukcję podłączenia wodomierza lub przepływomierza w sekcji „Pierwsza konfiguracja”",
   "vizElectricMeterUncountedPulses": "Nawet jeśli wodomierz nadal generuje impulsy, Autolejek nie zlicza ich przy przepalonym bezpieczniku.",
   "vizElectricMeterPoweredPickup": "Zasilany moduł impulsowy wodomierza wielostrumieniowego",
   "waterHammerLead": "Zasymuluj cofanie się wody i sprawdź, kiedy licznik może naliczyć dodatkowy impuls.",

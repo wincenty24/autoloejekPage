@@ -131,7 +131,9 @@ function applyTranslations(template, dictionary, language) {
   html = replaceTranslatedAttributes(html, dictionary, language, "data-i18n-alt", "alt");
   html = replaceTranslatedAttributes(html, dictionary, language, "data-i18n-aria-label", "aria-label");
 
-  const remaining = [...html.matchAll(/data-i18n(?:-alt|-aria-label)?="([^"]+)"/g)].map(match => match[1]);
+  html = replaceTranslatedAttributes(html, dictionary, language, "data-i18n-src", "src");
+
+  const remaining = [...html.matchAll(/data-i18n(?:-alt|-aria-label|-src)?="([^"]+)"/g)].map(match => match[1]);
   if (remaining.length) {
     throw new Error(`Unprocessed translation keys in ${language}: ${remaining.join(", ")}`);
   }

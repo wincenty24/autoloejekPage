@@ -49,16 +49,19 @@ const polishText = {
   "Faded, dashed lines show where the supply path is interrupted.": "Przygaszone, przerywane linie oznaczają brak ciągłości zasilania.",
   "Plug and socket mated": "Wtyczka połączona z gniazdem",
   "Motor plug disconnected": "Wtyczka pompy odłączona",
-  "RELAY1": "Przekaźnik 1",
+  "Relay 1": "Przekaźnik 1",
+  "Relay 2": "Przekaźnik 2",
+  "Water meter": "Wodomierz",
+  "Sensor": "Czujnik",
   "Start pulses · 1 Hz": "Uruchom impulsy · 1 Hz",
   "Stop pulses": "Zatrzymaj impulsy",
   "Pulses: {count}": "Impulsy: {count}",
   "5 V fuse": "Bezpiecznik 5 V",
   "5 V output available": "Wyjście 5 V aktywne",
   "5 V output interrupted": "Brak zasilania na wyjściu 5 V",
-  "Example with a powered 5 V pulse module: 5V, SIG and GND. Check the actual meter’s pinout.": "Przykład z modułem impulsowym zasilanym 5 V: 5V, SIG i GND. Sprawdź oznaczenia przewodów swojego wodomierza.",
-  "Active pulse sensor: 5V, SIG and GND.": "Aktywny czujnik impulsowy: 5V, SIG i GND.",
-  "Passive reed contact: connect SIG and GND. Leave 5V unused.": "Kontaktron pasywny podłącz do SIG i GND. Zacisk 5V pozostaw wolny.",
+  "Example with a powered 5 V pulse module: 5V, WATER METER and GND. Check the actual meter’s pinout.": "Przykład z modułem impulsowym zasilanym 5 V: 5V, WATER METER i GND. Sprawdź oznaczenia przewodów swojego wodomierza.",
+  "Active pulse sensor: 5V, WATER METER and GND.": "Aktywny czujnik impulsowy: 5V, WATER METER i GND.",
+  "Passive reed contact: connect WATER METER and GND. Leave 5V unused.": "Kontaktron pasywny podłącz do WATER METER i GND. Zacisk 5V pozostaw wolny.",
   "Relay 1 fuse": "Bezpiecznik przekaźnika 1",
   "Fuse intact": "Bezpiecznik sprawny",
   "Fuse blown": "Bezpiecznik przepalony",
@@ -200,10 +203,10 @@ function screw(x,y,color) {
 }
 const pcbConnectors = [
   {id:'power', pins:['VIN','GND'], x:7, y:437, vertical:true},
-  {id:'relay-1', name:t('RELAY1'), pins:['GND','VOUT'], x:76, y:633, pitch:45},
-  {id:'relay-2', name:'RELAY2', pins:['COM','NC','NO'], x:194, y:633, pitch:46},
-  {id:'water-meter', name:t('WATER-METER'), pins:['GND','SIG','5V'], x:356, y:633, pitch:46},
-  {id:'sensor', name:t('SENSOR'), pins:['GND','SENSOR','5V'], x:517, y:633, pitch:46}
+  {id:'relay-1', name:t('Relay 1'), pins:['GND','VOUT'], x:76, y:633, pitch:45},
+  {id:'relay-2', name:t('Relay 2'), pins:['COM','NC','NO'], x:194, y:633, pitch:46},
+  {id:'water-meter', name:t('Water meter'), pins:['GND','SIG','5V'], x:356, y:633, pitch:46},
+  {id:'sensor', name:t('Sensor'), pins:['GND','SENSOR','5V'], x:517, y:633, pitch:46}
 ];
 
 function pcbArtwork() {
@@ -293,7 +296,7 @@ function pcbArtwork() {
     const pitch=connector.pitch || 41;
     const width=vertical ? 70 : pitch*pins.length;
     const height=vertical ? pitch*pins.length : 67;
-    marks += '<g aria-label="'+(connector.name ? connector.name+': ' : '')+pins.map(pin => t(pin)).join(', ')+'">';
+    marks += '<g aria-label="'+(connector.name ? connector.name+': ' : '')+pins.map(pin => pin === 'SIG' ? 'WATER METER' : pin).join(', ')+'">';
     if (connector.name) marks += silkscreen(x,y-6,connector.name);
     marks += rect(x,y,width,height,'#4cebc7','#d9fff6',2) + rect(x+2,y+2,width-4,9,'#158369','#84f9dd',1);
     pins.forEach((pin,index) => {
@@ -309,7 +312,7 @@ function pcbArtwork() {
       marks += '<text class="pcb-pin"'+(pin === 'VIN' ? ' style="fill:#ff707d"' : '')+
         ' x="'+(vertical ? x+width+7 : pinX)+
         '" y="'+(vertical ? pinY+4 : y+86)+'" text-anchor="'+(vertical ? 'start' : 'middle')+'">'+
-        t(pin)+(pin === 'VIN' ? '<tspan data-pcb-vin></tspan>' : '')+'</text>';
+        (pin === 'SIG' ? 'WATER<tspan x="'+pinX+'" dy="12">METER</tspan>' : pin)+(pin === 'VIN' ? '<tspan data-pcb-vin></tspan>' : '')+'</text>';
     });
     marks += '</g>';
   }
@@ -402,9 +405,9 @@ function configureMeterSimulator() {
       const model = image.dataset.electricMeter;
       image.toggleAttribute('hidden',model !== selectedModel && !(poweredMultiJet && model === 'multi-jet-powered'));
     }
-    hint.textContent = t(poweredMultiJet ? 'Example with a powered 5 V pulse module: 5V, SIG and GND. Check the actual meter’s pinout.' :
-      active ? 'Active pulse sensor: 5V, SIG and GND.' :
-      'Passive reed contact: connect SIG and GND. Leave 5V unused.');
+    hint.textContent = t(poweredMultiJet ? 'Example with a powered 5 V pulse module: 5V, WATER METER and GND. Check the actual meter’s pinout.' :
+      active ? 'Active pulse sensor: 5V, WATER METER and GND.' :
+      'Passive reed contact: connect WATER METER and GND. Leave 5V unused.');
     const action = t(blown ? 'Replace fuse' : 'Simulate blown fuse');
     fuse.dataset.blown = String(blown);
     fuse.setAttribute('aria-label',t('5 V fuse')+' — '+action);
